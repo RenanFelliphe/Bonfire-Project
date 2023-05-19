@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'sans-serif';
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+:root {
+    /* ============== CORES ============== */
+    --black-to-white-color: #E2E2E2;
+    /*Essa cor deve ser preta no modo claro e branca no modo escuro*/
+    --white-to-black-color: #131313;
+    /*Essa cor deve ser branca no modo claro e preta no modo escuro*/
+
+    --text-color: #9E9C9C;
+    /*Cor dos Textos*/
+    --border-color: #585757;
+    /*Cor das Bordas*/
+
+    --first-color: #383A3B;
+    --second-color: #27282A;
+    /*Cor de primeiro foco*/
+    --third-color: #242526;
+    /*Cor dos Menus*/
+    --fourth-color: #232325;
+    /*Cor de sergundo foco*/
+    --fifth-color: #18191A;
+    /*Cor do body*/
+
+    /* ========= CORES DAS ORGS ========= */
+    --org-color: #00e226;
+    --org-color2: #00e226;
+    --org-color3: #00e226;
+    --org-color-darker: #005f10;
+    --org-color-lighter: #61ff7c;
+    --org-color-low-opacity: #00ff2a70;
+    /*Cor de cada organização, porém com opacidade reduzida*/
+
+    /* ============== FONTES ============== */
+
+    --family-font-tittle: 'Montserrat', 'sans-serif';
+
+    --size-font-tittle: 25px;
+    --size-font-subtittle: 15px;
+    --size-font-text: 13px;
+    --size-font-detail: 11px;
+}
+
+
+/*====================================================================================================
+=============================== DEFINIÇÃO / SUBSTITUIÇÃO DAS VÁRIAVEIS ===============================
+====================================================================================================*/
+
+.dark-mode {
+    /* ============== CORES ============== */
+
+    --black-to-white-color: #E2E2E2;
+    --white-to-black-color: #131313;
+
+    --text-color: #9E9C9C;
+    --border-color: #585757;
+
+    --first-color: #383A3B;
+    --second-color: #27282A;
+    --third-color: #242526;
+    --fourth-color: #232325;
+    --fifth-color: #18191A;
+
+    /* ============== FONTES ============== */
+
+    --family-font-tittle: ;
+    --size-font-tittle: ;
+
+    --text-font-family: ;
+    --size-font-text: ;
+
+    --subtext-font-family: ;
+    --size-font-text: ;
+}
+
+.light-mode {
+    --black-to-white-color: #000000;
+    --white-to-black-color: #E2E2E2;
+
+    --text-color: #252525;
+    --border-color: #B1B1B1;
+
+    --first-color: #f3f3f3;
+    --third-color: #ffffff;
+    --second-color: #FFFFFF;
+    --fourth-color: #F9FAFF;
+    --fifth-color: #EBEBF5;
+}
+
+.fluxo-color {
+    --org-color: #C300FF;
+    --org-color2: #C91085;
+    --org-color3: #C300FF;
+    --org-color-darker: #680088;
+    --org-color-lighter: #D650FF;
+    --org-color-low-opacity-color: #C300FF70;
+}
+
+.kru-color {
+    --org-color: #FF00B3;
+    --org-color2: #FF00B3;
+    --org-color3: #FF00B3;
+    --org-color-darker: #910065;
+    --org-color-lighter: #ff5dce;
+    --org-color-low-opacity-color: #FF00B370;
+}
+
+.leviatan-color {
+    --org-color: #4687BD;
+    --org-color2: #4687BD;
+    --org-color3: #4687BD;
+    --org-color-darker: #20425C;
+    --org-color-lighter: #6DBAFA;
+    --org-color-low-opacity-color: #4687BD70;
+}
+
+.liberty-color {
+    --org-color: #00FFFF;
+    --org-color2: #00FFFF;
+    --org-color3: #00FFFF;
+    --org-color-darker: #006969;
+    --org-color-lighter: #7DFFFF;
+    --org-color-low-opacity-color: #00FFFF70;
+}
+
+.los-color {
+    --org-color: #FF4500;
+    --org-color2: #FF4500;
+    --org-color3: #FF4500;
+    --org-color-darker: #AC2E00;
+    --org-color-lighter: #FF6027;
+    --org-color-low-opacity-color: #FF450070;
+}
+
+.loud-color {
+    --org-color: #00EB00;
+    --org-color2: #00EB00;
+    --org-color3: #00EB00;
+    --org-color-darker: #007200;
+    --org-color-lighter: #2DFF2D;
+    --org-color-low-opacity-color: #00FF2A70;
+}
+
+.magic-squad-color {
+    --org-color: #0EB1A9;
+    --org-color2: #0EB1A9;
+    --org-color3: #0EB1A9;
+    --org-color-darker: #006969;
+    --org-color-lighter: #55b9b4;
+    --org-color-low-opacity-color: #0EB1A970;
+}
+
+.pain-color {
+    --org-color: #FF0000;
+    --org-color2: #FF0000;
+    --org-color3: #FF0000;
+    --org-color-darker: #810000;
+    --org-color-lighter: #ff2f2f;
+    --org-color-low-opacity-color: #FF000070;
+}
+
+.red-canids-color {
+    --org-color: #DB0630;
+    --org-color2: #FF1947;
+    --org-color3: #B32844;
+    --org-color-darker: #8A031E;
+    --org-color-lighter: #DB2D50;
+    --org-color-low-opacity-color: #DB063070;
+}
+
+.sentinels-color {
+    --org-color: #E70045;
+    --org-color2: #E70045;
+    --org-color3: #E70045;
+    --org-color-darker: #770024;
+    --org-color-lighter: #a73759;
+    --org-color-low-opacity-color: #E7004570;
+}
+
+.team-liquid-color {
+    --org-color: #002ec5;
+    --org-color2: #DA9311;
+    --org-color3: #002ec5;
+    --org-color-darker: #00165e;
+    --org-color-lighter: #294ec9;
+    --org-color-low-opacity-color: #002ec570;
+}
+
+.vivo-keyd-color {
+    --org-color: #7A11C5;
+    --org-color2: #7A11C5;
+    --org-color3: #7A11C5;
+    --org-color-darker: #310053;
+    --org-color-lighter: #9a42d8;
+    --org-color-low-opacity-color: #7A11C570;
+}
+
+body::selection {
+    color: var(--black-to-white-color);
+    background-color: var(--org-color-low-opacity);
+}
+
+body {
+    background-color: var(--fifth-color);
+    overflow: auto;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-left: 250px;
+    padding-top: 50px;
+    z-index: -1;
+}
+
+.M-icon {
+    cursor: pointer;
+}
+
+.M-icon:hover {
+    color: var(--org-color2);
+    transition: 0.2s;
+}
+
+.icon-hover {
+    position: absolute;
+    display: flex;
+    min-width: 60px;
+    width: auto;
+    min-height: 23px;
+    font-size: var(--size-font-text);
+    font-weight: 600;
+    background-color: var(--first-color);
+    border-radius: 10px;
+    opacity: 0;
+}
+
+:hover .icon-hover {
+    transition-delay: 0.6s;
+    transition-duration: 0.22s;
+}
+
+
+/*====================================================================================================
+============================================= MENU HEADER ============================================
+====================================================================================================*/
+
+
+.M-menu-header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: var(--third-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+}
+
+.M-menu-header section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    line-height: 50px;
+}
+
+.M-menu-header .M-header-left img {
+    position: absolute;
+    width: 40px;
+    left: 17px;
+}
+
+.M-menu-header .M-header-center .M-header-search {
+    background-color: var(--fourth-color);
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    min-width: 290px;
+    width: 45%;
+    height: 55%;
+    line-height: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5px 0 5px;
+}
+
+.M-menu-header .M-header-center .M-header-search input {
+    outline: none;
+    border: none;
+    width: 200px;
+    background: none;
+    color: var(--org-color2);
+}
+
+.M-menu-header .M-header-right .config-icon {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 24px;
+    height: 100%;
+}
+
+.M-menu-header .M-header-right .config-icon .icon-hover {
+    width: 115px;
+    left: -120px;
+}
+
+.M-menu-header .M-header-right .config-icon:hover .icon-hover {
+    opacity: 0.8;
+}
+
+
+
+/*====================================================================================================
+======================================== CONFIG: S-SETTINGS ==========================================
+====================================================================================================*/
+
+
+main .S-settings {
+    position: relative;
+    width: 40%;
+    min-width: 450px;
+    height: 100%;
+    line-height: 40px;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--second-color);
+    overflow-y: auto;
+}
+
+main .S-settings .S-top {
+    position: relative;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 30px 0 50px;
+}
+
+main .S-settings .S-top::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 23px;
+    min-width: 400px;
+    min-height: 50px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+main .S-settings .S-top .S-logout-icon {
+    position: absolute;
+    width: 35px;
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+    right: 0px;
+    top: 11px;
+    transition: 0.5s;
+    border-right: 2px dashed transparent;
+    z-index: +10;
+}
+
+main .S-settings .S-top .S-logout-icon:hover {
+    color: var(--org-color);
+    border-right: 2px dashed var(--org-color);
+}
+
+main .S-settings .S-top .S-tittle {
+    font-size: var(--size-font-tittle);
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+main .S-settings .S-top .S-logout-icon .icon-hover {
+    left: -80px;
+}
+
+main .S-settings .S-top .S-logout-icon:hover .icon-hover {
+    opacity: 0.8;
+}
+
+main .S-settings .S-top .S-search-icon {
+    position: absolute;
+    left: 25px;
+}
+
+main .S-settings .S-div-search {
+    position: relative;
+    height: 90px;
+    display: flex;
+}
+
+main .S-settings .S-div-search .S-search-buttom {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    width: 350px;
+    background-color: var(--first-color);
+    border-radius: 50px;
+    border: solid 1px var(--border-color);
+    padding: 0 5px 0 5px;
+}
+
+main .S-settings .S-div-search input {
+    width: 80%;
+    outline: none;
+    border-style: none;
+    background-color: transparent;
+}
+
+main .S-settings .S-center {
+    position: relative;
+    margin-top: 3px;
+    height: 100%;
+    width: 100%;
+}
+
+main .S-settings::-webkit-scrollbar {
+    display: none;
+}
+
+main .S-settings .S-center ul .S-buttom {
+    width: 100%;
+    height: 100%;
+}
+
+main .S-settings .S-center ul .S-buttom {
+    line-height: 45px;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    padding-top: 6px;
+    font-size: var(--size-font-subtittle);
+}
+
+main .S-settings .S-center ul .S-buttom::after {
+    content: '';
+    position: absolute;
+    width: 92%;
+    left: 17px;
+    border-bottom: 1px solid var(--border-color);
+    transition: 0.5s;
+}
+
+main .S-settings .S-center ul .S-buttom.active::after {
+    width: 100%;
+    left: 0;
+    transition: 0.5s;
+}
+
+main .S-settings .S-center ul .S-buttom:hover {
+    background-color: var(--fourth-color);
+}
+
+main .S-settings .S-center ul .S-buttom .S-subbuttom .S-back-icon {
+    position: absolute;
+    right: 10px;
+    margin-top: -33px;
+    rotate: 0;
+    transition: 0.4s;
+    font-size: 18px;
+}
+
+main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-back-icon {
+    rotate: -90deg;
+    margin-top: -35px;
+    color: var(--org-color2);
+    transition: 0.3s;
+}
+
+main .S-settings .S-center ul .S-buttom.active {
+    color: var(--org-color);
+    background-color: var(--fourth-color);
+    border-left: 1px solid var(--org-color);
+}
+
+main .S-settings .S-center ul .S-buttom.active p:hover {
+    color: var(--org-color);
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+main .S-settings .S-center ul .S-buttom .S-subbuttom {
+    line-height: 20px;
+    padding-left: 40px;
+    font-size: var(--size-font-text);
+    letter-spacing: 2px;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
+}
+
+main .S-settings .S-center ul .S-buttom.active .S-subbuttom {
+    max-height: 500px;
+}
+
+
+/*====================================================================================================
+======================================= CONFIG: S-SUBSETTINGS ========================================
+====================================================================================================*/
+
+
+main .S-subsettings {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 60%;
+    min-width: 600px;
+    background-color: var(--fourth-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow-y: auto;
+}
+
+main .S-subsettings::-webkit-scrollbar {
+    display: none;
+}
+
+main .S-subsettings .S-account-profile {
+    height: 100%;
+    width: 100%;
+}
+
+main .S-subsettings .S-account-profile section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+main .S-subsettings .S-account-profile section:last-child {
+    border-bottom: none;
+}
+
+main .S-subsettings .S-account-profile section article {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--border-color);
+    line-height: 25px;
+}
+
+main .S-subsettings .S-account-profile .S-back-icon {
+    position: absolute;
+    margin: 10px 0 0 10px;
+    padding: 1px 2px 0 0;
+    font-size: 30px;
+    background-color: var(--fourth-color);
+    border: 1px solid var(--border-color);
+    border-radius: 11px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+main .S-subsettings .S-account-profile .S-back-icon:hover {
+    margin: 9px 0 0 8px;
+    color: var(--org-color);
+    border-color: var(--org-color-darker);
+    font-size: 34px;
+    transition: 0.2s;
+    border-radius: 13px;
+}
+
+main .S-subsettings .S-account-profile .S-article-tittle {
+    font-size: var(--size-font-subtittle);
+    padding-left: 15px;
+    letter-spacing: 2px;
+}
+
+main .S-subsettings .S-account-profile .S-article-subtittle {
+    padding: 0 0 0 30px;
+    font-size: var(--size-font-text);
+}
+
+main .S-subsettings .S-account-profile .S-profile {
+    position: relative;
+    width: 100%;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-cover {
+    position: relative;
+    width: 100%;
+    height: 170px;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 65px;
+    background-color: var(--fourth-color);
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images {
+    position: absolute;
+    display: flex;
+    width: 15%;
+    min-width: 100px;
+    height: 155%;
+    min-height: 75px;
+    max-height: 190px;
+    max-width: 100px;
+    bottom: 5px;
+    left: 15px;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images img {
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .perfil-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-color: var(--fourth-color);
+    border-radius: 100%;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .org-img {
+    position: absolute;
+    width: 33.5%;
+    height: 33%;
+    bottom: 0;
+    right: 3px;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 8px;
+    left: 132px;
+    height: 100%;
+    width: auto;
+    font-size: var(--size-font-text);
+    line-height: 15px;
+    line-height: 16px;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .nick {
+    font-size: 26px;
+    font-weight: bolder;
+    color: var(--org-color);
+    letter-spacing: 0.02em;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
+    font-size: var(--size-font-text);
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a {
+    position: absolute;
+    display: flex;
+    right: 15px;
+    top: 15px;
+    height: 25px;
+    width: 100px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    cursor: pointer;
+    color: lightgray;
+    transition: 0.3s;
+    font-weight: lighter;
+    border-color: var(--border-color);
+    background-color: var(--org-color-darker);
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a:hover {
+    height: 25px;
+    width: 103px;
+    color: var(--org-color);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-color: var(--org-color);
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-numbers {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50px;
+    font-size: var(--size-font-text);
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-numbers span {
+    display: flex;
+    gap: 7px;
+}
+
+main .S-subsettings .S-account-profile .S-profile .S-profile-numbers em {
+    color: var(--org-color);
+    font-size: var(--size-font-subtittle);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+main .S-subsettings .S-account-profile .S-bio {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 0px 5px 0 10px;
+    margin: 0 0 0 10px;
+    border-left: 1px solid var(--border-color);
+    font-size: var(--size-font-subtittle);
+}
+
+main .S-subsettings .S-account-profile .S-bio textarea {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    outline: none;
+    border-style: none;
+    background-color: transparent;
+    padding: 10px 10px 0 0;
+}
+
+main .S-subsettings .S-account-profile .S-theme {
+    position: relative;
+    width: 100%;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 18px;
+    width: 36px;
+    border-radius: 50px;
+    transform: scale(1.5);
+    background-color: var(--fifth-color);
+    font-size: 10px;
+    letter-spacing: 7px;
+    cursor: pointer;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label .S-sun {
+    color: #ffd900;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label .S-moon {
+    color: #2d2dff;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-ball {
+    background-color: var(--black-to-white-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 80%;
+    width: 40.2%;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
+    transform: translateX(18px);
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-options img {
+    width: 4%;
+    min-width: 23px;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
