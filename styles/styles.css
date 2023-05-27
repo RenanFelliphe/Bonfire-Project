@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     color: var(--text-color);
+    transition: 1s color border-color background-color;
 }
 
 :root {
@@ -51,6 +52,7 @@
     --size-font-subtittle: 15px;
     --size-font-text: 13px;
     --size-font-detail: 11px;
+    --size-font-icons: 18px;
 }
 
 
@@ -265,7 +267,7 @@ main {
 .M-menu-header {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 3.2rem;
     background-color: var(--third-color);
     border: 1px solid var(--border-color);
     display: flex;
@@ -276,33 +278,32 @@ main {
     height: 100%;
     width: 100%;
     display: flex;
-    gap: 80px;
-    line-height: 50px;
+    gap: 5rem;
+    line-height: 3.125rem;
 }
 
 .M-menu-header .M-header-left img {
     position: absolute;
-    width: 40px;
-    left: 17px;
+    width: 2.6rem;
+    left: 1.0625rem;
 }
 
 .M-menu-header .M-header-center .M-header-search {
     background-color: var(--fourth-color);
     border: 1px solid var(--border-color);
-    border-radius: 100px;
-    min-width: 290px;
+    border-radius: 5rem;
+    min-width: 18.125rem;
     width: 45%;
     height: 55%;
-    line-height: 50%;
     display: flex;
     justify-content: space-around;
-    padding: 0 5px 0 5px;
+    padding: 0 0.3125rem 0 0.3125rem;
 }
 
 .M-menu-header .M-header-center .M-header-search input {
     outline: none;
     border: none;
-    width: 200px;
+    width: 12.5rem;
     background: none;
     color: var(--org-color2);
 }
@@ -311,14 +312,14 @@ main {
     display: flex;
     position: absolute;
     top: 0;
-    right: 15px;
-    font-size: 24px;
+    right: 0.9rem;
+    font-size: 1.5rem;
     height: 100%;
 }
 
 .M-menu-header .M-header-right .config-icon .icon-hover {
-    width: 115px;
-    left: -120px;
+    width: 7.2rem;
+    left: -7.5rem;
 }
 
 .M-menu-header .M-header-right .config-icon:hover .icon-hover {
@@ -331,16 +332,16 @@ main {
 
 .M-menu-aside {
     position: fixed;
-    top: 49px;
+    top: 3.15rem;
     left: 0;
     height: 100vh;
-    width: 200px;
+    width: 15.65rem;
     background-color: var(--third-color);
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
 }
 .M-menu-aside section{
-    padding: 10px 0 10px 20px;
+    padding: 1rem 0 1rem 1.3rem;
     position: relative;
     height: auto;
 }
@@ -350,21 +351,19 @@ main {
     position: absolute;
     bottom: 0;
     width: 80%;
-    padding-top: 5px;
     border-bottom: 1px solid var(--border-color);
 }
 .M-menu-aside .M-aside-gradient{
     position: absolute;
-    top: -50px;
-    left: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     width: 1px;
     background-color: var(--org-color);
-    box-shadow: 1px 0 2px 0 var(--org-color-lighter);
+    box-shadow: 0 0 5px 0 var(--org-color-lighter);
 }
 .M-menu-aside .M-aside-top{
     position: relative;
-    height: 70px;
+    height: 5rem;
     width: 100%;
 }
 .M-menu-aside .M-aside-center{
@@ -375,7 +374,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 5vh;
+    gap: 3rem;
+    width: 100%;
 }
 /*====================================================================================================
 ======================================== CONFIG: S-SETTINGS ==========================================
@@ -385,9 +385,9 @@ main {
 main .S-settings {
     position: relative;
     width: 40%;
-    min-width: 450px;
+    min-width: 28.152rem;
     height: 100%;
-    line-height: 40px;
+    line-height: 2.5rem;
     border-right: 1px solid var(--border-color);
     background-color: var(--second-color);
     overflow-y: auto;
@@ -395,34 +395,32 @@ main .S-settings {
 
 main .S-settings .S-top {
     position: relative;
-    min-height: 50px;
+    min-height: 3.125rem;
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding: 0px 30px 0 50px;
+    padding: 0 1.875rem 0 3.125rem;
 }
 
 main .S-settings .S-top::after {
     content: '';
     position: absolute;
     bottom: -3px;
-    left: 23px;
-    min-width: 400px;
-    min-height: 50px;
+    left: 1.4rem;
+    min-width: 93%;
     border-bottom: 1px solid var(--border-color);
 }
 
 main .S-settings .S-top .S-logout-icon {
     position: absolute;
-    width: 35px;
+    width: 2.2rem;
     display: flex;
     justify-content: flex-start;
-    height: 30px;
-    right: 0px;
-    top: 11px;
+    height: 1.88rem;
+    right: 0;
+    top: 0.7rem;
     transition: 0.5s;
     border-right: 2px dashed transparent;
-    z-index: +10;
 }
 
 main .S-settings .S-top .S-logout-icon:hover {
@@ -451,7 +449,7 @@ main .S-settings .S-top .S-search-icon {
 
 main .S-settings .S-div-search {
     position: relative;
-    height: 90px;
+    height: 5.5rem;
     display: flex;
 }
 
@@ -459,10 +457,10 @@ main .S-settings .S-div-search .S-search-buttom {
     position: absolute;
     display: flex;
     justify-content: space-evenly;
-    height: 30px;
-    width: 350px;
+    height: 1.9rem;
+    width: 22rem;
     background-color: var(--first-color);
-    border-radius: 50px;
+    border-radius: 5rem;
     border: solid 1px var(--border-color);
     padding: 0 5px 0 5px;
 }
@@ -491,11 +489,9 @@ main .S-settings .S-center ul .S-buttom {
 }
 
 main .S-settings .S-center ul .S-buttom {
-    line-height: 45px;
-    transition: 0.5s;
+    line-height: 3rem;
     letter-spacing: 1px;
-    padding-left: 50px;
-    padding-top: 6px;
+    padding-left: 3rem;
     font-size: var(--size-font-subtittle);
 }
 
@@ -503,7 +499,7 @@ main .S-settings .S-center ul .S-buttom::after {
     content: '';
     position: absolute;
     width: 92%;
-    left: 17px;
+    left: 1.5rem;
     border-bottom: 1px solid var(--border-color);
     transition: 0.5s;
 }
@@ -518,18 +514,17 @@ main .S-settings .S-center ul .S-buttom:hover {
     background-color: var(--fourth-color);
 }
 
-main .S-settings .S-center ul .S-buttom .S-subbuttom .S-back-icon {
+main .S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
     position: absolute;
     right: 10px;
     margin-top: -33px;
     rotate: 0;
     transition: 0.4s;
-    font-size: 18px;
+    font-size: var(--size-font-icons);
 }
 
-main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-back-icon {
+main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
     rotate: -90deg;
-    margin-top: -35px;
     color: var(--org-color2);
     transition: 0.3s;
 }
@@ -547,8 +542,8 @@ main .S-settings .S-center ul .S-buttom.active p:hover {
 }
 
 main .S-settings .S-center ul .S-buttom .S-subbuttom {
-    line-height: 20px;
-    padding-left: 40px;
+    line-height: 1.5rem;
+    padding-left: 2.5rem;
     font-size: var(--size-font-text);
     letter-spacing: 2px;
     overflow: hidden;
@@ -571,7 +566,7 @@ main .S-subsettings {
     display: block;
     height: 100%;
     width: 60%;
-    min-width: 600px;
+    min-width: 37.5rem;
     background-color: var(--fourth-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -595,7 +590,7 @@ main .S-subsettings .S-account-profile section {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 0.7rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -607,14 +602,14 @@ main .S-subsettings .S-account-profile section article {
     width: 100%;
     height: auto;
     border-bottom: 1px solid var(--border-color);
-    line-height: 25px;
+    line-height: 2rem;
 }
 
 main .S-subsettings .S-account-profile .S-back-icon {
     position: absolute;
     margin: 10px 0 0 10px;
     padding: 1px 2px 0 0;
-    font-size: 30px;
+    font-size: 2rem;
     background-color: var(--fourth-color);
     border: 1px solid var(--border-color);
     border-radius: 11px;
@@ -624,22 +619,20 @@ main .S-subsettings .S-account-profile .S-back-icon {
 }
 
 main .S-subsettings .S-account-profile .S-back-icon:hover {
-    margin: 9px 0 0 8px;
     color: var(--org-color);
     border-color: var(--org-color-darker);
-    font-size: 34px;
     transition: 0.2s;
-    border-radius: 13px;
+    border-radius: 15px;
 }
 
 main .S-subsettings .S-account-profile .S-article-tittle {
     font-size: var(--size-font-subtittle);
-    padding-left: 15px;
+    padding-left: 1rem;
     letter-spacing: 2px;
 }
 
 main .S-subsettings .S-account-profile .S-article-subtittle {
-    padding: 0 0 0 30px;
+    padding: 0 0 0 2rem;
     font-size: var(--size-font-text);
 }
 
@@ -672,13 +665,13 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     position: absolute;
     display: flex;
     width: 15%;
-    min-width: 100px;
+    min-width: 6.25rem;
     height: 155%;
-    min-height: 75px;
-    max-height: 190px;
-    max-width: 100px;
-    bottom: 5px;
-    left: 15px;
+    min-height: 4.7rem;
+    max-height: 12rem;
+    max-width: 6.25rem;
+    bottom: 0.3rem;
+    left: 1rem;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images img {
@@ -706,7 +699,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     width: 33.5%;
     height: 33%;
     bottom: 0;
-    right: 3px;
+    right: 0.1875rem;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
@@ -714,35 +707,30 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 8px;
-    left: 132px;
+    padding-bottom: 0.5rem;
+    left: 8.25rem;
     height: 100%;
     width: auto;
     font-size: var(--size-font-text);
-    line-height: 15px;
-    line-height: 16px;
+    line-height: 1rem;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .nick {
-    font-size: 26px;
+    font-size: 1.7rem;
     font-weight: bolder;
     color: var(--org-color);
-    letter-spacing: 0.02em;
-}
-
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
-    font-size: var(--size-font-text);
+    letter-spacing: 2px;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a {
     position: absolute;
     display: flex;
-    right: 15px;
-    top: 15px;
-    height: 25px;
-    width: 100px;
+    right: 1rem;
+    top: 1rem;
+    height: 1.7rem;
+    width: 6rem;
     border: 1px solid var(--border-color);
-    border-radius: 15px;
+    border-radius: 10rem;
     cursor: pointer;
     color: lightgray;
     transition: 0.3s;
@@ -752,8 +740,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-pro
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a:hover {
-    height: 25px;
-    width: 103px;
+    width: 6.2rem;
     color: var(--org-color);
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -765,13 +752,13 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-numbers {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    height: 50px;
+    height: 3.2rem;
     font-size: var(--size-font-text);
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-numbers span {
     display: flex;
-    gap: 7px;
+    gap: 0.5rem;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-numbers em {
@@ -784,9 +771,9 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-numbers em {
 main .S-subsettings .S-account-profile .S-bio {
     position: relative;
     width: 100%;
-    height: 100px;
-    padding: 0px 5px 0 10px;
-    margin: 0 0 0 10px;
+    height: 6.25rem;
+    padding-left: 0.8rem;
+    margin-left: 1rem;
     border-left: 1px solid var(--border-color);
     font-size: var(--size-font-subtittle);
 }
@@ -798,7 +785,6 @@ main .S-subsettings .S-account-profile .S-bio textarea {
     outline: none;
     border-style: none;
     background-color: transparent;
-    padding: 10px 10px 0 0;
 }
 
 main .S-subsettings .S-account-profile .S-theme {
@@ -807,11 +793,10 @@ main .S-subsettings .S-account-profile .S-theme {
 }
 
 main .S-subsettings .S-account-profile .S-theme .S-toggle-mode {
-    width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 2rem;
 }
 
 main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox {
@@ -824,14 +809,14 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
-    height: 18px;
-    width: 36px;
-    border-radius: 50px;
+    padding: 0.3rem;
+    height: 1.1rem;
+    width: 2.25rem;
+    border-radius: 10rem;
     transform: scale(1.5);
     background-color: var(--fifth-color);
-    font-size: 10px;
-    letter-spacing: 7px;
+    font-size: 0.63rem;
+    letter-spacing: 0.5rem;
     cursor: pointer;
 }
 
@@ -851,24 +836,23 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-ball {
     left: 2px;
     height: 80%;
     width: 40.2%;
-    transform: translateX(0px);
+    transform: translateX(0);
     transition: transform 0.2s linear;
 }
 
 main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
-    transform: translateX(18px);
+    transform: translateX(1.1rem);
 }
 
 main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-options {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 15px;
+    margin-bottom: 2rem;
 }
 
 main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-options img {
-    width: 4%;
-    min-width: 23px;
+    width: 2rem;
     cursor: pointer;
     transition: var(--tran-03);
 }
