@@ -550,9 +550,17 @@ main .S-settings .S-center ul .S-buttom .S-subbuttom {
     max-height: 0;
     transition: 0.5s;
 }
-
+main .S-settings .S-center ul .S-buttom .S-subbuttom li{
+    opacity: 0;
+    transition: 1.5s;
+}
+main .S-settings .S-center ul .S-buttom.active .S-subbuttom li{
+    opacity: 1;
+    transition: 0.4s;
+}
 main .S-settings .S-center ul .S-buttom.active .S-subbuttom {
     max-height: 500px;
+    opacity: 1;
 }
 
 
