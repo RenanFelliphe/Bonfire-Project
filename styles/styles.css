@@ -285,8 +285,8 @@ main {
 
 .M-menu-header .M-header-left img {
     position: absolute;
-    width: 2.6rem;
-    left: 1.0625rem;
+    width: 2.2rem;
+    left: 1.17rem;
 }
 
 .M-menu-header .M-header-center .M-header-search {
@@ -341,6 +341,7 @@ main {
     background-color: var(--third-color);
     border: 1px solid var(--border-color);
     border-top: none;
+    transition: width 0.5s;
 }
 
 .M-menu-aside.close {
@@ -349,6 +350,7 @@ main {
 
 .M-menu-aside .M-icon{
     padding-left: 1.8rem;
+    transition: 0.5s;
 }
 
 .M-menu-aside.close .M-tittle{
@@ -376,10 +378,6 @@ main {
     width: 60%;
 }
 
-.M-menu-aside section::before:hover{
-    color: var(--org-color);
-}
-
 .M-menu-aside section:last-child::before{
     display: none;
 }
@@ -397,7 +395,8 @@ main {
     background-color: var(--org-color);
     box-shadow: 0 0 5px 0 var(--org-color-lighter);
     z-index: +1;
-    transition: 0.5s;
+    transition: 0.6s;
+    transform: translateY(-50px);
 }
 .M-menu-aside.close .M-aside-gradient{
     height: 0;
@@ -413,19 +412,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 1rem;
+    
 }
 
 .M-menu-aside .M-aside-center ul li{
     height: 2.2rem;
-    line-height: 2.2rem;
+    line-height: 2.7rem;
     font-size: var(--size-font-subtittle);
+    transition: 0.5s;
 }
 
 .M-menu-aside .M-aside-center ul li.active{
     height: 2.7rem;
     line-height: 2.7rem;
     width: calc(100% + 2px);
+    transition: line-height 0;
     padding-left: 1.5rem;
     background-color: var(--fifth-color);
     border: 1px solid var(--border-color);
@@ -448,7 +450,14 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li a span{
+    position: fixed;
     padding-left: 0.8rem;
+    transition: 0.5s;
+}
+
+.M-menu-aside.close .M-aside-center ul li a span{
+    transform: translateX(-4rem);
+    transition: 0.5s;
 }
 
 .M-menu-aside .M-aside-center ul li.active a span{
