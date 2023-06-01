@@ -39,7 +39,7 @@
     --org-color: #00e226;
     --org-color2: #00e226;
     --org-color3: #00e226;
-    --org-color-darker: #005f10;
+    --org-color-darker: #008516;
     --org-color-lighter: #61ff7c;
     --org-color-low-opacity: #00ff2a70;
     /*Cor de cada organização, porém com opacidade reduzida*/
@@ -100,6 +100,7 @@
     --fourth-color: #F9FAFF;
     --fifth-color: #EBEBF5;
 }
+
 
 .fluxo-color {
     --org-color: #C300FF;
@@ -326,55 +327,84 @@ main {
     opacity: 0.8;
 }
 
+
 /*====================================================================================================
 ============================================ MENU ASIDE ==============================================
 ====================================================================================================*/
 
 .M-menu-aside {
     position: fixed;
-    top: 3.08rem;
+    top: 3.15rem;
     left: 0;
     height: 100vh;
     width: 15.65rem;
     background-color: var(--third-color);
-    border-right: 1px solid var(--border-color);
-    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-top: none;
 }
+
 .M-menu-aside.close {
-    width: 80px;
+    width: 5rem;
 }
+
 .M-menu-aside .M-icon{
-    padding-left: 1.3rem;
+    padding-left: 1.8rem;
 }
+
+.M-menu-aside.close .M-tittle{
+    opacity: 0;
+}
+
 .M-menu-aside section{
     padding: 1rem 0 1rem 0;
     position: relative;
     height: auto;
 }
+
 .M-menu-aside section::before{
     content: '';
     display: block;
     position: absolute;
     bottom: 0;
-    width: 80%;
+    width: 87%;
     border-bottom: 1px solid var(--border-color);
+    margin-left: 1rem;
+    transition: 0.3s;
 }
+
+.M-menu-aside.close section::before{
+    width: 60%;
+}
+
+.M-menu-aside section::before:hover{
+    color: var(--org-color);
+}
+
 .M-menu-aside section:last-child::before{
     display: none;
 }
 
+.M-menu-aside.section-highlight section::before {
+    border-bottom-color: var(--org-color-darker);
+    box-shadow: 0 0 3px 0 var(--org-color-darker);
+}
+
 .M-menu-aside .M-aside-gradient{
     position: absolute;
-    top: 0;
-    bottom: 0;
     width: 1px;
+    height: 100vh;
+    bottom: 0;
     background-color: var(--org-color);
     box-shadow: 0 0 5px 0 var(--org-color-lighter);
     z-index: +1;
+    transition: 0.5s;
+}
+.M-menu-aside.close .M-aside-gradient{
+    height: 0;
 }
 .M-menu-aside .M-aside-top{
     position: relative;
-    height: 5rem;
+    height: 6rem;
     width: 100%;
 }
 
@@ -393,54 +423,70 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li.active{
-    width: 102%;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    width: calc(100% + 2px);
     padding-left: 1.5rem;
     background-color: var(--fifth-color);
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-left-color: var(--fifth-color);
+    margin-left: -1px;
 }
+
 .M-menu-aside.close .M-aside-center ul li.active{
     padding-left: 0;
 }
+
 .M-menu-aside .M-aside-center ul li a{
     position: absolute;
     width: 100%;
 }
+
 .M-menu-aside .M-aside-center ul li.active a{
     font-size: 120%;
 }
+
 .M-menu-aside .M-aside-center ul li a span{
     padding-left: 0.8rem;
 }
+
 .M-menu-aside .M-aside-center ul li.active a span{
     color: var(--org-color);
     letter-spacing: 2px;
     font-weight: bold;
 }
+
 .M-menu-aside .M-aside-center ul li a .M-icon{
     height: 2.2rem;
     line-height: 2.2rem;
     color: var(--org-color);
 }
+
 .M-menu-aside .M-aside-footer .menu-buttom i{
     position: absolute;
-    font-size: var(--size-font-tittle);
+    font-size: calc(var(--size-font-tittle) + 0.3rem);
     transition: 0.5s;
-
+    padding-left: 1.42rem;
 }
 
 .M-menu-aside .M-aside-footer .menu-buttom i.close{
-    opacity: 0;
+    opacity: 1;
     color: var(--org-color);
-    transform: rotate(-360deg);
+    font-size: calc(var(--size-font-tittle) + 0.8rem);
+    padding-left: 1.17rem;
+    margin-top: -0.2rem;
 }
+
 .M-menu-aside.close .M-aside-footer .menu-buttom i.close{
+    opacity: 0;
+}
+
+.M-menu-aside.close .M-aside-footer .menu-buttom i.open{
     opacity: 1;
 }
 .M-menu-aside .M-aside-footer .menu-buttom i.open{
-    opacity: 1;
-}
-.M-menu-aside.close .M-aside-footer .menu-buttom i.open{
     opacity: 0;
-    transform: rotate(-360deg);
 }
 
 
@@ -781,9 +827,9 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 0.5rem;
     left: 8.25rem;
     height: 100%;
+    gap: 0.5rem;
     width: auto;
     font-size: var(--size-font-text);
     line-height: 1rem;
@@ -795,7 +841,9 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
     color: var(--org-color);
     letter-spacing: 2px;
 }
-
+main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
+    padding-left: 0.2rem;
+}
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a {
     position: absolute;
     display: flex;
