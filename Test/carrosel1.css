@@ -21,12 +21,7 @@
     --fourth-color: #232325;
     --fifth-color: #18191a;
     /* ========= CORES DAS ORGS ========= */
-    --org-color: #00e226;
-    --org-color2: #00e226;
-    --org-color3: #00e226;
-    --org-color-darker: #005f10;
-    --org-color-lighter: #61ff7c;
-    --org-color-low-opacity: #00ff2a70;
+    
     /*Cor de cada organização, porém com opacidade reduzida*/
 }
 
@@ -160,7 +155,20 @@ body {
     --org-color-lighter: "";
     --org-color-low-opacity-color: "";
 }
-
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.Colors span:last-of-type{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--org-color);
+    content: '';
+}
 .container {
     position: relative;
     padding: 15px;
