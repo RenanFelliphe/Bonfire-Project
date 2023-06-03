@@ -1,3 +1,289 @@
-.cards img{
-    width: 50px;
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+    /* ============== CORES ============== */
+    --black-to-white-color: #E2E2E2;
+    /*Essa cor deve ser preta no modo claro e branca no modo escuro*/
+    --white-to-black-color: #131313;
+    /*Essa cor deve ser branca no modo claro e preta no modo escuro*/
+
+    --text-color: #9E9C9C;
+    /*Cor dos Textos*/
+    --border-color: #585757;
+    /*Cor das Bordas*/
+
+    --first-color: #383A3B;
+    --second-color: #27282A;
+    /*Cor de primeiro foco*/
+    --third-color: #242526;
+    /*Cor dos Menus*/
+    --fourth-color: #232325;
+    /*Cor de sergundo foco*/
+    --fifth-color: #18191A;
+    /*Cor do body*/
+
+    /* ========= CORES DAS ORGS ========= */
+    --org-color: #00EB00;
+    --org-color2: #00e226;
+    --org-color3: #00e226;
+    --org-color-darker: #008516;
+    --org-color-lighter: #61ff7c;
+    --org-color-low-opacity: #00ff2a70;
+    /*Cor de cada organização, porém com opacidade reduzida*/
+
+    /* ============== FONTES ============== */
+
+    --family-font-title: 'Montserrat', 'sans-serif';
+
+    --size-font-title: 25px;
+    --size-font-subtitle: 15px;
+    --size-font-text: 13px;
+    --size-font-detail: 11px;
+    --size-font-icons: 18px;
+
+    /* ============== TANSIÇÕES ============== */
+    --menu-aside-open: 0.5s;
+    --menu-aside-close: 0.7s;
+}
+
+
+/*====================================================================================================
+=============================== DEFINIÇÃO / SUBSTITUIÇÃO DAS VÁRIAVEIS ===============================
+====================================================================================================*/
+
+.dark-mode {
+    /* ============== CORES ============== */
+
+    --black-to-white-color: #E2E2E2;
+    --white-to-black-color: #131313;
+
+    --text-color: #9E9C9C;
+    --border-color: #585757;
+
+    --first-color: #383A3B;
+    --second-color: #27282A;
+    --third-color: #242526;
+    --fourth-color: #232325;
+    --fifth-color: #18191A;
+}
+
+.fluxo-color {
+    --org-color: #C300FF;
+    --org-color2: #C91085;
+    --org-color3: #C300FF;
+    --org-color-darker: #680088;
+    --org-color-lighter: #D650FF;
+    --org-color-low-opacity-color: #C300FF70;
+}
+
+.kru-color {
+    --org-color: #FF00B3;
+    --org-color2: #FF00B3;
+    --org-color3: #FF00B3;
+    --org-color-darker: #910065;
+    --org-color-lighter: #ff5dce;
+    --org-color-low-opacity-color: #FF00B370;
+}
+
+.leviatan-color {
+    --org-color: #4687BD;
+    --org-color2: #4687BD;
+    --org-color3: #4687BD;
+    --org-color-darker: #20425C;
+    --org-color-lighter: #6DBAFA;
+    --org-color-low-opacity-color: #4687BD70;
+}
+
+.liberty-color {
+    --org-color: #00FFFF;
+    --org-color2: #00FFFF;
+    --org-color3: #00FFFF;
+    --org-color-darker: #006969;
+    --org-color-lighter: #7DFFFF;
+    --org-color-low-opacity-color: #00FFFF70;
+}
+
+.los-color {
+    --org-color: #FF4500;
+    --org-color2: #FF4500;
+    --org-color3: #FF4500;
+    --org-color-darker: #AC2E00;
+    --org-color-lighter: #FF6027;
+    --org-color-low-opacity-color: #FF450070;
+}
+
+.loud-color {
+    --org-color: #00EB00;
+    --org-color2: #00EB00;
+    --org-color3: #00EB00;
+    --org-color-darker: #007200;
+    --org-color-lighter: #2DFF2D;
+    --org-color-low-opacity-color: #00FF2A70;
+}
+
+.magic-squad-color {
+    --org-color: #0EB1A9;
+    --org-color2: #0EB1A9;
+    --org-color3: #0EB1A9;
+    --org-color-darker: #006969;
+    --org-color-lighter: #55b9b4;
+    --org-color-low-opacity-color: #0EB1A970;
+}
+
+.pain-color {
+    --org-color: #FF0000;
+    --org-color2: #FF0000;
+    --org-color3: #FF0000;
+    --org-color-darker: #810000;
+    --org-color-lighter: #ff2f2f;
+    --org-color-low-opacity-color: #FF000070;
+}
+
+.red-canids-color {
+    --org-color: #DB0630;
+    --org-color2: #FF1947;
+    --org-color3: #B32844;
+    --org-color-darker: #8A031E;
+    --org-color-lighter: #DB2D50;
+    --org-color-low-opacity-color: #DB063070;
+}
+
+.sentinels-color {
+    --org-color: #E70045;
+    --org-color2: #E70045;
+    --org-color3: #E70045;
+    --org-color-darker: #770024;
+    --org-color-lighter: #a73759;
+    --org-color-low-opacity-color: #E7004570;
+}
+
+.team-liquid-color {
+    --org-color: #002ec5;
+    --org-color2: #DA9311;
+    --org-color3: #002ec5;
+    --org-color-darker: #00165e;
+    --org-color-lighter: #294ec9;
+    --org-color-low-opacity-color: #002ec570;
+}
+
+.vivo-keyd-color {
+    --org-color: #7A11C5;
+    --org-color2: #7A11C5;
+    --org-color3: #7A11C5;
+    --org-color-darker: #310053;
+    --org-color-lighter: #9a42d8;
+    --org-color-low-opacity-color: #7A11C570;
+}
+/***************************************************************/
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #18191A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.gallery-wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #232325;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  border: 1px solid #585757;
+  color: white;
+}
+.gallery-wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+
+.gallery-wrapper i:first-child{
+  left: -22px;
+}
+
+.gallery-wrapper i:last-child{
+  right: -22px;
+}
+
+.gallery-wrapper .gallery{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  gap: 29px;
+  align-items: center;
+  height: 200px;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery.no-transition {
+  scroll-behavior: auto;
+}
+
+.gallery.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.gallery.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.gallery .card {
+  scroll-snap-align: start;
+  height: 150px;
+  width: 150px;
+  list-style: none;
+  background: #232325;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #585757;
+}
+
+.card img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.card.current{
+    width: 85%;
+    height: 95%;
+    border-color: var(--org-color);
+    box-shadow: 0 0 6px 0px var(--org-color);
+}
+.card.current img{
+    width: 80%;
+    height: 80%;
 }
