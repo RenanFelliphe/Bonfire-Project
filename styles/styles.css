@@ -766,10 +766,15 @@ main .S-subsettings .S-account-profile .S-back-icon:hover {
     border-radius: 15px;
 }
 
-main .S-subsettings .S-account-profile .S-article-title {
+main .S-subsettings .S-account-profile article .S-article-title {
     font-size: var(--size-font-subtitle);
     padding: 0 0 0.5rem 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    transition: color 0.4s;
+}
+main .S-subsettings .S-account-profile article:hover .S-article-title {
+    color: var(--org-color);
+    transition: color 0.3s;
 }
 
 main .S-subsettings .S-account-profile .S-article-subtitle {
