@@ -13,44 +13,32 @@ listElements.forEach(listElement => {
   })
 });
 
-const chk = document.getElementById('S-chk')
-chk.addEventListener('change', () => {
-  document.body.classList.toggle('light-mode')
-})
+//Define o MODO(Light/Dark) e as CORES do site
+function defineTheme() {
+  const colorCards = document.querySelectorAll('.S-card');
 
-document.getElementById("btn-fluxo").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "fluxo-color");
-})
-document.getElementById("btn-kru").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "kru-color");
-})
-document.getElementById("btn-leviatan").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "leviatan-color");
-})
-document.getElementById("btn-liberty").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "liberty-color");
-})
-document.getElementById("btn-los").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "los-color");
-})
-document.getElementById("btn-loud").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "loud-color");
-})
-document.getElementById("btn-magic-squad").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "magic-squad-color");
-})
-document.getElementById("btn-pain").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "pain-color");
-})
-document.getElementById("btn-red-canids").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "red-canids-color");
-})
-document.getElementById("btn-sentinels").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "sentinels-color");
-})
-document.getElementById("btn-team-liquid").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "team-liquid-color");
-})
-document.getElementById("btn-vivo-keyd").addEventListener("click", function () {
-  document.querySelector("body").setAttribute("class", "vivo-keyd-color");
-})
+  function updateColors() {
+    const currentCard = document.querySelector('.S-card.current');
+    document.documentElement.className = currentCard.classList[1];
+  }
+
+  function updateMode() {
+    const chk = document.getElementById('S-chk');
+    chk.addEventListener('change', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  }
+
+  colorCards.forEach(card => {
+    card.addEventListener('click', function() {
+      colorCards.forEach(card => card.classList.remove("current"));
+      this.classList.add("current");
+      updateColors(); // Atualiza as cores com base na seleção atual
+    });
+  });
+
+  updateMode(); // Ativa a funcionalidade de alternar entre o modo claro e escuro
+  updateColors(); // Atualiza as cores com base na seleção inicial
+}
+
+defineTheme();

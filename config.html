@@ -9,6 +9,7 @@
     <link rel="icon" href="assets/logo.jpeg">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
 
     <title>Bonfire</title>
@@ -57,8 +58,14 @@
                 </li>
                 <li class="M-aside-list">
                     <a class="list-title">
-                        <i class='bx bx-movie-play M-icon'></i>
-                        <span> Videos </span>
+                        <i class='bx bx-calendar M-icon'></i>
+                        <span class="M-tittle"> Calendário </span>
+                    </a>
+                </li>
+                <li class="M-aside-list">
+                    <a class="list-title">
+                        <i class='bx bx-chat M-icon'></i>
+                        <span class="M-tittle"> Explorar </span>
                     </a>
                 </li>
                 <li class="M-aside-list">
@@ -89,18 +96,6 @@
                     <a class="list-title">
                         <i class='bx bx-lock M-icon'></i>
                         <span> Cofre </span>
-                    </a>
-                </li>
-                <li class="M-aside-list">
-                    <a class="list-title">
-                        <i class='bx bx-calendar M-icon'></i>
-                        <span> Calendário </span>
-                    </a>
-                </li>
-                <li class="M-aside-list">
-                    <a href class="list-title">
-                        <i class='bx bx-chat M-icon'></i>
-                        <span> Explorar </span>
                     </a>
                 </li>
             </ul>
@@ -138,16 +133,19 @@
                                 <p> Perfil </p>
                             </li>
                             <li>
+                                <p> Vitrine </p>
+                            </li>
+                            <li>
                                 <p> Informações Pessoais </p>
                             </li>
                             <li>
                                 <p> Melhores Amigos </p>
                             </li>
                             <li>
-                                <p> Temas </p>
+                                <p> Tema </p>
                             </li>
                             <li>
-                                <p> Email e Senha </p>
+                                <p> Fonte </p>
                             </li>
                             <li>
                                 <p> Meus Jogos </p>
@@ -174,6 +172,9 @@
                         <ul class="S-subbuttom">
                             <i class='bx bxs-chevron-down S-open-list-icon'></i>
                             <li>
+                                <p> Visibilidade </p>
+                            </li>
+                            <li>
                                 <p> Contas Bloqueadas </p>
                             </li>
                             <li>
@@ -195,10 +196,10 @@
                         <ul class="S-subbuttom">
                             <i class='bx bxs-chevron-down S-open-list-icon'></i>
                             <li>
-                                <p> Modo Escuro </p>
+                                <p> Tema </p>
                             </li>
                             <li>
-                                <p> Cores Personalizadas </p>
+                                <p> Fonte </p>
                             </li>
                         </ul>
                     </li>
@@ -280,19 +281,37 @@
                         </div>
 
                     </article>
+                    <article class="S-showcase">
+                        <h1 class="S-article-title"> Vitrine </h1>
+                    </article>
                     <article class="S-profile">
-                        <h1 class="S-article-tittle"> Informações Pessoais </h1>
+                        <h1 class="S-article-title"> Informações Pessoais </h1>
+                        <div class="S-name">
+                            <p class="S-article-subtitle"> Nome: (Editar) </p>
+                        </div>
+                        <div class="S-nick">
+                            <p class="S-article-subtitle"> Apelido: (Editar) </p>
+                        </div>
+                        <div class="S-email">
+                            <p class="S-article-subtitle"> Email: (Editar) </p>
+                        </div>
+                        <div class="S-password">
+                            <p class="S-article-subtitle"> Senha: (Editar, ver dica)</p>
+                        </div>
+                        <div class="S-born-date">
+                            <p class="S-article-subtitle"> Data de nascimento: (Editar)</p>
+                        </div>
                     </article>
 
                     <article class="S-close-friends">
-                        <h1 class="S-article-tittle"> Melhores Amigos </h1>
+                        <h1 class="S-article-title"> Melhores Amigos </h1>
                     </article>
 
                     <article class="S-theme">
-                        <h1 class="S-article-tittle"> Tema </h1>
+                        <h1 class="S-article-title"> Tema </h1>
 
                         <div class="S-toggle-mode">
-                            <p class="S-article-subtittle"> Modo Claro / Escuro: </p>
+                            <p class="S-article-subtitle"> Modo Claro / Escuro: </p>
                             <input type="checkbox" class="S-checkbox" id="S-chk">
                             <label class="S-label" for="S-chk">
                                 <i class='bx bxs-sun S-sun'></i>
@@ -301,34 +320,44 @@
                             </label>
                         </div>
 
+                        <p class="S-article-subtitle"> Paleta de Cores: </p>
                         <div class="S-toggle-color">
-                            <p class="S-article-subtittle"> Paleta de Cores: </p>
                             <div class="S-card-slider">
-                                    <i class="bi bi-caret-left arrow-left control" id="left" aria-label="Previous image"></i>
-                                    <div class="gallery">
-                                        <span class="item current"><img src="assets/fluxo.png"></span>
-                                        <span class="item"><img src="assets/kru.png"></span>
-                                        <span class="item"><img src="assets/leviatan.png"></span>
-                                        <span class="item"><img src="assets/los.png"></span>
-                                        <span class="item"><img src="assets/loud.png"></span>
-                                        <span class="item"><img src="assets/magic-squad.png"></span>
-                                        <span class="item"><img src="assets/pain.png"></span>
-                                        <span class="item"><img src="assets/red-canids.png"></span>
-                                        <span class="item"><img src="assets/sentinels.png"></span>
-                                        <span class="item"><img src="assets/team-liquid.png"></span>
-                                        <span class="item"><img src="assets/vivo-keyd.webp"></span>
-                                    </div>
-                                    <i class="bi bi-caret-right arrow-right control" id="right" aria-label="Next image"></i>
+                                <div class="S-gallery">
+                                    <i id="left" class="fa-solid fa-angle-left"></i>
+                                    <span class="S-card fluxo-color"><img src="assets/fluxo.png"></span>
+                                    <span class="S-card kru-color"><img src="assets/kru.png"></span>
+                                    <span class="S-card leviatan-color"><img src="assets/leviatan.png"></span>
+                                    <span class="S-card los-color"><img src="assets/los.png"></span>
+                                    <span class="S-card loud-color current"><img src="assets/loud.png"></span>
+                                    <span class="S-card magic-squad-color"><img src="assets/magic-squad.png"></span>
+                                    <span class="S-card pain-color"><img src="assets/pain.png"></span>
+                                    <span class="S-card red-canids-color"><img src="assets/red-canids.png"></span>
+                                    <span class="S-card sentinels-color"><img src="assets/sentinels.png"></span>
+                                    <span class="S-card team-liquid-color"><img src="assets/team-liquid.png"></span>
+                                    <span class="S-card vivo-keyd-color"><img src="assets/vivo-keyd.webp"></span>
+                                    <i id="left" class="fa-solid fa-angle-right"></i>
+                                </div>
                             </div>
                         </div>
                     </article>
-
-                    <article class="S-email-senha">
-                        <h1 class="S-article-tittle"> Email e Senha </h1>
+                    <article class="S-font-style">
+                        <h1 class="S-article-title"> Fonte </h1>
+                        <div class="S-font-type">
+                            <p class="S-article-subtitle"> Tipo: </p>
+                        </div>
+                        <div class="S-font-size">
+                            <p class="S-article-subtitle"> Tamanho: </p>
+                        </div>
+                        <div class="S-font-weight">
+                            <p class="S-article-subtitle"> Espessura: </p>
+                        </div>
                     </article>
-
+                    <article class="S-my-games">
+                        <h1 class="S-article-title"> Meus Jogos </h1>
+                    </article>
                     <article class="S-statistics">
-                        <h1 class="S-article-tittle"> Estatísticas </h1>
+                        <h1 class="S-article-title"> Estatísticas da Conta</h1>
                     </article>
                 </section>
 

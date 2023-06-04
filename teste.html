@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>INFINITE</title>
+    <link rel="stylesheet" href="styles/TESTE.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/teste.css">
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
-    <title>CURRENT ITEM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <button class="arrow-left control" aria-label="Previous image">◀</button>
-        <button class="arrow-right control" aria-label="Next Image">▶</button>
-        <div class="gallery-wrapper">
-            <div class="gallery">
-                <img src="assets/fluxo.png" alt="FLUXO GG" class="item current-item">
-                <img src="assets/kru.png" alt="KRU" class="item">
-                <img src="assets/leviatan.png" alt="LEVIATÁN" class="item">
-                <img src="assets/los.png" alt="LOS GRANDES" class="item">
-                <img src="assets/loud.png" alt="LOUD GG" class="item">
-                <img src="assets/magic-squad.png" alt="MAGIC SQUAD" class="item">
-                <img src="assets/pain.png" alt="PAIN GAMING" class="item">
-                <img src="assets/red-canids.png" alt="RED CANIDS" class="item">
-                <img src="assets/sentinels.png" alt="SENTINELS" class="item">
-                <img src="assets/team-liquid.png" alt="TEAM LIQUID" class="item">
-                <img src="assets/vivo-keyd.webp" alt="VIVO KEYD" class="item">
-            </div>
+    <div class="gallery-wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="gallery">
+            <span class="card"><img src="assets/fluxo.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/kru.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/leviatan.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/liberty.png" alt="img" draggable="false"></span>
+            <span class="card current"><img src="assets/los.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/loud.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/magic-squad.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/pain.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/red-canids.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/sentinels.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/team-liquid.png" alt="img" draggable="false"></span>
+            <span class="card"><img src="assets/vivo-keyd.webp" alt="img" draggable="false"></span>
         </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
-    <script src="js/teste.js"> </script>
+    <script src="js/TESTE.js" defer></script>
 </body>
 
 </html>
