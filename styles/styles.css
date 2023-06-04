@@ -987,15 +987,59 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox:check
     transform: translateX(1.1rem);
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-options {
+main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2rem;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-options img {
+main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider img {
     width: 2rem;
     cursor: pointer;
     transition: var(--tran-03);
+}
+
+.S-card-slider{
+    width: 100%;
+    position: relative;
+    height: 100px;
+}
+
+.S-card-slider .gallery{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 5));
+    overflow-x: auto;
+    align-items: center;
+    width: 600px;
+    gap: 15px;
+    padding-left: 40px;
+}
+
+.S-card-slider .gallery .item{
+    height: 100%;
+    width: 60%;
+    background: #232325;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #585757;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.S-card-slider .gallery .item img {
+    width: 105%;
+    height: 75%;
+    object-fit: contain;
+}
+
+.S-card-slider .gallery::-webkit-scrollbar{
+    display: none;
+}
+
+.S-card-slider i {
+    font-size: 1.5rem;
+    cursor: pointer;
 }
