@@ -409,11 +409,11 @@ main {
     transition: var(--menu-aside-close);
 }
 .M-menu-aside .M-aside-top{
+    display: flex;
     position: relative;
     height: 13vh;
     width: 100%;
 }
-
 .M-menu-aside .M-aside-center ul{
     width: 100%;
     display: flex;
@@ -828,6 +828,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     position: relative;
     width: 100%;
     height: 100%;
+    border-radius: 45px;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images::before {
@@ -836,7 +837,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     width: 110%;
     height: 110%;
     background-color: var(--fourth-color);
-    border-radius: 100%;
+    border-radius: 45px;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .org-img {
