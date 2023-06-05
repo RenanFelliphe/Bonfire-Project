@@ -310,7 +310,6 @@ main {
     border: none;
     width: 12.5rem;
     background: none;
-    color: var(--org-color2);
 }
 
 .M-menu-header .M-header-right .config-icon {
@@ -411,7 +410,7 @@ main {
 }
 .M-menu-aside .M-aside-top{
     position: relative;
-    height: 6rem;
+    height: 13vh;
     width: 100%;
 }
 
@@ -420,12 +419,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 4.2vh;
 }
 
 .M-menu-aside .M-aside-center ul li{
-    height: 2rem;
-    line-height: 3rem;
+    height: 5vh;
+    line-height: 6vh;
     font-size: calc(var(--size-font-subtitle) + 0.1rem);
     transition: var(--menu-aside-open);
 }
@@ -434,8 +433,8 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li.active{
-    height: 3rem;
-    line-height: 3rem;
+    height: 6vh;
+    line-height: 6vh;
     width: calc(100% + 2px);
     padding-left: 1.5rem;
     background-color: var(--fifth-color);
@@ -487,7 +486,7 @@ main {
     position: absolute;
     font-size: calc(var(--size-font-title) + 0.8rem);
     transition: var(--menu-aside-open);
-    padding-left: 1.2rem;
+    padding: 0.5vh 0 0 1.2rem;
 }
 
 .M-menu-aside .M-aside-footer .menu-buttom i.close{
