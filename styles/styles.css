@@ -502,10 +502,10 @@ main {
 ======================================== INDEX: I-QUICK-MESSAGES ==========================================
 ====================================================================================================*/
 
-main .I-quick-messages{
+main .Q-quick-messages{
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 30%;
     height: 60%;
     background-color: var(--third-color);
@@ -513,15 +513,24 @@ main .I-quick-messages{
     border-bottom: none;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    transition: transform var(--menu-aside-open);
-    display: flex;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
-main .I-quick-messages.close{
-    transform: translateY(375px);
+main .Q-quick-messages.close{
+    bottom: -60vh;
 }
-main .I-quick-messages .I-message-pusher{
+
+main .Q-quick-messages .Q-message-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+main .Q-quick-messages.close .Q-message-content{
+    overflow: hidden;
+}
+
+main .Q-quick-messages .Q-message-pusher{
     position: absolute;
     top: -1.5rem;
     right: 50%;
@@ -535,17 +544,18 @@ main .I-quick-messages .I-message-pusher{
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom: none;
+    cursor: pointer;
 }
 
-main .I-quick-messages p{
+main .Q-quick-messages p{
     font-size: larger;
     letter-spacing: 5px;
     transition: 0.3s;
 }
 
-main .I-quick-messages:hover p,
-main .I-quick-messages:hover .I-message-pusher,
-main .I-quick-messages:hover{
+main .Q-quick-messages:hover p,
+main .Q-quick-messages:hover .Q-message-pusher,
+main .Q-quick-messages:hover{
     color: var(--org-color);
     border-color: var(--org-color);
 }
@@ -1122,4 +1132,6 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider i
     transition: 0.2s;
     color: var(--org-color);
 }
+
+/*=================================================FONTES=================================================*/
 

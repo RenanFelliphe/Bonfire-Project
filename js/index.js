@@ -12,8 +12,8 @@ menuButton.addEventListener('click', () => {
   sidebar.classList.toggle("close");
 });
 
-const quickMessages = document.querySelector('.I-quick-messages');
-const messagePusher = document.querySelector('.I-message-pusher');
+const quickMessages = document.querySelector('.Q-quick-messages');
+const messagePusher = document.querySelector('.Q-message-pusher');
 
 messagePusher.addEventListener('click', () => {
   quickMessages.classList.toggle("close");
