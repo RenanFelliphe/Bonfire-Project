@@ -25,7 +25,7 @@
     --border-color: #585757;
     /*Cor das Bordas*/
 
-    --first-color: #383A3B;
+    --first-color: #323435;
     --second-color: #27282A;
     /*Cor de primeiro foco*/
     --third-color: #242526;
@@ -514,6 +514,7 @@ main .Q-quick-messages{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     transition: all 0.5s;
+    z-index: 1;
 }
 
 main .Q-quick-messages.close{
@@ -559,6 +560,7 @@ main .Q-quick-messages:hover{
     color: var(--org-color);
     border-color: var(--org-color);
 }
+
 /*====================================================================================================
 ======================================== CONFIG: S-SETTINGS ==========================================
 ====================================================================================================*/
@@ -568,7 +570,6 @@ main .S-settings {
     width: 40%;
     min-width: 28rem;
     height: 100%;
-    line-height: 2.5rem;
     border-right: 1px solid var(--border-color);
     background-color: var(--second-color);
     overflow-y: auto;
@@ -576,11 +577,11 @@ main .S-settings {
 
 main .S-settings .S-top {
     position: relative;
-    min-height: 3.125rem;
+    min-height: 4.8rem;
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding: 0 1.875rem 0 3.125rem;
+    padding: 1.5rem 2rem 1.5rem 3rem;
 }
 
 main .S-settings .S-top::after {
@@ -592,6 +593,51 @@ main .S-settings .S-top::after {
     border-bottom: 1px solid var(--border-color);
 }
 
+main .S-settings .S-top .S-tittle {
+    font-size: var(--size-font-title);
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+main .S-settings .S-top .S-others-functions {
+    position: absolute;
+    right: 1.2rem;
+    display: grid;
+    height: auto;
+    width: 20px;
+    gap: 30px;
+}
+main .S-settings .S-top .S-others-functions i{
+    display: flex;
+    background-color: var(--first-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-size: var(--size-font-icons);
+}
+
+main .S-settings .S-top .S-others-functions a{
+    width: 100%;
+    height: 5px;
+}
+
+main .S-settings .S-top .S-others-functions .S-logout-icon .icon-hover {
+    position: absolute;
+    left: -80px;
+}
+
+main .S-settings .S-top .S-others-functions i:hover .icon-hover {
+    opacity: 0.8;
+}
+
+main .S-settings .S-top .S-others-functions .S-search-icon .icon-hover {
+    position: absolute;
+    left: -110px;
+    width: 90px;
+}
+
+/*
 main .S-settings .S-top .S-logout-icon {
     position: absolute;
     width: 2.2rem;
@@ -609,31 +655,41 @@ main .S-settings .S-top .S-logout-icon:hover {
     border-right: 2px dashed var(--org-color);
 }
 
-main .S-settings .S-top .S-tittle {
-    font-size: var(--size-font-title);
-    font-weight: bolder;
-    letter-spacing: 2px;
-}
-
-main .S-settings .S-top .S-logout-icon .icon-hover {
-    left: -80px;
-}
-
-main .S-settings .S-top .S-logout-icon:hover .icon-hover {
-    opacity: 0.8;
-}
-
 main .S-settings .S-top .S-search-icon {
     position: absolute;
     left: 25px;
 }
+*/
 
 main .S-settings .S-div-search {
     position: relative;
-    height: 5.5rem;
+    height: 7rem;
     display: flex;
+    overflow: hidden;
+    transition: all 0.5s;
 }
 
+main .S-settings .S-div-search.close {
+    transform: translateY(2px);    
+    height: 0;    
+    transition: 0.5s;
+}
+
+main .S-settings .S-div-search::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    transition: 0.7s;
+}
+
+main .S-settings .S-div-search.close::before {
+    width: 0px;
+    left: 50%;
+    transition: 0.7s;
+}
 main .S-settings .S-div-search .S-search-buttom {
     position: absolute;
     display: flex;
@@ -811,7 +867,7 @@ main .S-subsettings .S-account-profile .S-back-icon:hover {
     color: var(--org-color);
     border-color: var(--org-color-darker);
     transition: 0.2s;
-    border-radius: 15px;
+    border-radius: 13px;
 }
 
 main .S-subsettings .S-account-profile article .S-article-title {

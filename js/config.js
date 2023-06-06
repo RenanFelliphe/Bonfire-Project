@@ -1,3 +1,10 @@
+const searchConfigIcon = document.querySelector('.S-search-icon');
+const searchConfigSection = document.querySelector('.S-div-search');
+
+searchConfigIcon.addEventListener('click', () => {
+  searchConfigSection.classList.toggle("close");
+});
+
 let listElements = document.querySelectorAll('.S-buttom');
 
 listElements.forEach(listElement => {
