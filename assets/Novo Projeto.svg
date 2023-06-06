@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+	<title>Novo Projeto</title>
+	<style>
+		.s0 { fill: #f3bf08;stroke: #000000;paint-order:stroke fill markers;stroke-linejoin: round;stroke-width: 14 } 
+		.s1 { fill: #f04e2e;stroke: #0a0a0a;paint-order:stroke fill markers;stroke-linejoin: round;stroke-width: 12 } 
+		.s2 { fill: #000000 } 
+	</style>
+	<path id="Camada 3" class="s0" d="m532 228.9l-40 70-55-14 35 67-55 112 178 138-7-70 146-35.9 26-54-35-60.1 3-138-80 46-8-199-37 67-47 19z"/>
+	<path id="Camada 4" class="s1" d="m590 279.9l-91 161 89 50 88-46-29-60 24-63-48 22z"/>
+	<path id="Forma 1" class="s2" d="m648 409c-10 0-18-13-18-29 0-16 8-29 18-29 10 0 18 13 18 29 0 16-8 29-18 29z"/>
+	<path id="Forma 1 copy" class="s2" d="m536 410c-10 0-18-13-18-29 0-16 8-29 18-29 10 0 18 13 18 29 0 16-8 29-18 29z"/>
+</svg>
