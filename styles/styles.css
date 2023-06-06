@@ -345,6 +345,7 @@ main {
     border: 1px solid var(--border-color);
     border-top: none;
     transition: width var(--menu-aside-open);
+    padding-left: 10px;
 }
 
 .M-menu-aside.close {
@@ -354,12 +355,8 @@ main {
 
 .M-menu-aside .M-icon{
     font-size: calc(var(--size-font-icons) + 0.2rem);
-    padding-left: 1.8rem;
+    padding-left: 1rem;
     transition: var(--menu-aside-open);
-}
-
-.M-menu-aside.close .M-tittle{
-    opacity: 0;
 }
 
 .M-menu-aside section{
@@ -375,7 +372,7 @@ main {
     bottom: 0;
     width: 87%;
     border-bottom: 1px solid var(--border-color);
-    margin-left: 1rem;
+    margin-left: 0.45rem;
     transition: var(--menu-aside-open);
 }
 
@@ -396,6 +393,7 @@ main {
 .M-menu-aside .M-aside-gradient{
     position: absolute;
     width: 1px;
+    left: 0;
     height: 100vh;
     bottom: 0;
     background-color: var(--org-color);
@@ -409,93 +407,84 @@ main {
     transition: var(--menu-aside-close);
 }
 .M-menu-aside .M-aside-top{
-    display: flex;
     position: relative;
-    height: 13vh;
+    height: 5rem;
     width: 100%;
 }
-.M-menu-aside .M-aside-center ul{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4.2vh;
+
+/*=======================================*/
+/*=============ASIDE CENTER==============*/
+/*=======================================*/
+
+.M-menu-aside ul{
+    padding: 0.5rem 0 0.5rem 0;
 }
 
-.M-menu-aside .M-aside-center ul li{
-    height: 5vh;
-    line-height: 6vh;
-    font-size: calc(var(--size-font-subtitle) + 0.1rem);
-    transition: var(--menu-aside-open);
-}
-.M-menu-aside.close .M-aside-center ul li{
-    transition: var(--menu-aside-close);
+.M-menu-aside ul li{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
 }
 
-.M-menu-aside .M-aside-center ul li.active{
-    height: 6vh;
-    line-height: 6vh;
-    width: calc(100% + 2px);
-    padding-left: 1.5rem;
+.M-menu-aside ul li.active{
     background-color: var(--fifth-color);
+    width: calc(100% + 1px);
     border: 1px solid var(--border-color);
     border-right: none;
-    border-left-color: var(--fifth-color);
-    margin-left: -1px;
-}
-
-.M-menu-aside.close .M-aside-center ul li.active{
-    padding-left: 0;
-}
-
-.M-menu-aside .M-aside-center ul li a{
-    position: absolute;
-    width: 100%;
-}
-
-.M-menu-aside .M-aside-center ul li.active a{
-    font-size: 120%;
-}
-
-.M-menu-aside .M-aside-center ul li a span{
-    position: fixed;
-    padding-left: 1rem;
+    padding-left: 2rem;
     transition: var(--menu-aside-open);
 }
 
-.M-menu-aside.close .M-aside-center ul li a span{
-    transform: translateX(-4rem);
-    transition: var(--menu-aside-close);
+.M-menu-aside.close ul li.active{
+    padding-left: 0;
+    
+}
+.M-menu-aside ul li a{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.M-menu-aside ul li a .M-icon{
+    min-width: 4rem;
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.5rem;
+}
+.M-menu-aside ul li.active a .M-icon{
+    color: var(--org-color);
+}
+.M-menu-aside ul li a .M-title{
+    height: 48px;
+    line-height: 48px;
+    transition: var(--menu-aside-open);
+}
+.M-menu-aside.close ul li a .M-title{
     opacity: 0;
+    transform: translateX(-50px);   
+}
+.M-menu-aside ul li.active a .M-title{
+    font-size: calc(var(--size-font-title) - 5px);
+    color: var(--org-color);
 }
 
-.M-menu-aside .M-aside-center ul li.active a span{
-    color: var(--org-color);
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.M-menu-aside .M-aside-center ul li a .M-icon{
-    height: 2.2rem;
-    line-height: 2.2rem;
-    color: var(--org-color);
-    margin-top: 5px;
-}
+/*=======================================*/
+/*=============ASIDE FOOTER==============*/
+/*=======================================*/
 
 .M-menu-aside .M-aside-footer .menu-buttom i{
     position: absolute;
     font-size: calc(var(--size-font-title) + 0.8rem);
     transition: var(--menu-aside-open);
-    padding: 0.5vh 0 0 1.2rem;
+    margin-left: -0.4rem
 }
 
 .M-menu-aside .M-aside-footer .menu-buttom i.close{
     opacity: 1;
     color: var(--org-color);
     font-size: calc(var(--size-font-title) + 1rem);
-    padding-left: 1.05rem;
-    margin-top: -0.15rem;
+    padding: 0 0 0 0.94rem;
 }
+
 
 .M-menu-aside.close .M-aside-footer .menu-buttom i.close{
     opacity: 0;
@@ -509,7 +498,57 @@ main {
     opacity: 0;
 }
 
+/*====================================================================================================
+======================================== INDEX: I-QUICK-MESSAGES ==========================================
+====================================================================================================*/
 
+main .I-quick-messages{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 60%;
+    background-color: var(--third-color);
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: transform var(--menu-aside-open);
+    display: flex;
+    transition: all 0.3s;
+}
+
+main .I-quick-messages.close{
+    transform: translateY(375px);
+}
+main .I-quick-messages .I-message-pusher{
+    position: absolute;
+    top: -1.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 10rem;
+    height: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    background: var(--third-color);
+    border: 1px solid var(--border-color);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom: none;
+}
+
+main .I-quick-messages p{
+    font-size: larger;
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+
+main .I-quick-messages:hover p,
+main .I-quick-messages:hover .I-message-pusher,
+main .I-quick-messages:hover{
+    color: var(--org-color);
+    border-color: var(--org-color);
+}
 /*====================================================================================================
 ======================================== CONFIG: S-SETTINGS ==========================================
 ====================================================================================================*/
@@ -517,7 +556,7 @@ main {
 main .S-settings {
     position: relative;
     width: 40%;
-    min-width: 28.152rem;
+    min-width: 28rem;
     height: 100%;
     line-height: 2.5rem;
     border-right: 1px solid var(--border-color);
@@ -820,7 +859,6 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images img {
-    border-radius: 100%;
     cursor: pointer;
 }
 
@@ -842,10 +880,11 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .org-img {
     position: absolute;
-    width: 33.5%;
-    height: 33%;
-    bottom: 0;
-    right: 0.1875rem;
+    width: 31%;
+    height: 31%;
+    bottom: 0.05rem;
+    right: -0.1rem;
+    border-radius: 13px;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {

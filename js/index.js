@@ -12,6 +12,13 @@ menuButton.addEventListener('click', () => {
   sidebar.classList.toggle("close");
 });
 
+const quickMessages = document.querySelector('.I-quick-messages');
+const messagePusher = document.querySelector('.I-message-pusher');
+
+messagePusher.addEventListener('click', () => {
+  quickMessages.classList.toggle("close");
+});
+
 //Identação da página selecionada
 list.forEach(item => item.addEventListener('click', function() {
   list.forEach(item => item.classList.remove('active'));
