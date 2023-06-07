@@ -5,6 +5,15 @@ searchConfigIcon.addEventListener('click', () => {
   searchConfigSection.classList.toggle("close");
 });
 
+
+const quickMessages = document.querySelector('.Q-quick-messages');
+const messagePusher = document.querySelector('.Q-message-pusher');
+
+messagePusher.addEventListener('click', () => {
+  quickMessages.classList.toggle("close");
+});
+
+
 let listElements = document.querySelectorAll('.S-buttom');
 
 listElements.forEach(listElement => {

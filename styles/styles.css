@@ -59,7 +59,6 @@
     --menu-aside-close: 0.7s;
 }
 
-
 /*====================================================================================================
 =============================== DEFINIÇÃO / SUBSTITUIÇÃO DAS VÁRIAVEIS ===============================
 ====================================================================================================*/
@@ -212,11 +211,6 @@
     --org-color-darker: #310053;
     --org-color-lighter: #9a42d8;
     --org-color-low-opacity-color: #7A11C570;
-}
-
-body::selection {
-    color: var(--black-to-white-color);
-    background-color: var(--org-color-low-opacity);
 }
 
 body {
@@ -827,7 +821,10 @@ main .S-subsettings .S-account-profile {
     width: 100%;
 }
 
-main .S-subsettings .S-account-profile section {
+/*====================================================================================================
+======================================= CONFIG: S-ACCOUNT-PROFILE =======================================*/
+
+main .S-subsettings .S-tier section {
     position: relative;
     width: 100%;
     height: auto;
@@ -839,17 +836,19 @@ main .S-subsettings .S-account-profile section {
     border-bottom: 1px solid var(--border-color);
 }
 
-main .S-subsettings .S-account-profile section:last-child {
+main .S-subsettings .S-tier section:last-child {
     border-bottom: none;
 }
 
-main .S-subsettings .S-account-profile section article {
+main .S-subsettings .S-tier section article {
     width: 100%;
     height: auto;
     border-bottom: 1px solid var(--border-color);
     line-height: 2rem;
 }
-
+main .S-subsettings .S-account-profile{
+    display: none;
+}
 main .S-subsettings .S-account-profile .S-back-icon {
     position: absolute;
     margin: 10px 0 0 10px;
@@ -1014,11 +1013,12 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-numbers span {
     gap: 0.5rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-numbers em {
+main .S-subsettings .S-account-profile .S-profile .S-profile-numbers b {
     color: var(--org-color);
     font-size: var(--size-font-subtitle);
     cursor: pointer;
     transition: 0.5s;
+    font-weight: lighter;
 }
 
 main .S-subsettings .S-account-profile .S-bio {
@@ -1191,3 +1191,6 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider i
 
 /*=================================================FONTES=================================================*/
 
+
+/*====================================================================================================
+======================================= CONFIG: S-ACCOUNT-PROFILE =======================================*/
