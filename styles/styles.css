@@ -197,10 +197,6 @@ main {
     width: 100%;
 }
 
-/*=======================================*/
-/*=============ASIDE CENTER==============*/
-/*=======================================*/
-
 .M-menu-aside ul {
     padding: 0.5rem 0 0.5rem 0;
 }
@@ -257,10 +253,6 @@ main {
     color: var(--org-color);
 }
 
-/*=======================================*/
-/*=============ASIDE FOOTER==============*/
-/*=======================================*/
-
 .M-menu-aside .M-aside-footer .menu-buttom i {
     position: absolute;
     font-size: calc(var(--size-font-title) + 0.8rem);
@@ -274,7 +266,6 @@ main {
     font-size: calc(var(--size-font-title) + 1rem);
     padding: 0 0 0 0.94rem;
 }
-
 
 .M-menu-aside.close .M-aside-footer .menu-buttom i.close {
     opacity: 0;
@@ -423,6 +414,10 @@ main .S-settings .S-top .S-others-functions i {
     border-radius: 10px;
     transition: 0.2s;
     font-size: var(--size-font-icons);
+    border-right: 2px dashed transparent;
+}
+main .S-settings .S-top .S-others-functions i:hover {
+    border-color: var(--org-color);
 }
 
 main .S-settings .S-top .S-others-functions a {
@@ -444,30 +439,6 @@ main .S-settings .S-top .S-others-functions .S-search-icon .icon-hover {
     left: -110px;
     width: 90px;
 }
-
-/*
-main .S-settings .S-top .S-logout-icon {
-    position: absolute;
-    width: 2.2rem;
-    display: flex;
-    justify-content: flex-start;
-    height: 1.88rem;
-    right: 0;
-    top: 0.7rem;
-    transition: 0.5s;
-    border-right: 2px dashed transparent;
-}
-
-main .S-settings .S-top .S-logout-icon:hover {
-    color: var(--org-color);
-    border-right: 2px dashed var(--org-color);
-}
-
-main .S-settings .S-top .S-search-icon {
-    position: absolute;
-    left: 25px;
-}
-*/
 
 main .S-settings .S-div-search {
     position: relative;
@@ -638,8 +609,6 @@ main .S-subsettings .S-account-profile {
     height: 100%;
     width: 100%;
 }
-
-/*==================================== CONFIG: S-ACCOUNT-PROFILE ====================================*/
 
 main .S-subsettings .S-tier #S-section-divisions {
     position: relative;
@@ -867,9 +836,6 @@ main .S-subsettings .S-account-profile .S-bio textarea {
     background-color: transparent;
 }
 
-/*====================================================================================================
-======================================= CONFIG: S-APPEARENCE =======================================*/
-
 main .S-subsettings .S-appearence .S-theme {
     position: relative;
     width: 100%;
@@ -926,9 +892,6 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
 main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
     transform: translateX(1.1rem);
 }
-
-/*=================================================CARD SLIDER=================================================*/
-/*=================================================CHANGE COLOR================================================*/
 
 main .S-subsettings .S-appearence .S-theme .S-toggle-color {
     display: flex;
@@ -1021,4 +984,16 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:hove
     border-color: var(--org-color);
     transition: 0.2s;
     color: var(--org-color);
+}
+
+main .S-subsettings .S-appearence .S-font-style .S-font-filter{
+    font-size: var(--size-font-icons);
+    padding-bottom: 30px;
+}
+main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config{
+    display: block;
+}
+
+main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config.close{
+    display: none;
 }

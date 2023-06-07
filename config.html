@@ -138,7 +138,7 @@
             </div>
             <div class="S-center">
                 <ul>
-                    <li class="S-buttom active"> <span> Conta e Perfil </span>
+                    <li class="S-buttom"> <span> Conta e Perfil </span>
                         <ul class="S-subbuttom">
                             <i class='bx bxs-chevron-down S-open-list-icon'></i>
 
@@ -205,7 +205,7 @@
                         </ul>
                     </li>
 
-                    <li class="S-buttom"> <span> Aparência </span>
+                    <li class="S-buttom active"> <span> Aparência </span>
                         <ul class="S-subbuttom">
                             <i class='bx bxs-chevron-down S-open-list-icon'></i>
                             <li>
@@ -261,7 +261,7 @@
 
         <aside class="S-subsettings ">
 
-            <section class="S-account-profile S-tier active">
+            <section class="S-account-profile S-tier">
                 <i class='bx bxs-chevron-left S-back-icon'></i>
 
                 <section id="S-section-divisions">
@@ -342,7 +342,7 @@
                 </section>
             </section>
 
-            <section class="S-appearence S-tier">
+            <section class="S-appearence S-tier active">
                 <section id="S-section-divisions">
                     <article class="S-theme">
                         <h1 class="S-article-title"> Tema </h1>
@@ -387,13 +387,39 @@
 
                         <p class="S-article-subtitle"> Tamanho: </p>
                         <div class="S-font-size">
-                            <i class="bi bi-plus M-icon"></i>
-                            <input type="range" class="S-font-size-range">
-                            <i class="bi bi-dash M-icon"></i>
+                            <div class="S-all-font">
+                                <i class="bi bi-dash M-icon"></i>
+                                <input type="range" min="0" max="30" class="S-all-range">
+                                <i class="bi bi-plus M-icon"></i>
+                            </div>
                         </div>
                         <div class="S-font-weight">
                             <p class="S-article-subtitle"> Espessura: </p>
                         </div>
+
+                            <i class="bi bi-sliders S-font-filter M-icon"><span class="icon-hover">Configurações Avançadas</span></i>
+                            
+                            <section class="S-font-advanced-config close">
+
+                                <div class="S-title-font">
+                                    <i class="bi bi-dash M-icon"></i>
+                                    <input type="range" min="0" max="30" class="S-all-range">
+                                    <i class="bi bi-plus M-icon"></i>
+                                </div>
+
+                                <div class="S-icons-font">
+                                    <i class="bi bi-dash M-icon"></i>
+                                    <input type="range" min="0" max="30" class="S-all-range">
+                                    <i class="bi bi-plus M-icon"></i>
+                                </div>
+
+                                <div class="S-subtitle-font">
+                                </div>
+                                <div class="S-text-font">
+                                </div>
+                                <div class="S-detail-font">
+                                </div>
+                            </section>
                     </article>
                 </section>
 

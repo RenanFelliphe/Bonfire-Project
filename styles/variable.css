@@ -58,11 +58,11 @@
 
     --family-font-title: 'Montserrat', 'sans-serif';
 
-    --size-font-title: 25px;
-    --size-font-subtitle: 15px;
-    --size-font-text: 13px;
-    --size-font-detail: 11px;
+    --size-font-title: 26px;
     --size-font-icons: 18px;
+    --size-font-subtitle: 16px;
+    --size-font-text: 14px;
+    --size-font-detail: 12px;
 
     /* ============== TANSIÇÕES ============== */
     --menu-aside-open: 0.5s;

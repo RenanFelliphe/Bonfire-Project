@@ -1,3 +1,10 @@
+const quickMessages = document.querySelector('.Q-quick-messages');
+const messagePusher = document.querySelector('.Q-message-pusher');
+
+messagePusher.addEventListener('click', () => {
+    quickMessages.classList.toggle("close");
+});
+
 const searchConfigIcon = document.querySelector('.S-search-icon');
 const searchConfigSection = document.querySelector('.S-div-search');
 
@@ -6,24 +13,28 @@ searchConfigIcon.addEventListener('click', () => {
 });
 
 
-const quickMessages = document.querySelector('.Q-quick-messages');
-const messagePusher = document.querySelector('.Q-message-pusher');
-
-messagePusher.addEventListener('click', () => {
-    quickMessages.classList.toggle("close");
-});
-
 const buttomConfig = document.querySelectorAll('.S-buttom');
 const sTierSections = document.querySelectorAll('.S-tier');
 
 buttomConfig.forEach((listElement, index) => {
     listElement.addEventListener('click', () => {
-        // Remove active class from all S-buttoms and S-tier sections
-        buttomConfig.forEach((button) => button.classList.remove('active'));
+        // Se a S-buttom já estiver ativa, desativa ela e sua seção correspondente
+        if (listElement.classList.contains('active')) {
+            listElement.classList.remove('active');
+            sTierSections[index].classList.remove('active');
+            return;
+        }
+
+        // Fechar todas as seções S-tier ativas
         sTierSections.forEach((section) => section.classList.remove('active'));
 
-        // Toggle active class on the clicked S-buttom and corresponding S-tier section
+        // Remover a classe 'active' de todas as S-buttoms
+        buttomConfig.forEach((button) => button.classList.remove('active'));
+
+        // Adicionar a classe 'active' à S-buttom clicada
         listElement.classList.add('active');
+
+        // Adicionar a classe 'active' à seção S-tier correspondente
         sTierSections[index].classList.add('active');
     });
 });
@@ -57,3 +68,10 @@ function defineTheme() {
 }
 
 defineTheme();
+
+const fontFilter = document.querySelector('.S-font-filter');
+const fontAdvanced = document.querySelector('.S-font-advanced-config');
+
+fontFilter.addEventListener('click', () => {
+    fontAdvanced.classList.toggle('close');
+})
