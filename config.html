@@ -10,7 +10,8 @@
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">     <link rel="stylesheet" href="styles/variable.css">
+
 
     <title>Bonfire</title>
 
@@ -34,8 +35,8 @@
         </section>
 
         <section class="M-header-right">
-            <a href="config.html" style="color: var(--org-color);">
-                <i class='bx bx-dots-vertical-rounded M-icon config-icon'>
+            <a href="config.html">
+                <i class='bx bx-dots-vertical-rounded M-icon config-icon' style="color: var(--org-color)">
                     <span class="icon-hover">Configurações</span>
                 </i>
             </a>
@@ -116,7 +117,7 @@
                 <p>MENSAGENS RÁPIDAS</p>
             </div>
         </section>
-        
+
         <section class="S-settings">
             <div class="S-top">
                 <a href="config.html"><span class="S-tittle"> Configurações </span></a>
@@ -125,7 +126,7 @@
                         <i class='bx bx-log-out S-logout-icon M-icon'><span class="icon-hover">Sair</span></i>
                     </a>
                     <i class='bx bx-search S-search-icon M-icon'><span class="icon-hover">Pesquisar</span></i>
-                    
+
                 </div>
             </div>
             <div class="S-div-search close">
@@ -258,12 +259,12 @@
             </div>
         </section>
 
-        <aside class="S-subsettings">
+        <aside class="S-subsettings ">
 
-            <section class="S-account-profile S-tier">
+            <section class="S-account-profile S-tier active">
                 <i class='bx bxs-chevron-left S-back-icon'></i>
 
-                <section>
+                <section id="S-section-divisions">
                     <article class="S-profile">
                         <div class="S-cover">
                             <img src="assets/loud-capa.jpg" alt="Imagem de capa" class="cover">
@@ -319,6 +320,30 @@
                         <h1 class="S-article-title"> Melhores Amigos </h1>
                     </article>
 
+                    <article class="S-my-games">
+                        <h1 class="S-article-title"> Meus Jogos </h1>
+                    </article>
+
+                    <article class="S-statistics">
+                        <h1 class="S-article-title"> Estatísticas da Conta</h1>
+                    </article>
+                </section>
+
+            </section>
+
+            <section class="S-security S-tier">
+                <section id="S-section-divisions">
+                    SEGURANÇA
+                </section>
+            </section>
+            <section class="S-privacy S-tier">
+                <section id="S-section-divisions">
+                    PRIVACIDADE
+                </section>
+            </section>
+
+            <section class="S-appearence S-tier">
+                <section id="S-section-divisions">
                     <article class="S-theme">
                         <h1 class="S-article-title"> Tema </h1>
 
@@ -355,7 +380,7 @@
                     </article>
                     <article class="S-font-style">
                         <h1 class="S-article-title"> Fonte </h1>
-                        
+
                         <p class="S-article-subtitle"> Tipo: </p>
                         <div class="S-font-type">
                         </div>
@@ -370,18 +395,38 @@
                             <p class="S-article-subtitle"> Espessura: </p>
                         </div>
                     </article>
-                    <article class="S-my-games">
-                        <h1 class="S-article-title"> Meus Jogos </h1>
-                    </article>
-                    <article class="S-statistics">
-                        <h1 class="S-article-title"> Estatísticas da Conta</h1>
-                    </article>
                 </section>
 
             </section>
 
-            <section class="S-security S-tier">
-                
+            <section class="S-groups-friends S-tier">
+                <section id="S-section-divisions">
+                    GRUPOS E AMIZADES
+                </section>            
+            </section>
+
+            <section class="S-accessibility S-tier">
+                <section id="S-section-divisions">
+                    ACESSIBILIDADE
+                </section>
+            </section>
+
+            <section class="S-shopping S-tier">
+                <section id="S-section-divisions">
+                    COMPRAS
+                </section>
+            </section>
+
+            <section class="S-suport S-tier">
+                <section id="S-section-divisions">
+                    SUPORTE
+                </section>
+            </section>
+
+            <section class="S-about us S-tier">
+                <section id="S-section-divisions">
+                    SOBRE
+                </section>
             </section>
         </aside>
     </main>

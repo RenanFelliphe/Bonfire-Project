@@ -1,218 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Montserrat&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', 'sans-serif';
-    text-decoration: none;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-color);
-    transition: 1s color border-color background-color;
-}
-
-:root {
-    /* ============== CORES ============== */
-    --black-to-white-color: #E2E2E2;
-    /*Essa cor deve ser preta no modo claro e branca no modo escuro*/
-    --white-to-black-color: #131313;
-    /*Essa cor deve ser branca no modo claro e preta no modo escuro*/
-
-    --text-color: #9E9C9C;
-    /*Cor dos Textos*/
-    --border-color: #585757;
-    /*Cor das Bordas*/
-
-    --first-color: #323435;
-    --second-color: #27282A;
-    /*Cor de primeiro foco*/
-    --third-color: #242526;
-    /*Cor dos Menus*/
-    --fourth-color: #232325;
-    /*Cor de sergundo foco*/
-    --fifth-color: #18191A;
-    /*Cor do body*/
-
-    /* ========= CORES DAS ORGS ========= */
-    --org-color: #00e226;
-    --org-color2: #00e226;
-    --org-color3: #00e226;
-    --org-color-darker: #008516;
-    --org-color-lighter: #61ff7c;
-    --org-color-low-opacity: #00ff2a70;
-    /*Cor de cada organização, porém com opacidade reduzida*/
-
-    /* ============== FONTES ============== */
-
-    --family-font-title: 'Montserrat', 'sans-serif';
-
-    --size-font-title: 25px;
-    --size-font-subtitle: 15px;
-    --size-font-text: 13px;
-    --size-font-detail: 11px;
-    --size-font-icons: 18px;
-
-    /* ============== TANSIÇÕES ============== */
-    --menu-aside-open: 0.5s;
-    --menu-aside-close: 0.7s;
-}
-
-/*====================================================================================================
-=============================== DEFINIÇÃO / SUBSTITUIÇÃO DAS VÁRIAVEIS ===============================
-====================================================================================================*/
-
-.dark-mode {
-    /* ============== CORES ============== */
-
-    --black-to-white-color: #E2E2E2;
-    --white-to-black-color: #131313;
-
-    --text-color: #9E9C9C;
-    --border-color: #585757;
-
-    --first-color: #383A3B;
-    --second-color: #27282A;
-    --third-color: #242526;
-    --fourth-color: #232325;
-    --fifth-color: #18191A;
-
-    /* ============== FONTES ============== */
-
-    --family-font-title: ;
-    --size-font-title: ;
-
-    --text-font-family: ;
-    --size-font-text: ;
-
-    --subtext-font-family: ;
-    --size-font-text: ;
-}
-
-.light-mode {
-    --black-to-white-color: #000000;
-    --white-to-black-color: #E2E2E2;
-
-    --text-color: #252525;
-    --border-color: #B1B1B1;
-
-    --first-color: #f3f3f3;
-    --third-color: #ffffff;
-    --second-color: #FFFFFF;
-    --fourth-color: #F9FAFF;
-    --fifth-color: #EBEBF5;
-}
-
-
-.fluxo-color {
-    --org-color: #C300FF;
-    --org-color2: #C91085;
-    --org-color3: #C300FF;
-    --org-color-darker: #680088;
-    --org-color-lighter: #D650FF;
-    --org-color-low-opacity-color: #C300FF70;
-}
-
-.kru-color {
-    --org-color: #FF00B3;
-    --org-color2: #FF00B3;
-    --org-color3: #FF00B3;
-    --org-color-darker: #910065;
-    --org-color-lighter: #ff5dce;
-    --org-color-low-opacity-color: #FF00B370;
-}
-
-.leviatan-color {
-    --org-color: #4687BD;
-    --org-color2: #4687BD;
-    --org-color3: #4687BD;
-    --org-color-darker: #20425C;
-    --org-color-lighter: #6DBAFA;
-    --org-color-low-opacity-color: #4687BD70;
-}
-
-.liberty-color {
-    --org-color: #00FFFF;
-    --org-color2: #00FFFF;
-    --org-color3: #00FFFF;
-    --org-color-darker: #006969;
-    --org-color-lighter: #7DFFFF;
-    --org-color-low-opacity-color: #00FFFF70;
-}
-
-.los-color {
-    --org-color: #FF4500;
-    --org-color2: #FF4500;
-    --org-color3: #FF4500;
-    --org-color-darker: #AC2E00;
-    --org-color-lighter: #FF6027;
-    --org-color-low-opacity-color: #FF450070;
-}
-
-.loud-color {
-    --org-color: #00EB00;
-    --org-color2: #00EB00;
-    --org-color3: #00EB00;
-    --org-color-darker: #007200;
-    --org-color-lighter: #2DFF2D;
-    --org-color-low-opacity-color: #00FF2A70;
-}
-
-.magic-squad-color {
-    --org-color: #0EB1A9;
-    --org-color2: #0EB1A9;
-    --org-color3: #0EB1A9;
-    --org-color-darker: #006969;
-    --org-color-lighter: #55b9b4;
-    --org-color-low-opacity-color: #0EB1A970;
-}
-
-.pain-color {
-    --org-color: #FF0000;
-    --org-color2: #FF0000;
-    --org-color3: #FF0000;
-    --org-color-darker: #810000;
-    --org-color-lighter: #ff2f2f;
-    --org-color-low-opacity-color: #FF000070;
-}
-
-.red-canids-color {
-    --org-color: #DB0630;
-    --org-color2: #FF1947;
-    --org-color3: #B32844;
-    --org-color-darker: #8A031E;
-    --org-color-lighter: #DB2D50;
-    --org-color-low-opacity-color: #DB063070;
-}
-
-.sentinels-color {
-    --org-color: #E70045;
-    --org-color2: #E70045;
-    --org-color3: #E70045;
-    --org-color-darker: #770024;
-    --org-color-lighter: #a73759;
-    --org-color-low-opacity-color: #E7004570;
-}
-
-.team-liquid-color {
-    --org-color: #002ec5;
-    --org-color2: #DA9311;
-    --org-color3: #002ec5;
-    --org-color-darker: #00165e;
-    --org-color-lighter: #294ec9;
-    --org-color-low-opacity-color: #002ec570;
-}
-
-.vivo-keyd-color {
-    --org-color: #7A11C5;
-    --org-color2: #7A11C5;
-    --org-color3: #7A11C5;
-    --org-color-darker: #310053;
-    --org-color-lighter: #9a42d8;
-    --org-color-low-opacity-color: #7A11C570;
-}
-
 body {
     background-color: var(--fifth-color);
     overflow: auto;
@@ -309,10 +94,14 @@ main {
 .M-menu-header .M-header-right .config-icon {
     display: flex;
     position: absolute;
-    top: 0;
     right: 0.9rem;
-    font-size: 1.5rem;
-    height: 100%;
+    font-size: calc(var(--size-font-icons) + 10px);
+    width: 30px;
+    height: 30px;
+    background-color: var(--first-color);
+    border-radius: 10px;
+    transition: 0.2s;
+    top: 0.6rem;
 }
 
 .M-menu-header .M-header-right .config-icon .icon-hover {
@@ -347,19 +136,19 @@ main {
     transition: width var(--menu-aside-close);
 }
 
-.M-menu-aside .M-icon{
+.M-menu-aside .M-icon {
     font-size: calc(var(--size-font-icons) + 0.2rem);
     padding-left: 1rem;
     transition: var(--menu-aside-open);
 }
 
-.M-menu-aside section{
+.M-menu-aside section {
     padding: 1rem 0 1rem 0;
     position: relative;
     height: auto;
 }
 
-.M-menu-aside section::before{
+.M-menu-aside section::before {
     content: '';
     display: block;
     position: absolute;
@@ -370,12 +159,12 @@ main {
     transition: var(--menu-aside-open);
 }
 
-.M-menu-aside.close section::before{
+.M-menu-aside.close section::before {
     width: 60%;
     transition: var(--menu-aside-close);
 }
 
-.M-menu-aside section:last-child::before{
+.M-menu-aside section:last-child::before {
     display: none;
 }
 
@@ -384,7 +173,7 @@ main {
     box-shadow: 0 0 3px 0 var(--org-color-darker);
 }
 
-.M-menu-aside .M-aside-gradient{
+.M-menu-aside .M-aside-gradient {
     position: absolute;
     width: 1px;
     left: 0;
@@ -396,11 +185,13 @@ main {
     transition: var(--menu-aside-open);
     transform: translateY(-50px);
 }
-.M-menu-aside.close .M-aside-gradient{
+
+.M-menu-aside.close .M-aside-gradient {
     height: 0;
     transition: var(--menu-aside-close);
 }
-.M-menu-aside .M-aside-top{
+
+.M-menu-aside .M-aside-top {
     position: relative;
     height: 5rem;
     width: 100%;
@@ -410,17 +201,17 @@ main {
 /*=============ASIDE CENTER==============*/
 /*=======================================*/
 
-.M-menu-aside ul{
+.M-menu-aside ul {
     padding: 0.5rem 0 0.5rem 0;
 }
 
-.M-menu-aside ul li{
+.M-menu-aside ul li {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     overflow: hidden;
 }
 
-.M-menu-aside ul li.active{
+.M-menu-aside ul li.active {
     background-color: var(--fifth-color);
     width: calc(100% + 1px);
     border: 1px solid var(--border-color);
@@ -429,34 +220,39 @@ main {
     transition: var(--menu-aside-open);
 }
 
-.M-menu-aside.close ul li.active{
+.M-menu-aside.close ul li.active {
     padding-left: 0;
-    
+
 }
-.M-menu-aside ul li a{
+
+.M-menu-aside ul li a {
     display: flex;
     justify-content: flex-start;
 }
 
-.M-menu-aside ul li a .M-icon{
+.M-menu-aside ul li a .M-icon {
     min-width: 4rem;
     height: 48px;
     line-height: 48px;
     font-size: 1.5rem;
 }
-.M-menu-aside ul li.active a .M-icon{
+
+.M-menu-aside ul li.active a .M-icon {
     color: var(--org-color);
 }
-.M-menu-aside ul li a .M-title{
+
+.M-menu-aside ul li a .M-title {
     height: 48px;
     line-height: 48px;
     transition: var(--menu-aside-open);
 }
-.M-menu-aside.close ul li a .M-title{
+
+.M-menu-aside.close ul li a .M-title {
     opacity: 0;
-    transform: translateX(-50px);   
+    transform: translateX(-50px);
 }
-.M-menu-aside ul li.active a .M-title{
+
+.M-menu-aside ul li.active a .M-title {
     font-size: calc(var(--size-font-title) - 5px);
     color: var(--org-color);
 }
@@ -465,14 +261,14 @@ main {
 /*=============ASIDE FOOTER==============*/
 /*=======================================*/
 
-.M-menu-aside .M-aside-footer .menu-buttom i{
+.M-menu-aside .M-aside-footer .menu-buttom i {
     position: absolute;
     font-size: calc(var(--size-font-title) + 0.8rem);
     transition: var(--menu-aside-open);
     margin-left: -0.4rem
 }
 
-.M-menu-aside .M-aside-footer .menu-buttom i.close{
+.M-menu-aside .M-aside-footer .menu-buttom i.close {
     opacity: 1;
     color: var(--org-color);
     font-size: calc(var(--size-font-title) + 1rem);
@@ -480,15 +276,15 @@ main {
 }
 
 
-.M-menu-aside.close .M-aside-footer .menu-buttom i.close{
+.M-menu-aside.close .M-aside-footer .menu-buttom i.close {
     opacity: 0;
 }
 
-.M-menu-aside.close .M-aside-footer .menu-buttom i.open{
-    opacity: 1;     
+.M-menu-aside.close .M-aside-footer .menu-buttom i.open {
+    opacity: 1;
 }
 
-.M-menu-aside .M-aside-footer .menu-buttom i.open{
+.M-menu-aside .M-aside-footer .menu-buttom i.open {
     opacity: 0;
 }
 
@@ -496,14 +292,14 @@ main {
 ======================================== INDEX: I-QUICK-MESSAGES ==========================================
 ====================================================================================================*/
 
-main .Q-quick-messages{
+main .Q-quick-messages {
     position: fixed;
     right: 0;
     bottom: -1px;
     width: 30%;
     height: 60%;
     background-color: var(--third-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--org-color-darker);
     border-bottom: none;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -511,38 +307,55 @@ main .Q-quick-messages{
     z-index: 1;
 }
 
-main .Q-quick-messages.close{
+main .Q-quick-messages.close {
     bottom: -60vh;
+    border-color: var(--border-color);
 }
 
-main .Q-quick-messages .Q-message-content{
+main .Q-quick-messages .Q-message-content {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-main .Q-quick-messages.close .Q-message-content{
+main .Q-quick-messages.close .Q-message-content {
     overflow: hidden;
 }
 
-main .Q-quick-messages .Q-message-pusher{
+main .Q-quick-messages .Q-message-pusher {
     position: absolute;
-    top: -1.5rem;
+    top: -2.3rem;
     right: 50%;
     transform: translateX(50%);
-    width: 10rem;
-    height: 1.5rem;
-    line-height: 2rem;
+    width: 15rem;
+    max-width: 15rem;
+    height: 2.3rem;
+    line-height: 2.5rem;
     text-align: center;
     background: var(--third-color);
-    border: 1px solid var(--border-color);
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border: 1px solid var(--org-color-darker);
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
     border-bottom: none;
     cursor: pointer;
+    font-size: calc(var(--size-font-icons) + 10px);
+    transition: all 0.5s;
 }
 
-main .Q-quick-messages p{
+main .Q-quick-messages.close .Q-message-pusher {
+    border-color: var(--border-color);
+}
+main .Q-quick-messages.close .Q-message-pusher i{
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+main .Q-quick-messages .Q-message-pusher i{
+    color: var(--org-color);
+    transition: all 0.3s;
+}
+
+main .Q-quick-messages p {
     font-size: larger;
     letter-spacing: 5px;
     transition: 0.3s;
@@ -550,7 +363,7 @@ main .Q-quick-messages p{
 
 main .Q-quick-messages:hover p,
 main .Q-quick-messages:hover .Q-message-pusher,
-main .Q-quick-messages:hover{
+main .Q-quick-messages:hover {
     color: var(--org-color);
     border-color: var(--org-color);
 }
@@ -601,7 +414,8 @@ main .S-settings .S-top .S-others-functions {
     width: 20px;
     gap: 30px;
 }
-main .S-settings .S-top .S-others-functions i{
+
+main .S-settings .S-top .S-others-functions i {
     display: flex;
     background-color: var(--first-color);
     width: 30px;
@@ -611,7 +425,7 @@ main .S-settings .S-top .S-others-functions i{
     font-size: var(--size-font-icons);
 }
 
-main .S-settings .S-top .S-others-functions a{
+main .S-settings .S-top .S-others-functions a {
     width: 100%;
     height: 5px;
 }
@@ -664,8 +478,8 @@ main .S-settings .S-div-search {
 }
 
 main .S-settings .S-div-search.close {
-    transform: translateY(2px);    
-    height: 0;    
+    transform: translateY(2px);
+    height: 0;
     transition: 0.5s;
 }
 
@@ -684,6 +498,7 @@ main .S-settings .S-div-search.close::before {
     left: 50%;
     transition: 0.7s;
 }
+
 main .S-settings .S-div-search .S-search-buttom {
     position: absolute;
     display: flex;
@@ -781,14 +596,17 @@ main .S-settings .S-center ul .S-buttom .S-subbuttom {
     max-height: 0;
     transition: 0.5s;
 }
-main .S-settings .S-center ul .S-buttom .S-subbuttom li{
+
+main .S-settings .S-center ul .S-buttom .S-subbuttom li {
     opacity: 0;
     transition: 1.5s;
 }
-main .S-settings .S-center ul .S-buttom.active .S-subbuttom li{
+
+main .S-settings .S-center ul .S-buttom.active .S-subbuttom li {
     opacity: 1;
     transition: 0.4s;
 }
+
 main .S-settings .S-center ul .S-buttom.active .S-subbuttom {
     max-height: 500px;
     opacity: 1;
@@ -821,10 +639,9 @@ main .S-subsettings .S-account-profile {
     width: 100%;
 }
 
-/*====================================================================================================
-======================================= CONFIG: S-ACCOUNT-PROFILE =======================================*/
+/*==================================== CONFIG: S-ACCOUNT-PROFILE ====================================*/
 
-main .S-subsettings .S-tier section {
+main .S-subsettings .S-tier #S-section-divisions {
     position: relative;
     width: 100%;
     height: auto;
@@ -836,20 +653,27 @@ main .S-subsettings .S-tier section {
     border-bottom: 1px solid var(--border-color);
 }
 
-main .S-subsettings .S-tier section:last-child {
+main .S-subsettings .S-tier #S-section-divisions:last-child {
     border-bottom: none;
 }
 
-main .S-subsettings .S-tier section article {
+main .S-subsettings .S-tier #S-section-divisions article {
     width: 100%;
     height: auto;
     border-bottom: 1px solid var(--border-color);
     line-height: 2rem;
 }
-main .S-subsettings .S-account-profile{
+
+main .S-subsettings .S-tier {
     display: none;
 }
-main .S-subsettings .S-account-profile .S-back-icon {
+
+main .S-subsettings .S-tier.active {
+    opacity: 1;
+    display: block;
+}
+
+main .S-subsettings .S-tier .S-back-icon {
     position: absolute;
     margin: 10px 0 0 10px;
     padding: 1px 2px 0 0;
@@ -862,25 +686,26 @@ main .S-subsettings .S-account-profile .S-back-icon {
     transition: 0.2s;
 }
 
-main .S-subsettings .S-account-profile .S-back-icon:hover {
+main .S-subsettings .S-tier .S-back-icon:hover {
     color: var(--org-color);
     border-color: var(--org-color-darker);
     transition: 0.2s;
     border-radius: 13px;
 }
 
-main .S-subsettings .S-account-profile article .S-article-title {
+main .S-subsettings .S-tier article .S-article-title {
     font-size: var(--size-font-subtitle);
     padding: 0 0 0.5rem 1rem;
     letter-spacing: 3px;
     transition: color 0.4s;
 }
-main .S-subsettings .S-account-profile article:hover .S-article-title {
+
+main .S-subsettings .S-tier article:hover .S-article-title {
     color: var(--org-color);
     transition: color 0.3s;
 }
 
-main .S-subsettings .S-account-profile .S-article-subtitle {
+main .S-subsettings .S-tier .S-article-subtitle {
     padding: 0 0 0 2rem;
     font-size: var(--size-font-text);
 }
@@ -971,9 +796,11 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
     color: var(--org-color);
     letter-spacing: 2px;
 }
+
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
     padding-left: 0.2rem;
 }
+
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a {
     position: absolute;
     display: flex;
@@ -1040,24 +867,27 @@ main .S-subsettings .S-account-profile .S-bio textarea {
     background-color: transparent;
 }
 
-main .S-subsettings .S-account-profile .S-theme {
+/*====================================================================================================
+======================================= CONFIG: S-APPEARENCE =======================================*/
+
+main .S-subsettings .S-appearence .S-theme {
     position: relative;
     width: 100%;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode {
     height: auto;
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox {
     opacity: 0;
     position: absolute;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label {
     position: relative;
     display: flex;
     align-items: center;
@@ -1073,15 +903,15 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label {
     cursor: pointer;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label .S-sun {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-sun {
     color: #ffd900;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-label .S-moon {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-moon {
     color: #2d2dff;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-ball {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
     background-color: var(--black-to-white-color);
     border-radius: 50%;
     position: absolute;
@@ -1093,20 +923,21 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-ball {
     transition: transform 0.2s linear;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
+main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
     transform: translateX(1.1rem);
 }
 
 /*=================================================CARD SLIDER=================================================*/
 /*=================================================CHANGE COLOR================================================*/
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color{
+main .S-subsettings .S-appearence .S-theme .S-toggle-color {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider {
+
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider {
     position: relative;
     width: 600px;
     display: flex;
@@ -1115,7 +946,7 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider {
     height: 100px;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .S-gallery{
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 5));
@@ -1125,7 +956,7 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .
     padding-left: 44px;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card{
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card {
     height: 90%;
     width: 55%;
     background-color: var(--second-color);
@@ -1137,26 +968,29 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .
     cursor: pointer;
     transition: 0.4s;
 }
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card:hover{
+
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card:hover {
     box-shadow: 0 0 2px 0 var(--org-color-lighter);
     border-color: var(--org-color);
     transition: 0.3s;
 }
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card.current{
+
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card.current {
     box-shadow: 0 0 2px 0 var(--org-color-lighter);
     border-color: var(--org-color);
 }
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card img {
+
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card img {
     width: 58%;
     height: 70%;
     object-fit: contain;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider .S-gallery::-webkit-scrollbar{
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery::-webkit-scrollbar {
     display: none;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider i {
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i {
     font-size: 1rem;
     cursor: pointer;
     height: 25px;
@@ -1170,8 +1004,8 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider i
     box-shadow: 0 2px 4px 0 #00000081;
     transition: transform 0.1s linear;
     border: 1px solid #585757;
-    transition: 0.2s;
 }
+
 .S-card-slider i:first-child {
     left: -6px;
     padding-right: 2px;
@@ -1182,15 +1016,9 @@ main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider i
     padding-left: 2px;
 }
 
-main .S-subsettings .S-account-profile .S-theme .S-toggle-color .S-card-slider i:hover {
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:hover {
     box-shadow: 0 0 3px 0 var(--org-color);
     border-color: var(--org-color);
     transition: 0.2s;
     color: var(--org-color);
 }
-
-/*=================================================FONTES=================================================*/
-
-
-/*====================================================================================================
-======================================= CONFIG: S-ACCOUNT-PROFILE =======================================*/
