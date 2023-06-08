@@ -1,43 +1,39 @@
-const quickMessages = document.querySelector('.Q-quick-messages');
-const messagePusher = document.querySelector('.Q-message-pusher');
+/*========================================================================================================================================
+========================================================== FUNÇÕES DA PÁGINA =============================================================
+/*=======================================================================================================================================*/
 
-messagePusher.addEventListener('click', () => {
-    quickMessages.classList.toggle("close");
-});
+openTiers(); //Abre e fecha cada SEÇÃO da página de configurações
+openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
+defineTheme(); //Define o MODO(Light/Dark) e as CORES do site
+defineFont(); //Define o TIPO, o TAMANHO e a ESPESSURA das FONTES do site
+openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 
-const searchConfigIcon = document.querySelector('.S-search-icon');
-const searchConfigSection = document.querySelector('.S-div-search');
+/*========================================================================================================================================
+========================================================= DEFININDO AS FUNÇÕES ===========================================================
+/*=======================================================================================================================================*/
 
-searchConfigIcon.addEventListener('click', () => {
-    searchConfigSection.classList.toggle("close");
-});
+//Abre e fecha cada SEÇÃO da página de configurações
+function openTiers() {
+    const buttomConfig = document.querySelectorAll('.S-buttom');
+    const tierSections = document.querySelectorAll('.S-tier');
 
-
-const buttomConfig = document.querySelectorAll('.S-buttom');
-const sTierSections = document.querySelectorAll('.S-tier');
-
-buttomConfig.forEach((listElement, index) => {
-    listElement.addEventListener('click', () => {
-        // Se a S-buttom já estiver ativa, desativa ela e sua seção correspondente
-        if (listElement.classList.contains('active')) {
-            listElement.classList.remove('active');
-            sTierSections[index].classList.remove('active');
-            return;
-        }
-
-        // Fechar todas as seções S-tier ativas
-        sTierSections.forEach((section) => section.classList.remove('active'));
-
-        // Remover a classe 'active' de todas as S-buttoms
-        buttomConfig.forEach((button) => button.classList.remove('active'));
-
-        // Adicionar a classe 'active' à S-buttom clicada
-        listElement.classList.add('active');
-
-        // Adicionar a classe 'active' à seção S-tier correspondente
-        sTierSections[index].classList.add('active');
+    buttomConfig.forEach((buttomList, index) => {
+        buttomList.addEventListener('click', () => {
+            buttomConfig.forEach(button => button.classList.toggle('active', button === buttomList));
+            tierSections.forEach(section => section.classList.toggle('active', section === tierSections[index]));
+        });
     });
-});
+}
+
+//Abre e fecha a ÁREA DE PESQUISA
+function openSearchArea() {
+    const searchConfigIcon = document.querySelector('.S-search-icon');
+    const searchConfigSection = document.querySelector('.S-div-search');
+
+    searchConfigIcon.addEventListener('click', () => {
+        searchConfigSection.classList.toggle("close");
+    });
+}
 
 //Define o MODO(Light/Dark) e as CORES do site
 function defineTheme() {
@@ -67,11 +63,29 @@ function defineTheme() {
     updateColors(); // Atualiza as cores com base na seleção inicial
 }
 
-defineTheme();
+//Define o TIPO, o TAMANHO e a ESPESSURA das FONTES do site
+function defineFont() {
+    const fontSizeValue = document.querySelector('.S-font-size-value');
+    const fontSizeRange = document.querySelector('.S-font-size-range');
 
-const fontFilter = document.querySelector('.S-font-filter');
-const fontAdvanced = document.querySelector('.S-font-advanced-config');
+    const fontWeightValue = document.querySelector('.S-font-weight-value');
+    const fontWeightRange = document.querySelector('.S-font-weight-range');
 
-fontFilter.addEventListener('click', () => {
-    fontAdvanced.classList.toggle('close');
-})
+    fontSizeRange.addEventListener('input', function () {
+        fontSizeValue.innerHTML = this.value;
+    });
+
+    fontWeightRange.addEventListener('input', function () {
+        fontWeightValue.innerHTML = this.value;
+    });
+}
+
+//Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
+function openQuickMessages() {
+    const quickMessages = document.querySelector('.Q-quick-messages');
+    const messagePusher = document.querySelector('.Q-message-pusher');
+
+    messagePusher.addEventListener('click', () => {
+        quickMessages.classList.toggle("close");
+    });
+}

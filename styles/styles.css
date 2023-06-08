@@ -127,23 +127,23 @@ main {
     background-color: var(--third-color);
     border: 1px solid var(--border-color);
     border-top: none;
-    transition: width var(--menu-aside-open);
+    transition: width var(--element-in);
     padding-left: 10px;
 }
 
 .M-menu-aside.close {
-    width: 5.3rem;
-    transition: width var(--menu-aside-close);
+    width: 5rem;
+    transition: width var(--element-out);
 }
 
 .M-menu-aside .M-icon {
     font-size: calc(var(--size-font-icons) + 0.2rem);
     padding-left: 1rem;
-    transition: var(--menu-aside-open);
+    transition: var(--element-in);
 }
 
 .M-menu-aside section {
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0 1.2rem 0;
     position: relative;
     height: auto;
 }
@@ -156,12 +156,12 @@ main {
     width: 87%;
     border-bottom: 1px solid var(--border-color);
     margin-left: 0.45rem;
-    transition: var(--menu-aside-open);
+    transition: var(--element-in);
 }
 
 .M-menu-aside.close section::before {
     width: 60%;
-    transition: var(--menu-aside-close);
+    transition: var(--element-out);
 }
 
 .M-menu-aside section:last-child::before {
@@ -182,13 +182,13 @@ main {
     background-color: var(--org-color);
     box-shadow: 0 0 5px 0 var(--org-color-lighter);
     z-index: +1;
-    transition: var(--menu-aside-open);
+    transition: var(--element-in);
     transform: translateY(-50px);
 }
 
 .M-menu-aside.close .M-aside-gradient {
     height: 0;
-    transition: var(--menu-aside-close);
+    transition: var(--element-out);
 }
 
 .M-menu-aside .M-aside-top {
@@ -198,7 +198,11 @@ main {
 }
 
 .M-menu-aside ul {
-    padding: 0.5rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
 }
 
 .M-menu-aside ul li {
@@ -213,12 +217,11 @@ main {
     border: 1px solid var(--border-color);
     border-right: none;
     padding-left: 2rem;
-    transition: var(--menu-aside-open);
+    transition: var(--element-in);
 }
 
 .M-menu-aside.close ul li.active {
     padding-left: 0;
-
 }
 
 .M-menu-aside ul li a {
@@ -228,8 +231,8 @@ main {
 
 .M-menu-aside ul li a .M-icon {
     min-width: 4rem;
-    height: 48px;
-    line-height: 48px;
+    height: 44px;
+    line-height: 44px;
     font-size: 1.5rem;
 }
 
@@ -238,9 +241,9 @@ main {
 }
 
 .M-menu-aside ul li a .M-title {
-    height: 48px;
-    line-height: 48px;
-    transition: var(--menu-aside-open);
+    height: 44px;
+    line-height: 44px;
+    transition: var(--element-in);
 }
 
 .M-menu-aside.close ul li a .M-title {
@@ -256,8 +259,8 @@ main {
 .M-menu-aside .M-aside-footer .menu-buttom i {
     position: absolute;
     font-size: calc(var(--size-font-title) + 0.8rem);
-    transition: var(--menu-aside-open);
-    margin-left: -0.4rem
+    transition: var(--element-in);
+    margin-left: -0.5rem
 }
 
 .M-menu-aside .M-aside-footer .menu-buttom i.close {
@@ -336,12 +339,13 @@ main .Q-quick-messages .Q-message-pusher {
 main .Q-quick-messages.close .Q-message-pusher {
     border-color: var(--border-color);
 }
-main .Q-quick-messages.close .Q-message-pusher i{
+
+main .Q-quick-messages.close .Q-message-pusher i {
     color: var(--text-color);
     transition: all 0.3s;
 }
 
-main .Q-quick-messages .Q-message-pusher i{
+main .Q-quick-messages .Q-message-pusher i {
     color: var(--org-color);
     transition: all 0.3s;
 }
@@ -374,12 +378,35 @@ main .S-settings {
 }
 
 main .S-settings .S-top {
-    position: relative;
+    position: sticky;
+    top: 0;
     min-height: 4.8rem;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     padding: 1.5rem 2rem 1.5rem 3rem;
+    background-color: var(--second-color);
+    z-index: 2;
+}
+
+main .S-settings .S-div-search {
+    position: sticky;
+    top: 5rem;
+    /* Altura do S-top */
+    height: 7rem;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s;
+    background-color: var(--second-color);
+    z-index: 1;
+}
+
+main .S-settings .S-center {
+    position: relative;
+    margin-top: 3px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 
 main .S-settings .S-top::after {
@@ -416,6 +443,7 @@ main .S-settings .S-top .S-others-functions i {
     font-size: var(--size-font-icons);
     border-right: 2px dashed transparent;
 }
+
 main .S-settings .S-top .S-others-functions i:hover {
     border-color: var(--org-color);
 }
@@ -440,18 +468,12 @@ main .S-settings .S-top .S-others-functions .S-search-icon .icon-hover {
     width: 90px;
 }
 
-main .S-settings .S-div-search {
-    position: relative;
-    height: 7rem;
-    display: flex;
-    overflow: hidden;
-    transition: all 0.5s;
-}
-
 main .S-settings .S-div-search.close {
     transform: translateY(2px);
     height: 0;
     transition: 0.5s;
+    position: static;
+    overflow: hidden;
 }
 
 main .S-settings .S-div-search::before {
@@ -461,7 +483,7 @@ main .S-settings .S-div-search::before {
     left: 0;
     width: 100%;
     border-bottom: 1px solid var(--border-color);
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
 main .S-settings .S-div-search.close::before {
@@ -489,13 +511,6 @@ main .S-settings .S-div-search input {
     background-color: transparent;
 }
 
-main .S-settings .S-center {
-    position: relative;
-    margin-top: 3px;
-    height: 100%;
-    width: 100%;
-}
-
 main .S-settings::-webkit-scrollbar {
     display: none;
 }
@@ -521,6 +536,13 @@ main .S-settings .S-center ul .S-buttom::after {
     transition: 0.5s;
 }
 
+main .S-settings .S-center ul .S-buttom.active {
+    color: var(--org-color);
+    background-color: var(--fourth-color);
+    border-left: 1px solid var(--org-color);
+    border-right: 1px solid var(--org-color);
+}
+
 main .S-settings .S-center ul .S-buttom.active::after {
     width: 100%;
     left: 0;
@@ -544,12 +566,6 @@ main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
     rotate: -90deg;
     color: var(--org-color2);
     transition: 0.3s;
-}
-
-main .S-settings .S-center ul .S-buttom.active {
-    color: var(--org-color);
-    background-color: var(--fourth-color);
-    border-left: 1px solid var(--org-color);
 }
 
 main .S-settings .S-center ul .S-buttom.active p:hover {
@@ -605,11 +621,6 @@ main .S-subsettings::-webkit-scrollbar {
     display: none;
 }
 
-main .S-subsettings .S-account-profile {
-    height: 100%;
-    width: 100%;
-}
-
 main .S-subsettings .S-tier #S-section-divisions {
     position: relative;
     width: 100%;
@@ -640,6 +651,7 @@ main .S-subsettings .S-tier {
 main .S-subsettings .S-tier.active {
     opacity: 1;
     display: block;
+    padding-top: 2rem;
 }
 
 main .S-subsettings .S-tier .S-back-icon {
@@ -677,6 +689,11 @@ main .S-subsettings .S-tier article:hover .S-article-title {
 main .S-subsettings .S-tier .S-article-subtitle {
     padding: 0 0 0 2rem;
     font-size: var(--size-font-text);
+}
+
+main .S-subsettings .S-account-profile {
+    height: 100%;
+    width: 100%;
 }
 
 main .S-subsettings .S-account-profile .S-profile {
@@ -969,12 +986,12 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i {
     border: 1px solid #585757;
 }
 
-.S-card-slider i:first-child {
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:first-child {
     left: -6px;
     padding-right: 2px;
 }
 
-.S-card-slider i:last-child {
+main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:last-child {
     right: 0px;
     padding-left: 2px;
 }
@@ -986,14 +1003,43 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:hove
     color: var(--org-color);
 }
 
-main .S-subsettings .S-appearence .S-font-style .S-font-filter{
-    font-size: var(--size-font-icons);
-    padding-bottom: 30px;
-}
-main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config{
-    display: block;
+main .S-subsettings .S-appearence .S-font-style div {
+    display: flex;
+    gap: 50px;
 }
 
-main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config.close{
-    display: none;
+main .S-subsettings .S-appearence .S-font-style input[type=range] {
+    appearance: none;
+    background-color: var(--fifth-color);
+    height: 0.5rem;
+    width: 15rem;
+    border-radius: 100rem;
+    cursor: pointer;
+}
+
+main .S-subsettings .S-appearence .S-font-style input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: var(--org-color-darker);
+    border: 2px dotted var(--org-color);
+    transition: 0.2s;
+    opacity: 0.9;
+}
+
+main .S-subsettings .S-appearence .S-font-style input[type=range]:hover::-webkit-slider-thumb {
+    background-color: var(--org-color);
+    box-shadow: 0 0 3px 0px var(--org-color-lighter);
+}
+
+main .S-subsettings .S-appearence .S-font-style div .S-font-size-value,
+main .S-subsettings .S-appearence .S-font-style div .S-font-weight-value {
+    width: 34px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    color: var(--org-color);
+    font-weight: 600;
+    font-size: calc(var(--size-font-icons) -5px);
 }

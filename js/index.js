@@ -1,47 +1,56 @@
-/*====================================================================================================
-============================================ MENU ASIDE ==============================================
-====================================================================================================*/
+/*========================================================================================================================================
+========================================================== FUNÇÕES DA PÁGINA =============================================================
+/*=======================================================================================================================================*/
 
-//Estado de abertura e fechamento do Menu
-const list = document.querySelectorAll('.M-aside-list');
-const sidebar = document.querySelector(".M-menu-aside");
-const menuButton = document.querySelector(".menu-buttom");
+openMenuAside(); //Abre e fecha o MENU DE NAVEGAÇÃO LATERAL
+toggleSelectedPage() //Troca e identa a PÁGINA SELECIONADA no menu lateral
+changeMenuBars(); //Troca de COR DAS BARRAS do menu lateral
+openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 
-menuButton.addEventListener('click', () => {
-    sidebar.classList.toggle("close");
-});
+/*========================================================================================================================================
+========================================================= DEFININDO AS FUNÇÕES ===========================================================
+/*=======================================================================================================================================*/
 
-const quickMessages = document.querySelector('.Q-quick-messages');
-const messagePusher = document.querySelector('.Q-message-pusher');
+//Abre e fecha o MENU DE NAVEGAÇÃO LATERAL
+function openMenuAside() {
+    const sidebar = document.querySelector(".M-menu-aside");
+    const menuButton = document.querySelector(".menu-buttom");
 
-messagePusher.addEventListener('click', () => {
-    quickMessages.classList.toggle("close");
-});
+    menuButton.addEventListener('click', () => {
+        sidebar.classList.toggle("close");
+    });
+}
 
-//Identação da página selecionada
-list.forEach(item => item.addEventListener('click', function () {
-    list.forEach(item => item.classList.remove('active'));
-    this.classList.add('active');
-}));
+//Troca e identa a PÁGINA SELECIONADA no menu lateral
+function toggleSelectedPage() {
+    const list = document.querySelectorAll('.M-aside-list');
 
-//Troca de cor das barras
-const asideTop = document.querySelector('.M-aside-top');
-const firstSectionBefore = asideTop.querySelector('section:first-child::before');
-const asideCenter = document.querySelector('.M-aside-center');
-const menuAside = document.querySelector('.M-menu-aside');
+    list.forEach(item => item.addEventListener('click', function () {
+        list.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+    }));
+}
 
-asideTop.addEventListener('mouseover', () => {
-    firstSectionBefore.classList.add('section-highlight');
-});
+//Troca de COR DAS BARRAS do menu lateral
+function changeMenuBars() {
+    const asideTop = document.querySelector('.M-aside-top');
+    const firstSectionBefore = asideTop.querySelector('section:first-child::before');
+    const asideCenter = document.querySelector('.M-aside-center');
+    const menuAside = document.querySelector('.M-menu-aside');
 
-asideTop.addEventListener('mouseout', () => {
-    firstSectionBefore.classList.remove('section-highlight');
-});
+    asideTop.addEventListener('mouseover', () => firstSectionBefore.classList.toggle('section-highlight', true));
+    asideTop.addEventListener('mouseout', () => firstSectionBefore.classList.toggle('section-highlight', false));
 
-asideCenter.addEventListener('mouseover', () => {
-    menuAside.classList.add('section-highlight');
-});
+    asideCenter.addEventListener('mouseover', () => menuAside.classList.toggle('section-highlight', true));
+    asideCenter.addEventListener('mouseout', () => menuAside.classList.toggle('section-highlight', false));
+}
 
-asideCenter.addEventListener('mouseout', () => {
-    menuAside.classList.remove('section-highlight');
-});
+//Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
+function openQuickMessages() {
+    const quickMessages = document.querySelector('.Q-quick-messages');
+    const messagePusher = document.querySelector('.Q-message-pusher');
+
+    messagePusher.addEventListener('click', () => {
+        quickMessages.classList.toggle("close");
+    });
+}

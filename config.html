@@ -10,7 +10,8 @@
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/styles.css">     <link rel="stylesheet" href="styles/variable.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/variable.css">
 
 
     <title>Bonfire</title>
@@ -152,16 +153,10 @@
                                 <p> Informações Pessoais </p>
                             </li>
                             <li>
-                                <p> Melhores Amigos </p>
-                            </li>
-                            <li>
-                                <p> Tema </p>
-                            </li>
-                            <li>
-                                <p> Fonte </p>
-                            </li>
-                            <li>
                                 <p> Meus Jogos </p>
+                            </li>
+                            <li>
+                                <p> Visibilidade </p>
                             </li>
                             <li>
                                 <p> Estatísticas da Conta </p>
@@ -184,9 +179,6 @@
                     <li class="S-buttom"> <span> Privacidade </span>
                         <ul class="S-subbuttom">
                             <i class='bx bxs-chevron-down S-open-list-icon'></i>
-                            <li>
-                                <p> Visibilidade </p>
-                            </li>
                             <li>
                                 <p> Contas Bloqueadas </p>
                             </li>
@@ -220,6 +212,18 @@
                     <li class="S-buttom"> <span> Grupos e Amizades </span>
                         <ul class="S-subbuttom">
                             <i class='bx bxs-chevron-down S-open-list-icon'></i>
+                            <li>
+                                <p> Seguindo e Seguidores </p>
+                            </li>
+                            <li>
+                                <p> Melhores Amigos </p>
+                            </li>
+                            <li>
+                                <p> Organização </p>
+                            </li>
+                            <li>
+                                <p> Comunidades </p>
+                            </li>
                         </ul>
                     </li>
 
@@ -261,7 +265,7 @@
 
         <aside class="S-subsettings ">
 
-            <section class="S-account-profile S-tier">
+            <section class="S-account-profile S-tier" style="padding-top: 0;">
                 <i class='bx bxs-chevron-left S-back-icon'></i>
 
                 <section id="S-section-divisions">
@@ -296,6 +300,7 @@
                     </article>
                     <article class="S-showcase">
                         <h1 class="S-article-title"> Vitrine </h1>
+
                     </article>
                     <article class="S-profile">
                         <h1 class="S-article-title"> Informações Pessoais </h1>
@@ -316,12 +321,12 @@
                         </div>
                     </article>
 
-                    <article class="S-close-friends">
-                        <h1 class="S-article-title"> Melhores Amigos </h1>
-                    </article>
-
                     <article class="S-my-games">
                         <h1 class="S-article-title"> Meus Jogos </h1>
+                    </article>
+
+                    <article class="S-visibility">
+                        <h1 class="S-article-title"> Visibilidade </h1>
                     </article>
 
                     <article class="S-statistics">
@@ -387,48 +392,29 @@
 
                         <p class="S-article-subtitle"> Tamanho: </p>
                         <div class="S-font-size">
-                            <div class="S-all-font">
-                                <i class="bi bi-dash M-icon"></i>
-                                <input type="range" min="0" max="30" class="S-all-range">
-                                <i class="bi bi-plus M-icon"></i>
-                            </div>
+                            <i class="bi bi-dash M-icon S-font-size-minus"></i>
+                            <input type="range" min="1" max="9" class="S-font-size-range">
+                            <i class="bi bi-dash M-icon S-font-size-plus"></i>
+                            <p class="S-font-size-value"> 5 </p>
                         </div>
+
+                        <p class="S-article-subtitle"> Espessura: </p>
                         <div class="S-font-weight">
-                            <p class="S-article-subtitle"> Espessura: </p>
+                            <i class="bi bi-dash M-icon S-font-weight-minus"></i>
+                            <input type="range" min="1" max="9" class="S-font-weight-range">
+                            <i class="bi bi-plus M-icon S-font-weight-plus"></i>
+                            <p class="S-font-weight-value"> 5 </p>
                         </div>
-
-                            <i class="bi bi-sliders S-font-filter M-icon"><span class="icon-hover">Configurações Avançadas</span></i>
-                            
-                            <section class="S-font-advanced-config close">
-
-                                <div class="S-title-font">
-                                    <i class="bi bi-dash M-icon"></i>
-                                    <input type="range" min="0" max="30" class="S-all-range">
-                                    <i class="bi bi-plus M-icon"></i>
-                                </div>
-
-                                <div class="S-icons-font">
-                                    <i class="bi bi-dash M-icon"></i>
-                                    <input type="range" min="0" max="30" class="S-all-range">
-                                    <i class="bi bi-plus M-icon"></i>
-                                </div>
-
-                                <div class="S-subtitle-font">
-                                </div>
-                                <div class="S-text-font">
-                                </div>
-                                <div class="S-detail-font">
-                                </div>
-                            </section>
-                    </article>
                 </section>
+                </article>
+            </section>
 
             </section>
 
             <section class="S-groups-friends S-tier">
                 <section id="S-section-divisions">
                     GRUPOS E AMIZADES
-                </section>            
+                </section>
             </section>
 
             <section class="S-accessibility S-tier">
