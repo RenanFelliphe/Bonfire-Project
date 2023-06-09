@@ -1,0 +1,12 @@
+img{
+    width: 120px;
+}
+
+i{
+    font-size: 100px;
+}
+
+.S-card-slider {
+    width: 500px;
+    border: 1px solid var(--border-color);
+}
