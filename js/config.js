@@ -1,6 +1,6 @@
 /*========================================================================================================================================
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
-/*=======================================================================================================================================*/
+=========================================================================================================================================*/
 
 openTiers(); //Abre e fecha cada SEÇÃO da página de configurações
 openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
@@ -8,9 +8,10 @@ defineTheme(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define o TIPO, o TAMANHO e a ESPESSURA das FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 
+
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
-/*=======================================================================================================================================*/
+=========================================================================================================================================*/
 
 //Abre e fecha cada SEÇÃO da página de configurações
 function openTiers() {
@@ -33,34 +34,6 @@ function openSearchArea() {
     searchConfigIcon.addEventListener('click', () => {
         searchConfigSection.classList.toggle("close");
     });
-}
-
-//Define o MODO(Light/Dark) e as CORES do site
-function defineTheme() {
-    const colorCards = document.querySelectorAll('.S-card');
-
-    function updateColors() {
-        const currentCard = document.querySelector('.S-card.current');
-        document.documentElement.className = currentCard.classList[1];
-    }
-
-    function updateMode() {
-        const chk = document.getElementById('S-chk');
-        chk.addEventListener('change', () => {
-            document.body.classList.toggle('light-mode');
-        });
-    }
-
-    colorCards.forEach(card => {
-        card.addEventListener('click', function () {
-            colorCards.forEach(card => card.classList.remove("current"));
-            this.classList.add("current");
-            updateColors(); // Atualiza as cores com base na seleção atual
-        });
-    });
-
-    updateMode(); // Ativa a funcionalidade de alternar entre o modo claro e escuro
-    updateColors(); // Atualiza as cores com base na seleção inicial
 }
 
 //Define o TIPO, o TAMANHO e a ESPESSURA das FONTES do site
@@ -89,3 +62,66 @@ function openQuickMessages() {
         quickMessages.classList.toggle("close");
     });
 }
+
+
+/*==========================================================================================================================================
+======================================================== INDIVIDUALIDADES DA PÁGINA ========================================================
+============================================================================================================================================*/
+
+//Define o MODO(Light/Dark) e as CORES do site
+function defineTheme() {
+    const colorCards = document.querySelectorAll('.S-card');
+
+    function updateColors() {
+        const currentCard = document.querySelector('.S-card.current');
+        const orgColorClass = Array.from(currentCard.classList).find(cls => cls.endsWith('-color'));
+        document.documentElement.className = orgColorClass;
+    }
+
+    function updateMode() {
+        const chk = document.getElementById('S-chk');
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    }
+
+    colorCards.forEach(card => {
+        card.addEventListener('click', function () {
+            colorCards.forEach(card => card.classList.remove("current"));
+            this.classList.add("current");
+            updateColors(); // Atualiza as cores com base na seleção atual
+        });
+    });
+
+    updateMode(); // Ativa a funcionalidade de alternar entre o modo claro e escuro
+    updateColors(); // Atualiza as cores com base na seleção inicial
+}
+//Carrosel de organizações
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 5,
+    centeredSlides: true,
+    freeMode: true,
+    spaceBetween: 40,
+    grabCursor: true,
+    mousewheel: true,
+    watchOverflow: true,
+
+    keyboard: {
+        enabled: true
+    },
+
+    pagination: {
+        el: '.org-pagination',
+        dynamicBullets: true,
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.fa-angle-right',
+        prevEl: '.fa-angle-left',
+    },
+
+    speed: 300, // Defina um valor adequado para a velocidade da transição dos slides
+});
+

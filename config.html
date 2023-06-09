@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/variable.css">
     <link rel="stylesheet" href="styles/styles.css">
 
@@ -364,23 +364,26 @@
 
                         <p class="S-article-subtitle"> Paleta de Cores: </p>
                         <div class="S-toggle-color">
-                            <div class="S-card-slider">
-                                <div class="S-gallery">
-                                    <i id="left" class="fa-solid fa-angle-left"></i>
-                                    <span class="S-card fluxo-color"><img src="assets/fluxo.png"></span>
-                                    <span class="S-card kru-color"><img src="assets/kru.png"></span>
-                                    <span class="S-card leviatan-color"><img src="assets/leviatan.png"></span>
-                                    <span class="S-card los-color"><img src="assets/los.png"></span>
-                                    <span class="S-card loud-color current"><img src="assets/loud.png"></span>
-                                    <span class="S-card magic-squad-color"><img src="assets/magic-squad.png"></span>
-                                    <span class="S-card pain-color"><img src="assets/pain.png"></span>
-                                    <span class="S-card red-canids-color"><img src="assets/red-canids.png"></span>
-                                    <span class="S-card sentinels-color"><img src="assets/sentinels.png"></span>
-                                    <span class="S-card team-liquid-color"><img src="assets/team-liquid.png"></span>
-                                    <span class="S-card vivo-keyd-color"><img src="assets/vivo-keyd.webp"></span>
-                                    <i id="left" class="fa-solid fa-angle-right"></i>
+                            <div class="S-card-slider swiper">
+                                <i class="fa-solid fa-angle-left"></i>
+                                <div class="S-gallery swiper-wrapper">
+                                    <span class="swiper-slide S-card fluxo-color"><img src="assets/fluxo.png"></span>
+                                    <span class="swiper-slide S-card kru-color"><img src="assets/kru.png"></span>
+                                    <span class="swiper-slide S-card leviatan-color"><img src="assets/leviatan.png"></span>
+                                    <span class="swiper-slide S-card los-color"><img src="assets/los.png"></span>
+                                    <span class="swiper-slide S-card current loud-color"><img src="assets/loud.png"></span>
+                                    <span class="swiper-slide S-card magic-squad-color"><img src="assets/magic-squad.png"></span>
+                                    <span class="swiper-slide S-card pain-color"><img src="assets/pain.png"></span>
+                                    <span class="swiper-slide S-card red-canids-color"><img src="assets/red-canids.png"></span>
+                                    <span class="swiper-slide S-card sentinels-color"><img src="assets/sentinels.png"></span>
+                                    <span class="swiper-slide S-card team-liquid-color"><img src="assets/team-liquid.png"></span>
+                                    <span class="swiper-slide S-card vivo-keyd-color"><img src="assets/vivo-keyd.webp"></span>
                                 </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                                
                             </div>
+                            <div class="org-pagination swiper-pagination swiper-pagination-dynamic"></div>
+
                         </div>
                     </article>
                     <article class="S-font-style">
@@ -443,7 +446,7 @@
         </aside>
     </main>
     
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/config.js"></script>
 </body>
 

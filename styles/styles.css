@@ -298,7 +298,7 @@ main .Q-quick-messages {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     transition: all 0.5s;
-    z-index: 1;
+    z-index: 11;
 }
 
 main .Q-quick-messages.close {
@@ -445,7 +445,7 @@ main .S-settings .S-top .S-others-functions i {
 }
 
 main .S-settings .S-top .S-others-functions i:hover {
-    border-color: var(--org-color);
+    border-color: var(--org-color2);
 }
 
 main .S-settings .S-top .S-others-functions a {
@@ -668,8 +668,8 @@ main .S-subsettings .S-tier .S-back-icon {
 }
 
 main .S-subsettings .S-tier .S-back-icon:hover {
-    color: var(--org-color);
-    border-color: var(--org-color-darker);
+    color: var(--org-color2);
+    border-color: var(--org-color2);
     transition: 0.2s;
     border-radius: 13px;
 }
@@ -910,35 +910,37 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
     transform: translateX(1.1rem);
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color {
+.S-toggle-color {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider {
+.S-toggle-color .swiper-pagination-bullet {
+    background-color: var(--org-color-lighter);
+}
+
+.S-toggle-color .swiper-pagination-bullet-active {
+    background-color: var(--org-color-darker);
+    border: 1px solid var(--org-color2);
+}
+
+.S-toggle-color .S-card-slider {
     position: relative;
     width: 600px;
+    height: 200px;
+    padding: 0 20px 0 20px;
+}
+
+.S-toggle-color .S-card-slider .S-gallery {
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
-    height: 100px;
-}
-
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 5));
-    overflow-x: auto;
     align-items: center;
-    gap: 19px;
-    padding-left: 44px;
+    padding-left: 20px;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card {
-    height: 90%;
-    width: 55%;
+.S-toggle-color .S-card-slider .S-gallery .S-card {
+    height: 40%;
     background-color: var(--second-color);
     display: flex;
     justify-content: center;
@@ -949,58 +951,56 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gal
     transition: 0.4s;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card:hover {
-    box-shadow: 0 0 2px 0 var(--org-color-lighter);
-    border-color: var(--org-color);
+.S-toggle-color .S-card-slider .S-gallery .S-card:hover {
+    box-shadow: 0 0 5px 0 var(--org-color);
+    border-color: var(--org-color2);
     transition: 0.3s;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card.current {
-    box-shadow: 0 0 2px 0 var(--org-color-lighter);
-    border-color: var(--org-color);
+.S-toggle-color .S-card-slider .S-gallery .S-card.current {
+    box-shadow: 0 0 5px 0 var(--org-color);
+    border-color: var(--org-color2);
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery .S-card img {
+.S-toggle-color .S-card-slider .S-gallery .S-card img {
     width: 58%;
     height: 70%;
     object-fit: contain;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider .S-gallery::-webkit-scrollbar {
-    display: none;
-}
-
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i {
-    font-size: 1rem;
+.S-toggle-color .S-card-slider i{
+    font-size: 1.3rem;
     cursor: pointer;
-    height: 25px;
-    width: 25px;
-    line-height: 25px;
-    cursor: pointer;
-    position: absolute;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
     text-align: center;
     background: var(--fourth-color);
     border-radius: 50%;
     box-shadow: 0 2px 4px 0 #00000081;
     transition: transform 0.1s linear;
-    border: 1px solid #585757;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:first-child {
-    left: -6px;
+.S-toggle-color .S-card-slider i:hover {
+    transition: 0.2s;
+    color: var(--org-color);
+    border-color: var(--org-color2);
+    box-shadow: 0 0 2px 1px var(--org-color2);
+}
+
+.S-toggle-color .S-card-slider i.fa-angle-left {
+    left: 5px;
     padding-right: 2px;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:last-child {
-    right: 0px;
+.S-toggle-color .S-card-slider i.fa-angle-right {
+    right: 5px;
     padding-left: 2px;
-}
-
-main .S-subsettings .S-appearence .S-theme .S-toggle-color .S-card-slider i:hover {
-    box-shadow: 0 0 3px 0 var(--org-color);
-    border-color: var(--org-color);
-    transition: 0.2s;
-    color: var(--org-color);
 }
 
 main .S-subsettings .S-appearence .S-font-style div {
@@ -1039,7 +1039,7 @@ main .S-subsettings .S-appearence .S-font-style div .S-font-weight-value {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     display: flex;
-    color: var(--org-color);
+    color: var(--org-color2);
     font-weight: 600;
     font-size: calc(var(--size-font-icons) -5px);
 }
