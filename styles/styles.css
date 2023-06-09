@@ -138,7 +138,7 @@ main {
 
 .M-menu-aside .M-icon {
     font-size: calc(var(--size-font-icons) + 0.2rem);
-    padding-left: 1rem;
+    padding-left: 0.9rem;
     transition: var(--element-in);
 }
 
@@ -216,7 +216,7 @@ main {
     width: calc(100% + 1px);
     border: 1px solid var(--border-color);
     border-right: none;
-    padding-left: 2rem;
+    padding-left: 2.5rem;
     transition: var(--element-in);
 }
 
@@ -260,14 +260,14 @@ main {
     position: absolute;
     font-size: calc(var(--size-font-title) + 0.8rem);
     transition: var(--element-in);
-    margin-left: -0.5rem
+    margin-left: -0.4rem
 }
 
 .M-menu-aside .M-aside-footer .menu-buttom i.close {
     opacity: 1;
     color: var(--org-color);
     font-size: calc(var(--size-font-title) + 1rem);
-    padding: 0 0 0 0.94rem;
+    padding: 0 0 0 0.79rem;
 }
 
 .M-menu-aside.close .M-aside-footer .menu-buttom i.close {
@@ -403,7 +403,7 @@ main .S-settings .S-div-search {
 
 main .S-settings .S-center {
     position: relative;
-    margin-top: 3px;
+    margin-top: 0px;
     height: 100%;
     width: 100%;
     z-index: 0;
@@ -412,7 +412,7 @@ main .S-settings .S-center {
 main .S-settings .S-top::after {
     content: '';
     position: absolute;
-    bottom: -3px;
+    bottom: 0;
     left: 1.4rem;
     min-width: 93%;
     border-bottom: 1px solid var(--border-color);
@@ -742,14 +742,14 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 45px;
+    border-radius: 40px;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images::before {
     content: '';
     position: absolute;
-    width: 110%;
-    height: 110%;
+    width: 112%;
+    height: 112%;
     background-color: var(--fourth-color);
     border-radius: 45px;
 }
@@ -760,7 +760,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     height: 31%;
     bottom: 0.05rem;
     right: -0.1rem;
-    border-radius: 13px;
+    border-radius: 100%;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
