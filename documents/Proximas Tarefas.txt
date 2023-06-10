@@ -19,3 +19,4 @@
 - Iniciar o design da vitrine de títulos n o perfil
 - Planejar os novos designs, caminhos e funcionalidades da página de Login/Registro
 - Trocar todos os ícones de outras bibliotecas para os ícones da biblioteca GetBootstrap
+- Criar um link para o site no Github
