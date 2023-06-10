@@ -95,7 +95,7 @@ main {
     display: flex;
     position: absolute;
     right: 0.9rem;
-    font-size: calc(var(--size-font-icons) + 10px);
+    font-size: calc(var(--size-font-icons) + 0.5rem);
     width: 30px;
     height: 30px;
     background-color: var(--first-color);
@@ -613,7 +613,6 @@ main .S-subsettings {
     min-width: 37.5rem;
     background-color: var(--fourth-color);
     border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
     overflow-y: auto;
 }
 
@@ -631,6 +630,10 @@ main .S-subsettings .S-tier #S-section-divisions {
     justify-content: flex-start;
     gap: 0.7rem;
     border-bottom: 1px solid var(--border-color);
+}
+
+main .S-subsettings .S-tier #S-section-divisions:last-child {
+    border-bottom: none;
 }
 
 main .S-subsettings .S-tier #S-section-divisions:last-child {
@@ -968,7 +971,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
     object-fit: contain;
 }
 
-.S-toggle-color .S-card-slider i{
+.S-toggle-color .S-card-slider i {
     font-size: 1.3rem;
     cursor: pointer;
     height: 30px;
@@ -1011,7 +1014,7 @@ main .S-subsettings .S-appearence .S-font-style div {
 main .S-subsettings .S-appearence .S-font-style input[type=range] {
     appearance: none;
     background-color: var(--fifth-color);
-    height: 0.5rem;
+    height: 0.45rem;
     width: 15rem;
     border-radius: 100rem;
     cursor: pointer;
@@ -1042,4 +1045,33 @@ main .S-subsettings .S-appearence .S-font-style div .S-font-weight-value {
     color: var(--org-color2);
     font-weight: 600;
     font-size: calc(var(--size-font-icons) -5px);
+}
+
+main .S-subsettings .S-appearence .S-font-style i.S-font-config {
+    float: right;
+    position: relative;
+    margin: 0 15px 15px 0;
+    font-size: calc(var(--size-font-icons) + 0.1rem);
+    font-weight: bolder;
+    width: 35px;
+    height: 35px;
+    background-color: var(--first-color);
+    border-radius: 12px;
+    display: flex;
+}
+
+main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config {
+    height: 20.5rem;
+    display: block;
+    overflow: hidden;
+    transition: height 0.5s;
+    clear: both;
+}
+
+main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config.close {
+    height: 0rem;
+}
+
+main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-article-title {
+    color: var(--text-color);
 }

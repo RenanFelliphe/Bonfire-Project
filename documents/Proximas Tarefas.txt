@@ -1,0 +1,21 @@
+- Mudar o tamanho dos icones para a variável --size-font-icons
+- Ajustar a proporcionalidade da foto de perfil e da capa
+- Terminar o menu-aside-top
+- Fazer o menu aside abir com hover em desktops
+- Voltar o ícone da página de configurações para o menu aside
+- Adicionar a funcionalidade do botão S-back-icon nos tiers
+- Fazer os hovers das páginas no menu-aside para os textos e ícones
+- Fazer a pergunta de confirmação para sair do aplicativo usando o botão log-out nas configurações
+- Atualizar a logo da Los Grandes (NOVA ERA DA LOS)
+- Adicionar as novas orgs às opções de cores. Ex: Nip, God Unidas, DRX, Fnatic, Kabuum, Optic...
+- Redefinir as cores de algumas organizações
+- Definir as cores definitivas do modo claro
+- Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
+- Trocar a logo do site no menu header
+- Adicionar o alterador de tipo de fonte nas configurações
+- Adicionar a funcionalidade dos botões de + e - no alterador de tamanho das fontes
+- Deletar os arquivos NOVO TESTE (Css, Html e JS)
+- Adicionar os ícones para as contas do usuário em outros sites no perfil
+- Iniciar o design da vitrine de títulos n o perfil
+- Planejar os novos designs, caminhos e funcionalidades da página de Login/Registro
+- Trocar todos os ícones de outras bibliotecas para os ícones da biblioteca GetBootstrap

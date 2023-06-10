@@ -46,12 +46,12 @@
     /*Cor do body*/
 
     /* ========= CORES DAS ORGS ========= */
-    --org-color: #00e226;
-    --org-color2: #00e226;
-    --org-color3: #00e226;
-    --org-color-darker: #008516;
-    --org-color-lighter: #61ff7c;
-    --org-color-low-opacity: #00ff2a70;
+    --org-color: #FF4500;
+    --org-color2: #FF4500;
+    --org-color3: #FF4500;
+    --org-color-darker: #AC2E00;
+    --org-color-lighter: #FF6027;
+    --org-color-low-opacity-color: #FF450070;
     /*Cor de cada organização, porém com opacidade reduzida*/
 
     /* ============== FONTES ============== */
@@ -62,7 +62,9 @@
     --size-font-icons: 18px;
     --size-font-subtitle: 16px;
     --size-font-text: 14px;
-    --size-font-detail: 12px;
+
+    --weight-font-normal: 500;
+    --weight-font-bold: 1000;
 
     /* ============== TANSIÇÕES ============== */
     --element-in: 0.45s;
