@@ -20,3 +20,6 @@
 - Planejar os novos designs, caminhos e funcionalidades da página de Login/Registro
 - Trocar todos os ícones de outras bibliotecas para os ícones da biblioteca GetBootstrap
 - Criar um link para o site no Github
+- Criar a Branch para ir adicionando as novas organizacoes uma de cada vez
+- Criar o botão de pesquisar uma organização para escolher a cor
+- Criar um botão para sugerir uma nova organização
