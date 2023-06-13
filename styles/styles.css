@@ -68,8 +68,14 @@ main {
 
 .M-menu-header .M-header-left img {
     position: absolute;
-    width: 2.2rem;
-    left: 1.17rem;
+    width: 6.5rem;
+    left: -0.5rem;
+    transition: 0.15s;
+}
+.M-menu-header .M-header-left img:hover {
+    position: absolute;
+    width: 7rem;
+    left: -0.75rem;
 }
 
 .M-menu-header .M-header-center .M-header-search {
@@ -1011,11 +1017,21 @@ main .S-subsettings .S-appearence .S-font-style div {
     gap: 50px;
 }
 
+main .S-subsettings .S-appearence .S-font-style .S-all-font-size .M-icon {
+    font-size: calc(var(--size-font-icons) + 0.3rem);
+    transition: 0.15s;
+}
+  
+main .S-subsettings .S-appearence .S-font-style .S-all-font-size .M-icon:target {
+    font-size: calc(var(--size-font-icons) + 1rem);
+}
+  
+
 main .S-subsettings .S-appearence .S-font-style input[type=range] {
     appearance: none;
     background-color: var(--fifth-color);
     height: 0.45rem;
-    width: 15rem;
+    width: 20rem;
     border-radius: 100rem;
     cursor: pointer;
 }

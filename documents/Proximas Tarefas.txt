@@ -1,3 +1,6 @@
+~~ Adicionar a funcionalidade dos botões de + e - no alterador de tamanho das fontes
+~~ Trocar a logo do site no menu header
+
 - Mudar o tamanho dos icones para a variável --size-font-icons
 - Ajustar a proporcionalidade da foto de perfil e da capa
 - Terminar o menu-aside-top
@@ -11,9 +14,7 @@
 - Redefinir as cores de algumas organizações
 - Definir as cores definitivas do modo claro
 - Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
-- Trocar a logo do site no menu header
 - Adicionar o alterador de tipo de fonte nas configurações
-- Adicionar a funcionalidade dos botões de + e - no alterador de tamanho das fontes
 - Deletar os arquivos NOVO TESTE (Css, Html e JS)
 - Adicionar os ícones para as contas do usuário em outros sites no perfil
 - Iniciar o design da vitrine de títulos n o perfil

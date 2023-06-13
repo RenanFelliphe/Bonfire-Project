@@ -1,5 +1,3 @@
-
-
 /*==========================================================================================================================================
 ======================================================== INDIVIDUALIDADES DA PÁGINA ========================================================
 ============================================================================================================================================*/
@@ -163,6 +161,22 @@ function defineFont() {
             document.documentElement.style.setProperty('--size-font-text', `${newTextSize}px`);
             document.documentElement.style.setProperty('--size-font-detail', `${newDetailSize}px`);
         });
+
+        function defineFontSizeByButtons() {
+            const fontSizeMinus = document.querySelector('.S-font-size-minus');
+            const fontSizePlus = document.querySelector('.S-font-size-plus');
+
+            fontSizePlus.addEventListener('click', () => {
+                fontSizeRange.value = parseInt(fontSizeRange.value) + 1;
+                fontSizeRange.dispatchEvent(new Event('input'));
+            });
+
+            fontSizeMinus.addEventListener('click', () => {
+                fontSizeRange.value = parseInt(fontSizeRange.value) - 1;
+                fontSizeRange.dispatchEvent(new Event('input'));
+            });
+        }
+        defineFontSizeByButtons();
     }
 
     openAdvancedFontConfig();
