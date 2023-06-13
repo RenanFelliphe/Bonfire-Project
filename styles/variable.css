@@ -211,3 +211,28 @@
     --org-color-lighter: #9a42d8;
     --org-color-low-opacity-color: #7A11C570;
 }
+.prg-color{
+    --org-color: #ff14ad;
+    --org-color2: #ff14ad;
+    --org-color3: #7A11C5;
+    --org-color-darker: #310053;
+    --org-color-lighter: #9a42d8;
+    --org-color-low-opacity-color: #7A11C570;
+}
+
+.god-unidas-color{
+    --org-color: #FFD700;
+    --org-color2: #00388b;
+    --org-color3: #00488b;
+    --org-color-darker: #004a8b;
+    --org-color-lighter: #002e8b7e;
+    --org-color-low-opacity-color: #00388b70;
+} 
+.miners-color{
+    --org-color: #5c049b;
+    --org-color2: #DC143C;
+    --org-color3: #5c049b;
+    --org-color-darker: #3e0069;
+    --org-color-lighter:  #7b2bb4;;
+    --org-color-low-opacity-color:#5c049b70;
+} 
