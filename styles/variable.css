@@ -264,3 +264,19 @@
     --org-color-lighter: #9a42d8;
     --org-color-color-low-opacity: #7A11C580;
 }
+.luminosity-gaming-color {
+    --org-color: #1E90FF;
+    --org-color2: #1E90FF;
+    --org-color3: #1E90FF;
+    --org-color-darker: #0251a0;
+    --org-color-lighter: #478dd4;
+    --org-color-color-low-opacity: #1E90FF80;
+}
+.faze-clan-color {
+    --org-color: #B22222;
+    --org-color2: #B22222;
+    --org-color3: #B22222;
+    --org-color-darker:#8b0606;
+    --org-color-lighter:#f43232;
+    --org-color-color-low-opacity: #B2222280;
+}

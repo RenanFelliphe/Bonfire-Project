@@ -4,7 +4,6 @@
 
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 toggleSelectedPage() //Troca e identa a PÁGINA SELECIONADA no menu lateral
-changeMenuBars(); //Troca de COR DAS BARRAS do menu lateral
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 
 /*========================================================================================================================================
