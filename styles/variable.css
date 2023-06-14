@@ -35,13 +35,16 @@
     --border-color: #585757;
     /*Cor das Bordas*/
 
+    --active-color: #3a3c3d;
+
     --first-color: #323435;
-    --second-color: #27282A;
     /*Cor de primeiro foco*/
-    --third-color: #242526;
+    --second-color: #27282A;
+    /*Cor de segundo foco*/
+    --menu-color: #242526;
     /*Cor dos Menus*/
     --fourth-color: #232325;
-    /*Cor de sergundo foco*/
+    /*Cor de quarto foco*/
     --fifth-color: #18191A;
     /*Cor do body*/
 
@@ -84,7 +87,7 @@
 
     --first-color: #383A3B;
     --second-color: #27282A;
-    --third-color: #242526;
+    --menu-color: #242526;
     --fourth-color: #232325;
     --fifth-color: #18191A;
 }
@@ -97,29 +100,31 @@
     --border-color: #B1B1B1;
 
     --first-color: #f3f3f3;
-    --third-color: #ffffff;
+    --menu-color: #ffffff;
     --second-color: #FFFFFF;
     --fourth-color: #F9FAFF;
     --fifth-color: #EBEBF5;
 }
 
-.cloud9-color{
+.cloud9-color {
     --org-color: #00a2ff;
     --org-color2: #00a2ff;
     --org-color3: #00a2ff;
     --org-color-darker: #005383;
-    --org-color-lighter:  #62c6ff;;
-    --org-color-color-low-opacity:#00a2ff70;
-} 
+    --org-color-lighter: #62c6ff;
+    ;
+    --org-color-color-low-opacity: #00a2ff70;
+}
 
-.drx-color{
+.drx-color {
     --org-color: #658cf5;
     --org-color2: #658cf5;
     --org-color3: #658cf5;
     --org-color-darker: #658cf5;
-    --org-color-lighter:  #658cf5;;
-    --org-color-color-low-opacity:#658cf570;
-} 
+    --org-color-lighter: #658cf5;
+    ;
+    --org-color-color-low-opacity: #658cf570;
+}
 
 .fluxo-color {
     --org-color: #C300FF;
@@ -130,14 +135,14 @@
     --org-color-color-low-opacity: #C300FF80;
 }
 
-.god-unidas-color{
+.god-unidas-color {
     --org-color: #FFD700;
     --org-color2: #0066ff;
     --org-color3: #0066ff;
     --org-color-darker: #0043a7;
     --org-color-lighter: #2f82ff;
     --org-color-color-low-opacity: #0066ff80;
-} 
+}
 
 .kru-color {
     --org-color: #FF00B3;
@@ -193,23 +198,25 @@
     --org-color-color-low-opacity: #0EB1A980;
 }
 
-.miners-color{
+.miners-color {
     --org-color: #5c049b;
     --org-color2: #DC143C;
     --org-color3: #5c049b;
     --org-color-darker: #3e0069;
-    --org-color-lighter:  #7b2bb4;;
-    --org-color-color-low-opacity:#5c049b80;
-} 
+    --org-color-lighter: #7b2bb4;
+    ;
+    --org-color-color-low-opacity: #5c049b80;
+}
 
-.nip-color{
+.nip-color {
     --org-color: #d0ff00;
     --org-color2: #d0ff00;
     --org-color3: #d0ff00;
     --org-color-darker: #677e00;
-    --org-color-lighter:  #daff33;;
-    --org-color-color-low-opacity:#d0ff0070;
-} 
+    --org-color-lighter: #daff33;
+    ;
+    --org-color-color-low-opacity: #d0ff0070;
+}
 
 .pain-color {
     --org-color: #FF0000;
@@ -220,7 +227,7 @@
     --org-color-color-low-opacity: #FF000080;
 }
 
-.prg-color{
+.prg-color {
     --org-color: #ff14ad;
     --org-color2: #ff14ad;
     --org-color3: #7A11C5;
@@ -264,6 +271,7 @@
     --org-color-lighter: #9a42d8;
     --org-color-color-low-opacity: #7A11C580;
 }
+
 .luminosity-gaming-color {
     --org-color: #1E90FF;
     --org-color2: #1E90FF;
@@ -272,11 +280,12 @@
     --org-color-lighter: #478dd4;
     --org-color-color-low-opacity: #1E90FF80;
 }
+
 .faze-clan-color {
     --org-color: #B22222;
     --org-color2: #B22222;
     --org-color3: #B22222;
-    --org-color-darker:#8b0606;
-    --org-color-lighter:#f43232;
+    --org-color-darker: #8b0606;
+    --org-color-lighter: #f43232;
     --org-color-color-low-opacity: #B2222280;
 }

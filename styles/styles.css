@@ -53,7 +53,7 @@ main {
     position: fixed;
     width: 100%;
     height: 3.2rem;
-    background-color: var(--third-color);
+    background-color: var(--menu-color);
     border: 1px solid var(--border-color);
     display: flex;
 }
@@ -68,10 +68,11 @@ main {
 }
 
 
-.M-menu-header .M-header-left a{
+.M-menu-header .M-header-left a {
     width: 100%;
     height: 100%;
 }
+
 .M-menu-header .M-header-left a img {
     position: absolute;
     width: 6.5rem;
@@ -79,6 +80,7 @@ main {
     transition: 0.15s;
     top: -0.4rem;
 }
+
 .M-menu-header .M-header-left img:hover {
     position: absolute;
     width: 7rem;
@@ -113,8 +115,8 @@ main {
     top: 3.15rem;
     left: 0;
     height: 100vh;
-    width: 15.65rem;
-    background-color: var(--third-color);
+    width: 17rem;
+    background-color: var(--menu-color);
     border: 1px solid var(--border-color);
     border-top: none;
     transition: width var(--element-in);
@@ -225,7 +227,7 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li a .All-icon {
-    min-width: 3rem;
+    min-width: 2.8rem;
     height: 44px;
     line-height: 44px;
 }
@@ -273,6 +275,29 @@ main {
     font-size: var(--size-font-icons);
 }
 
+.M-menu-aside .M-aside-center ul li.M-more-pages .M-more-arrow {
+    position: absolute;
+    right: 1rem;
+}
+
+.M-menu-aside.close .M-aside-center ul li.M-more-pages .M-more-arrow {
+    opacity: 0;
+}
+
+.M-menu-aside .M-aside-center ul li.M-more-pages.active .M-more-arrow {
+    transform: rotate(90deg);
+}
+
+.M-menu-aside .M-aside-center ul li.M-more-pages ul li,
+.M-menu-aside.close .M-aside-center ul li.M-more-pages.active ul li {
+    display: none;
+}
+
+.M-menu-aside .M-aside-center ul li.M-more-pages.active ul li {
+    margin-left: 1.75rem;
+    display: block;
+}
+
 .M-menu-aside .M-aside-footer .menu-buttom i.All-icon.close {
     opacity: 1;
     color: var(--org-color);
@@ -302,7 +327,7 @@ main .Q-quick-messages {
     bottom: -1px;
     width: 30%;
     height: 60%;
-    background-color: var(--third-color);
+    background-color: var(--menu-color);
     border: 1px solid var(--org-color-darker);
     border-bottom: none;
     border-top-right-radius: 15px;
@@ -336,7 +361,7 @@ main .Q-quick-messages .Q-message-pusher {
     height: 2.3rem;
     line-height: 2.5rem;
     text-align: center;
-    background: var(--third-color);
+    background: var(--menu-color);
     border: 1px solid var(--org-color-darker);
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
@@ -1049,7 +1074,7 @@ main .S-subsettings .S-appearence .S-font-style input[type=range]:hover::-webkit
     box-shadow: 0 0 3px 0px var(--org-color-lighter);
 }
 
-main .S-subsettings .S-appearence .S-font-style div .S-font-size-value{
+main .S-subsettings .S-appearence .S-font-style div .S-font-size-value {
     width: 34px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
