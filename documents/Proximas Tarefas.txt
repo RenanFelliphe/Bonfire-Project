@@ -20,5 +20,6 @@
 - Recriar as bordas dos maiores containers do site para fazer com que o mesmo pareça mais redondo
 - Recriar o botão 'Editar Perfil' nas configurações
 - Retirar o fundo da logo da Rensga
+- Retirar o fundo da logo da Los
 - Retirar a tipografia da logo da DRX
 - Aumentar a distribuição das variáveis de cores pelo site
