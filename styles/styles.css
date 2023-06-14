@@ -124,7 +124,8 @@ main {
 ============================================ MENU ASIDE ==============================================
 ====================================================================================================*/
 
-.M-menu-aside {
+.M-menu-aside,
+.M-menu-aside:hover {
     position: fixed;
     top: 3.15rem;
     left: 0;
@@ -141,6 +142,7 @@ main {
     width: 5rem;
     transition: width var(--element-out);
 }
+
 
 .M-menu-aside .M-icon {
     font-size: calc(var(--size-font-icons) + 0.2rem);
@@ -222,7 +224,7 @@ main {
     width: calc(100% + 1px);
     border: 1px solid var(--border-color);
     border-right: none;
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
     transition: var(--element-in);
 }
 
@@ -236,9 +238,9 @@ main {
 }
 
 .M-menu-aside ul li a .M-icon {
-    min-width: 4rem;
-    height: 44px;
-    line-height: 44px;
+    min-width: 3rem;
+    height: 40px;
+    line-height: 40px;
     font-size: 1.5rem;
 }
 
@@ -247,8 +249,8 @@ main {
 }
 
 .M-menu-aside ul li a .M-title {
-    height: 44px;
-    line-height: 44px;
+    height: 40px;
+    line-height: 40px;
     transition: var(--element-in);
 }
 
@@ -383,6 +385,10 @@ main .S-settings {
     overflow-y: auto;
 }
 
+main .S-settings::-webkit-scrollbar {
+    display: none;
+}
+
 main .S-settings .S-top {
     position: sticky;
     top: 0;
@@ -393,26 +399,6 @@ main .S-settings .S-top {
     padding: 1.5rem 2rem 1.5rem 3rem;
     background-color: var(--second-color);
     z-index: 2;
-}
-
-main .S-settings .S-div-search {
-    position: sticky;
-    top: 5rem;
-    /* Altura do S-top */
-    height: 7rem;
-    display: flex;
-    overflow: hidden;
-    transition: all 0.5s;
-    background-color: var(--second-color);
-    z-index: 1;
-}
-
-main .S-settings .S-center {
-    position: relative;
-    margin-top: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
 }
 
 main .S-settings .S-top::after {
@@ -474,11 +460,21 @@ main .S-settings .S-top .S-others-functions .S-search-icon .icon-hover {
     width: 90px;
 }
 
+main .S-settings .S-div-search {
+    position: sticky;
+    top: 5rem;
+    height: 7rem;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s;
+    background-color: var(--second-color);
+    z-index: 1;
+}
+
 main .S-settings .S-div-search.close {
     transform: translateY(2px);
     height: 0;
     transition: 0.5s;
-    position: static;
     overflow: hidden;
 }
 
@@ -517,8 +513,12 @@ main .S-settings .S-div-search input {
     background-color: transparent;
 }
 
-main .S-settings::-webkit-scrollbar {
-    display: none;
+main .S-settings .S-center {
+    position: relative;
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 
 main .S-settings .S-center ul .S-buttom {
@@ -574,9 +574,13 @@ main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
     transition: 0.3s;
 }
 
+main .S-settings .S-center ul .S-buttom.active p {
+    transition: color 0.8s;
+}
+
 main .S-settings .S-center ul .S-buttom.active p:hover {
     color: var(--org-color);
-    transition: 0.1s;
+    transition: color 0.1s;
     cursor: pointer;
 }
 
@@ -790,10 +794,6 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
     font-weight: bolder;
     color: var(--org-color);
     letter-spacing: 2px;
-}
-
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
-    padding-left: 0.2rem;
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a {
@@ -1041,7 +1041,7 @@ main .S-subsettings .S-appearence .S-font-style input[type=range]::-webkit-slide
     width: 1rem;
     height: 1rem;
     border-radius: 100%;
-    background-color: var(--org-color-darker);
+    background-color: var(--org-color-color-low-opacity);
     border: 2px dotted var(--org-color);
     transition: 0.2s;
     opacity: 0.9;
