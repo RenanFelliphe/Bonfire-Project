@@ -1,25 +1,46 @@
-- Mudar o tamanho dos icones para a variável --size-font-icons
-- Ajustar a proporcionalidade da foto de perfil e da capa
-- Terminar o menu-aside-top
-- Adicionar a funcionalidade do botão S-back-icon nos tiers
-- Fazer os hovers das páginas no menu-aside para os textos e ícones
-- Fazer a pergunta de confirmação para sair do aplicativo usando o botão log-out nas configurações
-- Atualizar a logo da Los Grandes (NOVA ERA DA LOS)
-- Redefinir as cores de algumas organizações
-- Definir as cores definitivas do modo claro
-- Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
-- Adicionar o alterador de tipo de fonte nas configurações (Select)
-- Adicionar os ícones para as contas do usuário em outros sites no perfil
+| >>> INICIAR <<< |
 - Iniciar o design da vitrine de títulos n o perfil
-- Planejar os novos designs, caminhos e funcionalidades da página de Login/Registro
-- Trocar todos os ícones de outras bibliotecas para os ícones da biblioteca GetBootstrap
 - Criar um link para o site no Github
+
+
+| >>> CRIAR <<< |
+- Adicionar a funcionalidade do botão S-back-icon nos tiers
 - Criar a Branch para ir adicionando as novas organizacoes uma de cada vez
 - Criar o botão de pesquisar uma organização para escolher a cor
 - Criar um botão para sugerir uma nova organização
+- Adicionar o alterador de tipo de fonte nas configurações (Select)
+- Adicionar os ícones para as contas do usuário em outros sites no perfil
+- Fazer a pergunta de confirmação para sair do aplicativo usando o botão log-out nas configurações
+
+
+| >>> DEFINIR <<< |
+- Definir as cores definitivas do modo claro
+
+
+| >>> ATUALIZAR / ALTERAR <<< |
+- Ajustar a proporcionalidade da foto de perfil e da capa
+- Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
+- Atualizar a logo da Los Grandes (NOVA ERA DA LOS)
+- Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
+- Trocar todos os ícones de outras bibliotecas para os ícones da biblioteca GetBootstrap
+- Redefinir as cores de algumas organizações
+
+
+| >>> RECRIAR <<< |
+- Planejar os novos designs, caminhos e funcionalidades da página de Login/Registro
 - Recriar as bordas dos maiores containers do site para fazer com que o mesmo pareça mais redondo
 - Recriar o botão 'Editar Perfil' nas configurações
+
+
+| >>> FINALIZAR <<< |
+- Terminar o menu-aside-top
+
+
+| >>> DELETAR <<< |
 - Retirar o fundo da logo da Rensga
 - Retirar o fundo da logo da Los
 - Retirar a tipografia da logo da DRX
+
+
+| >>> OUTROS <<< |
 - Aumentar a distribuição das variáveis de cores pelo site
