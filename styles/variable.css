@@ -49,12 +49,12 @@
     /*Cor do body*/
 
     /* ========= CORES DAS ORGS ========= */
-    --org-color: #FF4500;
-    --org-color2: #FF4500;
-    --org-color3: #FF4500;
-    --org-color-darker: #AC2E00;
-    --org-color-lighter: #FF6027;
-    --org-color-color-low-opacity: #FF450080;
+    --org-color: #00EB00;
+    --org-color2: #00EB00;
+    --org-color3: #00EB00;
+    --org-color-darker: #007200;
+    --org-color-lighter: #2DFF2D;
+    --org-color-color-low-opacity: #00FF2A80;
     /*Cor de cada organização, porém com opacidade reduzida*/
 
     /* ============== FONTES ============== */
@@ -122,7 +122,6 @@
     --org-color3: #658cf5;
     --org-color-darker: #658cf5;
     --org-color-lighter: #658cf5;
-    ;
     --org-color-color-low-opacity: #658cf570;
 }
 

@@ -6,8 +6,6 @@
 | >>> CRIAR <<< |
 - Adicionar a funcionalidade do botão S-back-icon nos tiers
 - Criar a Branch para ir adicionando as novas organizacoes uma de cada vez
-- Criar o botão de pesquisar uma organização para escolher a cor
-- Criar um botão para sugerir uma nova organização
 - Adicionar o alterador de tipo de fonte nas configurações (Select)
 - Adicionar os ícones para as contas do usuário em outros sites no perfil
 - Fazer a pergunta de confirmação para sair do aplicativo usando o botão log-out nas configurações

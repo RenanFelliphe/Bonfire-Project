@@ -115,7 +115,7 @@ main {
     top: 3.15rem;
     left: 0;
     height: 100vh;
-    width: 17rem;
+    width: 15.75rem;
     background-color: var(--menu-color);
     border: 1px solid var(--border-color);
     border-top: none;
@@ -230,11 +230,12 @@ main {
     min-width: 2.8rem;
     height: 44px;
     line-height: 44px;
+    font-size: calc(var(--size-font-icons) + 0.3rem);
 }
 
 .M-menu-aside .M-aside-center ul li:hover a .All-icon {
     color: var(--org-color);
-    font-size: calc(var(--size-font-icons) + 0.3rem);
+    font-size: calc(var(--size-font-icons) + 0.5rem);
 }
 
 .M-menu-aside .M-aside-center ul li a .M-title {
@@ -600,11 +601,14 @@ main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
     color: var(--org-color2);
     transition: 0.3s;
 }
+main .S-settings .S-center ul .S-buttom.active p {
+    transition: color 1s;
+    cursor: pointer;
+}
 
 main .S-settings .S-center ul .S-buttom.active p:hover {
     color: var(--org-color);
-    transition: 0.1s;
-    cursor: pointer;
+    transition: color 0.1s;
 }
 
 main .S-settings .S-center ul .S-buttom .S-subbuttom {
@@ -614,17 +618,17 @@ main .S-settings .S-center ul .S-buttom .S-subbuttom {
     letter-spacing: 2px;
     overflow: hidden;
     max-height: 0;
-    transition: 0.5s;
+    transition: max-height 0.5s;
 }
 
 main .S-settings .S-center ul .S-buttom .S-subbuttom li {
     opacity: 0;
-    transition: 1.5s;
+    transition: opacity 1.5s;
 }
 
 main .S-settings .S-center ul .S-buttom.active .S-subbuttom li {
     opacity: 1;
-    transition: 0.4s;
+    transition: opacity 0.4s;
 }
 
 main .S-settings .S-center ul .S-buttom.active .S-subbuttom {
@@ -951,6 +955,15 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.S-toggle-color .S-color-functions{
+    width: 100%;
+    display: flex;
+    gap: 0.7rem;
+    position: absolute;
+    top: 40%;
+    transform: translate(33%);
 }
 
 .S-toggle-color .swiper-pagination-bullet {
