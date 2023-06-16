@@ -5,7 +5,6 @@
 
 | >>> CRIAR <<< |
 - Adicionar a funcionalidade do botão S-back-icon nos tiers
-- Criar a Branch para ir adicionando as novas organizacoes uma de cada vez
 - Adicionar o alterador de tipo de fonte nas configurações (Select)
 - Adicionar os ícones para as contas do usuário em outros sites no perfil
 - Fazer a pergunta de confirmação para sair do aplicativo usando o botão log-out nas configurações
@@ -17,8 +16,6 @@
 
 | >>> ATUALIZAR / ALTERAR <<< |
 - Ajustar a proporcionalidade da foto de perfil e da capa
-- Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
-- Atualizar a logo da Los Grandes (NOVA ERA DA LOS)
 - Alterar o tempo de transição de algumas cores na transição de modo (claro ~ escuro)
 - Trocar todos os ícones de outras bibliotecas para os ícones da biblioteca GetBootstrap
 - Redefinir as cores de algumas organizações
@@ -35,9 +32,6 @@
 
 
 | >>> DELETAR <<< |
-- Retirar o fundo da logo da Rensga
-- Retirar o fundo da logo da Los
-- Retirar a tipografia da logo da DRX
 
 
 | >>> OUTROS <<< |
