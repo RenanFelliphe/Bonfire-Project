@@ -25,8 +25,8 @@ const swiper = new Swiper('.swiper', {
     },
 
     navigation: {
-        nextEl: '.fa-angle-right',
-        prevEl: '.fa-angle-left',
+        nextEl: '.arrow-right',
+        prevEl: '.arrow-left',
     },
 
     speed: 300, // Defina um valor adequado para a velocidade da transição dos slides

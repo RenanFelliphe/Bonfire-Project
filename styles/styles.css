@@ -286,7 +286,7 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li.M-more-pages.active .M-more-arrow {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 .M-menu-aside .M-aside-center ul li.M-more-pages ul li,
@@ -697,7 +697,9 @@ main .S-subsettings .S-tier.active {
 main .S-subsettings .S-tier .S-back-icon {
     position: absolute;
     margin: 10px 0 0 10px;
-    padding: 1px 2px 0 0;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
     font-size: calc(var(--size-font-icons) + 1rem);
     background-color: var(--fourth-color);
     border: 1px solid var(--border-color);
@@ -705,6 +707,7 @@ main .S-subsettings .S-tier .S-back-icon {
     cursor: pointer;
     z-index: 1;
     transition: 0.2s;
+    transform: rotate(90deg);
 }
 
 main .S-subsettings .S-tier .S-back-icon:hover {
@@ -1018,21 +1021,19 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
 }
 
 .S-toggle-color .S-card-slider i {
-    font-size: 1.3rem;
     cursor: pointer;
     height: 30px;
     width: 30px;
-    line-height: 30px;
-    text-align: center;
     background: var(--fourth-color);
     border-radius: 50%;
     box-shadow: 0 2px 4px 0 #00000081;
     transition: transform 0.1s linear;
     border: 1px solid var(--border-color);
     position: absolute;
-    top: 50%;
+    top: 43%;
     transform: translateY(-50%);
     z-index: 2;
+    display: flex;
 }
 
 .S-toggle-color .S-card-slider i:hover {
@@ -1042,14 +1043,18 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
     box-shadow: 0 0 2px 1px var(--org-color2);
 }
 
-.S-toggle-color .S-card-slider i.fa-angle-left {
+.S-toggle-color .S-card-slider i.arrow-left {
     left: 5px;
     padding-right: 2px;
+    transform: rotate(90deg);
+    padding: 0 2px 0 1px;
 }
 
-.S-toggle-color .S-card-slider i.fa-angle-right {
+.S-toggle-color .S-card-slider i.arrow-right {
     right: 5px;
     padding-left: 2px;
+    transform: rotate(-90deg);
+    padding: 1px 1px 0 0;
 }
 
 main .S-subsettings .S-appearence .S-font-style div {

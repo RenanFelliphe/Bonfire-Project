@@ -134,6 +134,15 @@
     --org-color-color-low-opacity: #C300FF80;
 }
 
+.fnatic-color {
+    --org-color: #ff6600;
+    --org-color2: #ff6600;
+    --org-color3: #ff6600;
+    --org-color-darker: #723300;
+    --org-color-lighter: #ff9138;
+    --org-color-color-low-opacity: #ff660080;
+}
+
 .god-unidas-color {
     --org-color: #FFD700;
     --org-color2: #0066ff;
@@ -203,7 +212,6 @@
     --org-color3: #5c049b;
     --org-color-darker: #3e0069;
     --org-color-lighter: #7b2bb4;
-    ;
     --org-color-color-low-opacity: #5c049b80;
 }
 
@@ -213,7 +221,6 @@
     --org-color3: #d0ff00;
     --org-color-darker: #677e00;
     --org-color-lighter: #daff33;
-    ;
     --org-color-color-low-opacity: #d0ff0070;
 }
 
@@ -262,6 +269,15 @@
     --org-color-color-low-opacity: #002ec580;
 }
 
+.vincit-color {
+    --org-color: #00eeff;
+    --org-color2: #00eeff;
+    --org-color3: #00eeff;
+    --org-color-darker: #007a83;
+    --org-color-lighter: #57f4ff;
+    --org-color-color-low-opacity: #00eeff80;
+}
+
 .vivo-keyd-color {
     --org-color: #7A11C5;
     --org-color2: #7A11C5;
@@ -287,4 +303,40 @@
     --org-color-darker: #8b0606;
     --org-color-lighter: #f43232;
     --org-color-color-low-opacity: #B2222280;
+}
+
+.immortals-color {
+    --org-color: #00ffc8;
+    --org-color2: #00ffc8;
+    --org-color3: #00ffc8;
+    --org-color-darker: #008669;
+    --org-color-lighter: #58ffdb;
+    --org-color-color-low-opacity: #00ffc880;
+}
+
+.tropa-color {
+    --org-color: #ffd900;
+    --org-color2: #ffd900;
+    --org-color3: #ffd900;
+    --org-color-darker: #6d5d00;
+    --org-color-lighter: #ffe44a;
+    --org-color-color-low-opacity: #ffd90080;
+}
+
+.evos-e-sports-color {
+    --org-color: #52baff;
+    --org-color2: #52baff;
+    --org-color3: #52baff;
+    --org-color-darker: #0061a1;
+    --org-color-lighter: #86cfff;
+    --org-color-color-low-opacity: #52baff80;
+}
+
+.talon-e-sports-color {
+    --org-color: #e7404e;
+    --org-color2: #e7404e;
+    --org-color3: #e7404e;
+    --org-color-darker: #97000d;
+    --org-color-lighter: #ff5866;
+    --org-color-color-low-opacity: #e7404e80;
 }
