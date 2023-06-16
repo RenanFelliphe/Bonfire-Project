@@ -34,9 +34,10 @@
     /*Cor dos Textos*/
     --border-color: #585757;
     /*Cor das Bordas*/
-
+    --modal-focus: #000000ab;
+    /*Cor do body ao abrir um modal*/
     --active-color: #3a3c3d;
-
+    /*Cor dos ícones e itens ativados ou com hover*/
     --first-color: #323435;
     /*Cor de primeiro foco*/
     --second-color: #27282A;
@@ -54,7 +55,7 @@
     --org-color3: #00EB00;
     --org-color-darker: #007200;
     --org-color-lighter: #2DFF2D;
-    --org-color-color-low-opacity: #00FF2A80;
+    --org-color-low-opacity: #00FF2A80;
     /*Cor de cada organização, porém com opacidade reduzida*/
 
     /* ============== FONTES ============== */
@@ -122,7 +123,7 @@
     --org-color3: #658cf5;
     --org-color-darker: #658cf5;
     --org-color-lighter: #658cf5;
-    --org-color-color-low-opacity: #658cf570;
+    --org-color-low-opacity: #658cf570;
 }
 
 .fluxo-color {
@@ -131,7 +132,7 @@
     --org-color3: #C300FF;
     --org-color-darker: #680088;
     --org-color-lighter: #D650FF;
-    --org-color-color-low-opacity: #C300FF80;
+    --org-color-low-opacity: #C300FF80;
 }
 
 .fnatic-color {
@@ -140,7 +141,7 @@
     --org-color3: #ff6600;
     --org-color-darker: #723300;
     --org-color-lighter: #ff9138;
-    --org-color-color-low-opacity: #ff660080;
+    --org-color-low-opacity: #ff660080;
 }
 
 .god-unidas-color {
@@ -149,7 +150,7 @@
     --org-color3: #0066ff;
     --org-color-darker: #0043a7;
     --org-color-lighter: #2f82ff;
-    --org-color-color-low-opacity: #0066ff80;
+    --org-color-low-opacity: #0066ff80;
 }
 
 .kru-color {
@@ -158,7 +159,7 @@
     --org-color3: #FF00B3;
     --org-color-darker: #910065;
     --org-color-lighter: #ff5dce;
-    --org-color-color-low-opacity: #FF00B380;
+    --org-color-low-opacity: #FF00B380;
 }
 
 .leviatan-color {
@@ -167,7 +168,7 @@
     --org-color3: #4687BD;
     --org-color-darker: #20425C;
     --org-color-lighter: #6DBAFA;
-    --org-color-color-low-opacity: #4687BD80;
+    --org-color-low-opacity: #4687BD80;
 }
 
 .liberty-color {
@@ -176,7 +177,7 @@
     --org-color3: #00FFFF;
     --org-color-darker: #006969;
     --org-color-lighter: #7DFFFF;
-    --org-color-color-low-opacity: #00FFFF80;
+    --org-color-low-opacity: #00FFFF80;
 }
 
 .los-color {
@@ -185,7 +186,7 @@
     --org-color3: #FF4500;
     --org-color-darker: #AC2E00;
     --org-color-lighter: #FF6027;
-    --org-color-color-low-opacity: #FF450080;
+    --org-color-low-opacity: #FF450080;
 }
 
 .loud-color {
@@ -194,7 +195,7 @@
     --org-color3: #00EB00;
     --org-color-darker: #007200;
     --org-color-lighter: #2DFF2D;
-    --org-color-color-low-opacity: #00FF2A80;
+    --org-color-low-opacity: #00FF2A80;
 }
 
 .magic-squad-color {
@@ -203,7 +204,7 @@
     --org-color3: #0EB1A9;
     --org-color-darker: #006969;
     --org-color-lighter: #55b9b4;
-    --org-color-color-low-opacity: #0EB1A980;
+    --org-color-low-opacity: #0EB1A980;
 }
 
 .miners-color {
@@ -212,7 +213,7 @@
     --org-color3: #5c049b;
     --org-color-darker: #3e0069;
     --org-color-lighter: #7b2bb4;
-    --org-color-color-low-opacity: #5c049b80;
+    --org-color-low-opacity: #5c049b80;
 }
 
 .nip-color {
@@ -221,7 +222,7 @@
     --org-color3: #d0ff00;
     --org-color-darker: #677e00;
     --org-color-lighter: #daff33;
-    --org-color-color-low-opacity: #d0ff0070;
+    --org-color-low-opacity: #d0ff0070;
 }
 
 .pain-color {
@@ -230,7 +231,7 @@
     --org-color3: #FF0000;
     --org-color-darker: #810000;
     --org-color-lighter: #ff2f2f;
-    --org-color-color-low-opacity: #FF000080;
+    --org-color-low-opacity: #FF000080;
 }
 
 .prg-color {
@@ -239,7 +240,7 @@
     --org-color3: #7A11C5;
     --org-color-darker: #310053;
     --org-color-lighter: #9a42d8;
-    --org-color-color-low-opacity: #7A11C580;
+    --org-color-low-opacity: #7A11C580;
 }
 
 .red-canids-color {
@@ -248,7 +249,7 @@
     --org-color3: #B32844;
     --org-color-darker: #8A031E;
     --org-color-lighter: #DB2D50;
-    --org-color-color-low-opacity: #DB063080;
+    --org-color-low-opacity: #DB063080;
 }
 
 .sentinels-color {
@@ -257,7 +258,7 @@
     --org-color3: #E70045;
     --org-color-darker: #770024;
     --org-color-lighter: #a73759;
-    --org-color-color-low-opacity: #E7004580;
+    --org-color-low-opacity: #E7004580;
 }
 
 .team-liquid-color {
@@ -266,7 +267,7 @@
     --org-color3: #002ec5;
     --org-color-darker: #00165e;
     --org-color-lighter: #294ec9;
-    --org-color-color-low-opacity: #002ec580;
+    --org-color-low-opacity: #002ec580;
 }
 
 .vincit-color {
@@ -275,7 +276,7 @@
     --org-color3: #00eeff;
     --org-color-darker: #007a83;
     --org-color-lighter: #57f4ff;
-    --org-color-color-low-opacity: #00eeff80;
+    --org-color-low-opacity: #00eeff80;
 }
 
 .vivo-keyd-color {
@@ -284,7 +285,7 @@
     --org-color3: #7A11C5;
     --org-color-darker: #310053;
     --org-color-lighter: #9a42d8;
-    --org-color-color-low-opacity: #7A11C580;
+    --org-color-low-opacity: #7A11C580;
 }
 
 .luminosity-gaming-color {
@@ -293,7 +294,7 @@
     --org-color3: #1E90FF;
     --org-color-darker: #0251a0;
     --org-color-lighter: #478dd4;
-    --org-color-color-low-opacity: #1E90FF80;
+    --org-color-low-opacity: #1E90FF80;
 }
 
 .faze-clan-color {
@@ -302,7 +303,7 @@
     --org-color3: #B22222;
     --org-color-darker: #8b0606;
     --org-color-lighter: #f43232;
-    --org-color-color-low-opacity: #B2222280;
+    --org-color-low-opacity: #B2222280;
 }
 
 .immortals-color {
@@ -311,7 +312,7 @@
     --org-color3: #00ffc8;
     --org-color-darker: #008669;
     --org-color-lighter: #58ffdb;
-    --org-color-color-low-opacity: #00ffc880;
+    --org-color-low-opacity: #00ffc880;
 }
 
 .tropa-color {
@@ -320,7 +321,7 @@
     --org-color3: #ffd900;
     --org-color-darker: #6d5d00;
     --org-color-lighter: #ffe44a;
-    --org-color-color-low-opacity: #ffd90080;
+    --org-color-low-opacity: #ffd90080;
 }
 
 .evos-e-sports-color {
@@ -329,7 +330,7 @@
     --org-color3: #52baff;
     --org-color-darker: #0061a1;
     --org-color-lighter: #86cfff;
-    --org-color-color-low-opacity: #52baff80;
+    --org-color-low-opacity: #52baff80;
 }
 
 .talon-e-sports-color {
@@ -338,5 +339,5 @@
     --org-color3: #e7404e;
     --org-color-darker: #97000d;
     --org-color-lighter: #ff5866;
-    --org-color-color-low-opacity: #e7404e80;
+    --org-color-low-opacity: #e7404e80;
 }

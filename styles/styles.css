@@ -601,6 +601,7 @@ main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
     color: var(--org-color2);
     transition: 0.3s;
 }
+
 main .S-settings .S-center ul .S-buttom.active p {
     transition: color 1s;
     cursor: pointer;
@@ -691,30 +692,7 @@ main .S-subsettings .S-tier {
 main .S-subsettings .S-tier.active {
     opacity: 1;
     display: block;
-    padding-top: 2rem;
-}
-
-main .S-subsettings .S-tier .S-back-icon {
-    position: absolute;
-    margin: 10px 0 0 10px;
-    display: flex;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: calc(var(--size-font-icons) + 1rem);
-    background-color: var(--fourth-color);
-    border: 1px solid var(--border-color);
-    border-radius: 11px;
-    cursor: pointer;
-    z-index: 1;
-    transition: 0.2s;
-    transform: rotate(90deg);
-}
-
-main .S-subsettings .S-tier .S-back-icon:hover {
-    color: var(--org-color2);
-    border-color: var(--org-color2);
-    transition: 0.2s;
-    border-radius: 13px;
+    padding-top: 2.5rem;
 }
 
 main .S-subsettings .S-tier article .S-article-title {
@@ -960,7 +938,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
     justify-content: center;
 }
 
-.S-toggle-color .S-color-functions{
+.S-toggle-color .S-color-functions {
     width: 100%;
     display: flex;
     gap: 0.7rem;
@@ -1129,4 +1107,84 @@ main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config.close {
 
 main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-article-title {
     color: var(--text-color);
+}
+
+.S-log-out-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-focus);
+    z-index: 9999;
+}
+
+.S-log-out-modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--fifth-color);
+    padding: 25px;
+    padding-top: 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--org-color-darker);
+    border-top: 3px solid var(--org-color2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 8rem;
+    box-shadow: 0px 3px 30px 1px rgb(22, 22, 22);
+}
+
+.S-log-out-modal-container h4 {
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.S-log-out-modal-buttons {
+    display: flex;
+    padding: 2rem 0 0 6rem;
+}
+
+.S-log-out-modal-buttons button {
+    height: 1.6rem;
+    cursor: pointer;
+    font-size: calc(var(--size-font-subtitle) - 5px);
+    font-weight: 700;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+
+.S-log-out-modal-buttons button.S-cancel-log-out {
+    border: none;
+    background: none;
+    color: var(--org-color2);
+    width: 7rem;
+}
+
+.S-log-out-modal-buttons button.S-confirm-log-out {
+    color: var(--black-to-white-color);
+    background-color: var(--org-color-darker);
+    border: 1px solid var(--org-color);
+    border-radius: 5px;
+    width: 3.5rem;
+    box-shadow: 2px 1px 4px 0 rgb(22, 22, 22);
+}
+
+.S-log-out-modal-container .S-close-log-out-icon {
+    position: absolute;
+    top: -0.7rem;
+    right: 0.5rem;
+    color: var(--black-to-white-color);
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--org-color-darker);
+    border: 1px solid var(--org-color);
+    border-radius: 7px;
+    display: flex;
+    font-size: calc(var(--size-font-icons) + 8px);
+    padding: 2px 1px 0px 0px;
+    box-shadow: 0px 1px 5px 0 rgb(22, 22, 22);
 }

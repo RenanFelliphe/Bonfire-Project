@@ -32,6 +32,7 @@ const swiper = new Swiper('.swiper', {
     speed: 300, // Defina um valor adequado para a velocidade da transição dos slides
 });
 
+
 /*========================================================================================================================================
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
 =========================================================================================================================================*/
@@ -42,11 +43,14 @@ defineTheme(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 changeMenuBars(); //Troca de COR DAS BARRAS do menu lateral
+logOutBonfire(); //SAI do site
+
 
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
 =========================================================================================================================================*/
+
 
 //Abre e fecha CADA SEÇÃO da página de configurações
 function openTiers() {
@@ -206,4 +210,30 @@ function changeMenuBars() {
 
     asideCenter.addEventListener('mouseover', () => menuAside.classList.toggle('section-highlight', true));
     asideCenter.addEventListener('mouseout', () => menuAside.classList.toggle('section-highlight', false));
+}
+
+//SAI do site
+function logOutBonfire() {
+    const logOutButton = document.querySelector('.S-logout-icon');
+    const confirmDialog = document.querySelector('.S-log-out-modal');
+    const confirmYes = document.querySelector('.S-confirm-log-out');
+    const confirmNo = document.querySelector('.S-cancel-log-out');
+    const pressXbutton = document.querySelector('.S-close-log-out-icon');
+
+    logOutButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        confirmDialog.style.display = 'block';
+    });
+
+    confirmYes.addEventListener('click', () => {
+        window.location.href = 'login.html';
+    });
+
+    confirmNo.addEventListener('click', () => {
+        confirmDialog.style.display = 'none';
+    });
+
+    pressXbutton.addEventListener('click', () => {
+        confirmDialog.style.display = 'none';
+    });
 }
