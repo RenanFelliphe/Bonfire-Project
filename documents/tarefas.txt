@@ -1,0 +1,40 @@
+| >>> INICIAR <<< |
+- Iniciar o design da vitrine de títulos n o perfil
+- Iniciar o design da página 'Calendário'
+- Iniciar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro)
+
+
+| >>> ADICIONAR/CRIAR <<< |
+- Adicionar a funcionalidade ao botão S-back-icon nos tiers
+- Adicionar o alterador de tipo de fonte às configurações (SELECT)
+- Adicionar os ícones para as contas do usuário em outros sites ao Perfil
+- Adicionar a pergunta de confirmação ao pressionar o botão 'Log-out' nas configurações
+- Adicionar um link para o Bonfire no Github (Hospedar)
+
+
+| >>> DEFINIR <<< |
+
+
+| >>> ATUALIZAR / ALTERAR <<< |
+- Alterar as cores de todas organizações
+- Alterar o tempo de transição das cores na transição de modo (claro ~ escuro)
+- Alterar todas as variáveis CSS para o modelo 'Camel Case'
+- Alterar as cores do modo claro
+
+
+| >>> RECRIAR <<< |
+- Recriar os novos designs da página de Login/Registro
+- Recriar e arredondar as bordas dos containers do site
+- Recriar o botão 'Editar Perfil' nas configurações
+
+
+| >>> FINALIZAR <<< |
+- Finalizar o menu-aside-top
+
+
+| >>> DELETAR <<< |
+
+
+| >>> OUTROS <<< |
+- Aumentar a distribuição das variáveis de cores pelo site
+- Ajustar a proporcionalidade da foto de perfil e da capa
