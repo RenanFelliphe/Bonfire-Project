@@ -1,11 +1,26 @@
+| >>> NÍVEIS DE PRIORIDADE DAS TAREFAS:  <<< |
 
-| >>> INICIAR <<< |
-- Iniciar o design da vitrine de títulos n o perfil
-- Iniciar o design da página 'Calendário'
-- Iniciar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro)
++++ Emergente >>> 
+++ Muito Urgente >>> 
++ Urgente >>> 
+- Pouco Urgente >>> 
+-- Não Urgente >>> 
+--- Opcional >>> Tarefa opcional para o Site
 
 
-| >>> ADICIONAR/CRIAR <<< |
+| >>> PROJETAR <<< |
+
+- Projetar a seção 'Perfis em Destaque' para a Página Inicial
+- Projetar a modelagem responsiva do site
+- Projetar o design da vitrine de títulos no perfil
+- Projetar o design da página 'Calendário'
+- Projetar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro)
+- Projetar os novos designs da página de Login/Registro
+
+
+| >>> ADICIONAR / CRIAR <<< |
+
+- Adicionar os motivos para os 'Níveis de prioridade das Tarefas' nesse arquivo
 - Adicionar o alterador de tipo de fonte às configurações (SELECT)
 - Adicionar os ícones para as contas do usuário em outros sites ao Perfil
 - Adicionar um link para o Bonfire no Github (Hospedar)
@@ -14,26 +29,42 @@
 | >>> DEFINIR <<< |
 
 
-| >>> ATUALIZAR / ALTERAR <<< |
-- Alterar as cores de todas organizações
-- Alterar o tempo de transição das cores na transição de modo (claro ~ escuro)
-- Alterar todas as variáveis CSS para o modelo 'Camel Case'
-- Alterar as cores do Modo Claro
+| >>> FINALIZAR <<< |
+
+- Finalizar o menu-aside
+- Finalizar design do Menu-aside (Figma)
+
+
+| >>> ATUALIZAR <<< |
+
+- Atualizar as cores de todas organizações
+- Atualizar o tempo de transição das cores na transição de modo (claro ~ escuro)
+- Atualizar todas as variáveis CSS para o modelo 'Camel Case'
+- Atualizar as cores do Modo Claro
+- Atualizar o tamanho de cada ícone para um com base na variável --Size-font-icons (Usando 'Calc()' em CSS)
+- Atualizar as cores das arrows em imagem do site OU alterá-las para arrows de alguma biblioteca
 
 
 | >>> RECRIAR <<< |
-- Recriar os novos designs da página de Login/Registro
+
 - Recriar e arredondar as bordas dos containers do site
 - Recriar o botão 'Editar Perfil' nas configurações
+- Recriar as proporções da seção 'Main' nos arquivos HTML do site
 
 
-| >>> FINALIZAR <<< |
-- Finalizar o menu-aside-top
+| >>> CORRIGIR <<< |
+
+- Corrigir o bug do tamanho do link da logo Bonfire no menu header
+- Corrigir o bug de responsividade do Menu-header
+- Corrigir o bug de responsividade do Menu-aside
 
 
 | >>> DELETAR <<< |
 
 
 | >>> OUTROS <<< |
+
 - Aumentar a distribuição das variáveis de cores pelo site
 - Ajustar a proporcionalidade da foto de perfil e da capa
+- Passar o design do Quick-Messages do papel para o figma
+- Passar a subpágina 'Estatísticas da conta' das Configurações para o Menu-aside

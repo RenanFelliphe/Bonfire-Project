@@ -1,14 +1,13 @@
-/*========================================================================================================================================================================
-==========================================================================================================================================================================
-==========================================================================================================================================================================
-====================================================== ARQUIVO CSS ONDE TODAS AS VARIÁVEIS DEVEM SER DECLARADAS ==========================================================
-================================================= ESTE ARQUIVO DEVE SER CHAMADO EM TODOS OS ARQUIVOS HTML DO PROJETO =====================================================
-==========================================================================================================================================================================
-==========================================================================================================================================================================
-==========================================================================================================================================================================*/
-
-
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Montserrat&display=swap');
+
+/*===============================================================================================================================
+=================================================================================================================================
+=================================================================================================================================
+================================= ARQUIVO CSS ONDE TODAS AS VARIÁVEIS DEVEM SER DECLARADAS ======================================
+============================ ESTE ARQUIVO DEVE SER CHAMADO EM TODOS OS ARQUIVOS HTML DO PROJETO =================================
+=================================================================================================================================
+=================================================================================================================================
+=================================================================================================================================*/
 
 * {
     margin: 0;
@@ -24,17 +23,17 @@
 }
 
 :root {
-    /* ============== CORES ============== */
-    --black-to-white-color: #E2E2E2;
-    /*Essa cor deve ser preta no modo claro e branca no modo escuro*/
-    --white-to-black-color: #131313;
-    /*Essa cor deve ser branca no modo claro e preta no modo escuro*/
+    /* ========= VARIÁVEIS DE MODO (PADRÃO) ========= */
 
+    --white-to-black-color: #E2E2E2;
+    /*Essa cor deve ser preta no modo claro e branca no modo escuro*/
+    --black-to-white-color: #131313;
+    /*Essa cor deve ser branca no modo claro e preta no modo escuro*/
     --text-color: #9E9C9C;
     /*Cor dos Textos*/
     --border-color: #585757;
     /*Cor das Bordas*/
-    --modal-focus: #000000ab;
+    --modal-focus-color: #000000ab;
     /*Cor do body ao abrir um modal*/
     --active-color: #3a3c3d;
     /*Cor dos ícones e itens ativados ou com hover*/
@@ -44,19 +43,31 @@
     /*Cor de segundo foco*/
     --menu-color: #242526;
     /*Cor dos Menus*/
-    --fourth-color: #232325;
+    --third-color: #232325;
     /*Cor de quarto foco*/
-    --fifth-color: #18191A;
+    --fourth-color: #18191A;
     /*Cor do body*/
 
-    /* ========= CORES DAS ORGS ========= */
-    --org-color: #00EB00;
+    /* ========= VARIÁVEIS DE CORES (PADRÃO) ========= */
+
+    --org-color1: #00EB00;
+    /*Cor primária*/
     --org-color2: #00EB00;
+    /*Cor secundária*/
     --org-color3: #00EB00;
+    /*Cor terciária*/
+    --org-color4: #00EB00;
+    /*Cor quarternária*/
+    --org-color5: #00EB00;
+    /*Cor quinternária*/
     --org-color-darker: #007200;
+    /*Cor primária mais escuro*/
     --org-color-lighter: #2DFF2D;
+    /*Cor primária mais claro*/
     --org-color-low-opacity: #00FF2A80;
-    /*Cor de cada organização, porém com opacidade reduzida*/
+    /*Cor primária com opacidade menor (80%)*/
+    --org-color-transparent: #00FF2A20;
+    /*Cor primária com opacidade muito menor (20%)*/
 
     /* ============== FONTES ============== */
 
@@ -75,269 +86,479 @@
     --element-out: 0.65s;
 }
 
+
 /*====================================================================================================
-=============================== DEFINIÇÃO / SUBSTITUIÇÃO DAS VÁRIAVEIS ===============================
+========================================= VARIÁVEIS DE MODO ==========================================
+==================================== MODO CLARO / ESCURO / NEUTRO ====================================
 ====================================================================================================*/
 
+
 .dark-mode {
-    --black-to-white-color: #E2E2E2;
-    --white-to-black-color: #131313;
+    --white-to-black-color: #E2E2E2;
+    --black-to-white-color: #131313;
 
     --text-color: #9E9C9C;
     --border-color: #585757;
+    --menu-color: #242526;
+    --modal-focus-color: #000000ab;
+    --active-color: #3a3c3d;
 
     --first-color: #383A3B;
     --second-color: #27282A;
-    --menu-color: #242526;
-    --fourth-color: #232325;
-    --fifth-color: #18191A;
+    --third-color: #232325;
+    --fourth-color: #18191A;
 }
 
 .light-mode {
-    --black-to-white-color: #000000;
-    --white-to-black-color: #E2E2E2;
+    --white-to-black-color: #131313;
+    --black-to-white-color: #E2E2E2;
 
     --text-color: #252525;
     --border-color: #B1B1B1;
+    --menu-color: #ffffff;
+    --modal-focus-color: #000000d0;
+    --active-color: #3a3c3d;
 
     --first-color: #f3f3f3;
-    --menu-color: #ffffff;
     --second-color: #FFFFFF;
-    --fourth-color: #F9FAFF;
-    --fifth-color: #EBEBF5;
+    --third-color: #F9FAFF;
+    --fourth-color: #EBEBF5;
+}
+
+.neutral-mode {
+    --white-to-black-color: '#';
+    --black-to-white-color: '#';
+
+    --text-color: '#';
+    --border-color: '#';
+    --menu-color: '#';
+    --modal-focus-color: '#';
+    --active-color: '#';
+
+    --first-color: '#';
+    --second-color: '#';
+    --third-color: '#';
+    --fourth-color: '#';
+}
+
+
+/*====================================================================================================
+======================================== VARIÁVEIS DE COR: ===========================================
+=============================== PALETA DE CORES DE CADA ORGANIZAÇÃO ==================================
+=====================================================================================================*/
+
+
+::selection{
+    background-color: var(--org-color-transparent);
+    color: var(--white-to-black-color);
+}
+
+.amazon-cripz-color {
+    --org-color1: #0077ff;
+    --org-color2: #0077ff;
+    --org-color3: #0077ff;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #003a7c;
+    --org-color-lighter: #4fa1ff;
+    --org-color-low-opacity: #0077ff80;
+    --org-color-transparent: "#";
 }
 
 .cloud9-color {
-    --org-color: #00a2ff;
+    --org-color1: #00a2ff;
     --org-color2: #00a2ff;
     --org-color3: #00a2ff;
+    --org-color4: '#';
+    --org-color5: '#';
     --org-color-darker: #005383;
     --org-color-lighter: #62c6ff;
     ;
     --org-color-color-low-opacity: #00a2ff70;
+    --org-color-transparent: "#";
 }
 
 .drx-color {
-    --org-color: #658cf5;
+    --org-color1: #658cf5;
     --org-color2: #658cf5;
     --org-color3: #658cf5;
+    --org-color4: '#';
+    --org-color5: '#';
     --org-color-darker: #658cf5;
     --org-color-lighter: #658cf5;
     --org-color-low-opacity: #658cf570;
-}
-
-.fluxo-color {
-    --org-color: #C300FF;
-    --org-color2: #C91085;
-    --org-color3: #C300FF;
-    --org-color-darker: #680088;
-    --org-color-lighter: #D650FF;
-    --org-color-low-opacity: #C300FF80;
-}
-
-.fnatic-color {
-    --org-color: #ff6600;
-    --org-color2: #ff6600;
-    --org-color3: #ff6600;
-    --org-color-darker: #723300;
-    --org-color-lighter: #ff9138;
-    --org-color-low-opacity: #ff660080;
-}
-
-.god-unidas-color {
-    --org-color: #FFD700;
-    --org-color2: #0066ff;
-    --org-color3: #0066ff;
-    --org-color-darker: #0043a7;
-    --org-color-lighter: #2f82ff;
-    --org-color-low-opacity: #0066ff80;
-}
-
-.kru-color {
-    --org-color: #FF00B3;
-    --org-color2: #FF00B3;
-    --org-color3: #FF00B3;
-    --org-color-darker: #910065;
-    --org-color-lighter: #ff5dce;
-    --org-color-low-opacity: #FF00B380;
-}
-
-.leviatan-color {
-    --org-color: #4687BD;
-    --org-color2: #4687BD;
-    --org-color3: #4687BD;
-    --org-color-darker: #20425C;
-    --org-color-lighter: #6DBAFA;
-    --org-color-low-opacity: #4687BD80;
-}
-
-.liberty-color {
-    --org-color: #00FFFF;
-    --org-color2: #00FFFF;
-    --org-color3: #00FFFF;
-    --org-color-darker: #006969;
-    --org-color-lighter: #7DFFFF;
-    --org-color-low-opacity: #00FFFF80;
-}
-
-.los-color {
-    --org-color: #FF4500;
-    --org-color2: #FF4500;
-    --org-color3: #FF4500;
-    --org-color-darker: #AC2E00;
-    --org-color-lighter: #FF6027;
-    --org-color-low-opacity: #FF450080;
-}
-
-.loud-color {
-    --org-color: #00EB00;
-    --org-color2: #00EB00;
-    --org-color3: #00EB00;
-    --org-color-darker: #007200;
-    --org-color-lighter: #2DFF2D;
-    --org-color-low-opacity: #00FF2A80;
-}
-
-.magic-squad-color {
-    --org-color: #0EB1A9;
-    --org-color2: #0EB1A9;
-    --org-color3: #0EB1A9;
-    --org-color-darker: #006969;
-    --org-color-lighter: #55b9b4;
-    --org-color-low-opacity: #0EB1A980;
-}
-
-.miners-color {
-    --org-color: #5c049b;
-    --org-color2: #DC143C;
-    --org-color3: #5c049b;
-    --org-color-darker: #3e0069;
-    --org-color-lighter: #7b2bb4;
-    --org-color-low-opacity: #5c049b80;
-}
-
-.nip-color {
-    --org-color: #d0ff00;
-    --org-color2: #d0ff00;
-    --org-color3: #d0ff00;
-    --org-color-darker: #677e00;
-    --org-color-lighter: #daff33;
-    --org-color-low-opacity: #d0ff0070;
-}
-
-.pain-color {
-    --org-color: #FF0000;
-    --org-color2: #FF0000;
-    --org-color3: #FF0000;
-    --org-color-darker: #810000;
-    --org-color-lighter: #ff2f2f;
-    --org-color-low-opacity: #FF000080;
-}
-
-.prg-color {
-    --org-color: #ff14ad;
-    --org-color2: #ff14ad;
-    --org-color3: #7A11C5;
-    --org-color-darker: #310053;
-    --org-color-lighter: #9a42d8;
-    --org-color-low-opacity: #7A11C580;
-}
-
-.red-canids-color {
-    --org-color: #DB0630;
-    --org-color2: #FF1947;
-    --org-color3: #B32844;
-    --org-color-darker: #8A031E;
-    --org-color-lighter: #DB2D50;
-    --org-color-low-opacity: #DB063080;
-}
-
-.sentinels-color {
-    --org-color: #E70045;
-    --org-color2: #E70045;
-    --org-color3: #E70045;
-    --org-color-darker: #770024;
-    --org-color-lighter: #a73759;
-    --org-color-low-opacity: #E7004580;
-}
-
-.team-liquid-color {
-    --org-color: #2b40ff;
-    --org-color2: #e2970c;
-    --org-color3: #002ec5;
-    --org-color-darker: #00165e;
-    --org-color-lighter: #294ec9;
-    --org-color-low-opacity: #002ec580;
-}
-
-.vincit-color {
-    --org-color: #00eeff;
-    --org-color2: #00eeff;
-    --org-color3: #00eeff;
-    --org-color-darker: #007a83;
-    --org-color-lighter: #57f4ff;
-    --org-color-low-opacity: #00eeff80;
-}
-
-.vivo-keyd-color {
-    --org-color: #7A11C5;
-    --org-color2: #7A11C5;
-    --org-color3: #7A11C5;
-    --org-color-darker: #310053;
-    --org-color-lighter: #9a42d8;
-    --org-color-low-opacity: #7A11C580;
-}
-
-.luminosity-gaming-color {
-    --org-color: #1E90FF;
-    --org-color2: #1E90FF;
-    --org-color3: #1E90FF;
-    --org-color-darker: #0251a0;
-    --org-color-lighter: #478dd4;
-    --org-color-low-opacity: #1E90FF80;
-}
-
-.faze-clan-color {
-    --org-color: #B22222;
-    --org-color2: #B22222;
-    --org-color3: #B22222;
-    --org-color-darker: #8b0606;
-    --org-color-lighter: #f43232;
-    --org-color-low-opacity: #B2222280;
-}
-
-.immortals-color {
-    --org-color: #00ffc8;
-    --org-color2: #00ffc8;
-    --org-color3: #00ffc8;
-    --org-color-darker: #008669;
-    --org-color-lighter: #58ffdb;
-    --org-color-low-opacity: #00ffc880;
-}
-
-.tropa-color {
-    --org-color: #ffd900;
-    --org-color2: #ffd900;
-    --org-color3: #ffd900;
-    --org-color-darker: #6d5d00;
-    --org-color-lighter: #ffe44a;
-    --org-color-low-opacity: #ffd90080;
+    --org-color-transparent: "#";
 }
 
 .evos-e-sports-color {
-    --org-color: #52baff;
+    --org-color1: #52baff;
     --org-color2: #52baff;
     --org-color3: #52baff;
+    --org-color4: '#';
+    --org-color5: '#';
     --org-color-darker: #0061a1;
     --org-color-lighter: #86cfff;
     --org-color-low-opacity: #52baff80;
+    --org-color-transparent: "#";
+}
+
+.faze-clan-color {
+    --org-color1: #B22222;
+    --org-color2: #B22222;
+    --org-color3: #B22222;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #8b0606;
+    --org-color-lighter: #f43232;
+    --org-color-low-opacity: #B2222280;
+    --org-color-transparent: "#";
+}
+
+.fluxo-color {
+    --org-color1: #C300FF;
+    --org-color2: #C91085;
+    --org-color3: #C300FF;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #680088;
+    --org-color-lighter: #D650FF;
+    --org-color-low-opacity: #C300FF80;
+    --org-color-transparent: "#";
+}
+
+.fnatic-color {
+    --org-color1: #ff6600;
+    --org-color2: #ff6600;
+    --org-color3: #ff6600;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #723300;
+    --org-color-lighter: #ff9138;
+    --org-color-low-opacity: #ff660080;
+    --org-color-transparent: "#";
+}
+
+.god-unidas-color {
+    --org-color1: #FFD700;
+    --org-color2: #0066ff;
+    --org-color3: #0066ff;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #0043a7;
+    --org-color-lighter: #2f82ff;
+    --org-color-low-opacity: #0066ff80;
+    --org-color-transparent: "#";
+}
+
+.immortals-color {
+    --org-color1: #00ffc8;
+    --org-color2: #00ffc8;
+    --org-color3: #00ffc8;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #008669;
+    --org-color-lighter: #58ffdb;
+    --org-color-low-opacity: #00ffc880;
+    --org-color-transparent: "#";
+}
+
+.kabum-color {
+    --org-color1: #ff5100;
+    --org-color2: #ff9100;
+    --org-color3: #ff5100;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #832300;
+    --org-color-lighter: #ff7332;
+    --org-color-low-opacity: #ff510080;
+    --org-color-transparent: "#";
+}
+
+.kru-color {
+    --org-color1: #FF00B3;
+    --org-color2: #FF00B3;
+    --org-color3: #FF00B3;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #910065;
+    --org-color-lighter: #ff5dce;
+    --org-color-low-opacity: #FF00B380;
+    --org-color-transparent: "#";
+}
+
+.leviatan-color {
+    --org-color1: #4687BD;
+    --org-color2: #4687BD;
+    --org-color3: #4687BD;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #20425C;
+    --org-color-lighter: #6DBAFA;
+    --org-color-low-opacity: #4687BD80;
+    --org-color-transparent: "#";
+}
+
+.liberty-color {
+    --org-color1: #00FFFF;
+    --org-color2: #00FFFF;
+    --org-color3: #00FFFF;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #006969;
+    --org-color-lighter: #7DFFFF;
+    --org-color-low-opacity: #00FFFF80;
+    --org-color-transparent: "#";
+}
+
+.los-color {
+    --org-color1: #FF4500;
+    --org-color2: #FF4500;
+    --org-color3: #FF4500;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #AC2E00;
+    --org-color-lighter: #FF6027;
+    --org-color-low-opacity: #FF450080;
+    --org-color-transparent: "#";
+}
+
+.loud-color {
+    --org-color1: #00EB00;
+    --org-color2: #00EB00;
+    --org-color3: #00EB00;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #007200;
+    --org-color-lighter: #2DFF2D;
+    --org-color-low-opacity: #00FF2A80;
+    --org-color-transparent: #00FF2A40;
+}
+
+.luminosity-gaming-color {
+    --org-color1: #1E90FF;
+    --org-color2: #1E90FF;
+    --org-color3: #1E90FF;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #0251a0;
+    --org-color-lighter: #478dd4;
+    --org-color-low-opacity: #1E90FF80;
+    --org-color-transparent: "#";
+}
+
+.magic-squad-color {
+    --org-color1: #0EB1A9;
+    --org-color2: #0EB1A9;
+    --org-color3: #0EB1A9;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #006969;
+    --org-color-lighter: #55b9b4;
+    --org-color-low-opacity: #0EB1A980;
+    --org-color-transparent: "#";
+}
+
+.miners-color {
+    --org-color1: #5c049b;
+    --org-color2: #DC143C;
+    --org-color3: #5c049b;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #3e0069;
+    --org-color-lighter: #7b2bb4;
+    --org-color-low-opacity: #5c049b80;
+    --org-color-transparent: "#";
+}
+
+.nip-color {
+    --org-color1: #d0ff00;
+    --org-color2: #d0ff00;
+    --org-color3: #d0ff00;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #677e00;
+    --org-color-lighter: #daff33;
+    --org-color-low-opacity: #d0ff0070;
+    --org-color-transparent: "#";
+}
+
+.oddik-bright-color {
+    --org-color1: #e5ff00;
+    --org-color2: #ffe600;
+    --org-color3: #ffe600;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #636b19;
+    --org-color-lighter: #edff49;
+    --org-color-low-opacity: #e5ff0080;
+    --org-color-transparent: "#";
+}
+
+.optic-color {
+    --org-color1: #a6e94f;
+    --org-color2: #9ae94f;
+    --org-color3: #9ae94f;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #3f611f;
+    --org-color-lighter: #bbff7c;
+    --org-color-low-opacity: #9ae94f80;
+    --org-color-transparent: "#";
+}
+
+.pain-color {
+    --org-color1: #FF0000;
+    --org-color2: #FF0000;
+    --org-color3: #FF0000;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #810000;
+    --org-color-lighter: #ff2f2f;
+    --org-color-low-opacity: #FF000080;
+    --org-color-transparent: "#";
+}
+
+.prg-color {
+    --org-color1: #ff14ad;
+    --org-color2: #ff14ad;
+    --org-color3: #7A11C5;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #310053;
+    --org-color-lighter: #9a42d8;
+    --org-color-low-opacity: #7A11C580;
+    --org-color-transparent: "#";
+}
+
+.red-canids-color {
+    --org-color1: #DB0630;
+    --org-color2: #FF1947;
+    --org-color3: #B32844;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #8A031E;
+    --org-color-lighter: #DB2D50;
+    --org-color-low-opacity: #DB063080;
+    --org-color-transparent: "#";
+}
+
+.sentinels-color {
+    --org-color1: #E70045;
+    --org-color2: #E70045;
+    --org-color3: #E70045;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #770024;
+    --org-color-lighter: #a73759;
+    --org-color-low-opacity: #E7004580;
+    --org-color-transparent: "#";
 }
 
 .talon-e-sports-color {
-    --org-color: #e7404e;
+    --org-color1: #e7404e;
     --org-color2: #e7404e;
     --org-color3: #e7404e;
+    --org-color4: '#';
+    --org-color5: '#';
     --org-color-darker: #97000d;
     --org-color-lighter: #ff5866;
     --org-color-low-opacity: #e7404e80;
+    --org-color-transparent: "#";
+}
+
+.team-liquid-color {
+    --org-color1: #2b40ff;
+    --org-color2: #e2970c;
+    --org-color3: #002ec5;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #00165e;
+    --org-color-lighter: #294ec9;
+    --org-color-low-opacity: #002ec580;
+    --org-color-transparent: "#";
+}
+
+.tropa-color {
+    --org-color1: #ffd900;
+    --org-color2: #ffd900;
+    --org-color3: #ffd900;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #6d5d00;
+    --org-color-lighter: #ffe44a;
+    --org-color-low-opacity: #ffd90080;
+    --org-color-transparent: "#";
+}
+
+.vincit-color {
+    --org-color1: #00eeff;
+    --org-color2: #00eeff;
+    --org-color3: #00eeff;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #007a83;
+    --org-color-lighter: #57f4ff;
+    --org-color-low-opacity: #00eeff80;
+    --org-color-transparent: "#";
+}
+
+.vivo-keyd-color {
+    --org-color1: #7A11C5;
+    --org-color2: #7A11C5;
+    --org-color3: #7A11C5;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #310053;
+    --org-color-lighter: #9a42d8;
+    --org-color-low-opacity: #7A11C580;
+    --org-color-transparent: "#";
+}
+
+
+.stars-horizon-color {
+    --org-color1: #00ffff;
+    --org-color2: #00e077;
+    --org-color3: #1bc4ca;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #009191;
+    --org-color-lighter: #79ffff;
+    --org-color-low-opacity: #00ffff80;
+    --org-color-transparent: "#";
+}
+
+.rensga-color {
+    --org-color1: #00a2ff;
+    --org-color2: #f8b600;
+    --org-color3: #f8b600;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #005383;
+    --org-color-lighter: #3ab7ff;
+    --org-color-low-opacity: #00a2ff80;
+    --org-color-transparent: "#";
+}
+
+.t1-color {
+    --org-color1: #ff0022;
+    --org-color2: #ff0022;
+    --org-color3: #ff0022;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #8d0000;
+    --org-color-lighter: #fd3434;
+    --org-color-low-opacity: #ff002280;
+    --org-color-transparent: "#";
+}
+
+.team-one-color {
+    --org-color1: #d6ae3e;
+    --org-color2: #F7EF8A;
+    --org-color3: #AE8625;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #755809;
+    --org-color-lighter: #f5ee91;
+    --org-color-low-opacity: #AE8625;
+    --org-color-transparent: "#";
 }

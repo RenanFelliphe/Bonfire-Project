@@ -1,5 +1,5 @@
 body {
-    background-color: var(--fifth-color);
+    background-color: var(--fourth-color);
     overflow: auto;
 }
 
@@ -88,7 +88,7 @@ main {
 }
 
 .M-menu-header .M-header-center .M-header-search {
-    background-color: var(--fourth-color);
+    background-color: var(--third-color);
     border: 1px solid var(--border-color);
     border-radius: 5rem;
     min-width: 18.125rem;
@@ -170,7 +170,7 @@ main {
     left: 0;
     height: 100vh;
     bottom: 0;
-    background-color: var(--org-color);
+    background-color: var(--org-color1);
     box-shadow: 0 0 5px 0 var(--org-color-lighter);
     z-index: +1;
     transition: var(--element-in);
@@ -208,7 +208,7 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li.active {
-    background-color: var(--fifth-color);
+    background-color: var(--fourth-color);
     width: calc(100% + 1px);
     border: 1px solid var(--border-color);
     border-right: none;
@@ -234,7 +234,7 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li:hover a .All-icon {
-    color: var(--org-color);
+    color: var(--org-color1);
     font-size: calc(var(--size-font-icons) + 0.5rem);
 }
 
@@ -246,7 +246,7 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li:hover a .M-title {
-    color: var(--org-color);
+    color: var(--org-color1);
     font-size: calc(var(--size-font-subtitle) + 0.3rem);
 }
 
@@ -257,7 +257,7 @@ main {
 
 .M-menu-aside .M-aside-center ul li.active a .M-title {
     font-size: calc(var(--size-font-subtitle) + 2px);
-    color: var(--org-color);
+    color: var(--org-color1);
 }
 
 .M-menu-aside .M-aside-footer .menu-buttom i.All-icon {
@@ -269,7 +269,7 @@ main {
 
 .M-menu-aside .M-aside-center ul li.active a i.All-icon {
     font-size: calc(var(--size-font-icons) + 0.3rem);
-    color: var(--org-color);
+    color: var(--org-color1);
 }
 
 .M-menu-aside.close .M-aside-center ul li.active a i.All-icon {
@@ -301,7 +301,7 @@ main {
 
 .M-menu-aside .M-aside-footer .menu-buttom i.All-icon.close {
     opacity: 1;
-    color: var(--org-color);
+    color: var(--org-color1);
     font-size: calc(var(--size-font-icons) + 1rem);
     padding: 0 0 0 0.79rem;
 }
@@ -382,7 +382,7 @@ main .Q-quick-messages.close .Q-message-pusher i {
 }
 
 main .Q-quick-messages .Q-message-pusher i {
-    color: var(--org-color);
+    color: var(--org-color1);
     transition: all 0.3s;
 }
 
@@ -395,8 +395,8 @@ main .Q-quick-messages p {
 main .Q-quick-messages:hover p,
 main .Q-quick-messages:hover .Q-message-pusher,
 main .Q-quick-messages:hover {
-    color: var(--org-color);
-    border-color: var(--org-color);
+    color: var(--org-color1);
+    border-color: var(--org-color1);
 }
 
 /*====================================================================================================
@@ -572,10 +572,10 @@ main .S-settings .S-center ul .S-buttom::after {
 }
 
 main .S-settings .S-center ul .S-buttom.active {
-    color: var(--org-color);
-    background-color: var(--fourth-color);
-    border-left: 1px solid var(--org-color);
-    border-right: 1px solid var(--org-color);
+    color: var(--org-color1);
+    background-color: var(--third-color);
+    border-left: 1px solid var(--org-color1);
+    border-right: 1px solid var(--org-color1);
 }
 
 main .S-settings .S-center ul .S-buttom.active::after {
@@ -585,7 +585,7 @@ main .S-settings .S-center ul .S-buttom.active::after {
 }
 
 main .S-settings .S-center ul .S-buttom:hover {
-    background-color: var(--fourth-color);
+    background-color: var(--third-color);
 }
 
 main .S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
@@ -608,7 +608,7 @@ main .S-settings .S-center ul .S-buttom.active p {
 }
 
 main .S-settings .S-center ul .S-buttom.active p:hover {
-    color: var(--org-color);
+    color: var(--org-color1);
     transition: color 0.1s;
 }
 
@@ -649,7 +649,7 @@ main .S-subsettings {
     height: 100%;
     width: 60%;
     min-width: 37.5rem;
-    background-color: var(--fourth-color);
+    background-color: var(--third-color);
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
 }
@@ -703,7 +703,7 @@ main .S-subsettings .S-tier article .S-article-title {
 }
 
 main .S-subsettings .S-tier article:hover .S-article-title {
-    color: var(--org-color);
+    color: var(--org-color1);
     transition: color 0.3s;
 }
 
@@ -739,7 +739,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content {
     gap: 10px;
     width: 100%;
     height: 65px;
-    background-color: var(--fourth-color);
+    background-color: var(--third-color);
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images {
@@ -771,7 +771,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     position: absolute;
     width: 112%;
     height: 112%;
-    background-color: var(--fourth-color);
+    background-color: var(--third-color);
     border-radius: 45px;
 }
 
@@ -800,7 +800,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .nick {
     font-size: 1.7rem;
     font-weight: bolder;
-    color: var(--org-color);
+    color: var(--org-color1);
     letter-spacing: 2px;
 }
 
@@ -827,10 +827,10 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-pro
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-buttom a:hover {
     width: 6.2rem;
-    color: var(--org-color);
+    color: var(--org-color1);
     font-weight: bold;
     letter-spacing: 0.5px;
-    border-color: var(--org-color);
+    border-color: var(--org-color1);
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-numbers {
@@ -848,7 +848,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-numbers span {
 }
 
 main .S-subsettings .S-account-profile .S-profile .S-profile-numbers b {
-    color: var(--org-color);
+    color: var(--org-color1);
     font-size: var(--size-font-subtitle);
     cursor: pointer;
     transition: 0.5s;
@@ -901,7 +901,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label {
     width: 2.25rem;
     border-radius: 10rem;
     transform: scale(1.5);
-    background-color: var(--fifth-color);
+    background-color: var(--fourth-color);
     font-size: 0.63rem;
     letter-spacing: 0.5rem;
     cursor: pointer;
@@ -916,7 +916,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-moon {
 }
 
 main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
-    background-color: var(--black-to-white-color);
+    background-color: var(--white-to-black-color);
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -982,13 +982,13 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
 }
 
 .S-toggle-color .S-card-slider .S-gallery .S-card:hover {
-    box-shadow: 0 0 5px 0 var(--org-color);
+    box-shadow: 0 0 5px 0 var(--org-color1);
     border-color: var(--org-color2);
     transition: 0.3s;
 }
 
 .S-toggle-color .S-card-slider .S-gallery .S-card.current {
-    box-shadow: 0 0 5px 0 var(--org-color);
+    box-shadow: 0 0 5px 0 var(--org-color1);
     border-color: var(--org-color2);
 }
 
@@ -1002,7 +1002,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
     cursor: pointer;
     height: 30px;
     width: 30px;
-    background: var(--fourth-color);
+    background: var(--third-color);
     border-radius: 50%;
     box-shadow: 0 2px 4px 0 #00000081;
     transition: transform 0.1s linear;
@@ -1016,7 +1016,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
 
 .S-toggle-color .S-card-slider i:hover {
     transition: 0.2s;
-    color: var(--org-color);
+    color: var(--org-color1);
     border-color: var(--org-color2);
     box-shadow: 0 0 2px 1px var(--org-color2);
 }
@@ -1047,7 +1047,7 @@ main .S-subsettings .S-appearence .S-font-style .S-all-font-size .All-icon {
 
 main .S-subsettings .S-appearence .S-font-style input[type=range] {
     appearance: none;
-    background-color: var(--fifth-color);
+    background-color: var(--fourth-color);
     height: 0.45rem;
     width: 20rem;
     border-radius: 100rem;
@@ -1060,13 +1060,13 @@ main .S-subsettings .S-appearence .S-font-style input[type=range]::-webkit-slide
     height: 1rem;
     border-radius: 100%;
     background-color: var(--org-color-darker);
-    border: 2px dotted var(--org-color);
+    border: 2px dotted var(--org-color1);
     transition: 0.2s;
     opacity: 0.9;
 }
 
 main .S-subsettings .S-appearence .S-font-style input[type=range]:hover::-webkit-slider-thumb {
-    background-color: var(--org-color);
+    background-color: var(--org-color1);
     box-shadow: 0 0 3px 0px var(--org-color-lighter);
 }
 
@@ -1116,7 +1116,7 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--modal-focus);
+    background-color: var(--modal-focus-color);
     z-index: 9999;
 }
 
@@ -1125,7 +1125,7 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--fifth-color);
+    background-color: var(--fourth-color);
     padding: 25px;
     padding-top: 30px;
     border-radius: 5px;
@@ -1165,9 +1165,9 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
 }
 
 .S-log-out-modal-buttons button.S-confirm-log-out {
-    color: var(--black-to-white-color);
+    color: var(--white-to-black-color);
     background-color: var(--org-color-darker);
-    border: 1px solid var(--org-color);
+    border: 1px solid var(--org-color1);
     border-radius: 5px;
     width: 3.5rem;
     box-shadow: 2px 1px 4px 0 rgb(22, 22, 22);
@@ -1177,11 +1177,11 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
     position: absolute;
     top: -0.7rem;
     right: 0.5rem;
-    color: var(--black-to-white-color);
+    color: var(--white-to-black-color);
     width: 1.8rem;
     height: 1.8rem;
     background-color: var(--org-color-darker);
-    border: 1px solid var(--org-color);
+    border: 1px solid var(--org-color1);
     border-radius: 7px;
     display: flex;
     font-size: calc(var(--size-font-icons) + 8px);

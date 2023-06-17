@@ -1,14 +1,14 @@
 
-| >>> CANVAS <<< |
+| >>> CANVA (CANVAS BUSINESS MODEL) <<< |
     | Link de ACESSO -> https://www.canva.com/design/DAFl1vtiKqo/KlT4_ErgRXpc7x7BndVcKg/edit |
 
-| >>> MIRO <<< |
+| >>> MIRO (BRAINSTORM) <<< |
     | Link de ACESSO -> https://miro.com/app/board/uXjVM-72LzU=/#tpicker-content |
 
-| >>> FORMULÁRIO DE FEEDBACK <<< |
+| >>> GOOGLE FORMS (FORMULÁRIO DE FEEDBACK DE CLIENTE) <<< |
     | Link de ACESSO -> https://docs.google.com/forms/d/1wzkGe9qKRy5TQFHlgW2rFNHDrVHlXdnvzoXrcz4ALQE/edit |
 
-| >>> FIGMA <<< |
+| >>> FIGMA (ÁREA DE DESIGN) <<< |
     | Link de ACESSO (Menu-Sidebar) -> https://www.figma.com/file/DoYSYM0z0DEm772PQTqBsv/Menu-sidebar?type=design&node-id=0-1&t=JzqTckM7nIHQzFSE-0 |
 
 | >>> NOTION (CBL) <<< |
@@ -21,3 +21,6 @@
 | >>> GITHUB (REPOSITÓRIO) <<< |
     | Link de ACESSO -> https://github.com/RenanFelliphe/Bonfire-Project |
     | Link para CLONAGEM -> https://github.com/RenanFelliphe/Bonfire-Project.git |
+
+| >>> PINTEREST (PASTA DE REFERÊNCIAS) <<< |
+
