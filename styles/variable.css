@@ -562,3 +562,51 @@
     --org-color-low-opacity: #AE8625;
     --org-color-transparent: "#";
 }
+
+.mouz-color {
+    --org-color1: #ff0000;
+    --org-color2: #ff1414;
+    --org-color3: #ff1414;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #790000;
+    --org-color-lighter: #d63636;
+    --org-color-low-opacity: #ff141480;
+    --org-color-transparent: "#";
+}
+
+.funplus-phoenix-color {
+    --org-color1: #ff1e00;
+    --org-color2: #ff0000;
+    --org-color3: #ff1e00;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #a31300;
+    --org-color-lighter: #da2b2b;
+    --org-color-low-opacity: #ff1e0080;
+    --org-color-transparent: "#";
+}
+
+.real-sports-color {
+    --org-color1: #d413b4;
+    --org-color2: #ac009d;
+    --org-color3: #0e6d68;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #bb009c;
+    --org-color-lighter: #bb009c;
+    --org-color-low-opacity: #bb009c80;
+    --org-color-transparent: "#";
+}
+
+.team-rrq-color {
+    --org-color1: #f19f32;
+    --org-color2: #eca241;
+    --org-color3: #f0b73c;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #775712;
+    --org-color-lighter: #f5cb72;
+    --org-color-low-opacity: #ffc74d80;
+    --org-color-transparent: "#";
+}

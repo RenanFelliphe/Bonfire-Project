@@ -24,6 +24,7 @@
 - Adicionar o alterador de tipo de fonte às configurações (SELECT)
 - Adicionar os ícones para as contas do usuário em outros sites ao Perfil
 - Adicionar um link para o Bonfire no Github (Hospedar)
+- Adicionar os 'Icon-hover's do Menu-header
 
 
 | >>> DEFINIR <<< |
@@ -57,6 +58,7 @@
 - Corrigir o bug do tamanho do link da logo Bonfire no menu header
 - Corrigir o bug de responsividade do Menu-header
 - Corrigir o bug de responsividade do Menu-aside
+- Corrigir o bug de rolagem para a direita no carrossel de organizações
 
 
 | >>> DELETAR <<< |
@@ -67,4 +69,3 @@
 - Aumentar a distribuição das variáveis de cores pelo site
 - Ajustar a proporcionalidade da foto de perfil e da capa
 - Passar o design do Quick-Messages do papel para o figma
-- Passar a subpágina 'Estatísticas da conta' das Configurações para o Menu-aside
