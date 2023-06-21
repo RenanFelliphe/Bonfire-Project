@@ -645,3 +645,27 @@
     --org-color-low-opacity: #f1de3280;
     --org-color-transparent: "#";
 }
+
+.tbk-color {
+    --org-color1: #2929ec;
+    --org-color2: #1E90FF;
+    --org-color3: #0000CD;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #00008b;
+    --org-color-lighter: #1818f3;
+    --org-color-low-opacity: #0000CD80;
+    --org-color-transparent: "#";
+}
+ 
+.team-solid-color {
+    --org-color1: #f5d000;
+    --org-color2: #e4c30c;
+    --org-color3: #e7c81a;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #8d7800;
+    --org-color-lighter: #ffe23d;
+    --org-color-low-opacity: #FFD70080;
+    --org-color-transparent: "#";
+}
