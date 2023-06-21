@@ -358,12 +358,12 @@
 }
 
 .miners-color {
-    --org-color1: #5c049b;
+    --org-color1: #751eb3;
     --org-color2: #DC143C;
     --org-color3: #5c049b;
     --org-color4: '#';
     --org-color5: '#';
-    --org-color-darker: #3e0069;
+    --org-color-darker: #52167c;
     --org-color-lighter: #7b2bb4;
     --org-color-low-opacity: #5c049b80;
     --org-color-transparent: "#";
@@ -598,14 +598,50 @@
     --org-color-transparent: "#";
 }
 
-.team-rrq-color {
-    --org-color1: #f19f32;
-    --org-color2: #eca241;
-    --org-color3: #f0b73c;
+.karmine-corp-color {
+    --org-color1: #14eeee;
+    --org-color2: #32f1f1;
+    --org-color3: #32f1f1;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #138a8a;
+    --org-color-lighter: #62eeee;
+    --org-color-low-opacity: #32f1f180;
+    --org-color-transparent: "#";
+}
+
+.geng-g-color {
+    --org-color1: #c29f3e;
+    --org-color2: #d1a939;
+    --org-color3: #c29f3e;
     --org-color4: '#';
     --org-color5: '#';
     --org-color-darker: #775712;
-    --org-color-lighter: #f5cb72;
-    --org-color-low-opacity: #ffc74d80;
+    --org-color-lighter: #f3d189;
+    --org-color-low-opacity: #c29f3e80;
+    --org-color-transparent: "#";
+}
+
+.vorax-color {
+    --org-color1: #ae2ff7;
+    --org-color2: #ae2ff7;
+    --org-color3: #ae2ff7;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #651494;
+    --org-color-lighter: #ad62d8;
+    --org-color-low-opacity: #ae2ff780;
+    --org-color-transparent: "#";
+}
+
+.natus-vincere-color {
+    --org-color1: #f1de32;
+    --org-color2: #ffe600;
+    --org-color3: #ffe600;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #c2a10c;
+    --org-color-lighter: #f0df4b;
+    --org-color-low-opacity: #f1de3280;
     --org-color-transparent: "#";
 }

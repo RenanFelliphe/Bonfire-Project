@@ -929,11 +929,19 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S
 
 .S-toggle-color .S-color-functions {
     width: 100%;
-    display: flex;
     gap: 0.7rem;
+    display: flex;
     position: absolute;
     top: 40%;
     transform: translate(33%);
+}
+
+.S-toggle-color .S-color-functions div {
+    display: none;
+}
+
+.S-toggle-color .S-color-functions div.active {
+    display: block;
 }
 
 .S-toggle-color .swiper-pagination-bullet {
@@ -1177,3 +1185,4 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
     padding: 2px 1px 0px 0px;
     box-shadow: 0px 1px 5px 0 rgb(22, 22, 22);
 }
+

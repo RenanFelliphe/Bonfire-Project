@@ -44,7 +44,7 @@ defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 changeMenuBars(); //Troca de COR DAS BARRAS do menu lateral
 logOutBonfire(); //SAI do site
-
+openThemeSections();
 
 
 /*========================================================================================================================================
@@ -236,4 +236,37 @@ function logOutBonfire() {
     pressXbutton.addEventListener('click', () => {
         confirmDialog.style.display = 'none';
     });
+}
+
+//Abre as seções de cada função na área de escolha de tema do site por Organização
+function openThemeSections() {
+    function openSearchOrg() {
+        const searchOrgDiv = document.querySelector('.S-search-org');
+        const searchOrgIcon = document.querySelector('.S-search-org-icon');
+
+        searchOrgIcon.addEventListener('click', () => {
+            searchOrgDiv.classList.toggle('active');
+        });
+    }
+
+    function openSuggestOrg() {
+        const suggestOrgDiv = document.querySelector('.S-suggest-org');
+        const suggestOrgIcon = document.querySelector('.S-suggest-org-icon');
+
+        suggestOrgIcon.addEventListener('click', () => {
+            suggestOrgDiv.classList.toggle('active');
+        });
+    }
+
+    function openCleanOrg() {
+        const cleanOrgDiv = document.querySelector('.S-clean-org');
+        const cleanOrgIcon = document.querySelector('.S-clean-org-icon');
+        cleanOrgIcon.addEventListener('click', () => {
+            cleanOrgDiv.classList.toggle('active');
+        });
+    }
+
+    openSearchOrg();
+    openSuggestOrg();
+    openCleanOrg();
 }
