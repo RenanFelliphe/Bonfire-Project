@@ -669,3 +669,63 @@
     --org-color-low-opacity: #FFD70080;
     --org-color-transparent: "#";
 }
+
+.team-vitality-color {
+    --org-color1: #fffb00;
+    --org-color2: #fffb00;
+    --org-color3: #fffb00;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #8d7800;
+    --org-color-lighter: #fffd7d;
+    --org-color-low-opacity: #fffb0080;
+    --org-color-transparent: "#";
+}
+
+.detonation-focusme-color {
+    --org-color1: #007ff5;
+    --org-color2: #007ff5;
+    --org-color3: #007ff5;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #007ff5;
+    --org-color-lighter: #007ff5;
+    --org-color-low-opacity: #007ff580;
+    --org-color-transparent: "#";
+}
+
+.b4-color {
+    --org-color1: #ff0000;
+    --org-color2: #ff2600;
+    --org-color3: #ff0000;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #770000;
+    --org-color-lighter: #ca4b4b;
+    --org-color-low-opacity: #ff000080;
+    --org-color-transparent: "#";
+}
+
+.a100-thieves-color {
+    --org-color1: #ff3737;
+    --org-color2: #ff3737;
+    --org-color3: #ff3737;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #ff3737;
+    --org-color-lighter: #ff3737;
+    --org-color-low-opacity: #ff373780;
+    --org-color-transparent: "#";
+}
+
+.meta-gaming-color {
+    --org-color1: #e9c708;
+    --org-color2: #eeff00;
+    --org-color3: #e9c708;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #e9c708;
+    --org-color-lighter: #e9c708;
+    --org-color-low-opacity: #e9c708;
+    --org-color-transparent: "#";
+}

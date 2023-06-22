@@ -22,5 +22,6 @@
     | Link de ACESSO -> https://github.com/RenanFelliphe/Bonfire-Project |
     | Link para CLONAGEM -> https://github.com/RenanFelliphe/Bonfire-Project.git |
 
-| >>> PINTEREST (PASTA DE REFERÊNCIAS) <<< |
+| >>> REFERÊNCIAS <<< |
+    | https://mobbin.com/browse/android/screens?sort=popularity |
 
