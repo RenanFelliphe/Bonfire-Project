@@ -706,7 +706,7 @@
     --org-color-transparent: "#";
 }
 
-.a100-thieves-color {
+.thieves100-color {
     --org-color1: #ff3737;
     --org-color2: #ff3737;
     --org-color3: #ff3737;
@@ -727,5 +727,77 @@
     --org-color-darker: #e9c708;
     --org-color-lighter: #e9c708;
     --org-color-low-opacity: #e9c708;
+    --org-color-transparent: "#";
+}
+
+.team-rrq-color {
+    --org-color1: #f5b52d;
+    --org-color2: #ffba26;
+    --org-color3: #f5b52d;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #aa7504;
+    --org-color-lighter: #ffc64d;
+    --org-color-low-opacity: #f5b52d80;
+    --org-color-transparent: "#";
+}
+
+.b4-color {
+    --org-color1: #ff0000;
+    --org-color2: #ff2600;
+    --org-color3: #ff0000;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #770000;
+    --org-color-lighter: #ca4b4b;
+    --org-color-low-opacity: #ff000080;
+    --org-color-transparent: "#";
+}
+
+.naguara-team-color {
+    --org-color1: #ffae00;
+    --org-color2: #ffd000;
+    --org-color3: #00b7ff;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #6e4b00;
+    --org-color-lighter: #ffcb59;
+    --org-color-low-opacity: #ffae0080;
+    --org-color-transparent: "#";
+}
+
+.nation00-color {
+    --org-color1: #e5ff00;
+    --org-color2: #fbff00;
+    --org-color3: #d0ff00;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #849200;
+    --org-color-lighter: #d9e664;
+    --org-color-low-opacity: #e5ff0080;
+    --org-color-transparent: "#";
+}
+
+.total-gaming-color {
+    --org-color1: #ff0000;
+    --org-color2: #ff2600;
+    --org-color3: #fbff00;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #7c1717;
+    --org-color-lighter: #ff6060;
+    --org-color-low-opacity: #ff000080;
+    --org-color-transparent: "#";
+}
+
+.gamelanders-color {
+    --org-color1: #1944ff;
+    --org-color2: #6f00ff;
+    --org-color3: #8c00ff;
+    --org-color4: '#';
+    --org-color5: '#';
+    --org-color-darker: #001883;
+    --org-color-lighter: #637afc;
+    --org-color-low-opacity: #1944ff80;
     --org-color-transparent: "#";
 }
