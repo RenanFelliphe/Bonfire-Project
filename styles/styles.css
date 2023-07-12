@@ -121,7 +121,6 @@ main {
     border: 1px solid var(--border-color);
     border-top: none;
     transition: width var(--element-in);
-    padding-left: 10px;
 }
 
 .M-menu-aside.close {
@@ -129,40 +128,15 @@ main {
     transition: width var(--element-out);
 }
 
-.M-menu-aside .All-icon {
-    padding-left: 0.9rem;
-    transition: var(--element-in);
-}
-
 .M-menu-aside section {
-    padding: 1rem 0 1.2rem 0;
+    padding: 1rem 0 1.2rem 1rem;
     position: relative;
     height: auto;
 }
 
-.M-menu-aside section::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 87%;
+.M-menu-aside section:nth-of-type(2) {
     border-bottom: 1px solid var(--border-color);
-    margin-left: 0.45rem;
-    transition: var(--element-in);
-}
-
-.M-menu-aside.close section::before {
-    width: 60%;
-    transition: var(--element-out);
-}
-
-.M-menu-aside section:last-child::before {
-    display: none;
-}
-
-.M-menu-aside.section-highlight section::before {
-    border-bottom-color: var(--org-color-darker);
-    box-shadow: 0 0 3px 0 var(--org-color-darker);
+    border-top: 1px solid var(--border-color);
 }
 
 .M-menu-aside .M-aside-gradient {
@@ -182,11 +156,36 @@ main {
     height: 0;
     transition: var(--element-out);
 }
-
-.M-menu-aside .M-aside-top {
+.M-menu-aside .M-aside-top{
     position: relative;
-    height: 5rem;
-    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--half-second-color);
+}
+.M-menu-aside .M-aside-top .menu-buttom{
+    height: 2.5rem;
+}
+.M-menu-aside .M-aside-top .menu-buttom .All-icon{
+    transition: all 0.4s;
+}
+
+.M-menu-aside .M-aside-top .menu-buttom .All-icon.open{
+    opacity: 1;
+    font-size: calc(var(--size-font-icons) + 1rem);
+}
+
+.M-menu-aside .M-aside-top .menu-buttom .All-icon.close{
+    opacity: 1;
+    font-size: calc(var(--size-font-icons) + 1.5rem);
+}
+
+.M-menu-aside.close .M-aside-top .menu-buttom .All-icon.open{
+    opacity: 1;
+}
+
+.M-menu-aside.close .M-aside-top .menu-buttom .All-icon.close{
+    opacity: 0;
 }
 
 .M-menu-aside .M-aside-center {
@@ -208,73 +207,9 @@ main {
     overflow: hidden;
 }
 
-.M-menu-aside .M-aside-center ul li.active {
-    background-color: var(--fourth-color);
-    width: calc(100% + 1px);
-    border: 1px solid var(--border-color);
-    border-right: none;
-    padding-left: 2.5rem;
-    transition: var(--element-in);
-    font-weight: 600;
-}
-
-.M-menu-aside.close .M-aside-center ul li.active {
-    padding-left: 0;
-}
-
 .M-menu-aside .M-aside-center ul li a {
     display: flex;
     justify-content: flex-start;
-}
-
-.M-menu-aside .M-aside-center ul li a .All-icon {
-    min-width: 2.8rem;
-    height: 44px;
-    line-height: 44px;
-    font-size: calc(var(--size-font-icons) + 0.3rem);
-}
-
-.M-menu-aside .M-aside-center ul li:hover a .All-icon {
-    color: var(--org-color1);
-    font-size: calc(var(--size-font-icons) + 0.5rem);
-}
-
-.M-menu-aside .M-aside-center ul li a .M-title {
-    height: 44px;
-    line-height: 44px;
-    transition: var(--element-in);
-    font-size: var(--size-font-subtitle);
-}
-
-.M-menu-aside .M-aside-center ul li:hover a .M-title {
-    color: var(--org-color1);
-    font-size: calc(var(--size-font-subtitle) + 0.3rem);
-}
-
-.M-menu-aside.close .M-aside-center ul li a .M-title {
-    opacity: 0;
-    transform: translateX(-50px);
-}
-
-.M-menu-aside .M-aside-center ul li.active a .M-title {
-    font-size: calc(var(--size-font-subtitle) + 2px);
-    color: var(--org-color1);
-}
-
-.M-menu-aside .M-aside-footer .menu-buttom i.All-icon {
-    position: absolute;
-    font-size: calc(var(--size-font-icons) + 0.8rem);
-    transition: var(--element-in);
-    margin-left: -0.4rem
-}
-
-.M-menu-aside .M-aside-center ul li.active a i.All-icon {
-    font-size: calc(var(--size-font-icons) + 0.3rem);
-    color: var(--org-color1);
-}
-
-.M-menu-aside.close .M-aside-center ul li.active a i.All-icon {
-    font-size: var(--size-font-icons);
 }
 
 .M-menu-aside .M-aside-center ul li.M-more-pages .M-more-arrow {
@@ -296,29 +231,8 @@ main {
 }
 
 .M-menu-aside .M-aside-center ul li.M-more-pages.active ul li {
-    margin-left: 1.75rem;
     display: block;
 }
-
-.M-menu-aside .M-aside-footer .menu-buttom i.All-icon.close {
-    opacity: 1;
-    color: var(--org-color1);
-    font-size: calc(var(--size-font-icons) + 1rem);
-    padding: 0 0 0 0.79rem;
-}
-
-.M-menu-aside.close .M-aside-footer .menu-buttom i.close {
-    opacity: 0;
-}
-
-.M-menu-aside.close .M-aside-footer .menu-buttom i.open {
-    opacity: 1;
-}
-
-.M-menu-aside .M-aside-footer .menu-buttom i.open {
-    opacity: 0;
-}
-
 /*====================================================================================================
 ======================================== INDEX: I-QUICK-MESSAGES ==========================================
 ====================================================================================================*/

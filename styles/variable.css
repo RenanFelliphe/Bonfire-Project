@@ -41,12 +41,15 @@
     /*Cor de primeiro foco*/
     --second-color: #27282A;
     /*Cor de segundo foco*/
+    --half-second-color: #2D2E30;
+    /*Cor de terceiro foco*/
     --menu-color: #242526;
     /*Cor dos Menus*/
     --third-color: #232325;
     /*Cor de quarto foco*/
     --fourth-color: #18191A;
     /*Cor do body*/
+    
 
     /* ========= VARIÁVEIS DE CORES (PADRÃO) ========= */
 
