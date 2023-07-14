@@ -42,9 +42,9 @@ openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
 defineTheme(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
-changeMenuBars(); //Troca de COR DAS BARRAS do menu lateral
 logOutBonfire(); //SAI do site
-openThemeSections();
+openToggleThemeFunctions(); //Abre as seções de cada função na área de escolha de tema do site por Organização
+menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 
 
 /*========================================================================================================================================
@@ -198,20 +198,6 @@ function openQuickMessages() {
     });
 }
 
-//Troca de COR DAS BARRAS do menu lateral
-function changeMenuBars() {
-    const asideTop = document.querySelector('.M-aside-top');
-    const firstSectionBefore = asideTop.querySelector('section:first-child::before');
-    const asideCenter = document.querySelector('.M-aside-center');
-    const menuAside = document.querySelector('.M-menu-aside');
-
-    asideTop.addEventListener('mouseover', () => firstSectionBefore.classList.toggle('section-highlight', true));
-    asideTop.addEventListener('mouseout', () => firstSectionBefore.classList.toggle('section-highlight', false));
-
-    asideCenter.addEventListener('mouseover', () => menuAside.classList.toggle('section-highlight', true));
-    asideCenter.addEventListener('mouseout', () => menuAside.classList.toggle('section-highlight', false));
-}
-
 //SAI do site
 function logOutBonfire() {
     const logOutButton = document.querySelector('.S-logout-icon');
@@ -239,7 +225,7 @@ function logOutBonfire() {
 }
 
 //Abre as seções de cada função na área de escolha de tema do site por Organização
-function openThemeSections() {
+function openToggleThemeFunctions() {
     function openSearchOrg() {
         const searchOrgDiv = document.querySelector('.S-search-org');
         const searchOrgIcon = document.querySelector('.S-search-org-icon');
@@ -270,3 +256,110 @@ function openThemeSections() {
     openSuggestOrg();
     openCleanOrg();
 }
+
+//Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
+function menuAsideFunctions() {
+    const sidebar = document.querySelector(".M-menu-aside");
+    const morePagesContainer = document.querySelector(".M-aside-more");
+    var isOpen = false; // Variável para controlar o estado de abertura da sidebar
+    var hoverTimeout;
+  
+    /* Essas funções do Menu Aside não devem ocorrer nessa página
+        // Abre e fecha o menu usando BOTÃO
+        function buttonMenuAside() {
+        const menuButton = document.querySelector(".menu-button");
+    
+        menuButton.addEventListener('click', function() {
+            sidebar.classList.toggle("close");
+            isOpen = !isOpen;
+    
+            if (isOpen) {
+            setTimeout(hoverMorePages, 2000); // Aguarda 2 segundos antes de permitir a execução da função hoverMorePages
+            } else {
+            morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
+            }
+        });
+        }
+        // Abre o menu usando HOVER em Desktops
+        function hoverMenuAside() {
+      sidebar.addEventListener('mouseover', function() {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(function() {
+          sidebar.classList.remove("close");
+        }, 100); // Delay em milissegundos
+      });
+  
+      sidebar.addEventListener('mouseout', function() {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(function() {
+          sidebar.classList.add("close");
+          morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
+        }, 200); // Delay em milissegundos
+      });
+    }*/
+
+    // Abre a seção para ver as páginas ocultas
+    function openMorePages() {
+      const morePages = document.querySelector(".M-more-pages");
+  
+      morePages.addEventListener('click', function() {
+        morePagesContainer.classList.toggle("close");
+        isOpen = !isOpen;
+  
+        if (isOpen) {
+          setTimeout(hoverMorePages, 1300); // Aguarda 1,3 segundos antes de permitir a execução da função hoverMorePages
+        } else {
+          morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
+        }
+      });
+
+      // Fecha a seção ao retirar o mouse do container
+      function hoverMorePages() {
+        if (!isOpen) {
+          return; // Retorna se o elemento não estiver aberto
+        }
+  
+        morePagesContainer.addEventListener('mouseover', function() {
+          clearTimeout(hoverTimeout);
+        });
+  
+        morePagesContainer.addEventListener('mouseout', function() {
+          clearTimeout(hoverTimeout);
+          hoverTimeout = setTimeout(function() {
+            morePagesContainer.classList.add("close");
+            isOpen = false; // Atualiza o estado de abertura do elemento para fechado
+          }, 200); // Delay em milissegundos
+        });
+      }
+    }
+
+    //Muda o tema de acordo com o circulo
+    function testChangeTheme() {
+      const body = document.querySelector("body");
+      const team1 = document.querySelector(".M-team-1");
+      const team2 = document.querySelector(".M-team-2");
+      const team3 = document.querySelector(".M-team-3");
+    
+      team1.addEventListener("click", () => {
+        body.classList.toggle("loud-color");
+        body.classList.remove("los-color");
+        body.classList.remove("cloud9-color");
+      });
+    
+      team2.addEventListener("click", () => {
+        body.classList.toggle("los-color");
+        body.classList.remove("loud-color");
+        body.classList.remove("cloud9-color");
+      });
+    
+      team3.addEventListener("click", () => {
+        body.classList.toggle("cloud9-color");
+        body.classList.remove("loud-color");
+        body.classList.remove("los-color");
+      });
+    }
+
+    testChangeTheme();
+    openMorePages();
+}  
+

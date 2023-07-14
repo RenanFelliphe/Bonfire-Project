@@ -13,52 +13,110 @@ openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 function menuAsideFunctions() {
     const sidebar = document.querySelector(".M-menu-aside");
-
-    //Abre e fecha o menu usando BOTÃO
+    const morePagesContainer = document.querySelector(".M-aside-more");
+    var isOpen = false; // Variável para controlar o estado de abertura da sidebar
+    var hoverTimeout;
+  
+    // Abre e fecha o menu usando BOTÃO
     function buttonMenuAside() {
-        const menuButton = document.querySelector(".menu-buttom");
-
-        menuButton.addEventListener('click', () => {
-            sidebar.classList.toggle("close");
-        });
+      const menuButton = document.querySelector(".menu-button");
+  
+      menuButton.addEventListener('click', function() {
+        sidebar.classList.toggle("close");
+        isOpen = !isOpen;
+  
+        if (isOpen) {
+          setTimeout(hoverMorePages, 2000); // Aguarda 2 segundos antes de permitir a execução da função hoverMorePages
+        } else {
+          morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
+        }
+      });
     }
-
-    //Abre o menu usando HOVER em Desktops
+  
+    // Abre o menu usando HOVER em Desktops
     function hoverMenuAside() {
-        let hoverTimeout;
-
-        sidebar.addEventListener('mouseover', () => {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(() => {
-                sidebar.classList.remove("close");
-            }, 100); // Delay em milissegundos
-        });
-        sidebar.addEventListener('mouseout', () => {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(() => {
-                sidebar.classList.add("close");
-            }, 200); // Delay em milissegundos
-        });
+      sidebar.addEventListener('mouseover', function() {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(function() {
+          sidebar.classList.remove("close");
+        }, 100); // Delay em milissegundos
+      });
+  
+      sidebar.addEventListener('mouseout', function() {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(function() {
+          sidebar.classList.add("close");
+          morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
+        }, 200); // Delay em milissegundos
+      });
     }
 
-    //Troca de COR DAS BARRAS do menu lateral
-    function changeMenuBars() {
-        const asideTop = document.querySelector('.M-aside-top');
-        const firstSectionBefore = asideTop.querySelector('section:first-child::before');
-        const asideCenter = document.querySelector('.M-aside-center');
-        const menuAside = document.querySelector('.M-menu-aside');
+    // Abre a seção para ver as páginas ocultas
+    function openMorePages() {
+      const morePages = document.querySelector(".M-more-pages");
+  
+      morePages.addEventListener('click', function() {
+        morePagesContainer.classList.toggle("close");
+        isOpen = !isOpen;
+  
+        if (isOpen) {
+          setTimeout(hoverMorePages, 1300); // Aguarda 1,3 segundos antes de permitir a execução da função hoverMorePages
+        } else {
+          morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
+        }
+      });
 
-        asideTop.addEventListener('mouseover', () => firstSectionBefore.classList.toggle('section-highlight', true));
-        asideTop.addEventListener('mouseout', () => firstSectionBefore.classList.toggle('section-highlight', false));
-
-        asideCenter.addEventListener('mouseover', () => menuAside.classList.toggle('section-highlight', true));
-        asideCenter.addEventListener('mouseout', () => menuAside.classList.toggle('section-highlight', false));
+      // Fecha a seção ao retirar o mouse do container
+      function hoverMorePages() {
+        if (!isOpen) {
+          return; // Retorna se o elemento não estiver aberto
+        }
+  
+        morePagesContainer.addEventListener('mouseover', function() {
+          clearTimeout(hoverTimeout);
+        });
+  
+        morePagesContainer.addEventListener('mouseout', function() {
+          clearTimeout(hoverTimeout);
+          hoverTimeout = setTimeout(function() {
+            morePagesContainer.classList.add("close");
+            isOpen = false; // Atualiza o estado de abertura do elemento para fechado
+          }, 200); // Delay em milissegundos
+        });
+      }
     }
 
+    //Muda o tema de acordo com o circulo
+    function testChangeTheme() {
+      const body = document.querySelector("body");
+      const team1 = document.querySelector(".M-team-1");
+      const team2 = document.querySelector(".M-team-2");
+      const team3 = document.querySelector(".M-team-3");
+    
+      team1.addEventListener("click", () => {
+        body.classList.toggle("loud-color");
+        body.classList.remove("los-color");
+        body.classList.remove("cloud9-color");
+      });
+    
+      team2.addEventListener("click", () => {
+        body.classList.toggle("los-color");
+        body.classList.remove("loud-color");
+        body.classList.remove("cloud9-color");
+      });
+    
+      team3.addEventListener("click", () => {
+        body.classList.toggle("cloud9-color");
+        body.classList.remove("loud-color");
+        body.classList.remove("los-color");
+      });
+    }
+
+    testChangeTheme();
+    openMorePages();
     hoverMenuAside();
     buttonMenuAside();
-    changeMenuBars();
-}
+}  
 
 //Troca e identa a PÁGINA SELECIONADA no menu lateral
 function toggleSelectedPage() {
@@ -79,3 +137,4 @@ function openQuickMessages() {
         quickMessages.classList.toggle("close");
     });
 }
+
