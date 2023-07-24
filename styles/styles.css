@@ -165,6 +165,13 @@ main {
     justify-content: flex-start;
     background-color: var(--half-second-color);
 }
+.M-menu-aside li.active a span{
+    color: var(--org-color2);
+}
+
+.M-menu-aside li.M-more-pages li.active a span{
+    color: var(--org-color2);
+}
 
 .M-menu-aside .M-aside-top i.All-icon {
     position: absolute;
@@ -187,16 +194,16 @@ main {
 
 .M-menu-aside .M-aside-top i.M-open {
     opacity: 0;
-    font-size: calc(var(--size-font-icons) + 0.8rem);
+    font-size: calc(var(--size-font-icons) + 1rem);
     transform: rotate(0deg);
     margin: -1.2rem 0 0 0;
 }
 
 .M-menu-aside .M-aside-top i.M-close {
     opacity: 1;
-    font-size: calc(var(--size-font-icons) + 1.5rem);
-    margin: -1.634rem 0 0 -0.33rem;
-    transform: rotate(360deg);
+    font-size: calc(var(--size-font-icons) + 1.7rem);
+    margin: -1.634rem 0 0 -0.35rem;
+    transform: rotate(180deg);
     color: var(--org-color-lighter);
 }
 
@@ -290,11 +297,27 @@ main {
     transition: 0.1s;
 }
 
-.M-menu-aside .M-aside-center li .M-aside-more li span {
-    transition: var(--element-out);
+.M-menu-aside .M-aside-center li.M-events .M-event-icon{
+    position: absolute;
+    display: flex;
+    width: 1.2rem;
+    clip-path: circle();
+    transform: translateX(0.75rem) translateY(-0.45rem);
 }
 
-.M-menu-aside .M-aside-center li:hover .M-aside-more span{
+.M-menu-aside .M-aside-center li.M-events .M-event-icon img{
+    max-width: 100%;
+}
+
+.M-menu-aside .M-aside-center li.M-friends .M-message-notify{
+    position: absolute;
+    font-size: calc(var(--size-font-icons) + 0.7rem);
+    transform: translateX(0.6rem) translateY(-0.5rem);
+    color: var(--org-color2);
+}
+
+.M-menu-aside .M-aside-center li .M-aside-more li span {
+    transition: var(--element-out);
     color: var(--text-color);
 }
 
@@ -378,6 +401,7 @@ main {
     width: 3.7rem;
     clip-path: circle();
 }
+
 .M-menu-aside .M-aside-footer .M-footer-content .M-user-images a:hover .icon-hover{
     opacity: 1;
     transition-delay: 0.6s;

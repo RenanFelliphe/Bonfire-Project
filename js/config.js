@@ -358,8 +358,25 @@ function menuAsideFunctions() {
         body.classList.remove("los-color");
       });
     }
+    
+    //Troca e identa a PÁGINA SELECIONADA no menu lateral
+    function toggleSelectedPage() {
+        const list = document.querySelectorAll('.M-list');
+        const sublist = document.querySelectorAll('.M-sublist');
+
+        list.forEach(item => item.addEventListener('click', function () {
+            list.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        }));
+
+        sublist.forEach(subitem => subitem.addEventListener('click', function () {
+            sublist.forEach(subitem => subitem.classList.remove('active'));
+            this.classList.add('active');
+        }));
+    }
 
     testChangeTheme();
     openMorePages();
+    toggleSelectedPage();
 }  
 
