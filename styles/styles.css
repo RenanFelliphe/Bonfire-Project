@@ -125,18 +125,18 @@ main {
 }
 
 .M-menu-aside.close {
-    width: 4.5rem;
+    width: 4.8rem;
     transition: width var(--element-out);
 }
 
 .M-menu-aside section {
-    padding: 1rem 0 1.2rem 1rem;
+    padding: 1rem 0 1.2rem 1.2rem;
     position: relative;
     height: auto;
 }
 
 .M-menu-aside section:nth-of-type(2) {
-    padding-left: 1.2rem;
+    padding-left: 1.5rem;
     border-bottom: 1px solid var(--border-color);
     border-top: 1px solid var(--border-color);
 }
@@ -342,7 +342,7 @@ main {
     display: flex;
     padding: 1.2rem;
     position: absolute;
-    top: 50%;
+    top: 66%;
     right: -55%;
     transform: translateX(45%) translateY(55%);
     border: 2px solid var(--border-color);
@@ -367,7 +367,7 @@ main {
 
 .M-menu-aside .M-aside-footer{
     padding: 1rem;
-    padding-left: 0.25rem;
+    padding-left: 0.45rem;
     height: 100%;
     width: 100%;
 }
@@ -756,12 +756,11 @@ main .S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
     position: absolute;
     right: 10px;
     margin-top: -33px;
-    rotate: 0;
     transition: 0.4s;
 }
 
 main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
-    rotate: -90deg;
+    transform: rotate(-90deg) translate(5px);
     color: var(--org-color2);
     transition: 0.3s;
 }
