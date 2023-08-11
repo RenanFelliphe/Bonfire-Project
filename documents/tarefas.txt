@@ -1,70 +1,77 @@
 | >>> NÍVEIS DE PRIORIDADE DAS TAREFAS:  <<< |
 
-++ Emergente >>> Obrigatório para esse bimestre (07/07)
-+ Urgente >>> Aconselhável ser feito nesse bimestre
-- Pouco Urgente >>> Deve ser feito até o final do projeto
--- Opcional >>> Tarefa opcional para o projeto
+++ Emergente >>> Obrigatório para esse bimestre (07/07).
++ Urgente >>> Aconselhável ser feito nesse bimestre.
+- Pouco Urgente >>> Deve ser feito até o final do projeto.
+-- Opcional >>> Tarefa opcional para o projeto.
+
 
 
 | >>> PROJETAR <<< |
-++ Projetar a modelagem responsiva do site
-++ Projetar o design da vitrine de títulos no perfil
+++ Projetar o design da vitrine de títulos no perfil.
 
-+ Projetar a seção 'Perfis em Destaque' para a Página Inicial
-+ Projetar os novos designs da página de Login/Registro
++ Projetar os novos designs da página de Login/Registro.
++ Projetar o design da página 'Calendário'.
 
-- Projetar o design da página 'Calendário'
--- Projetar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro)
+- Projetar a modelagem responsiva do site.
+- Projetar a seção 'Perfis em Destaque' para a Página Inicial.
+
+-- Projetar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro).
+
 
 
 | >>> ADICIONAR / CRIAR <<< |
-++ Adicionar o alterador de tipo de fonte às configurações (SELECT)
-+ Adicionar os ícones para as contas do usuário em outros sites ao Perfil
++ Adicionar os ícones para as contas do usuário em outros sites ao Perfil.
++ Adicionar um link para o Bonfire no Github (Hospedar).
 
-- Adicionar os 'Icon-hover's do Menu-header
--- Adicionar um link para o Bonfire no Github (Hospedar)
+- Adicionar os 'Icon-hover's do Menu-header.
+- Adicionar os diagramas DER e DTR no repositório.
+
+-- Adicionar o alterador de tipo de fonte às configurações (SELECT).
+
+
 
 | >>> DEFINIR <<< |
 
 
+
 | >>> FINALIZAR <<< |
-++ Finalizar e adicionar design do Menu-aside
+
 
 
 | >>> ATUALIZAR <<< |
-++ Atualizar as cores das arrows em imagem do site OU alterá-las para arrows de alguma biblioteca
-+ Atualizar o tamanho de cada ícone para um com base na variável --Size-font-icons (Usando 'Calc()' em CSS)
+- Atualizar as cores do Modo Claro.
 
-- Atualizar o tempo de transição das cores na transição de modo (claro ~ escuro)
-- Atualizar as cores do Modo Claro
-
--- Atualizar as cores de todas organizações
--- Atualizar todas as variáveis CSS para o modelo 'Camel Case'
+-- Atualizar o tempo de transição das cores na transição de modo (claro ~ escuro).
+-- Atualizar todas as variáveis CSS para o modelo 'Camel Case'.
 
 
 
 | >>> RECRIAR <<< |
-+ Recriar e simplificar a seção de mudança de tema para as cores padrão, azul, ciano, verde, marrom, roxo, rosa, vermelho, laranja, amarelo
++ Recriar e simplificar a seção de mudança de tema para as cores padrão, azul, ciano, verde, marrom, roxo, rosa, vermelho, laranja, amarelo.
 
-- Recriar as proporções da seção 'Main' nos arquivos HTML do site
+- Recriar as proporções da seção 'Main' nos arquivos HTML do site.
 
--- Recriar e arredondar as bordas dos containers do site
+-- Recriar e arredondar as bordas dos containers do site.
+
 
 
 | >>> CORRIGIR <<< |
-++ Corrigir o bug de responsividade do Menu-header
-++ Corrigir o bug de responsividade do Menu-aside
+++ Corrigir o bug de responsividade do Menu-header.
+++ Corrigir o bug de responsividade do Menu-aside.
 
-+ Corrigir o bug do tamanho do link da logo Bonfire no menu header
-+ Corrigir o bug de rolagem para a direita no carrossel de organizações
++ Corrigir o bug do tamanho do link da logo Bonfire no menu header.
++ Corrigir o bug de rolagem para a direita no carrossel de organizações.
+
 
 
 | >>> DELETAR <<< |
 
 
-| >>> OUTROS <<< |
-++ Ajustar a proporcionalidade da foto de perfil e da capa
-++ Passar o design do Quick-Messages do papel para o figma
 
--- Aumentar a distribuição das variáveis de cores pelo site
+| >>> OUTROS <<< |
+++ Ajustar a proporcionalidade da foto de perfil e da capa.
+++ Passar o design do Quick-Messages do papel para o figma.
+
+-- Aumentar a distribuição das variáveis de cores pelo site.
 

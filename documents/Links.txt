@@ -1,27 +1,43 @@
 
 | >>> CANVA (CANVAS BUSINESS MODEL) <<< |
-    | Link de ACESSO -> https://www.canva.com/design/DAFl1vtiKqo/KlT4_ErgRXpc7x7BndVcKg/edit |
+    [ Link de ACESSO ]
+        https://www.canva.com/design/DAFl1vtiKqo/KlT4_ErgRXpc7x7BndVcKg/edit
+
 
 | >>> MIRO (BRAINSTORM) <<< |
-    | Link de ACESSO -> https://miro.com/app/board/uXjVM-72LzU=/#tpicker-content |
+    [ Link de ACESSO ]
+        https://miro.com/app/board/uXjVM-72LzU=/#tpicker-content
+
 
 | >>> GOOGLE FORMS (FORMULÁRIO DE FEEDBACK DE CLIENTE) <<< |
-    | Link de ACESSO -> https://docs.google.com/forms/d/1wzkGe9qKRy5TQFHlgW2rFNHDrVHlXdnvzoXrcz4ALQE/edit |
+    [ Link de ACESSO ]
+        https://docs.google.com/forms/d/1wzkGe9qKRy5TQFHlgW2rFNHDrVHlXdnvzoXrcz4ALQE/edit
 
-| >>> FIGMA (ÁREA DE DESIGN) <<< |
-    | Link de ACESSO (Menu-Sidebar) -> https://www.figma.com/file/DoYSYM0z0DEm772PQTqBsv/Menu-sidebar?type=design&node-id=0-1&t=JzqTckM7nIHQzFSE-0 |
+
+| >>> FIGMA (DESIGNING E PROTOTIPAÇÃO) <<< |
+    [ Link de ACESSO ]
+        https://www.figma.com/file/DoYSYM0z0DEm772PQTqBsv/Menu-sidebar?type=design&node-id=0-1&t=JzqTckM7nIHQzFSE-0
+
 
 | >>> NOTION (CBL) <<< |
-    | Link de ACESSO -> https://www.notion.so/invite/aa687bed92fa5ceb40e16312c59a8908c2dce781 |
-    | Link de CONVITE -> https://www.notion.so/34c2dfd081ed4aa6922890c5425db095 |
+    [ Link de ACESSO ]
+        https://www.notion.so/invite/aa687bed92fa5ceb40e16312c59a8908c2dce781
+    [ Link de CONVITE ]
+        https://www.notion.so/34c2dfd081ed4aa6922890c5425db095
+
 
 | >>> WHATSAPP (GRUPO) <<< |
-    | Link de CONVITE -> https://chat.whatsapp.com/DAkMLlBP6um9jg7NsX6wH3 |
+    [ Link de CONVITE ]
+        https://chat.whatsapp.com/DAkMLlBP6um9jg7NsX6wH3
+
 
 | >>> GITHUB (REPOSITÓRIO) <<< |
-    | Link de ACESSO -> https://github.com/RenanFelliphe/Bonfire-Project |
-    | Link para CLONAGEM -> https://github.com/RenanFelliphe/Bonfire-Project.git |
+    [ Link de ACESSO ]
+        https://github.com/RenanFelliphe/Bonfire-Project
+    [ Link para CLONAGEM ]
+        https://github.com/RenanFelliphe/Bonfire-Project.git
+
 
 | >>> REFERÊNCIAS <<< |
-    | https://mobbin.com/browse/android/screens?sort=popularity |
+        https://mobbin.com/browse/android/screens?sort=popularity
 
