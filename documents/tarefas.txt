@@ -44,6 +44,8 @@
 
 
 | >>> RECRIAR <<< |
++ Recriar e simplificar a seção de mudança de tema para as cores padrão, azul, ciano, verde, marrom, roxo, rosa, vermelho, laranja, amarelo
+
 - Recriar as proporções da seção 'Main' nos arquivos HTML do site
 
 -- Recriar e arredondar as bordas dos containers do site
