@@ -3,35 +3,6 @@
 ============================================================================================================================================*/
 
 
-//Carrosel de organizações
-const swiper = new Swiper('.swiper', {
-    loop: true,
-    slidesPerView: 5,
-    centeredSlides: true,
-    freeMode: true,
-    spaceBetween: 40,
-    grabCursor: true,
-    mousewheel: true,
-    watchOverflow: true,
-
-    keyboard: {
-        enabled: true
-    },
-
-    pagination: {
-        el: '.org-pagination',
-        dynamicBullets: true,
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: '.arrow-right',
-        prevEl: '.arrow-left',
-    },
-
-    speed: 300, // Defina um valor adequado para a velocidade da transição dos slides
-});
-
 
 /*========================================================================================================================================
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
@@ -39,11 +10,10 @@ const swiper = new Swiper('.swiper', {
 
 openTiers(); //Abre e fecha CADA SEÇÃO da página de configurações
 openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
-defineTheme(); //Define o MODO(Light/Dark) e as CORES do site
+updateMode(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 logOutBonfire(); //SAI do site
-openToggleThemeFunctions(); //Abre as seções de cada função na área de escolha de tema do site por Organização
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 
 
@@ -76,32 +46,11 @@ function openSearchArea() {
 }
 
 //Define o MODO(Light/Dark) e as CORES do site
-function defineTheme() {
-    const colorCards = document.querySelectorAll('.S-card');
-
-    function updateColors() {
-        const currentCard = document.querySelector('.S-card.current');
-        const orgColorClass = Array.from(currentCard.classList).find(cls => cls.endsWith('-color'));
-        document.documentElement.className = orgColorClass;
-    }
-
-    function updateMode() {
-        const chk = document.getElementById('S-chk');
-        chk.addEventListener('change', () => {
-            document.body.classList.toggle('light-mode');
-        });
-    }
-
-    colorCards.forEach(card => {
-        card.addEventListener('click', function () {
-            colorCards.forEach(card => card.classList.remove("current"));
-            this.classList.add("current");
-            updateColors(); // Atualiza as cores com base na seleção atual
-        });
+function updateMode() {
+    const chk = document.getElementById('S-chk');
+    chk.addEventListener('change', () => {
+        document.body.classList.toggle('light-mode');
     });
-
-    updateMode(); // Ativa a funcionalidade de alternar entre o modo claro e escuro
-    updateColors(); // Atualiza as cores com base na seleção inicial
 }
 
 //Define AS FONTES do site
@@ -224,39 +173,6 @@ function logOutBonfire() {
     });
 }
 
-//Abre as seções de cada função na área de escolha de tema do site por Organização
-function openToggleThemeFunctions() {
-    function openSearchOrg() {
-        const searchOrgDiv = document.querySelector('.S-search-org');
-        const searchOrgIcon = document.querySelector('.S-search-org-icon');
-
-        searchOrgIcon.addEventListener('click', () => {
-            searchOrgDiv.classList.toggle('active');
-        });
-    }
-
-    function openSuggestOrg() {
-        const suggestOrgDiv = document.querySelector('.S-suggest-org');
-        const suggestOrgIcon = document.querySelector('.S-suggest-org-icon');
-
-        suggestOrgIcon.addEventListener('click', () => {
-            suggestOrgDiv.classList.toggle('active');
-        });
-    }
-
-    function openCleanOrg() {
-        const cleanOrgDiv = document.querySelector('.S-clean-org');
-        const cleanOrgIcon = document.querySelector('.S-clean-org-icon');
-        cleanOrgIcon.addEventListener('click', () => {
-            cleanOrgDiv.classList.toggle('active');
-        });
-    }
-
-    openSearchOrg();
-    openSuggestOrg();
-    openCleanOrg();
-}
-
 //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 function menuAsideFunctions() {
     const sidebar = document.querySelector(".M-menu-aside");
@@ -265,23 +181,24 @@ function menuAsideFunctions() {
     var hoverTimeout;
   
     /* Essas funções do Menu Aside não devem ocorrer nessa página
-        // Abre e fecha o menu usando BOTÃO
-        function buttonMenuAside() {
-        const menuButton = document.querySelector(".menu-button");
-    
-        menuButton.addEventListener('click', function() {
-            sidebar.classList.toggle("close");
-            isOpen = !isOpen;
-    
-            if (isOpen) {
-            setTimeout(hoverMorePages, 2000); // Aguarda 2 segundos antes de permitir a execução da função hoverMorePages
-            } else {
-            morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
-            }
-        });
+    // Abre e fecha o menu usando BOTÃO
+    function buttonMenuAside() {
+      const menuButton = document.querySelector(".menu-button");
+  
+      menuButton.addEventListener('click', function() {
+        sidebar.classList.toggle("close");
+        isOpen = !isOpen;
+  
+        if (isOpen) {
+          setTimeout(hoverMorePages, 2000); // Aguarda 2 segundos antes de permitir a execução da função hoverMorePages
+        } else {
+          morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
         }
-        // Abre o menu usando HOVER em Desktops
-        function hoverMenuAside() {
+      });
+    }
+
+    // Abre o menu usando HOVER em Desktops
+    function hoverMenuAside() {
       sidebar.addEventListener('mouseover', function() {
         clearTimeout(hoverTimeout);
         hoverTimeout = setTimeout(function() {
@@ -296,7 +213,7 @@ function menuAsideFunctions() {
           morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
         }, 200); // Delay em milissegundos
       });
-    }*/
+    } */
 
     // Abre a seção para ver as páginas ocultas
     function openMorePages() {
@@ -358,21 +275,21 @@ function menuAsideFunctions() {
         body.classList.remove("los-color");
       });
     }
-    
+
     //Troca e identa a PÁGINA SELECIONADA no menu lateral
     function toggleSelectedPage() {
-        const list = document.querySelectorAll('.M-list');
-        const sublist = document.querySelectorAll('.M-sublist');
+      const list = document.querySelectorAll('.M-list');
+      const sublist = document.querySelectorAll('.M-sublist');
 
-        list.forEach(item => item.addEventListener('click', function () {
-            list.forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
-        }));
+      list.forEach(item => item.addEventListener('click', function () {
+          list.forEach(item => item.classList.remove('active'));
+          this.classList.add('active');
+      }));
 
-        sublist.forEach(subitem => subitem.addEventListener('click', function () {
-            sublist.forEach(subitem => subitem.classList.remove('active'));
-            this.classList.add('active');
-        }));
+      sublist.forEach(subitem => subitem.addEventListener('click', function () {
+          sublist.forEach(subitem => subitem.classList.remove('active'));
+          this.classList.add('active');
+      }));
     }
 
     testChangeTheme();

@@ -311,9 +311,12 @@ main {
 
 .M-menu-aside .M-aside-center li.M-friends .M-message-notify{
     position: absolute;
-    font-size: calc(var(--size-font-icons) + 0.7rem);
-    transform: translateX(0.6rem) translateY(-0.5rem);
-    color: var(--org-color2);
+    width: 0.7rem;
+    height: 0.7rem;
+    transform: translateX(1.03rem) translateY(-0.57rem);
+    background-color: var(--org-color2);
+    border: 2px solid var(--menu-color);
+    border-radius: 100%;
 }
 
 .M-menu-aside .M-aside-center li .M-aside-more li span {
@@ -1080,118 +1083,6 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
 
 main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
     transform: translateX(1.1rem);
-}
-
-.S-toggle-color {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.S-toggle-color .S-color-functions {
-    width: 100%;
-    gap: 0.7rem;
-    display: flex;
-    position: absolute;
-    top: 40%;
-    transform: translate(33%);
-}
-
-.S-toggle-color .S-color-functions div {
-    display: none;
-}
-
-.S-toggle-color .S-color-functions div.active {
-    display: block;
-}
-
-.S-toggle-color .swiper-pagination-bullet {
-    background-color: var(--org-color-lighter);
-}
-
-.S-toggle-color .swiper-pagination-bullet-active {
-    background-color: var(--org-color-darker);
-    border: 1px solid var(--org-color2);
-}
-
-.S-toggle-color .S-card-slider {
-    position: relative;
-    width: 600px;
-    height: 200px;
-    padding: 0 20px 0 20px;
-}
-
-.S-toggle-color .S-card-slider .S-gallery {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.S-toggle-color .S-card-slider .S-gallery .S-card {
-    height: 40%;
-    background-color: var(--second-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.S-toggle-color .S-card-slider .S-gallery .S-card:hover {
-    box-shadow: 0 0 5px 0 var(--org-color1);
-    border-color: var(--org-color2);
-    transition: 0.3s;
-}
-
-.S-toggle-color .S-card-slider .S-gallery .S-card.current {
-    box-shadow: 0 0 5px 0 var(--org-color1);
-    border-color: var(--org-color2);
-}
-
-.S-toggle-color .S-card-slider .S-gallery .S-card img {
-    width: 58%;
-    height: 70%;
-    object-fit: contain;
-}
-
-.S-toggle-color .S-card-slider i {
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    background: var(--third-color);
-    border-radius: 50%;
-    box-shadow: 0 2px 4px 0 #00000081;
-    transition: transform 0.1s linear;
-    border: 1px solid var(--border-color);
-    position: absolute;
-    top: 43%;
-    transform: translateY(-50%);
-    z-index: 2;
-    display: flex;
-}
-
-.S-toggle-color .S-card-slider i:hover {
-    transition: 0.2s;
-    color: var(--org-color1);
-    border-color: var(--org-color2);
-    box-shadow: 0 0 2px 1px var(--org-color2);
-}
-
-.S-toggle-color .S-card-slider i.arrow-left {
-    left: 5px;
-    padding-right: 2px;
-    transform: rotate(90deg);
-    padding: 0 2px 0 1px;
-}
-
-.S-toggle-color .S-card-slider i.arrow-right {
-    right: 5px;
-    padding-left: 2px;
-    transform: rotate(-90deg);
-    padding: 1px 1px 0 0;
 }
 
 main .S-subsettings .S-appearence .S-font-style div {
