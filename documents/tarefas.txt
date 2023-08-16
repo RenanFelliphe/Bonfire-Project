@@ -40,6 +40,7 @@
 
 
 | >>> ATUALIZAR <<< |
+++ Atualizar o botão de configurações para uma seção de alternar perfil e sair da conta
 - Atualizar as cores do Modo Claro.
 
 -- Atualizar o tempo de transição das cores na transição de modo (claro ~ escuro).
