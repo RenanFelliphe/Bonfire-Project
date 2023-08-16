@@ -485,6 +485,30 @@ main {
     transition: opacity var(--element-out);
 }
 
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-actions{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    width: 14rem;
+    height: 5rem;
+    top: -4.8rem;
+    background-color: var(--menu-color);
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-actions ul li{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
 /*====================================================================================================
 ======================================== INDEX: I-QUICK-MESSAGES ==========================================
 ====================================================================================================*/
