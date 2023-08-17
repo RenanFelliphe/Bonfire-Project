@@ -13,7 +13,6 @@ openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
 updateMode(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
-logOutBonfire(); //SAI do site
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 
 
@@ -147,32 +146,6 @@ function openQuickMessages() {
     });
 }
 
-//SAI do site
-function logOutBonfire() {
-    const logOutButton = document.querySelector('.M-log-out');
-    const confirmDialog = document.querySelector('.M-log-out-modal');
-    const confirmYes = document.querySelector('.M-confirm-log-out');
-    const confirmNo = document.querySelector('.M-cancel-log-out');
-    const pressXbutton = document.querySelector('.M-close-log-out-icon');
-
-    logOutButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        confirmDialog.style.display = 'block';
-    });
-
-    confirmYes.addEventListener('click', () => {
-        window.location.href = 'login.html';
-    });
-
-    confirmNo.addEventListener('click', () => {
-        confirmDialog.style.display = 'none';
-    });
-
-    pressXbutton.addEventListener('click', () => {
-        confirmDialog.style.display = 'none';
-    });
-}
-
 //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 function menuAsideFunctions() {
     const main = document.querySelector("main");
@@ -277,21 +250,26 @@ function menuAsideFunctions() {
         }));
     }
 
-    function openUserActions() {
+    // Abre a seção para alternar de usuário e sair do site
+    function userActions() {
+
         const logOptionsDiv = document.querySelector('.M-log-actions');
         const logButtom = document.querySelector('.M-log-buttom');
-    
-        logButtom.addEventListener('click', function () {
-            logOptionsDiv.classList.toggle("close");
-            logButtom.classList.toggle("active");
-    
-            if (logOptionsDiv.classList.contains("close")) {
-                clearTimeout(hoverTimeout);
-            } else {
-                clearTimeout(hoverTimeout);
-            }
-        });
-
+        
+        // Abre a seção com botão
+        function openContainer() {
+            logButtom.addEventListener('click', function () {
+                logOptionsDiv.classList.toggle("close");
+                logButtom.classList.toggle("active");
+        
+                if (logOptionsDiv.classList.contains("close")) {
+                    clearTimeout(hoverTimeout);
+                } else {
+                    clearTimeout(hoverTimeout);
+                }
+            });
+    }
+        // Fecha a seção com hover
         function closeContainerHover(){
 
             main.addEventListener("mouseover", () => {
@@ -305,15 +283,42 @@ function menuAsideFunctions() {
             })
         }
 
+        //SAI do site
+        function logOutBonfire() {
+            const logOutButton = document.querySelector('.M-log-out');
+            const confirmDialog = document.querySelector('.M-log-out-modal');
+            const confirmYes = document.querySelector('.M-confirm-log-out');
+            const confirmNo = document.querySelector('.M-cancel-log-out');
+            const pressXbutton = document.querySelector('.M-close-log-out-icon');
+
+            logOutButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                confirmDialog.style.display = 'block';
+            });
+
+            confirmYes.addEventListener('click', () => {
+                window.location.href = 'login.html';
+            });
+
+            confirmNo.addEventListener('click', () => {
+                confirmDialog.style.display = 'none';
+            });
+
+            pressXbutton.addEventListener('click', () => {
+                confirmDialog.style.display = 'none';
+            });
+        }
+        openContainer();
         closeContainerHover();
+        logOutBonfire();
     }
-       
+
     /*hoverMenuAside();
     buttonMenuAside();*/
 
     testChangeTheme();
     openMorePages();
     toggleSelectedPage();
-    openUserActions();
+    userActions();
 }
 

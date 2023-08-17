@@ -26,7 +26,7 @@
 
 - Adicionar os 'Icon-hover's do Menu-header.
 - Adicionar os diagramas DER e DTR no repositório.
-
+- Adicionar um delay para o fechamento do Menu-aside.
 -- Adicionar o alterador de tipo de fonte às configurações (SELECT).
 
 
@@ -61,15 +61,16 @@
 ++ Corrigir o bug de responsividade do Menu-header.
 ++ Corrigir o bug de responsividade do Menu-aside.
 
++ Corrijir o modal de Log Out para inverter a estilização dos botões de SAIR e CANCELAR.
 + Corrigir o bug do tamanho do link da logo Bonfire no menu header.
 + Corrigir o bug de rolagem para a direita no carrossel de organizações.
 
--- Corrigir a opção de fechamento por mouseout para a seção M-aside-more do Menu lateral
+-- Corrigir a opção de fechamento por mouseout para a seção M-aside-more do Menu lateral.
 
 
 
 | >>> DELETAR <<< |
-
+++ Deletar o menu-header e passar suas funções para o menu-aside
 
 
 | >>> OUTROS <<< |
