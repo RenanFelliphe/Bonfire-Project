@@ -36,6 +36,7 @@
         <section class="M-header-right">
         </section>
     </header>
+    
     <nav class="M-menu-aside">
         <span class="M-aside-gradient"> </span>
         <section class="M-aside-top">
@@ -52,7 +53,7 @@
         </section>
         <section class="M-aside-center">
             <ul>
-                <li class="M-list M-home">
+                <li class="M-list M-home active">
                     <a href="index.html" class="M-list-content">
                         <span class="bi bi-house-door All-icon"></span>
                         <span class="M-title"> Home </span>
@@ -98,7 +99,7 @@
                         <span class="M-title"> Loja </span>
                     </a>
                 </li>
-                <li class="M-list M-more-pages active">
+                <li class="M-list M-more-pages">
                     <a class="M-list-content">
                         <span class="bi bi-three-dots All-icon"></span>
                         <span class="M-title"> Mais </span>
@@ -116,6 +117,12 @@
                                 <a class="M-list-content">
                                     <span class="bi bi-pie-chart All-icon"></span>
                                     <span class="M-title"> Estatísticas </span>
+                                </a>
+                            </li>
+                            <li class="M-sublist">
+                                <a href="config.html" class="M-list-content">
+                                    <span class="bi bi-gear-wide All-icon"></span>
+                                    <span class="M-title"> Configurações </span>
                                 </a>
                             </li>
                         </ul>
@@ -142,7 +149,24 @@
                     <p class="M-nick">Saadhak</p>
                     <p class="M-name">Matias Delipetro</p>
                 </div>
-                <a href="config.html" class="M-config"><i class="bi bi-three-dots-vertical All-icon"></i></a>
+
+                <i class="bi bi-arrow-left-right All-icon M-log-buttom"></i>
+                <div class="M-log-actions close">
+                    <ul>
+                        <li>  
+                            <a href="">                   
+                                <span class="bi bi-people All-icon"></span>
+                                <span class="M-title"> Alternar usuário </span>
+                            </a> 
+                        </li>
+                        <li>    
+                            <a href="login.html">               
+                                <span class="bi bi-box-arrow-left All-icon"></span>
+                                <span class="M-title M-log-out"> Sair </span>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </nav>
@@ -154,15 +178,11 @@
                 <p>MENSAGENS RÁPIDAS</p>
             </div>
         </section>
-        </nav>
 
         <section class="S-settings">
             <div class="S-top">
                 <a href="config.html"><span class="S-tittle"> Configurações </span></a>
                 <div class="S-others-functions">
-                    <a href="login.html">
-                        <i class='bi bi-box-arrow-left S-logout-icon All-icon'><span class="icon-hover">Sair</span></i>
-                    </a>
                     <i class='bi bi-search S-search-icon All-icon'><span class="icon-hover">Pesquisar</span></i>
                 </div>
             </div>
@@ -486,14 +506,14 @@
 
     <section>
         <!--SEÇÃO PARA DEFINIÇÃO DE MODAIS -->
-        <div class="S-log-out-modal">
+        <div class="M-log-out-modal">
             <!--Aparece ao Clicar no botão de Log Out na S-Settings-->
-            <div class="S-log-out-modal-container">
-                <i class="bi bi-x S-close-log-out-icon All-icon"></i>
+            <div class="M-log-out-modal-container">
+                <i class="bi bi-x M-close-log-out-icon All-icon"></i>
                 <h4>Tem certeza que deseja SAIR ?</h4>
-                <div class="S-log-out-modal-buttons">
-                    <button class="S-cancel-log-out">CANCELAR</button>
-                    <button class="S-confirm-log-out">SAIR</button>
+                <div class="M-log-out-modal-buttons">
+                    <button class="M-cancel-log-out">CANCELAR</button>
+                    <button class="M-confirm-log-out">SAIR</button>
                 </div>
             </div>
         </div>

@@ -64,6 +64,8 @@
 + Corrigir o bug do tamanho do link da logo Bonfire no menu header.
 + Corrigir o bug de rolagem para a direita no carrossel de organizações.
 
+-- Corrigir a opção de fechamento por mouseout para a seção M-aside-more do Menu lateral
+
 
 
 | >>> DELETAR <<< |

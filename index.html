@@ -118,6 +118,12 @@
                                     <span class="M-title"> Estatísticas </span>
                                 </a>
                             </li>
+                            <li class="M-sublist">
+                                <a href="config.html" class="M-list-content">
+                                    <span class="bi bi-gear-wide All-icon"></span>
+                                    <span class="M-title"> Configurações </span>
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -143,14 +149,20 @@
                     <p class="M-name">Matias Delipetro</p>
                 </div>
 
-                <a href="config.html" class="M-config"><i class="bi bi-arrow-left-right All-icon"></i></a>
-                <div class="M-user-actions">
+                <i class="bi bi-arrow-left-right All-icon M-log-buttom "></i>
+                <div class="M-log-actions close">
                     <ul>
-                        <li>                    
-                            <i class="bi bi-people All-icon"></i> <p> Alternar usuário </p>
+                        <li>  
+                            <a href="">                   
+                                <span class="bi bi-people All-icon"></span>
+                                <span class="M-title"> Alternar usuário </span>
+                            </a> 
                         </li>
-                        <li>                    
-                            <i class="bi bi-box-arrow-left All-icon"></i> <p> Sair </p>
+                        <li>    
+                            <a href="login.html">               
+                                <span class="bi bi-box-arrow-left All-icon"></span>
+                                <span class="M-title M-log-out"> Sair </span>
+                            </a> 
                         </li>
                     </ul>
                 </div>
@@ -166,6 +178,21 @@
             </div>
         </section>
     </main>
+
+    <section>
+        <!--SEÇÃO PARA DEFINIÇÃO DE MODAIS -->
+        <div class="M-log-out-modal">
+            <!--Aparece ao Clicar no botão de Log Out na S-Settings-->
+            <div class="M-log-out-modal-container">
+                <i class="bi bi-x M-close-log-out-icon All-icon"></i>
+                <h4>Tem certeza que deseja SAIR ?</h4>
+                <div class="M-log-out-modal-buttons">
+                    <button class="M-cancel-log-out">CANCELAR</button>
+                    <button class="M-confirm-log-out">SAIR</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/index.js"></script>
 </body>
 
