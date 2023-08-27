@@ -1220,6 +1220,102 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
     color: var(--text-color);
 }
 
+main .S-subsettings .S-suport .S-faq .S-questions-section{
+    position: relative;
+    display: flex;
+    gap: 10.5rem;
+}
+
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-generalQ-title.active,
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-otherQ-title.active{
+    color: var(--org-color1);
+}
+
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-line{
+    position: absolute;
+    bottom: -1px;
+    width: 13rem;
+    height: 1px;
+    background-color: var(--org-color1);
+    border-radius: 5rem;
+    z-index: 1;
+}
+
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-geral-active{
+    transform: translate(-7rem);
+    transition: transform var(--element-in);
+}
+
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-other-active{
+    transform: translate(7rem);
+    transition: transform var(--element-in);
+}
+main .S-subsettings .S-suport .S-faq .S-all-questions{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--half-third-color);
+}
+
+main .S-subsettings .S-suport .S-faq .S-all-questions div{
+    border-top: 1px solid var(--border-color);
+    width: 0;   
+    transform: translate(0);
+    display: none;
+    transition: var(--element-out);
+}
+
+main .S-subsettings .S-suport .S-faq .S-all-questions .S-other-questions.active{
+    display: block;
+    width: 100%;
+    transition: var(--element-in);
+}
+
+main .S-subsettings .S-suport .S-faq .S-all-questions .S-general-questions.active{
+    display: block;
+    width: 100%;
+    transition: var(--element-in);
+}
+
+main .S-subsettings .S-suport .S-faq #query{
+    color: var(--org-color1);
+}
+
+main .S-subsettings .S-suport .S-faq .S-questions{
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.4rem;
+    padding-left: 3rem;
+    font-size: calc(var(--size-font-subtitle) - 2px);
+}
+
+main .S-subsettings .S-suport .S-faq .S-answers{
+    position: relative;
+    padding-left: 2rem;
+    height: 5rem;
+    transition: calc(var(--element-in) - 0.05s);
+    overflow: hidden;
+}
+
+main .S-subsettings .S-suport .S-faq .S-answers.closed{
+    height: 0;
+    opacity: 30%;
+    transition: calc(var(--element-out) - 0.15s);
+}
+
+main .S-subsettings .S-suport .S-faq .S-service-terms{
+    font-size: calc(var(--size-font-text) - 2px);
+    letter-spacing: 2px;
+    position: relative;
+    transition: var(--element-in);
+    display: flex;
+    font-weight: 600;
+}
+
+main .S-subsettings .S-suport .S-faq .S-service-terms a:hover{
+    font-size: calc(var(--size-font-text) - 2px);  
+    transition: calc(var(--element-in) - 0.25s);
+}
+
 
 /*====================================================================================================
 ========================================== LOG-OUT MODAL =============================================

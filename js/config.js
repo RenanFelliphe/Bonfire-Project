@@ -14,7 +14,7 @@ updateMode(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
-
+FAQsection(); //Funções da seção das Perguntar Frequentes no Tier para o Suport
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
@@ -322,3 +322,77 @@ function menuAsideFunctions() {
     userActions();
 }
 
+//Funções da seção das Perguntar Frequentes no Tier para o Suport
+function FAQsection() {
+    const faq = document.querySelector(".S-faq");
+    const generalQuestions = document.querySelector(".S-general-questions");
+    const otherQuestions = document.querySelector(".S-other-questions");
+    const questions = document.querySelectorAll(".S-questions");
+    const answers = document.querySelectorAll(".S-answers");
+    const generalQuestionTitle = document.querySelector(".S-generalQ-title");
+    const otherQuestionTitle = document.querySelector(".S-otherQ-title");
+    const questionLine = document.querySelector(".S-line");
+
+    function openQuestion(){
+        questions.forEach((questionList, index) => {
+            questionList.addEventListener('click', () => {
+                answers[index].classList.remove("closed");
+            });
+        });
+    }
+
+    function closeQuestionsHover(){
+        faq.addEventListener('mouseleave', () => {
+            answers.forEach(answer => {
+                answer.classList.add('closed');
+            });
+        });
+    }
+
+    function otherQuestion(){
+        otherQuestionTitle.addEventListener('click', () => {
+            //Transiciona a linha colorida
+            questionLine.classList.remove("S-geral-active");
+            questionLine.classList.add("S-other-active");
+
+            //Identa os títulos das 2 seções
+            generalQuestionTitle.classList.remove("active");
+            otherQuestionTitle.classList.add("active");
+
+            //Inverte as seções
+            otherQuestions.classList.add("active");
+            generalQuestions.classList.remove("active");
+            
+            //Fecha as perguntas
+            answers.forEach(answer => {
+                answer.classList.add('closed');
+            });
+        });
+    }
+
+    function generalQuestion(){
+        generalQuestionTitle.addEventListener('click', () => {
+            //Transiciona a linha colorida
+            questionLine.classList.remove("S-other-active");
+            questionLine.classList.add("S-geral-active");
+
+            //Identa os títulos das 2 seções
+            otherQuestionTitle.classList.remove("active");
+            generalQuestionTitle.classList.add("active");
+
+            //Inverte as seções
+            generalQuestions.classList.add("active");
+            otherQuestions.classList.remove("active");
+            
+            //Fecha as perguntas
+            answers.forEach(answer => {
+                answer.classList.add('closed');
+            });
+        });
+    }
+
+    otherQuestion();
+    generalQuestion();
+    openQuestion();
+    closeQuestionsHover();
+}
