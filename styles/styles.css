@@ -1223,7 +1223,7 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
 main .S-subsettings .S-suport .S-faq .S-questions-section{
     position: relative;
     display: flex;
-    gap: 10.5rem;
+    gap: 20rem;
 }
 
 main .S-subsettings .S-suport .S-faq .S-questions-section .S-generalQ-title.active,
@@ -1234,7 +1234,7 @@ main .S-subsettings .S-suport .S-faq .S-questions-section .S-otherQ-title.active
 main .S-subsettings .S-suport .S-faq .S-questions-section .S-line{
     position: absolute;
     bottom: -1px;
-    width: 13rem;
+    width: 18rem;
     height: 1px;
     background-color: var(--org-color1);
     border-radius: 5rem;
@@ -1242,12 +1242,12 @@ main .S-subsettings .S-suport .S-faq .S-questions-section .S-line{
 }
 
 main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-geral-active{
-    transform: translate(-7rem);
+    transform: translate(-11.5rem);
     transition: transform var(--element-in);
 }
 
 main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-other-active{
-    transform: translate(7rem);
+    transform: translate(12rem);
     transition: transform var(--element-in);
 }
 main .S-subsettings .S-suport .S-faq .S-all-questions{
@@ -1283,9 +1283,9 @@ main .S-subsettings .S-suport .S-faq #query{
 main .S-subsettings .S-suport .S-faq .S-questions{
     position: relative;
     border-bottom: 1px solid var(--border-color);
-    padding: 0.4rem;
+    padding: 0.5rem;
     padding-left: 3rem;
-    font-size: calc(var(--size-font-subtitle) - 2px);
+    font-size: calc(var(--size-font-subtitle) - 1px);
 }
 
 main .S-subsettings .S-suport .S-faq .S-answers{
@@ -1306,16 +1306,15 @@ main .S-subsettings .S-suport .S-faq .S-service-terms{
     font-size: calc(var(--size-font-text) - 2px);
     letter-spacing: 2px;
     position: relative;
-    transition: var(--element-in);
     display: flex;
     font-weight: 600;
+    transition: var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-service-terms a:hover{
-    font-size: calc(var(--size-font-text) - 2px);  
+main .S-subsettings .S-suport .S-faq .S-service-terms:hover{
+    font-size: calc(var(--size-font-text) - 3px);  
     transition: calc(var(--element-in) - 0.25s);
 }
-
 
 /*====================================================================================================
 ========================================== LOG-OUT MODAL =============================================
