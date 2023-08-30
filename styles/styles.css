@@ -335,6 +335,7 @@ main {
     opacity: 1;
     transition: var(--element-in);
     right: 1rem;
+    font-size: var(--size-font-icons);
 }
 
 .M-menu-aside.close .M-more-pages span.All-arrows {
@@ -462,7 +463,8 @@ main {
     overflow: hidden;
     width: 80%;
     position: absolute;
-    left: 2rem;
+    left: 2.2rem;
+    transform: translateY(-2px);
 }
 
 .M-menu-aside .M-aside-footer .M-footer-content .M-user-informations .M-nick {
@@ -825,12 +827,13 @@ main .S-settings .S-center ul .S-buttom:hover {
 main .S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
     position: absolute;
     right: 10px;
-    margin-top: -33px;
+    margin-top: -40px;
     transition: 0.4s;
+    font-size: calc(var(--size-font-icons) + 10px);
 }
 
 main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
-    transform: rotate(-90deg) translate(5px);
+    transform: rotate(-90deg) translate(0px);
     color: var(--org-color2);
     transition: 0.3s;
 }
