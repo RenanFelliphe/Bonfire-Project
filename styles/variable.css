@@ -40,18 +40,22 @@
     --first-color: #323435;
     /*Cor de primeiro foco*/
     --second-color: #27282A;
-    /*Cor de segundo foco*/
+    /*Cor de primeiro foco*/
     --half-second-color: #2D2E30;
-    /*Cor de terceiro foco*/
+    /*Cor de segundo foco secundária*/
     --menu-color: #242526;
     /*Cor dos Menus*/
     --third-color: #232325;
+    /*Cor de terceriro foco*/
+    --half-third-color: #212124;
+    /*Cor de terceiro foco*/
+    --third-color: #232325;
+    /*Cor de terceiro foco secundária*/
+    --fourth-color: #1d1d1f;
     /*Cor de quarto foco*/
-    --half-third-color: rgb(33, 33, 36);
-    /*Cor de quinto foco*/
-    --fourth-color: #18191A;
+    --body-color: #18191A;
     /*Cor do body*/
-    
+
 
     /* ========= VARIÁVEIS DE CORES (PADRÃO) ========= */
 
@@ -153,7 +157,7 @@
 =====================================================================================================*/
 
 
-::selection{
+::selection {
     background-color: var(--org-color-transparent);
     color: var(--white-to-black-color);
 }
@@ -662,7 +666,7 @@
     --org-color-low-opacity: #0000CD80;
     --org-color-transparent: "#";
 }
- 
+
 .team-solid-color {
     --org-color1: #f5d000;
     --org-color2: #e4c30c;

@@ -1,5 +1,5 @@
 body {
-    background-color: var(--fourth-color);
+    background-color: var(--body-color);
     overflow: auto;
 }
 
@@ -165,11 +165,12 @@ main {
     justify-content: flex-start;
     background-color: var(--half-second-color);
 }
-.M-menu-aside li.active a span{
+
+.M-menu-aside li.active a span {
     color: var(--org-color2);
 }
 
-.M-menu-aside li.M-more-pages li.active a span{
+.M-menu-aside li.M-more-pages li.active a span {
     color: var(--org-color2);
 }
 
@@ -292,12 +293,12 @@ main {
     transition: opacity, transform, color var(--element-out);
 }
 
-.M-menu-aside .M-aside-center li:hover span{
+.M-menu-aside .M-aside-center li:hover span {
     color: var(--org-color-lighter);
     transition: 0.1s;
 }
 
-.M-menu-aside .M-aside-center li.M-events .M-event-icon{
+.M-menu-aside .M-aside-center li.M-events .M-event-icon {
     position: absolute;
     display: flex;
     width: 1.2rem;
@@ -305,11 +306,11 @@ main {
     transform: translateX(0.75rem) translateY(-0.45rem);
 }
 
-.M-menu-aside .M-aside-center li.M-events .M-event-icon img{
+.M-menu-aside .M-aside-center li.M-events .M-event-icon img {
     max-width: 100%;
 }
 
-.M-menu-aside .M-aside-center li.M-friends .M-message-notify{
+.M-menu-aside .M-aside-center li.M-friends .M-message-notify {
     position: absolute;
     width: 0.7rem;
     height: 0.7rem;
@@ -324,7 +325,7 @@ main {
     color: var(--text-color);
 }
 
-.M-menu-aside .M-aside-center li .M-aside-more li:hover span{
+.M-menu-aside .M-aside-center li .M-aside-more li:hover span {
     color: var(--org-color-lighter);
     transition: 0.1s;
 }
@@ -369,21 +370,22 @@ main {
     height: 0.6rem;
 }
 
-.M-menu-aside .M-aside-more ul li span.M-title{
+.M-menu-aside .M-aside-more ul li span.M-title {
     font-size: var(--size-font-subtitle);
 }
-.M-menu-aside .M-aside-more ul li span.All-icon{
+
+.M-menu-aside .M-aside-more ul li span.All-icon {
     font-size: var(--size-font-icons);
 }
 
-.M-menu-aside .M-aside-footer{
+.M-menu-aside .M-aside-footer {
     padding: 1rem;
     padding-left: 0.45rem;
     height: 100%;
     width: 100%;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content{
+.M-menu-aside .M-aside-footer .M-footer-content {
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
@@ -394,11 +396,12 @@ main {
     border-radius: 2rem;
 }
 
-.M-menu-aside.close .M-aside-footer .M-footer-content{
+.M-menu-aside.close .M-aside-footer .M-footer-content {
     border-radius: 0;
     background-color: transparent;
 }
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images{
+
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images {
     width: 3.7rem;
     height: 100%;
     display: flex;
@@ -407,30 +410,30 @@ main {
     box-shadow: 0 0 5px 0px black;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .profile-img{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .profile-img {
     display: flex;
     width: 3.7rem;
     clip-path: circle();
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images a:hover .icon-hover{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images a:hover .icon-hover {
     opacity: 1;
     transition-delay: 0.6s;
     transition-duration: 0.22s;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images a .icon-hover{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images a .icon-hover {
     top: -1.2rem;
     left: 10px;
     width: 5.5rem;
     transition-duration: 0.3s;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .profile-img img{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .profile-img img {
     max-width: 100%;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .M-user-status{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .M-user-status {
     position: absolute;
     display: flex;
     width: 4rem;
@@ -440,7 +443,8 @@ main {
     border-radius: 100%;
     z-index: -1;
 }
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .org-img{
+
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .org-img {
     position: absolute;
     display: flex;
     width: 1.5rem;
@@ -448,11 +452,11 @@ main {
     transform: translateX(1.3rem) translateY(1.2rem);
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .org-img img{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-images .org-img img {
     max-width: 100%;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-informations{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-informations {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -461,14 +465,14 @@ main {
     left: 2rem;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-informations .M-nick{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-informations .M-nick {
     font-size: var(--size-font-title);
     font-weight: bolder;
     letter-spacing: 1px;
     transition: opacity, transform var(--element-in);
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-user-informations .M-name{
+.M-menu-aside .M-aside-footer .M-footer-content .M-user-informations .M-name {
     margin: -0.3rem 0 0 -0.5rem;
     font-size: calc(var(--size-font-text) - 1px);
     font-weight: 600;
@@ -482,7 +486,7 @@ main {
     transition: var(--element-out);
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-buttom{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-buttom {
     position: absolute;
     display: flex;
     right: 1rem;
@@ -492,16 +496,16 @@ main {
     transition: opacity var(--element-in);
 }
 
-.M-menu-aside.close .M-aside-footer .M-footer-content .M-log-buttom{
+.M-menu-aside.close .M-aside-footer .M-footer-content .M-log-buttom {
     opacity: 0;
     transition: opacity var(--element-out);
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-buttom.active{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-buttom.active {
     background-color: var(--active-color);
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -521,33 +525,35 @@ main {
 }
 
 .M-menu-aside.close .M-aside-footer .M-footer-content .M-log-actions,
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions.close{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions.close {
     opacity: 0;
     z-index: -10;
-    top: 0;    
+    top: 0;
     transition: var(--element-out);
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li a{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li a {
     display: flex;
     justify-content: flex-start;
     gap: 0.8rem;
     height: 1.5rem;
     line-height: 1.5rem;
 }
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li a span{
+
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li a span {
     transition: color 0.4s;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li a:hover span{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li a:hover span {
     color: var(--org-color1);
     transition: color 0.2s;
 }
 
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li span.M-title{
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li span.M-title {
     font-size: var(--size-font-subtitle);
 }
-.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li span.All-icon{
+
+.M-menu-aside .M-aside-footer .M-footer-content .M-log-actions ul li span.All-icon {
     font-size: var(--size-font-icons);
 }
 
@@ -923,20 +929,15 @@ main .S-subsettings .S-tier.active {
 }
 
 main .S-subsettings .S-tier article .S-article-title {
-    font-size: var(--size-font-subtitle);
-    padding: 0 0 0.5rem 1rem;
-    letter-spacing: 3px;
+    font-size: calc(var(--size-font-subtitle) + 4px);
+    padding: 0 0 0.5rem 2rem;
+    letter-spacing: 2px;
     transition: color 0.4s;
 }
 
-main .S-subsettings .S-tier article:hover .S-article-title {
-    color: var(--org-color1);
-    transition: color 0.3s;
-}
-
 main .S-subsettings .S-tier .S-article-subtitle {
-    padding: 0 0 0 2rem;
-    font-size: var(--size-font-text);
+    padding: 0 0 0 4rem;
+    font-size: calc(var(--size-font-subtitle) + 1px);
 }
 
 main .S-subsettings .S-account-profile {
@@ -1116,7 +1117,7 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label {
     width: 2.25rem;
     border-radius: 10rem;
     transform: scale(1.5);
-    background-color: var(--fourth-color);
+    background-color: var(--body-color);
     font-size: 0.63rem;
     letter-spacing: 0.5rem;
     cursor: pointer;
@@ -1158,7 +1159,7 @@ main .S-subsettings .S-appearence .S-font-style .S-all-font-size .All-icon {
 
 main .S-subsettings .S-appearence .S-font-style input[type=range] {
     appearance: none;
-    background-color: var(--fourth-color);
+    background-color: var(--body-color);
     height: 0.45rem;
     width: 20rem;
     border-radius: 100rem;
@@ -1220,18 +1221,18 @@ main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-artic
     color: var(--text-color);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section{
+main .S-subsettings .S-suport .S-faq .S-questions-section {
     position: relative;
     display: flex;
     gap: 20rem;
 }
 
 main .S-subsettings .S-suport .S-faq .S-questions-section .S-generalQ-title.active,
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-otherQ-title.active{
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-otherQ-title.active {
     color: var(--org-color1);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-line{
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-line {
     position: absolute;
     bottom: -1px;
     width: 18rem;
@@ -1241,46 +1242,43 @@ main .S-subsettings .S-suport .S-faq .S-questions-section .S-line{
     z-index: 1;
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-geral-active{
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-geral-active {
     transform: translate(-11.5rem);
     transition: transform var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-other-active{
+main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-other-active {
     transform: translate(12rem);
     transition: transform var(--element-in);
 }
-main .S-subsettings .S-suport .S-faq .S-all-questions{
+
+main .S-subsettings .S-suport .S-faq .S-all-questions {
     display: flex;
     justify-content: flex-start;
     background-color: var(--half-third-color);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions div{
+main .S-subsettings .S-suport .S-faq .S-all-questions div {
     border-top: 1px solid var(--border-color);
-    width: 0;   
+    width: 0;
     transform: translate(0);
     display: none;
     transition: var(--element-out);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions .S-other-questions.active{
+main .S-subsettings .S-suport .S-faq .S-all-questions .S-other-questions.active {
     display: block;
     width: 100%;
     transition: var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions .S-general-questions.active{
+main .S-subsettings .S-suport .S-faq .S-all-questions .S-general-questions.active {
     display: block;
     width: 100%;
     transition: var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq #query{
-    color: var(--org-color1);
-}
-
-main .S-subsettings .S-suport .S-faq .S-questions{
+main .S-subsettings .S-suport .S-faq .S-questions {
     position: relative;
     border-bottom: 1px solid var(--border-color);
     padding: 0.5rem;
@@ -1288,7 +1286,11 @@ main .S-subsettings .S-suport .S-faq .S-questions{
     font-size: calc(var(--size-font-subtitle) - 1px);
 }
 
-main .S-subsettings .S-suport .S-faq .S-answers{
+main .S-subsettings .S-suport .S-faq .S-questions:last-child {
+    border-bottom: none;
+}
+
+main .S-subsettings .S-suport .S-faq .S-answers {
     position: relative;
     padding-left: 2rem;
     height: 5rem;
@@ -1296,24 +1298,257 @@ main .S-subsettings .S-suport .S-faq .S-answers{
     overflow: hidden;
 }
 
-main .S-subsettings .S-suport .S-faq .S-answers.closed{
+main .S-subsettings .S-suport .S-faq .S-answers.closed {
     height: 0;
     opacity: 30%;
     transition: calc(var(--element-out) - 0.15s);
 }
 
-main .S-subsettings .S-suport .S-faq .S-service-terms{
+main .S-subsettings .S-suport .S-service-terms {
     font-size: calc(var(--size-font-text) - 2px);
     letter-spacing: 2px;
     position: relative;
     display: flex;
     font-weight: 600;
     transition: var(--element-in);
+    margin-bottom: 1rem;
 }
 
-main .S-subsettings .S-suport .S-faq .S-service-terms:hover{
-    font-size: calc(var(--size-font-text) - 3px);  
+main .S-subsettings .S-suport .S-service-terms:hover {
+    font-size: calc(var(--size-font-text) - 3px);
     transition: calc(var(--element-in) - 0.25s);
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-article-description {
+    font-size: calc(var(--size-font-subtitle) - 1px);
+    margin: -0.5rem 0 0 5rem;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-tags {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0rem 2rem 0rem 2rem;
+    height: 9rem;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-tags {
+    display: flex;
+    position: relative;
+    margin: 0 1rem 0 1rem;
+    padding: 0rem 1rem 0rem 1rem;
+    background-color: var(--half-third-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    font-size: calc(var(--size-font-text) + 1px);
+    transition: calc(var(--element-out) - 0.2s);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-more-tags {
+    display: flex;
+    position: relative;
+    width: 0;
+    height: 2rem;
+    border-radius: 100%;
+    font-size: calc(var(--size-font-text) + 10px);
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-tags:hover {
+    transition: calc(var(--element-in) - 0.1s);
+    font-size: calc(var(--size-font-text) + 4px);
+    padding: 0.05rem 1.05rem 0.05rem 1.05rem;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-more-tags:hover {
+    font-size: calc(var(--size-font-text) + 20px);
+    padding: 1rem 1.05rem 1rem 1.05rem;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area {
+    position: relative;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+    height: 13rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    padding-top: 1rem;
+    background-color: var(--fourth-color);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    border-bottom-right-radius: 8px;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-clear {
+    display: flex;
+    position: absolute;
+    right: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.65rem;
+    font-size: calc(var(--size-font-icons) + 2px);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input {
+    border: none;
+    outline: none;
+    border-left: 1px solid var(--border-color);
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: var(--size-font-subtitle);
+    background: transparent;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input::-webkit-scrollbar {
+    display: none;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area textarea.S-report-input {
+    height: 6rem;
+    width: 95%;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit i {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    color: var(--white-to-black-color);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    font-size: calc(var(--size-font-icons) + 5px);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit i:hover {
+    color: var(--org-color1);
+    box-shadow: 0 0 4px 1px var(--org-color1);
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 6rem;
+    width: 2rem;
+    height: 2rem;
+    color: var(--white-to-black-color);
+    border-radius: 0.65rem;
+    border: 1px solid var(--border-color);
+    font-size: calc(var(--size-font-icons) + 5px);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media:hover {
+    color: var(--org-color1);
+    box-shadow: 0 0 3px 1px var(--org-color1);
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-media-placeholder {
+    position: absolute;
+    opacity: 75%;
+    bottom: 1rem;
+    right: 9rem;
+    pointer-events: none;
+}
+
+main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-placeholder {
+    position: absolute;
+    opacity: 75%;
+    pointer-events: none;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-article-description {
+    font-size: calc(var(--size-font-subtitle) - 1px);
+    margin: -0.5rem 0 0 5rem;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-bonfire {
+    color: var(--org-color2);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area {
+    position: relative;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+    height: 11rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    padding-top: 1rem;
+    background-color: var(--fourth-color);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    border-bottom-right-radius: 8px;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-clear {
+    display: flex;
+    position: absolute;
+    right: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.65rem;
+    font-size: calc(var(--size-font-icons) + 2px);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
+    border: none;
+    outline: none;
+    border-left: 1px solid var(--border-color);
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: var(--size-font-subtitle);
+    background: transparent;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input::-webkit-scrollbar {
+    display: none;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area textarea.S-feedback-input {
+    height: 6rem;
+    width: 95%;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    color: var(--white-to-black-color);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    font-size: calc(var(--size-font-icons) + 5px);
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i:hover {
+    color: var(--org-color1);
+    box-shadow: 0 0 4px 1px var(--org-color1);
+}
+
+
+main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-placeholder {
+    position: absolute;
+    opacity: 75%;
+    pointer-events: none;
 }
 
 /*====================================================================================================
@@ -1337,7 +1572,7 @@ main .S-subsettings .S-suport .S-faq .S-service-terms:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--fourth-color);
+    background-color: var(--body-color);
     padding: 25px;
     padding-top: 30px;
     border-radius: 5px;
