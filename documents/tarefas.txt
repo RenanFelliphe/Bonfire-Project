@@ -25,8 +25,8 @@
 + Adicionar um link para o Bonfire no Github (Hospedar).
 
 - Adicionar os 'Icon-hover's do Menu-header.
-- Adicionar os diagramas DER e DTR no repositório.
 - Adicionar um delay para o fechamento do Menu-aside.
+
 -- Adicionar o alterador de tipo de fonte às configurações (SELECT).
 
 
@@ -40,7 +40,6 @@
 
 
 | >>> ATUALIZAR <<< |
-++ Atualizar o botão de configurações para uma seção de alternar perfil e sair da conta
 - Atualizar as cores do Modo Claro.
 
 -- Atualizar o tempo de transição das cores na transição de modo (claro ~ escuro).
@@ -49,8 +48,6 @@
 
 
 | >>> RECRIAR <<< |
-+ Recriar e simplificar a seção de mudança de tema para as cores padrão, azul, ciano, verde, marrom, roxo, rosa, vermelho, laranja, amarelo.
-
 - Recriar as proporções da seção 'Main' nos arquivos HTML do site.
 
 -- Recriar e arredondar as bordas dos containers do site.
@@ -58,15 +55,9 @@
 
 
 | >>> CORRIGIR <<< |
-++ Corrigir o bug de responsividade do Menu-header.
 ++ Corrigir o bug de responsividade do Menu-aside.
 
-+ Corrijir o modal de Log Out para inverter a estilização dos botões de SAIR e CANCELAR.
 + Corrigir o bug do tamanho do link da logo Bonfire no menu header.
-+ Corrigir o bug de rolagem para a direita no carrossel de organizações.
-
--- Corrigir a opção de fechamento por mouseout para a seção M-aside-more do Menu lateral.
-
 
 
 | >>> DELETAR <<< |
@@ -75,7 +66,6 @@
 
 | >>> OUTROS <<< |
 ++ Ajustar a proporcionalidade da foto de perfil e da capa.
-++ Passar o design do Quick-Messages do papel para o figma.
 
 -- Aumentar a distribuição das variáveis de cores pelo site.
 
