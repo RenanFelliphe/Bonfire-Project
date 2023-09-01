@@ -1554,6 +1554,58 @@ main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-placehold
     pointer-events: none;
 }
 
+main .S-subsettings .S-about-us .S-bonfire-summary{
+    padding: 0rem 2.5rem 0.5rem 3.2rem;
+    text-align: justify;
+    font-size: var(--size-font-text);
+}
+
+main .S-subsettings .S-about-us .S-bonfire-summary strong{
+    color: var(--org-color2);
+    font-size: calc(var(--size-font-text) + 15px);
+}
+
+main .S-subsettings .S-about-us .S-download-bonfire{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+main .S-subsettings .S-about-us .S-download-bonfire .S-google-play-download{
+    width: 200px;
+    height: 55px;
+    transition: calc(var(--element-out) - 0.3s);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-about-us .S-download-bonfire .S-google-play-download:hover{
+    width: 210px;
+    height: 60px;
+    transition: calc(var(--element-in) - 0.3s);
+    transform: translate(-2px);
+}
+
+main .S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download{
+    width: 210px;
+    height: 62px;
+    transition: calc(var(--element-out) - 0.3s);
+    cursor: pointer;
+}
+
+main .S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download:hover{
+    width: 223px;
+    height: 70px;
+    transition: calc(var(--element-in) - 0.3s);
+    transform: translate(5px);
+}
+
+.S-google-play-download:hover ~ .S-apple-store-download{
+    opacity: 20%;
+}
+
+.S-apple-store-download:hover .S-google-play-download{
+    opacity: 20%;
+}
 /*====================================================================================================
 ========================================== LOG-OUT MODAL =============================================
 ====================================================================================================*/
