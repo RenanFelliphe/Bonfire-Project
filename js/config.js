@@ -396,3 +396,28 @@ function FAQsection() {
     openQuestion();
     closeQuestionsHover();
 }
+
+/*==============================================================================
+================google play/download============================================*/
+
+const gpd = document.querySelector(".S-google-play-download");
+const apd = document.querySelector(".S-apple-store-download");
+
+ gpd.addEventListener("mouseover", ()  => 
+    {
+        apd.classList.add("opacity");
+    });
+
+gpd.addEventListener("mouseout", ()  => 
+{
+    apd.classList.remove("opacity");
+});
+
+apd.addEventListener("mouseover", () =>
+    { 
+        gpd.classList.add("opacity"); 
+    });
+apd.addEventListener("mouseout", () =>
+{ 
+    gpd.classList.remove("opacity"); 
+});

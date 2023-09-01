@@ -301,6 +301,6 @@ button.ghost {
     position: relative;
     bottom: -28px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 30vh;
     background-color: rgb(35, 34, 39);
 }

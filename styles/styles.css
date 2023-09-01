@@ -1599,12 +1599,13 @@ main .S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download:hove
     transform: translate(5px);
 }
 
-.S-google-play-download:hover ~ .S-apple-store-download{
-    opacity: 20%;
+.S-google-play-download.opacity
+{
+    opacity:0.2;
 }
-
-.S-apple-store-download:hover .S-google-play-download{
-    opacity: 20%;
+.S-apple-store-download.opacity
+{
+    opacity:0.2;
 }
 /*====================================================================================================
 ========================================== LOG-OUT MODAL =============================================
