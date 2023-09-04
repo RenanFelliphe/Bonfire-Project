@@ -24,15 +24,19 @@
                 <div class="form-container sign-up-container">
                     <form action="#">
                         <h1 class="primary-text">Criar conta</h1>
+
                         <div class="social-container">
                             <a href="#" class="social"><i class='bx bxl-facebook'></i></a>
                             <a href="#" class="social"><i class='bx bxl-google'></i></a>
                             <a href="#" class="social"><i class='bx bxl-apple'></i></a>
                         </div>
+
                         <span class="quaternary-text">Ou use seu email para registrar</span>
+
                         <input type="text" placeholder="Usuário" required>
                         <input type="email" placeholder="E-mail" required>
-                        <input type="password" placeholder="Senha" required>
+                        <input type="password" minlength="8" placeholder="Senha" required>
+
                         <button>
                             <a href="index.html" class="register-button" id="register-button">Registrar</a>
                         </button>
@@ -42,15 +46,20 @@
                 <div class="form-container sign-in-container">
                     <form action="#">
                         <h1 class="primary-text">Iniciar sessão</h1>
+
                         <div class="social-container">
                             <a href="#" class="social"><i class='bx bxl-facebook'></i></a>
                             <a href="#" class="social"><i class='bx bxl-google'></i></a>
                             <a href="#" class="social"><i class='bx bxl-apple'></i></a>
                         </div>
+
                         <span class="quaternary-text">Ou entre com sua conta Bonfire</span>
+                        
                         <input type="text" placeholder="Usuário ou E-mail" required>
-                        <input type="password" placeholder="Senha" required>
-                        <a href="#">Esqueci minha senha</a>
+                        <input type="password" minlength="8" placeholder="Senha" required>
+
+                        <a href="#" class="forgot">Esqueci minha senha</a>
+
                         <button>
                             <a href="index.html" class="login-button" id="login-button">Entrar</a>
                         </button>
@@ -80,18 +89,9 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="goDown-button">
-            <a href="#footer" class="login-button" id="login-button">
-                <button>
-                    <i class='bx bx-chevron-down bx-flashing'></i>
-                </button>
-            </a>
-        </div>
     </main>
 
-    <footer class="login-footer" id="footer">
+    <footer id="footer">
 
     </footer>
 

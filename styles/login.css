@@ -9,7 +9,9 @@
 html {
     scroll-behavior: smooth;
 }
-
+/*====================================================================================================
+========================================== SCROLL STYLE =============================================
+====================================================================================================*/
 ::-webkit-scrollbar {
     width: 9px;
 }
@@ -34,7 +36,9 @@ body {
     overflow: overlay;
 
 }
-
+/*====================================================================================================
+========================================== MAIN STYLE =============================================
+====================================================================================================*/
 .login-start {
     height: 100%;
     width: 100%;
@@ -68,7 +72,7 @@ body {
 
 .global-login-container {
     font-family: "Montserrat", sans-serif;
-    margin: -85vh 0 0;
+    margin: -85vh 0 7.5vh;
     z-index: 2;
     width: 70%;
 
@@ -97,15 +101,17 @@ body {
 }
 
 a {
-    color: #333;
+    color: #383A3B;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
 }
-
+/*====================================================================================================
+========================================== CONTAINER STYLE =============================================
+====================================================================================================*/
 .container {
-    background: #fff;
-    border-radius: 25px;
+    background: #9E9C9C;
+    border-radius: 15px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.336), 0 10px 10px rgba(0, 0, 0, 0.295);
     position: relative;
     overflow: hidden;
@@ -114,7 +120,7 @@ a {
 }
 
 .form-container form {
-    background: #fff;
+    background: #9E9C9C;
     display: flex;
     flex-direction: column;
     padding: 0 50px;
@@ -129,7 +135,8 @@ a {
 }
 
 .social-container a {
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
+    background-color: #18191A;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -137,20 +144,40 @@ a {
     margin: 0 5px;
     height: 40px;
     width: 40px;
+    transition: transform 80ms ease-in;
 }
+    .social-container a i
+    {
+        color:#ffffff;
+    }
+
+    .social-container a:active {
+        transform: scale(.95);
+    }
+
+    .social-container a:focus {
+        outline: none;
+    }
 
 .form-container input {
-    background: #eee;
+    background: #868686;
     border: none;
+    border-radius: 15px;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+    outline:none;
+    color:#ffffff;
 }
+    .form-container input::placeholder
+    {
+        color:#ffffff;
+    }
 
 .global-login-container button {
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
-    background: #6e6e6e;
+    background: #383A3B;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -173,8 +200,9 @@ button:focus {
 }
 
 button.ghost {
-    background: transparent;
-    border-color: #fff;
+    background: #18191A;
+    border: solid 1px #fff;
+    border-radius: 15px;
 }
 
 .form-container {
@@ -198,6 +226,24 @@ button.ghost {
     z-index: 3;
 }
 
+.forgot
+{
+    color: #ffffff;
+    font-weight: 700;
+    padding:10px;
+    border-radius:15px;
+    transition: transform 80ms ease-in;
+}
+.forgot:hover
+{
+    background-color: #868686;
+}
+.forgot:active {
+    transform: scale(.95);
+}
+/*====================================================================================================
+========================================== OVERLAY STYLE =============================================
+====================================================================================================*/
 .overlay-container {
     position: absolute;
     top: 0;
@@ -210,7 +256,7 @@ button.ghost {
 
 .overlay {
     background: #161616;
-    background: linear-gradient(to right, #6e6e6e, #6d6d6d) no-repeat 0 0 / cover;
+    background: #383A3B no-repeat 0 0 / cover;
     color: #fff;
     position: relative;
     left: -100%;
@@ -234,7 +280,9 @@ button.ghost {
     transform: translateX(0);
     transition: transform .6s ease-in-out;
 }
-
+/*====================================================================================================
+========================================== ANIMATION STYLE =============================================
+====================================================================================================*/
 .overlay-right {
     right: 0;
     transform: translateX(0);
@@ -271,36 +319,6 @@ button.ghost {
     transform: translateX(20%)
 }
 
-.goDown-button {
-    z-index: 5;
-    margin: 15px;
-    height: 30px;
-    width: 30px;
-    display: flex;
-}
-
-.goDown-button button {
-    background: #6e6e6e;
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-
-}
-
-.goDown-button button i {
-    color: #fff;
-}
-
-
-.login-footer {
-    position: relative;
-    bottom: -28px;
-    width: 100%;
-    min-height: 30vh;
-    background-color: rgb(35, 34, 39);
-}
+/*====================================================================================================
+========================================== FOOTER STYLE =============================================
+====================================================================================================*/
