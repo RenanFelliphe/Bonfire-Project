@@ -9,18 +9,20 @@
 
 | >>> PROJETAR <<< |
 ++ Projetar o design da vitrine de títulos no perfil.
+++ Projetar o design das postagens.
 
 + Projetar os novos designs da página de Login/Registro.
 + Projetar o design da página 'Calendário'.
 
 - Projetar a modelagem responsiva do site.
-- Projetar a seção 'Perfis em Destaque' para a Página Inicial.
 
 -- Projetar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro).
 
 
 
 | >>> ADICIONAR / CRIAR <<< |
+++ Adicicionar as funções e ações para a navegação interna dentro pa página de Configurações.
+
 + Adicionar os ícones para as contas do usuário em outros sites ao Perfil.
 + Adicionar um link para o Bonfire no Github (Hospedar).
 
