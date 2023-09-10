@@ -6,7 +6,6 @@
 -- Opcional >>> Tarefa opcional para o projeto.
 
 
-
 | >>> PROJETAR <<< |
 ++ Projetar o design da vitrine de títulos no perfil.
 ++ Projetar o design das postagens.
@@ -17,7 +16,6 @@
 - Projetar a modelagem responsiva do site.
 
 -- Projetar um modo Neutro (BRILHO: Modo Claro > Modo Neutro < Modo Escuro).
-
 
 
 | >>> ADICIONAR / CRIAR <<< |
@@ -32,28 +30,24 @@
 -- Adicionar o alterador de tipo de fonte às configurações (SELECT).
 
 
-
 | >>> DEFINIR <<< |
-
 
 
 | >>> FINALIZAR <<< |
 
 
-
 | >>> ATUALIZAR <<< |
 - Atualizar as cores do Modo Claro.
+- Atualizar todos os "Groups" do Figma para "Frames".
 
 -- Atualizar o tempo de transição das cores na transição de modo (claro ~ escuro).
 -- Atualizar todas as variáveis CSS para o modelo 'Camel Case'.
-
 
 
 | >>> RECRIAR <<< |
 - Recriar as proporções da seção 'Main' nos arquivos HTML do site.
 
 -- Recriar e arredondar as bordas dos containers do site.
-
 
 
 | >>> CORRIGIR <<< |
@@ -63,7 +57,7 @@
 
 
 | >>> DELETAR <<< |
-++ Deletar o menu-header e passar suas funções para o menu-aside
+++ Deletar o menu-header e passar suas funções para o menu-aside.
 
 
 | >>> OUTROS <<< |
