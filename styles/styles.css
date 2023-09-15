@@ -559,11 +559,11 @@ main {
     font-size: var(--size-font-icons);
 }
 
-/*====================================================================================================
-======================================== INDEX: I-QUICK-MESSAGES ==========================================
-====================================================================================================*/
+/*=========================================================================================================
+======================================== GLOBAL: I-QUICK-MESSAGES ==========================================
+===========================================================================================================*/
 
-main .Q-quick-messages {
+.Q-quick-messages {
     position: fixed;
     right: 0;
     bottom: -1px;
@@ -578,22 +578,22 @@ main .Q-quick-messages {
     z-index: 11;
 }
 
-main .Q-quick-messages.close {
+.Q-quick-messages.close {
     bottom: -60vh;
     border-color: var(--border-color);
 }
 
-main .Q-quick-messages .Q-message-content {
+.Q-quick-messages .Q-message-content {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-main .Q-quick-messages.close .Q-message-content {
+.Q-quick-messages.close .Q-message-content {
     overflow: hidden;
 }
 
-main .Q-quick-messages .Q-message-pusher {
+.Q-quick-messages .Q-message-pusher {
     position: absolute;
     top: -2.3rem;
     right: 50%;
@@ -613,38 +613,44 @@ main .Q-quick-messages .Q-message-pusher {
     transition: all 0.5s;
 }
 
-main .Q-quick-messages.close .Q-message-pusher {
+.Q-quick-messages.close .Q-message-pusher {
     border-color: var(--border-color);
 }
 
-main .Q-quick-messages.close .Q-message-pusher i {
+.Q-quick-messages.close .Q-message-pusher i {
     color: var(--text-color);
     transition: all 0.3s;
 }
 
-main .Q-quick-messages .Q-message-pusher i {
+.Q-quick-messages .Q-message-pusher i {
     color: var(--org-color1);
     transition: all 0.3s;
 }
 
-main .Q-quick-messages p {
+.Q-quick-messages p {
     font-size: larger;
     letter-spacing: 5px;
     transition: 0.3s;
 }
 
-main .Q-quick-messages:hover p,
-main .Q-quick-messages:hover .Q-message-pusher,
-main .Q-quick-messages:hover {
+.Q-quick-messages:hover p,
+.Q-quick-messages:hover .Q-message-pusher,
+.Q-quick-messages:hover {
     color: var(--org-color1);
     border-color: var(--org-color1);
 }
 
-/*====================================================================================================
-======================================== CONFIG: S-SETTINGS ==========================================
-====================================================================================================*/
 
-main .S-settings {
+/*==============================================================================================================
+=========================================== HOME/INDEX: H-Timeline =============================================
+================================================================================================================*/
+
+
+/*===========================================================================================================
+=========================================== CONFIG: S-SETTINGS ==============================================
+===========================================================================================================*/
+
+.S-settings {
     position: relative;
     width: 40%;
     min-width: 28rem;
@@ -654,7 +660,7 @@ main .S-settings {
     overflow-y: auto;
 }
 
-main .S-settings .S-top {
+.S-settings .S-top {
     position: sticky;
     top: 0;
     min-height: 4.8rem;
@@ -666,7 +672,7 @@ main .S-settings .S-top {
     z-index: 2;
 }
 
-main .S-settings .S-div-search {
+.S-settings .S-div-search {
     position: sticky;
     top: 5rem;
     height: 7rem;
@@ -677,7 +683,7 @@ main .S-settings .S-div-search {
     z-index: 1;
 }
 
-main .S-settings .S-center {
+.S-settings .S-center {
     position: relative;
     margin-top: 0px;
     height: 100%;
@@ -685,7 +691,7 @@ main .S-settings .S-center {
     z-index: 0;
 }
 
-main .S-settings .S-top::after {
+.S-settings .S-top::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -694,13 +700,13 @@ main .S-settings .S-top::after {
     border-bottom: 1px solid var(--border-color);
 }
 
-main .S-settings .S-top .S-tittle {
+.S-settings .S-top .S-tittle {
     font-size: var(--size-font-title);
     font-weight: bolder;
     letter-spacing: 3px;
 }
 
-main .S-settings .S-top .S-others-functions {
+.S-settings .S-top .S-others-functions {
     position: absolute;
     right: 1.2rem;
     display: grid;
@@ -709,7 +715,7 @@ main .S-settings .S-top .S-others-functions {
     gap: 30px;
 }
 
-main .S-settings .S-top .S-others-functions i {
+.S-settings .S-top .S-others-functions i {
     display: flex;
     background-color: var(--first-color);
     width: 30px;
@@ -720,26 +726,26 @@ main .S-settings .S-top .S-others-functions i {
     border-right: 2px dashed transparent;
 }
 
-main .S-settings .S-top .S-others-functions i:hover {
+.S-settings .S-top .S-others-functions i:hover {
     border-color: var(--org-color2);
 }
 
-main .S-settings .S-top .S-others-functions a {
+.S-settings .S-top .S-others-functions a {
     width: 100%;
     height: 5px;
 }
 
-main .S-settings .S-top .S-others-functions i:hover .icon-hover {
+.S-settings .S-top .S-others-functions i:hover .icon-hover {
     opacity: 0.8;
 }
 
-main .S-settings .S-top .S-others-functions .S-search-icon .icon-hover {
+.S-settings .S-top .S-others-functions .S-search-icon .icon-hover {
     position: absolute;
     left: -110px;
     width: 90px;
 }
 
-main .S-settings .S-div-search.close {
+.S-settings .S-div-search.close {
     transform: translateY(2px);
     height: 0;
     transition: 0.5s;
@@ -747,7 +753,7 @@ main .S-settings .S-div-search.close {
     overflow: hidden;
 }
 
-main .S-settings .S-div-search::before {
+.S-settings .S-div-search::before {
     content: '';
     position: absolute;
     bottom: 0px;
@@ -757,13 +763,13 @@ main .S-settings .S-div-search::before {
     transition: 0.5s;
 }
 
-main .S-settings .S-div-search.close::before {
+.S-settings .S-div-search.close::before {
     width: 0px;
     left: 50%;
     transition: 0.7s;
 }
 
-main .S-settings .S-div-search .S-search-buttom {
+.S-settings .S-div-search .S-search-buttom {
     position: absolute;
     display: flex;
     justify-content: space-evenly;
@@ -775,30 +781,31 @@ main .S-settings .S-div-search .S-search-buttom {
     padding: 0 5px 0 5px;
 }
 
-main .S-settings .S-div-search input {
+.S-settings .S-div-search input {
     width: 80%;
     outline: none;
     border-style: none;
     background-color: transparent;
 }
 
-main .S-settings::-webkit-scrollbar {
+
+.S-settings::-webkit-scrollbar {
     display: none;
 }
 
-main .S-settings .S-center ul .S-buttom {
+.S-settings .S-center ul .S-buttom {
     width: 100%;
     height: 100%;
 }
 
-main .S-settings .S-center ul .S-buttom {
+.S-settings .S-center ul .S-buttom {
     line-height: 3rem;
     letter-spacing: 1px;
     padding-left: 3rem;
     font-size: var(--size-font-subtitle);
 }
 
-main .S-settings .S-center ul .S-buttom::after {
+.S-settings .S-center ul .S-buttom::after {
     content: '';
     position: absolute;
     width: 92%;
@@ -807,24 +814,24 @@ main .S-settings .S-center ul .S-buttom::after {
     transition: 0.5s;
 }
 
-main .S-settings .S-center ul .S-buttom.active {
+.S-settings .S-center ul .S-buttom.active {
     color: var(--org-color1);
     background-color: var(--third-color);
     border-left: 1px solid var(--org-color1);
     border-right: 1px solid var(--org-color1);
 }
 
-main .S-settings .S-center ul .S-buttom.active::after {
+.S-settings .S-center ul .S-buttom.active::after {
     width: 100%;
     left: 0;
     transition: 0.5s;
 }
 
-main .S-settings .S-center ul .S-buttom:hover {
+.S-settings .S-center ul .S-buttom:hover {
     background-color: var(--third-color);
 }
 
-main .S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
+.S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
     position: absolute;
     right: 10px;
     margin-top: -40px;
@@ -832,23 +839,23 @@ main .S-settings .S-center ul .S-buttom .S-subbuttom .S-open-list-icon {
     font-size: calc(var(--size-font-icons) + 10px);
 }
 
-main .S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
+.S-settings .S-center ul .S-buttom.active .S-subbuttom .S-open-list-icon {
     transform: rotate(-90deg) translate(0px);
     color: var(--org-color2);
     transition: 0.3s;
 }
 
-main .S-settings .S-center ul .S-buttom.active p {
+.S-settings .S-center ul .S-buttom.active p {
     transition: color 1s;
     cursor: pointer;
 }
 
-main .S-settings .S-center ul .S-buttom.active p:hover {
+.S-settings .S-center ul .S-buttom.active p:hover {
     color: var(--org-color1);
     transition: color 0.1s;
 }
 
-main .S-settings .S-center ul .S-buttom .S-subbuttom {
+.S-settings .S-center ul .S-buttom .S-subbuttom {
     line-height: 1.5rem;
     padding-left: 2.5rem;
     font-size: var(--size-font-text);
@@ -858,20 +865,21 @@ main .S-settings .S-center ul .S-buttom .S-subbuttom {
     transition: max-height 0.5s;
 }
 
-main .S-settings .S-center ul .S-buttom .S-subbuttom li {
+.S-settings .S-center ul .S-buttom .S-subbuttom li {
     opacity: 0;
     transition: opacity 1.5s;
 }
 
-main .S-settings .S-center ul .S-buttom.active .S-subbuttom li {
+.S-settings .S-center ul .S-buttom.active .S-subbuttom li {
     opacity: 1;
     transition: opacity 0.4s;
 }
 
-main .S-settings .S-center ul .S-buttom.active .S-subbuttom {
+.S-settings .S-center ul .S-buttom.active .S-subbuttom {
     max-height: 500px;
     opacity: 1;
 }
+
 
 
 /*====================================================================================================
@@ -879,7 +887,7 @@ main .S-settings .S-center ul .S-buttom.active .S-subbuttom {
 ====================================================================================================*/
 
 
-main .S-subsettings {
+.S-subsettings {
     position: relative;
     display: block;
     height: 100%;
@@ -888,13 +896,14 @@ main .S-subsettings {
     background-color: var(--third-color);
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
-main .S-subsettings::-webkit-scrollbar {
+.S-subsettings::-webkit-scrollbar {
     display: none;
 }
 
-main .S-subsettings .S-tier #S-section-divisions {
+.S-subsettings .S-tier #S-section-divisions {
     position: relative;
     width: 100%;
     height: auto;
@@ -906,65 +915,65 @@ main .S-subsettings .S-tier #S-section-divisions {
     border-bottom: 1px solid var(--border-color);
 }
 
-main .S-subsettings .S-tier #S-section-divisions:last-child {
+.S-subsettings .S-tier #S-section-divisions:last-child {
     border-bottom: none;
 }
 
-main .S-subsettings .S-tier #S-section-divisions:last-child {
+.S-subsettings .S-tier #S-section-divisions:last-child {
     border-bottom: none;
 }
 
-main .S-subsettings .S-tier #S-section-divisions article {
+.S-subsettings .S-tier #S-section-divisions article {
     width: 100%;
     height: auto;
     border-bottom: 1px solid var(--border-color);
     line-height: 2rem;
 }
 
-main .S-subsettings .S-tier {
+.S-subsettings .S-tier {
     display: none;
 }
 
-main .S-subsettings .S-tier.active {
+.S-subsettings .S-tier.active {
     opacity: 1;
     display: block;
     padding-top: 2.5rem;
 }
 
-main .S-subsettings .S-tier article .S-article-title {
+.S-subsettings .S-tier article .S-article-title {
     font-size: calc(var(--size-font-subtitle) + 4px);
     padding: 0 0 0.5rem 2rem;
     letter-spacing: 2px;
     transition: color 0.4s;
 }
 
-main .S-subsettings .S-tier .S-article-subtitle {
+.S-subsettings .S-tier .S-article-subtitle {
     padding: 0 0 0 4rem;
     font-size: calc(var(--size-font-subtitle) + 1px);
 }
 
-main .S-subsettings .S-account-profile {
+.S-subsettings .S-account-profile {
     height: 100%;
     width: 100%;
 }
 
-main .S-subsettings .S-account-profile .S-profile {
+.S-subsettings .S-account-profile .S-profile {
     position: relative;
     width: 100%;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-cover {
+.S-subsettings .S-account-profile .S-profile .S-cover {
     position: relative;
     width: 100%;
     height: 170px;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-cover img {
+.S-subsettings .S-account-profile .S-profile .S-cover img {
     width: 100%;
     height: 100%;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content {
+.S-subsettings .S-account-profile .S-profile .S-profile-content {
     position: relative;
     display: flex;
     gap: 10px;
@@ -973,7 +982,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content {
     background-color: var(--third-color);
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images {
     position: absolute;
     display: flex;
     width: 15%;
@@ -986,18 +995,18 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     left: 1rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images img {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images img {
     cursor: pointer;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .perfil-img {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .perfil-img {
     position: relative;
     width: 100%;
     height: 100%;
     border-radius: 40px;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images::before {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images::before {
     content: '';
     position: absolute;
     width: 112%;
@@ -1006,7 +1015,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     border-radius: 45px;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .org-img {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .org-img {
     position: absolute;
     width: 31%;
     height: 31%;
@@ -1015,7 +1024,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-
     border-radius: 100%;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -1028,31 +1037,31 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-inf
     line-height: 1rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .nick {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .nick {
     font-size: 1.7rem;
     font-weight: bolder;
     color: var(--org-color1);
     letter-spacing: 2px;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
     padding-left: 0.2rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-icon {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-icon {
     position: absolute;
     right: 1rem;
     top: 0.5rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-icon span.icon-hover {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .S-edit-profile-icon span.icon-hover {
     width: 7.2rem;
     top: -1px;
     right: 2rem;
     height: 1rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-numbers {
+.S-subsettings .S-account-profile .S-profile .S-profile-numbers {
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -1061,12 +1070,12 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-numbers {
     font-size: var(--size-font-text);
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-numbers span {
+.S-subsettings .S-account-profile .S-profile .S-profile-numbers span {
     display: flex;
     gap: 0.5rem;
 }
 
-main .S-subsettings .S-account-profile .S-profile .S-profile-numbers b {
+.S-subsettings .S-account-profile .S-profile .S-profile-numbers b {
     color: var(--org-color1);
     font-size: var(--size-font-subtitle);
     cursor: pointer;
@@ -1074,7 +1083,7 @@ main .S-subsettings .S-account-profile .S-profile .S-profile-numbers b {
     font-weight: lighter;
 }
 
-main .S-subsettings .S-account-profile .S-bio {
+.S-subsettings .S-account-profile .S-bio {
     position: relative;
     width: 100%;
     height: 6.25rem;
@@ -1084,7 +1093,7 @@ main .S-subsettings .S-account-profile .S-bio {
     font-size: var(--size-font-subtitle);
 }
 
-main .S-subsettings .S-account-profile .S-bio textarea {
+.S-subsettings .S-account-profile .S-bio textarea {
     position: relative;
     width: 100%;
     height: 75%;
@@ -1093,24 +1102,24 @@ main .S-subsettings .S-account-profile .S-bio textarea {
     background-color: transparent;
 }
 
-main .S-subsettings .S-appearence .S-theme {
+.S-subsettings .S-appearence .S-theme {
     position: relative;
     width: 100%;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode {
     height: auto;
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox {
     opacity: 0;
     position: absolute;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label {
     position: relative;
     display: flex;
     align-items: center;
@@ -1126,15 +1135,15 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label {
     cursor: pointer;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-sun {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-sun {
     color: #ffd900;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-moon {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode .S-label .S-moon {
     color: #2d2dff;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
     background-color: var(--white-to-black-color);
     border-radius: 50%;
     position: absolute;
@@ -1146,21 +1155,21 @@ main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-ball {
     transition: transform 0.2s linear;
 }
 
-main .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
+.S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
     transform: translateX(1.1rem);
 }
 
-main .S-subsettings .S-appearence .S-font-style div {
+.S-subsettings .S-appearence .S-font-style div {
     display: flex;
     gap: 50px;
 }
 
-main .S-subsettings .S-appearence .S-font-style .S-all-font-size .All-icon {
+.S-subsettings .S-appearence .S-font-style .S-all-font-size .All-icon {
     font-size: calc(var(--size-font-icons) + 0.3rem);
     transition: 0.15s;
 }
 
-main .S-subsettings .S-appearence .S-font-style input[type=range] {
+.S-subsettings .S-appearence .S-font-style input[type=range] {
     appearance: none;
     background-color: var(--body-color);
     height: 0.45rem;
@@ -1169,7 +1178,7 @@ main .S-subsettings .S-appearence .S-font-style input[type=range] {
     cursor: pointer;
 }
 
-main .S-subsettings .S-appearence .S-font-style input[type=range]::-webkit-slider-thumb {
+.S-subsettings .S-appearence .S-font-style input[type=range]::-webkit-slider-thumb {
     appearance: none;
     width: 1rem;
     height: 1rem;
@@ -1180,12 +1189,12 @@ main .S-subsettings .S-appearence .S-font-style input[type=range]::-webkit-slide
     opacity: 0.9;
 }
 
-main .S-subsettings .S-appearence .S-font-style input[type=range]:hover::-webkit-slider-thumb {
+.S-subsettings .S-appearence .S-font-style input[type=range]:hover::-webkit-slider-thumb {
     background-color: var(--org-color1);
     box-shadow: 0 0 3px 0px var(--org-color-lighter);
 }
 
-main .S-subsettings .S-appearence .S-font-style div .S-font-size-value {
+.S-subsettings .S-appearence .S-font-style div .S-font-size-value {
     width: 34px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -1195,7 +1204,7 @@ main .S-subsettings .S-appearence .S-font-style div .S-font-size-value {
     font-size: calc(var(--size-font-icons) -5px);
 }
 
-main .S-subsettings .S-appearence .S-font-style i.All-icon.S-font-config {
+.S-subsettings .S-appearence .S-font-style i.All-icon.S-font-config {
     float: right;
     position: relative;
     margin: 0 15px 15px 0;
@@ -1208,7 +1217,7 @@ main .S-subsettings .S-appearence .S-font-style i.All-icon.S-font-config {
     display: flex;
 }
 
-main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config {
+.S-subsettings .S-appearence .S-font-style .S-font-advanced-config {
     height: 20.5rem;
     display: block;
     overflow: hidden;
@@ -1216,26 +1225,26 @@ main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config {
     clear: both;
 }
 
-main .S-subsettings .S-appearence .S-font-style .S-font-advanced-config.close {
+.S-subsettings .S-appearence .S-font-style .S-font-advanced-config.close {
     height: 0rem;
 }
 
-main .S-subsettings .S-appearence article:hover .S-font-advanced-config .S-article-title {
+.S-subsettings .S-appearence article:hover .S-font-advanced-config .S-article-title {
     color: var(--text-color);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section {
+.S-subsettings .S-suport .S-faq .S-questions-section {
     position: relative;
     display: flex;
     gap: 20rem;
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-generalQ-title.active,
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-otherQ-title.active {
+.S-subsettings .S-suport .S-faq .S-questions-section .S-generalQ-title.active,
+.S-subsettings .S-suport .S-faq .S-questions-section .S-otherQ-title.active {
     color: var(--org-color1);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-line {
+.S-subsettings .S-suport .S-faq .S-questions-section .S-line {
     position: absolute;
     bottom: -1px;
     width: 18rem;
@@ -1245,23 +1254,23 @@ main .S-subsettings .S-suport .S-faq .S-questions-section .S-line {
     z-index: 1;
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-geral-active {
+.S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-geral-active {
     transform: translate(-11.5rem);
     transition: transform var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-other-active {
+.S-subsettings .S-suport .S-faq .S-questions-section .S-line.S-other-active {
     transform: translate(12rem);
     transition: transform var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions {
+.S-subsettings .S-suport .S-faq .S-all-questions {
     display: flex;
     justify-content: flex-start;
     background-color: var(--half-third-color);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions div {
+.S-subsettings .S-suport .S-faq .S-all-questions div {
     border-top: 1px solid var(--border-color);
     width: 0;
     transform: translate(0);
@@ -1269,19 +1278,19 @@ main .S-subsettings .S-suport .S-faq .S-all-questions div {
     transition: var(--element-out);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions .S-other-questions.active {
+.S-subsettings .S-suport .S-faq .S-all-questions .S-other-questions.active {
     display: block;
     width: 100%;
     transition: var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-all-questions .S-general-questions.active {
+.S-subsettings .S-suport .S-faq .S-all-questions .S-general-questions.active {
     display: block;
     width: 100%;
     transition: var(--element-in);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions {
+.S-subsettings .S-suport .S-faq .S-questions {
     position: relative;
     border-bottom: 1px solid var(--border-color);
     padding: 0.5rem;
@@ -1289,11 +1298,11 @@ main .S-subsettings .S-suport .S-faq .S-questions {
     font-size: calc(var(--size-font-subtitle) - 1px);
 }
 
-main .S-subsettings .S-suport .S-faq .S-questions:last-child {
+.S-subsettings .S-suport .S-faq .S-questions:last-child {
     border-bottom: none;
 }
 
-main .S-subsettings .S-suport .S-faq .S-answers {
+.S-subsettings .S-suport .S-faq .S-answers {
     position: relative;
     padding-left: 2rem;
     height: 5rem;
@@ -1301,13 +1310,13 @@ main .S-subsettings .S-suport .S-faq .S-answers {
     overflow: hidden;
 }
 
-main .S-subsettings .S-suport .S-faq .S-answers.closed {
+.S-subsettings .S-suport .S-faq .S-answers.closed {
     height: 0;
     opacity: 30%;
     transition: calc(var(--element-out) - 0.15s);
 }
 
-main .S-subsettings .S-suport .S-service-terms {
+.S-subsettings .S-suport .S-service-terms {
     font-size: calc(var(--size-font-text) - 2px);
     letter-spacing: 2px;
     position: relative;
@@ -1317,17 +1326,17 @@ main .S-subsettings .S-suport .S-service-terms {
     margin-bottom: 1rem;
 }
 
-main .S-subsettings .S-suport .S-service-terms:hover {
+.S-subsettings .S-suport .S-service-terms:hover {
     font-size: calc(var(--size-font-text) - 3px);
     transition: calc(var(--element-in) - 0.25s);
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-article-description {
+.S-subsettings .S-suport .S-report-problems .S-article-description {
     font-size: calc(var(--size-font-subtitle) - 1px);
     margin: -0.5rem 0 0 5rem;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-tags {
+.S-subsettings .S-suport .S-report-problems .S-report-tags {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -1337,7 +1346,7 @@ main .S-subsettings .S-suport .S-report-problems .S-report-tags {
     margin: 0.5rem;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-tags {
+.S-subsettings .S-suport .S-report-problems .S-tags {
     display: flex;
     position: relative;
     margin: 0 1rem 0 1rem;
@@ -1350,7 +1359,7 @@ main .S-subsettings .S-suport .S-report-problems .S-tags {
     cursor: pointer;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-more-tags {
+.S-subsettings .S-suport .S-report-problems .S-more-tags {
     display: flex;
     position: relative;
     width: 0;
@@ -1359,18 +1368,18 @@ main .S-subsettings .S-suport .S-report-problems .S-more-tags {
     font-size: calc(var(--size-font-text) + 10px);
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-tags:hover {
+.S-subsettings .S-suport .S-report-problems .S-tags:hover {
     transition: calc(var(--element-in) - 0.1s);
     font-size: calc(var(--size-font-text) + 4px);
     padding: 0.05rem 1.05rem 0.05rem 1.05rem;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-more-tags:hover {
+.S-subsettings .S-suport .S-report-problems .S-more-tags:hover {
     font-size: calc(var(--size-font-text) + 20px);
     padding: 1rem 1.05rem 1rem 1.05rem;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area {
+.S-subsettings .S-suport .S-report-problems .S-report-area {
     position: relative;
     flex-direction: column;
     gap: 0.7rem;
@@ -1385,7 +1394,7 @@ main .S-subsettings .S-suport .S-report-problems .S-report-area {
     border-bottom-right-radius: 8px;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-clear {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-clear {
     display: flex;
     position: absolute;
     right: 2.5rem;
@@ -1397,7 +1406,7 @@ main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-clear 
     cursor: pointer;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input {
     border: none;
     outline: none;
     border-left: 1px solid var(--border-color);
@@ -1407,16 +1416,16 @@ main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input 
     background: transparent;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input::-webkit-scrollbar {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input::-webkit-scrollbar {
     display: none;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area textarea.S-report-input {
+.S-subsettings .S-suport .S-report-problems .S-report-area textarea.S-report-input {
     height: 6rem;
     width: 95%;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit i {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit i {
     display: flex;
     position: absolute;
     bottom: 1rem;
@@ -1431,12 +1440,12 @@ main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit
     cursor: pointer;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit i:hover {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-submit i:hover {
     color: var(--org-color1);
     box-shadow: 0 0 4px 1px var(--org-color1);
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media {
     display: flex;
     position: absolute;
     bottom: 1rem;
@@ -1451,12 +1460,12 @@ main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media 
     cursor: pointer;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media:hover {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-media:hover {
     color: var(--org-color1);
     box-shadow: 0 0 3px 1px var(--org-color1);
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-media-placeholder {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-media-placeholder {
     position: absolute;
     opacity: 75%;
     bottom: 1rem;
@@ -1464,24 +1473,24 @@ main .S-subsettings .S-suport .S-report-problems .S-report-area .S-media-placeho
     pointer-events: none;
 }
 
-main .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-placeholder {
+.S-subsettings .S-suport .S-report-problems .S-report-area .S-report-placeholder {
     position: absolute;
     opacity: 75%;
     pointer-events: none;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-article-description {
+.S-subsettings .S-suport .S-feedback .S-article-description {
     font-size: calc(var(--size-font-subtitle) - 1px);
     margin: -0.5rem 0 0 5rem;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-bonfire {
+.S-subsettings .S-suport .S-feedback .S-feedback-bonfire {
     color: var(--org-color2);
     font-weight: 600;
     letter-spacing: 3px;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area {
+.S-subsettings .S-suport .S-feedback .S-feedback-area {
     position: relative;
     flex-direction: column;
     gap: 0.7rem;
@@ -1496,7 +1505,7 @@ main .S-subsettings .S-suport .S-feedback .S-feedback-area {
     border-bottom-right-radius: 8px;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-clear {
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-clear {
     display: flex;
     position: absolute;
     right: 2.5rem;
@@ -1508,7 +1517,7 @@ main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-clear {
     cursor: pointer;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
     border: none;
     outline: none;
     border-left: 1px solid var(--border-color);
@@ -1518,16 +1527,16 @@ main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
     background: transparent;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input::-webkit-scrollbar {
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input::-webkit-scrollbar {
     display: none;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area textarea.S-feedback-input {
+.S-subsettings .S-suport .S-feedback .S-feedback-area textarea.S-feedback-input {
     height: 6rem;
     width: 95%;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i {
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i {
     display: flex;
     position: absolute;
     bottom: 1rem;
@@ -1542,71 +1551,57 @@ main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i 
     cursor: pointer;
 }
 
-main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i:hover {
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-submit i:hover {
     color: var(--org-color1);
     box-shadow: 0 0 4px 1px var(--org-color1);
 }
 
-
-main .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-placeholder {
-    position: absolute;
-    opacity: 75%;
-    pointer-events: none;
-}
-
-main .S-subsettings .S-about-us .S-bonfire-summary{
+.S-subsettings .S-about-us .S-bonfire-summary {
     padding: 0rem 2.5rem 0.5rem 3.2rem;
     text-align: justify;
     font-size: var(--size-font-text);
 }
 
-main .S-subsettings .S-about-us .S-bonfire-summary strong{
+.S-subsettings .S-about-us .S-bonfire-summary strong {
     color: var(--org-color2);
     font-size: calc(var(--size-font-text) + 15px);
 }
 
-main .S-subsettings .S-about-us .S-download-bonfire{
+.S-subsettings .S-about-us .S-download-bonfire {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1rem;
 }
 
-main .S-subsettings .S-about-us .S-download-bonfire .S-google-play-download{
+.S-subsettings .S-about-us .S-download-bonfire .S-google-play-download {
     width: 200px;
     height: 55px;
     transition: calc(var(--element-out) - 0.3s);
     cursor: pointer;
 }
 
-main .S-subsettings .S-about-us .S-download-bonfire .S-google-play-download:hover{
+.S-subsettings .S-about-us .S-download-bonfire .S-google-play-download:hover {
     width: 210px;
     height: 60px;
     transition: calc(var(--element-in) - 0.3s);
     transform: translate(-2px);
 }
 
-main .S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download{
+.S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download {
     width: 210px;
     height: 62px;
     transition: calc(var(--element-out) - 0.3s);
     cursor: pointer;
 }
 
-main .S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download:hover{
+.S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download:hover {
     width: 223px;
     height: 70px;
     transition: calc(var(--element-in) - 0.3s);
     transform: translate(5px);
 }
 
-.S-google-play-download.opacity
-{
-    opacity:0.2;
-}
-.S-apple-store-download.opacity
-{
-    opacity:0.2;
-}
+
 /*====================================================================================================
 ========================================== LOG-OUT MODAL =============================================
 ====================================================================================================*/
