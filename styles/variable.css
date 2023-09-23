@@ -134,679 +134,92 @@
     --fourth-color: #EBEBF5;
 }
 
-.neutral-mode {
-    --white-to-black-color: '#';
-    --black-to-white-color: '#';
-
-    --text-color: '#';
-    --border-color: '#';
-    --menu-color: '#';
-    --modal-focus-color: '#';
-    --active-color: '#';
-
-    --first-color: '#';
-    --second-color: '#';
-    --third-color: '#';
-    --fourth-color: '#';
-}
-
 
 /*====================================================================================================
 ======================================== VARIÁVEIS DE COR: ===========================================
-=============================== PALETA DE CORES DE CADA ORGANIZAÇÃO ==================================
 =====================================================================================================*/
-
-
 ::selection {
     background-color: var(--org-color-transparent);
     color: var(--white-to-black-color);
 }
 
-.amazon-cripz-color {
-    --org-color1: #0077ff;
-    --org-color2: #0077ff;
-    --org-color3: #0077ff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #003a7c;
-    --org-color-lighter: #4fa1ff;
-    --org-color-low-opacity: #0077ff80;
-    --org-color-transparent: "#";
+.G-white {
+    --org-color1: #EFEFEF; /* Branco versão 1 */
+    --org-color2: #EFEFEF; /* Branco versão 2 */
+    --org-color-darker: #BFBFBF; /* Uma versão mais escura da cor branca */
+    --org-color-lighter: #FFFFFF; /* Uma versão mais clara da cor branca */
+    --org-color-color-low-opacity: #EFEFEF60; /* Branco com baixa opacidade */
+    --org-color-transparent: #EFEFEF30; /* Branco semitransparente */
 }
 
-.cloud9-color {
-    --org-color1: #00a2ff;
-    --org-color2: #00a2ff;
-    --org-color3: #00a2ff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #005383;
-    --org-color-lighter: #62c6ff;
-    --org-color-color-low-opacity: #00a2ff70;
-    --org-color-transparent: "#";
+.G-red {
+    --org-color1: #FF0000; /* Vermelho versão 1 */
+    --org-color2: #FF0000; /* Vermelho versão 2 */
+    --org-color-darker: #800000; /* Uma versão mais escura da cor vermelha */
+    --org-color-lighter: #FF6666; /* Uma versão mais clara da cor vermelha */
+    --org-color-color-low-opacity: #FF000060; /* Vermelho com baixa opacidade */
+    --org-color-transparent: #FF000030; /* Vermelho semitransparente */
 }
 
-.drx-color {
-    --org-color1: #658cf5;
-    --org-color2: #658cf5;
-    --org-color3: #658cf5;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #658cf5;
-    --org-color-lighter: #658cf5;
-    --org-color-low-opacity: #658cf570;
-    --org-color-transparent: "#";
+.G-orange {
+    --org-color1: #FF7A00; /* Laranja versão 1 */
+    --org-color2: #FF7A00; /* Laranja versão 2 */
+    --org-color-darker: #994C00; /* Uma versão mais escura da cor laranja */
+    --org-color-lighter: #FFA733; /* Uma versão mais clara da cor laranja */
+    --org-color-color-low-opacity: #FF7A0060; /* Laranja com baixa opacidade */
+    --org-color-transparent: #FF7A0030; /* Laranja semitransparente */
 }
 
-.evos-e-sports-color {
-    --org-color1: #52baff;
-    --org-color2: #52baff;
-    --org-color3: #52baff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #0061a1;
-    --org-color-lighter: #86cfff;
-    --org-color-low-opacity: #52baff80;
-    --org-color-transparent: "#";
+.G-yellow {
+    --org-color1: #FFFF00; /* Amarelo versão 1 */
+    --org-color2: #FFFF00; /* Amarelo versão 2 */
+    --org-color-darker: #BFBF00; /* Uma versão mais escura da cor amarela */
+    --org-color-lighter: #FFFF99; /* Uma versão mais clara da cor amarela */
+    --org-color-color-low-opacity: #FFFF0060; /* Amarelo com baixa opacidade */
+    --org-color-transparent: #FFFF0030; /* Amarelo semitransparente */
 }
 
-.faze-clan-color {
-    --org-color1: #B22222;
-    --org-color2: #B22222;
-    --org-color3: #B22222;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #8b0606;
-    --org-color-lighter: #f43232;
-    --org-color-low-opacity: #B2222280;
-    --org-color-transparent: "#";
+.G-green {
+    --org-color1: #00FF00; /* Verde versão 1 */
+    --org-color2: #00FF00; /* Verde versão 2 */
+    --org-color-darker: #008000; /* Uma versão mais escura da cor verde */
+    --org-color-lighter: #66FF66; /* Uma versão mais clara da cor verde */
+    --org-color-color-low-opacity: #00FF0060; /* Verde com baixa opacidade */
+    --org-color-transparent: #00FF0030; /* Verde semitransparente */
 }
 
-.fluxo-color {
-    --org-color1: #C300FF;
-    --org-color2: #C91085;
-    --org-color3: #C300FF;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #680088;
-    --org-color-lighter: #D650FF;
-    --org-color-low-opacity: #C300FF80;
-    --org-color-transparent: "#";
+.G-cyan {
+    --org-color1: #00FFFF; /* Ciano versão 1 */
+    --org-color2: #00FFFF; /* Ciano versão 2 */
+    --org-color-darker: #008080; /* Uma versão mais escura da cor ciano */
+    --org-color-lighter: #66FFFF; /* Uma versão mais clara da cor ciano */
+    --org-color-color-low-opacity: #00FFFF60; /* Ciano com baixa opacidade */
+    --org-color-transparent: #00FFFF30; /* Ciano semitransparente */
 }
 
-.fnatic-color {
-    --org-color1: #ff6600;
-    --org-color2: #ff6600;
-    --org-color3: #ff6600;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #723300;
-    --org-color-lighter: #ff9138;
-    --org-color-low-opacity: #ff660080;
-    --org-color-transparent: "#";
+.G-blue {
+    --org-color1: #1E90FF; /* Azul versão 1 */
+    --org-color2: #1E90FF; /* Azul versão 2 */
+    --org-color-darker: #104E8B; /* Uma versão mais escura da cor azul */
+    --org-color-lighter: #7FB3D5; /* Uma versão mais clara da cor azul */
+    --org-color-color-low-opacity: #1E90FF60; /* Azul com baixa opacidade */
+    --org-color-transparent: #1E90FF30; /* Azul semitransparente */
 }
 
-.god-unidas-color {
-    --org-color1: #FFD700;
-    --org-color2: #0066ff;
-    --org-color3: #0066ff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #0043a7;
-    --org-color-lighter: #2f82ff;
-    --org-color-low-opacity: #0066ff80;
-    --org-color-transparent: "#";
+.G-purple {
+    --org-color1: #A020F0; /* Roxo versão 1 */
+    --org-color2: #A020F0; /* Roxo versão 2 */
+    --org-color-darker: #691FAD; /* Uma versão mais escura da cor roxa */
+    --org-color-lighter: #C18FFF; /* Uma versão mais clara da cor roxa */
+    --org-color-color-low-opacity: #A020F060; /* Roxo com baixa opacidade */
+    --org-color-transparent: #A020F030; /* Roxo semitransparente */
 }
 
-.immortals-color {
-    --org-color1: #00ffc8;
-    --org-color2: #00ffc8;
-    --org-color3: #00ffc8;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #008669;
-    --org-color-lighter: #58ffdb;
-    --org-color-low-opacity: #00ffc880;
-    --org-color-transparent: "#";
-}
-
-.kabum-color {
-    --org-color1: #ff5100;
-    --org-color2: #ff9100;
-    --org-color3: #ff5100;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #832300;
-    --org-color-lighter: #ff7332;
-    --org-color-low-opacity: #ff510080;
-    --org-color-transparent: "#";
-}
-
-.kru-color {
-    --org-color1: #FF00B3;
-    --org-color2: #FF00B3;
-    --org-color3: #FF00B3;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #910065;
-    --org-color-lighter: #ff5dce;
-    --org-color-low-opacity: #FF00B380;
-    --org-color-transparent: "#";
-}
-
-.leviatan-color {
-    --org-color1: #4687BD;
-    --org-color2: #4687BD;
-    --org-color3: #4687BD;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #20425C;
-    --org-color-lighter: #6DBAFA;
-    --org-color-low-opacity: #4687BD80;
-    --org-color-transparent: "#";
-}
-
-.liberty-color {
-    --org-color1: #00FFFF;
-    --org-color2: #00FFFF;
-    --org-color3: #00FFFF;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #006969;
-    --org-color-lighter: #7DFFFF;
-    --org-color-low-opacity: #00FFFF80;
-    --org-color-transparent: "#";
-}
-
-.los-color {
-    --org-color1: #FF4500;
-    --org-color2: #FF4500;
-    --org-color3: #FF4500;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #AC2E00;
-    --org-color-lighter: #FF6027;
-    --org-color-low-opacity: #FF450080;
-    --org-color-transparent: "#";
-}
-
-.loud-color {
-    --org-color1: #00EB00;
-    --org-color2: #00EB00;
-    --org-color3: #00EB00;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #007200;
-    --org-color-lighter: #2DFF2D;
-    --org-color-low-opacity: #00FF2A80;
-    --org-color-transparent: #00FF2A40;
-}
-
-.luminosity-gaming-color {
-    --org-color1: #1E90FF;
-    --org-color2: #1E90FF;
-    --org-color3: #1E90FF;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #0251a0;
-    --org-color-lighter: #478dd4;
-    --org-color-low-opacity: #1E90FF80;
-    --org-color-transparent: "#";
-}
-
-.magic-squad-color {
-    --org-color1: #0EB1A9;
-    --org-color2: #0EB1A9;
-    --org-color3: #0EB1A9;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #006969;
-    --org-color-lighter: #55b9b4;
-    --org-color-low-opacity: #0EB1A980;
-    --org-color-transparent: "#";
-}
-
-.miners-color {
-    --org-color1: #751eb3;
-    --org-color2: #DC143C;
-    --org-color3: #5c049b;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #52167c;
-    --org-color-lighter: #7b2bb4;
-    --org-color-low-opacity: #5c049b80;
-    --org-color-transparent: "#";
-}
-
-.nip-color {
-    --org-color1: #d0ff00;
-    --org-color2: #d0ff00;
-    --org-color3: #d0ff00;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #677e00;
-    --org-color-lighter: #daff33;
-    --org-color-low-opacity: #d0ff0070;
-    --org-color-transparent: "#";
-}
-
-.oddik-bright-color {
-    --org-color1: #e5ff00;
-    --org-color2: #ffe600;
-    --org-color3: #ffe600;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #636b19;
-    --org-color-lighter: #edff49;
-    --org-color-low-opacity: #e5ff0080;
-    --org-color-transparent: "#";
-}
-
-.optic-color {
-    --org-color1: #a6e94f;
-    --org-color2: #9ae94f;
-    --org-color3: #9ae94f;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #3f611f;
-    --org-color-lighter: #bbff7c;
-    --org-color-low-opacity: #9ae94f80;
-    --org-color-transparent: "#";
-}
-
-.pain-color {
-    --org-color1: #FF0000;
-    --org-color2: #FF0000;
-    --org-color3: #FF0000;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #810000;
-    --org-color-lighter: #ff2f2f;
-    --org-color-low-opacity: #FF000080;
-    --org-color-transparent: "#";
-}
-
-.prg-color {
-    --org-color1: #ff14ad;
-    --org-color2: #ff14ad;
-    --org-color3: #7A11C5;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #310053;
-    --org-color-lighter: #9a42d8;
-    --org-color-low-opacity: #7A11C580;
-    --org-color-transparent: "#";
-}
-
-.red-canids-color {
-    --org-color1: #DB0630;
-    --org-color2: #FF1947;
-    --org-color3: #B32844;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #8A031E;
-    --org-color-lighter: #DB2D50;
-    --org-color-low-opacity: #DB063080;
-    --org-color-transparent: "#";
-}
-
-.sentinels-color {
-    --org-color1: #E70045;
-    --org-color2: #E70045;
-    --org-color3: #E70045;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #770024;
-    --org-color-lighter: #a73759;
-    --org-color-low-opacity: #E7004580;
-    --org-color-transparent: "#";
-}
-
-.talon-e-sports-color {
-    --org-color1: #e7404e;
-    --org-color2: #e7404e;
-    --org-color3: #e7404e;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #97000d;
-    --org-color-lighter: #ff5866;
-    --org-color-low-opacity: #e7404e80;
-    --org-color-transparent: "#";
-}
-
-.team-liquid-color {
-    --org-color1: #2b40ff;
-    --org-color2: #e2970c;
-    --org-color3: #002ec5;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #00165e;
-    --org-color-lighter: #294ec9;
-    --org-color-low-opacity: #002ec580;
-    --org-color-transparent: "#";
-}
-
-.tropa-color {
-    --org-color1: #ffd900;
-    --org-color2: #ffd900;
-    --org-color3: #ffd900;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #6d5d00;
-    --org-color-lighter: #ffe44a;
-    --org-color-low-opacity: #ffd90080;
-    --org-color-transparent: "#";
-}
-
-.vincit-color {
-    --org-color1: #00eeff;
-    --org-color2: #00eeff;
-    --org-color3: #00eeff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #007a83;
-    --org-color-lighter: #57f4ff;
-    --org-color-low-opacity: #00eeff80;
-    --org-color-transparent: "#";
-}
-
-.vivo-keyd-color {
-    --org-color1: #7A11C5;
-    --org-color2: #7A11C5;
-    --org-color3: #7A11C5;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #310053;
-    --org-color-lighter: #9a42d8;
-    --org-color-low-opacity: #7A11C580;
-    --org-color-transparent: "#";
-}
-
-
-.stars-horizon-color {
-    --org-color1: #00ffff;
-    --org-color2: #00e077;
-    --org-color3: #1bc4ca;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #009191;
-    --org-color-lighter: #79ffff;
-    --org-color-low-opacity: #00ffff80;
-    --org-color-transparent: "#";
-}
-
-.rensga-color {
-    --org-color1: #00a2ff;
-    --org-color2: #f8b600;
-    --org-color3: #f8b600;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #005383;
-    --org-color-lighter: #3ab7ff;
-    --org-color-low-opacity: #00a2ff80;
-    --org-color-transparent: "#";
-}
-
-.t1-color {
-    --org-color1: #ff0022;
-    --org-color2: #ff0022;
-    --org-color3: #ff0022;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #8d0000;
-    --org-color-lighter: #fd3434;
-    --org-color-low-opacity: #ff002280;
-    --org-color-transparent: "#";
-}
-
-.team-one-color {
-    --org-color1: #d6ae3e;
-    --org-color2: #F7EF8A;
-    --org-color3: #AE8625;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #755809;
-    --org-color-lighter: #f5ee91;
-    --org-color-low-opacity: #AE8625;
-    --org-color-transparent: "#";
-}
-
-.mouz-color {
-    --org-color1: #ff0000;
-    --org-color2: #ff1414;
-    --org-color3: #ff1414;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #790000;
-    --org-color-lighter: #d63636;
-    --org-color-low-opacity: #ff141480;
-    --org-color-transparent: "#";
-}
-
-.funplus-phoenix-color {
-    --org-color1: #ff1e00;
-    --org-color2: #ff0000;
-    --org-color3: #ff1e00;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #a31300;
-    --org-color-lighter: #da2b2b;
-    --org-color-low-opacity: #ff1e0080;
-    --org-color-transparent: "#";
-}
-
-.real-sports-color {
-    --org-color1: #d413b4;
-    --org-color2: #ac009d;
-    --org-color3: #0e6d68;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #bb009c;
-    --org-color-lighter: #bb009c;
-    --org-color-low-opacity: #bb009c80;
-    --org-color-transparent: "#";
-}
-
-.karmine-corp-color {
-    --org-color1: #14eeee;
-    --org-color2: #32f1f1;
-    --org-color3: #32f1f1;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #138a8a;
-    --org-color-lighter: #62eeee;
-    --org-color-low-opacity: #32f1f180;
-    --org-color-transparent: "#";
-}
-
-.geng-g-color {
-    --org-color1: #c29f3e;
-    --org-color2: #d1a939;
-    --org-color3: #c29f3e;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #775712;
-    --org-color-lighter: #f3d189;
-    --org-color-low-opacity: #c29f3e80;
-    --org-color-transparent: "#";
-}
-
-.vorax-color {
-    --org-color1: #ae2ff7;
-    --org-color2: #ae2ff7;
-    --org-color3: #ae2ff7;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #651494;
-    --org-color-lighter: #ad62d8;
-    --org-color-low-opacity: #ae2ff780;
-    --org-color-transparent: "#";
-}
-
-.natus-vincere-color {
-    --org-color1: #f1de32;
-    --org-color2: #ffe600;
-    --org-color3: #ffe600;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #c2a10c;
-    --org-color-lighter: #f0df4b;
-    --org-color-low-opacity: #f1de3280;
-    --org-color-transparent: "#";
-}
-
-.tbk-color {
-    --org-color1: #2929ec;
-    --org-color2: #1E90FF;
-    --org-color3: #0000CD;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #00008b;
-    --org-color-lighter: #1818f3;
-    --org-color-low-opacity: #0000CD80;
-    --org-color-transparent: "#";
-}
-
-.team-solid-color {
-    --org-color1: #f5d000;
-    --org-color2: #e4c30c;
-    --org-color3: #e7c81a;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #8d7800;
-    --org-color-lighter: #ffe23d;
-    --org-color-low-opacity: #FFD70080;
-    --org-color-transparent: "#";
-}
-
-.team-vitality-color {
-    --org-color1: #fffb00;
-    --org-color2: #fffb00;
-    --org-color3: #fffb00;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #8d7800;
-    --org-color-lighter: #fffd7d;
-    --org-color-low-opacity: #fffb0080;
-    --org-color-transparent: "#";
-}
-
-.detonation-focusme-color {
-    --org-color1: #007ff5;
-    --org-color2: #007ff5;
-    --org-color3: #007ff5;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #007ff5;
-    --org-color-lighter: #007ff5;
-    --org-color-low-opacity: #007ff580;
-    --org-color-transparent: "#";
-}
-
-.b4-color {
-    --org-color1: #ff0000;
-    --org-color2: #ff2600;
-    --org-color3: #ff0000;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #770000;
-    --org-color-lighter: #ca4b4b;
-    --org-color-low-opacity: #ff000080;
-    --org-color-transparent: "#";
-}
-
-.thieves100-color {
-    --org-color1: #ff3737;
-    --org-color2: #ff3737;
-    --org-color3: #ff3737;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #ff3737;
-    --org-color-lighter: #ff3737;
-    --org-color-low-opacity: #ff373780;
-    --org-color-transparent: "#";
-}
-
-.meta-gaming-color {
-    --org-color1: #e9c708;
-    --org-color2: #eeff00;
-    --org-color3: #e9c708;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #e9c708;
-    --org-color-lighter: #e9c708;
-    --org-color-low-opacity: #e9c708;
-    --org-color-transparent: "#";
-}
-
-.team-rrq-color {
-    --org-color1: #f5b52d;
-    --org-color2: #ffba26;
-    --org-color3: #f5b52d;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #aa7504;
-    --org-color-lighter: #ffc64d;
-    --org-color-low-opacity: #f5b52d80;
-    --org-color-transparent: "#";
-}
-
-.b4-color {
-    --org-color1: #ff0000;
-    --org-color2: #ff2600;
-    --org-color3: #ff0000;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #770000;
-    --org-color-lighter: #ca4b4b;
-    --org-color-low-opacity: #ff000080;
-    --org-color-transparent: "#";
-}
-
-.naguara-team-color {
-    --org-color1: #ffae00;
-    --org-color2: #ffd000;
-    --org-color3: #00b7ff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #6e4b00;
-    --org-color-lighter: #ffcb59;
-    --org-color-low-opacity: #ffae0080;
-    --org-color-transparent: "#";
-}
-
-.nation00-color {
-    --org-color1: #e5ff00;
-    --org-color2: #fbff00;
-    --org-color3: #d0ff00;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #849200;
-    --org-color-lighter: #d9e664;
-    --org-color-low-opacity: #e5ff0080;
-    --org-color-transparent: "#";
-}
-
-.total-gaming-color {
-    --org-color1: #ff0000;
-    --org-color2: #ff2600;
-    --org-color3: #fbff00;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #7c1717;
-    --org-color-lighter: #ff6060;
-    --org-color-low-opacity: #ff000080;
-    --org-color-transparent: "#";
-}
-
-.gamelanders-color {
-    --org-color1: #1944ff;
-    --org-color2: #6f00ff;
-    --org-color3: #8c00ff;
-    --org-color4: '#';
-    --org-color5: '#';
-    --org-color-darker: #001883;
-    --org-color-lighter: #637afc;
-    --org-color-low-opacity: #1944ff80;
-    --org-color-transparent: "#";
+.G-pink {
+    --org-color1: #FF008A; /* Rosa versão 1 */
+    --org-color2: #FF008A; /* Rosa versão 2 */
+    --org-color-darker: #990052; /* Uma versão mais escura da cor rosa */
+    --org-color-lighter: #FF66B2; /* Uma versão mais clara da cor rosa */
+    --org-color-color-low-opacity: #FF008A60; /* Rosa com baixa opacidade */
+    --org-color-transparent: #FF008A30; /* Rosa semitransparente */
 }

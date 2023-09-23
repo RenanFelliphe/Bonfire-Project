@@ -588,6 +588,12 @@ main {
     height: 100vh;
 }
 
+
+/*===============================================================================================================
+============================================= HOME/INDEX: H-Aside================================================
+================================================================================================================*/
+
+
 .H-aside{
     background-color: var(--third-color);
     width: 50%;
@@ -605,7 +611,8 @@ main {
 .H-aside .H-search .H-search-input {
     background-color: var(--third-color);
     border: 1px solid var(--border-color);
-    border-radius: 5rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
     min-width: 20rem;
     height: 2rem;
     display: flex;
@@ -620,6 +627,14 @@ main {
     background: none;
 }
 
+.H-aside .H-user-notify{
+    display: flex;
+    border: 1px solid var(--border-color);
+    width: 2.2rem;
+    height: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
 /*===========================================================================================================
 =========================================== CONFIG: S-SETTINGS ==============================================
 ===========================================================================================================*/
@@ -1081,6 +1096,20 @@ main {
     width: 100%;
 }
 
+.S-subsettings .S-appearence .S-theme .S-theme-tips{
+    text-align: center;
+    margin: -1rem 0 1rem 0;
+    padding-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    font-size: calc(var(--size-font-text) + 1px);
+}
+
+.S-subsettings .S-appearence .S-theme .S-theme-tips strong{
+    color: var(--org-color1);
+    letter-spacing: 1px;
+}
+
 .S-subsettings .S-appearence .S-theme .S-toggle-mode {
     height: auto;
     display: flex;
@@ -1131,6 +1160,83 @@ main {
 
 .S-subsettings .S-appearence .S-theme .S-toggle-mode .S-checkbox:checked+.S-label .S-ball {
     transform: translateX(1.1rem);
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 4.5rem 2rem 4.5rem ;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: wheat;
+    cursor: pointer;
+    opacity: 40%;
+    transition: opacity calc(var(--element-out) - 0.2s);
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors:hover,
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.active {
+    opacity: 100%;
+    transition: calc(var(--element-in) - 0.2s);
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-white{
+    background-color: #EFEFEF;
+    border: 1px solid #646464;
+    box-shadow: 0 0 2px 1px #646464;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-red{
+    background-color: #FF0000;
+    border: 1px solid #6F0000;
+    box-shadow: 0 0 2px 1px #6F0000;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-orange{
+    background-color: #FF7A00;
+    border: 1px solid #733700;
+    box-shadow: 0 0 2px 1px #733700;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-yellow{
+    background-color: #FFFF00;
+    border: 1px solid #555500;
+    box-shadow: 0 0 2px 1px #555500;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-green{
+    background-color: #00FF00;
+    border: 1px solid #005B00;
+    box-shadow: 0 0 2px 1px #005B00;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-cyan{
+    background-color: #00FFFF;
+    border: 1px solid #005858;
+    box-shadow: 0 0 2px 1px #005858;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-blue{
+    background-color: #1E90FF;
+    border: 1px solid #005383;
+    box-shadow: 0 0 2px 1px #005383;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-purple{
+    background-color: #A020F0;
+    border: 1px solid #2E004A;
+    box-shadow: 0 0 2px 1px #2E004A;
+}
+
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-pink{
+    background-color: #FF008A;
+    border: 1px solid #51002C;
+    box-shadow: 0 0 2px 1px #51002C;
 }
 
 .S-subsettings .S-appearence .S-font-style div {

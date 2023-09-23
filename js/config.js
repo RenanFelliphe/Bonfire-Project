@@ -15,6 +15,7 @@ defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 FAQsection(); //Funções da seção das Perguntar Frequentes no Tier para o Suport
+updateTheme();
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
@@ -49,6 +50,33 @@ function updateMode() {
     const chk = document.getElementById('S-chk');
     chk.addEventListener('change', () => {
         document.body.classList.toggle('light-mode');
+    });
+}
+
+function updateTheme() {
+    const colors = document.querySelectorAll(".S-colors");
+
+    colors.forEach(newColor => {
+        newColor.addEventListener('click', () => {
+            colors.forEach(lastColor => lastColor.classList.remove("active"));
+            newColor.classList.add("active");
+
+            // Remove todas as classes de cor do body
+            document.body.classList.remove(
+                "G-white",
+                "G-red",
+                "G-orange",
+                "G-yellow",
+                "G-green",
+                "G-cyan",
+                "G-blue",
+                "G-purple",
+                "G-pink"
+            );
+
+            // Adiciona a classe de cor selecionada ao body
+            document.body.classList.add(newColor.classList[1]);
+        });
     });
 }
 
@@ -216,21 +244,21 @@ function menuAsideFunctions() {
         const team3 = document.querySelector(".M-team-3");
 
         team1.addEventListener("click", () => {
-            body.classList.toggle("loud-color");
-            body.classList.remove("los-color");
-            body.classList.remove("cloud9-color");
+            body.classList.toggle("G-green");
+            body.classList.remove("G-orange");
+            body.classList.remove("G-blue");
         });
 
         team2.addEventListener("click", () => {
-            body.classList.toggle("los-color");
-            body.classList.remove("loud-color");
-            body.classList.remove("cloud9-color");
+            body.classList.toggle("G-orange");
+            body.classList.remove("G-green");
+            body.classList.remove("G-blue");
         });
 
         team3.addEventListener("click", () => {
-            body.classList.toggle("cloud9-color");
-            body.classList.remove("loud-color");
-            body.classList.remove("los-color");
+            body.classList.toggle("G-blue");
+            body.classList.remove("G-orange");
+            body.classList.remove("G-green");
         });
     }
 
@@ -397,27 +425,6 @@ function FAQsection() {
     closeQuestionsHover();
 }
 
-/*==============================================================================
-================google play/download============================================*/
 
-const gpd = document.querySelector(".S-google-play-download");
-const apd = document.querySelector(".S-apple-store-download");
 
- gpd.addEventListener("mouseover", ()  => 
-    {
-        apd.classList.add("opacity");
-    });
 
-gpd.addEventListener("mouseout", ()  => 
-{
-    apd.classList.remove("opacity");
-});
-
-apd.addEventListener("mouseover", () =>
-    { 
-        gpd.classList.add("opacity"); 
-    });
-apd.addEventListener("mouseout", () =>
-{ 
-    gpd.classList.remove("opacity"); 
-});

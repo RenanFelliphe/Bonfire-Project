@@ -76,21 +76,21 @@ function menuAsideFunctions() {
         const team3 = document.querySelector(".M-team-3");
 
         team1.addEventListener("click", () => {
-            body.classList.toggle("loud-color");
-            body.classList.remove("los-color");
-            body.classList.remove("cloud9-color");
+            body.classList.toggle("G-green");
+            body.classList.remove("G-orange");
+            body.classList.remove("G-blue");
         });
 
         team2.addEventListener("click", () => {
-            body.classList.toggle("los-color");
-            body.classList.remove("loud-color");
-            body.classList.remove("cloud9-color");
+            body.classList.toggle("G-orange");
+            body.classList.remove("G-green");
+            body.classList.remove("G-blue");
         });
 
         team3.addEventListener("click", () => {
-            body.classList.toggle("cloud9-color");
-            body.classList.remove("loud-color");
-            body.classList.remove("los-color");
+            body.classList.toggle("G-blue");
+            body.classList.remove("G-orange");
+            body.classList.remove("G-green");
         });
     }
 
