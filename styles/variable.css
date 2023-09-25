@@ -149,77 +149,77 @@
     --org-color-darker: #BFBFBF; /* Uma versão mais escura da cor branca */
     --org-color-lighter: #FFFFFF; /* Uma versão mais clara da cor branca */
     --org-color-color-low-opacity: #EFEFEF60; /* Branco com baixa opacidade */
-    --org-color-transparent: #EFEFEF30; /* Branco semitransparente */
+    --org-color-transparent: #EFEFEF30; /* Branco semi-transparente */
 }
 
 .G-red {
     --org-color1: #FF0000; /* Vermelho versão 1 */
     --org-color2: #FF0000; /* Vermelho versão 2 */
-    --org-color-darker: #800000; /* Uma versão mais escura da cor vermelha */
+    --org-color-darker: #6F0000; /* Uma versão mais escura da cor vermelha */
     --org-color-lighter: #FF6666; /* Uma versão mais clara da cor vermelha */
     --org-color-color-low-opacity: #FF000060; /* Vermelho com baixa opacidade */
-    --org-color-transparent: #FF000030; /* Vermelho semitransparente */
+    --org-color-transparent: #FF000030; /* Vermelho semi-transparente */
 }
 
 .G-orange {
     --org-color1: #FF7A00; /* Laranja versão 1 */
     --org-color2: #FF7A00; /* Laranja versão 2 */
-    --org-color-darker: #994C00; /* Uma versão mais escura da cor laranja */
+    --org-color-darker: #683200; /* Uma versão mais escura da cor laranja */
     --org-color-lighter: #FFA733; /* Uma versão mais clara da cor laranja */
     --org-color-color-low-opacity: #FF7A0060; /* Laranja com baixa opacidade */
-    --org-color-transparent: #FF7A0030; /* Laranja semitransparente */
+    --org-color-transparent: #FF7A0030; /* Laranja semi-transparente */
 }
 
 .G-yellow {
     --org-color1: #FFFF00; /* Amarelo versão 1 */
     --org-color2: #FFFF00; /* Amarelo versão 2 */
-    --org-color-darker: #BFBF00; /* Uma versão mais escura da cor amarela */
+    --org-color-darker: #77770f; /* Uma versão mais escura da cor amarela */
     --org-color-lighter: #FFFF99; /* Uma versão mais clara da cor amarela */
     --org-color-color-low-opacity: #FFFF0060; /* Amarelo com baixa opacidade */
-    --org-color-transparent: #FFFF0030; /* Amarelo semitransparente */
+    --org-color-transparent: #FFFF0030; /* Amarelo semi-transparente */
 }
 
 .G-green {
     --org-color1: #00FF00; /* Verde versão 1 */
     --org-color2: #00FF00; /* Verde versão 2 */
-    --org-color-darker: #008000; /* Uma versão mais escura da cor verde */
+    --org-color-darker: #004e00; /* Uma versão mais escura da cor verde */
     --org-color-lighter: #66FF66; /* Uma versão mais clara da cor verde */
     --org-color-color-low-opacity: #00FF0060; /* Verde com baixa opacidade */
-    --org-color-transparent: #00FF0030; /* Verde semitransparente */
+    --org-color-transparent: #00FF0030; /* Verde semi-transparente */
 }
 
 .G-cyan {
     --org-color1: #00FFFF; /* Ciano versão 1 */
     --org-color2: #00FFFF; /* Ciano versão 2 */
-    --org-color-darker: #008080; /* Uma versão mais escura da cor ciano */
+    --org-color-darker: #005353; /* Uma versão mais escura da cor ciano */
     --org-color-lighter: #66FFFF; /* Uma versão mais clara da cor ciano */
     --org-color-color-low-opacity: #00FFFF60; /* Ciano com baixa opacidade */
-    --org-color-transparent: #00FFFF30; /* Ciano semitransparente */
+    --org-color-transparent: #00FFFF30; /* Ciano semi-transparente */
 }
 
 .G-blue {
     --org-color1: #1E90FF; /* Azul versão 1 */
     --org-color2: #1E90FF; /* Azul versão 2 */
-    --org-color-darker: #104E8B; /* Uma versão mais escura da cor azul */
+    --org-color-darker: #003c5f; /* Uma versão mais escura da cor azul */
     --org-color-lighter: #7FB3D5; /* Uma versão mais clara da cor azul */
     --org-color-color-low-opacity: #1E90FF60; /* Azul com baixa opacidade */
-    --org-color-transparent: #1E90FF30; /* Azul semitransparente */
+    --org-color-transparent: #1E90FF30; /* Azul semi-transparente */
 }
 
 .G-purple {
     --org-color1: #A020F0; /* Roxo versão 1 */
     --org-color2: #A020F0; /* Roxo versão 2 */
-    --org-color-darker: #691FAD; /* Uma versão mais escura da cor roxa */
+    --org-color-darker: #370058; /* Uma versão mais escura da cor roxa */
     --org-color-lighter: #C18FFF; /* Uma versão mais clara da cor roxa */
     --org-color-color-low-opacity: #A020F060; /* Roxo com baixa opacidade */
-    --org-color-transparent: #A020F030; /* Roxo semitransparente */
+    --org-color-transparent: #A020F030; /* Roxo semi-transparente */
 }
 
 .G-pink {
     --org-color1: #FF008A; /* Rosa versão 1 */
     --org-color2: #FF008A; /* Rosa versão 2 */
-    --org-color-darker: #990052; /* Uma versão mais escura da cor rosa */
+    --org-color-darker: #5e0033; /* Uma versão mais escura da cor rosa */
     --org-color-lighter: #FF66B2; /* Uma versão mais clara da cor rosa */
     --org-color-color-low-opacity: #FF008A60; /* Rosa com baixa opacidade */
-    --org-color-transparent: #FF008A30; /* Rosa semitransparente */
+    --org-color-transparent: #FF008A30; /* Rosa semi-transparente */
 }

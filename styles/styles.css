@@ -1185,58 +1185,64 @@ main {
     transition: calc(var(--element-in) - 0.2s);
 }
 
+.S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.active {
+    width: 2.6rem;
+    height: 2.6rem;
+    transform: translateX(-1px);
+}
+
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-white{
     background-color: #EFEFEF;
-    border: 1px solid #646464;
-    box-shadow: 0 0 2px 1px #646464;
+    border: 2px solid #5f5f5f;
+    box-shadow: 0 0 2px 1px #5f5f5f;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-red{
     background-color: #FF0000;
-    border: 1px solid #6F0000;
+    border: 2px solid #6F0000;
     box-shadow: 0 0 2px 1px #6F0000;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-orange{
     background-color: #FF7A00;
-    border: 1px solid #733700;
-    box-shadow: 0 0 2px 1px #733700;
+    border: 2px solid #683200;
+    box-shadow: 0 0 2px 1px #683200;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-yellow{
     background-color: #FFFF00;
-    border: 1px solid #555500;
-    box-shadow: 0 0 2px 1px #555500;
+    border: 2px solid #77770f;
+    box-shadow: 0 0 2px 1px #77770f;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-green{
     background-color: #00FF00;
-    border: 1px solid #005B00;
-    box-shadow: 0 0 2px 1px #005B00;
+    border: 2px solid #004e00;
+    box-shadow: 0 0 2px 1px #004e00;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-cyan{
     background-color: #00FFFF;
-    border: 1px solid #005858;
-    box-shadow: 0 0 2px 1px #005858;
+    border: 2px solid #005353;
+    box-shadow: 0 0 2px 1px #005353;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-blue{
     background-color: #1E90FF;
-    border: 1px solid #005383;
-    box-shadow: 0 0 2px 1px #005383;
+    border: 2px solid #003c5f;
+    box-shadow: 0 0 2px 1px #003c5f;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-purple{
     background-color: #A020F0;
-    border: 1px solid #2E004A;
-    box-shadow: 0 0 2px 1px #2E004A;
+    border: 2px solid #370058;
+    box-shadow: 0 0 2px 1px #370058;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-pink{
     background-color: #FF008A;
-    border: 1px solid #51002C;
-    box-shadow: 0 0 2px 1px #51002C;
+    border: 2px solid #5e0033;
+    box-shadow: 0 0 2px 1px #5e0033;
 }
 
 .S-subsettings .S-appearence .S-font-style div {
