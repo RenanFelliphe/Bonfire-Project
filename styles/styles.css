@@ -834,16 +834,6 @@ main {
     transition: 0.3s;
 }
 
-.S-settings .S-center ul .S-buttom.active p {
-    transition: color 1s;
-    cursor: pointer;
-}
-
-.S-settings .S-center ul .S-buttom.active p:hover {
-    color: var(--org-color1);
-    transition: color 0.1s;
-}
-
 .S-settings .S-center ul .S-buttom .S-subbuttom {
     line-height: 1.5rem;
     padding-left: 2.5rem;
@@ -852,6 +842,11 @@ main {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s;
+}
+
+.S-settings .S-center ul .S-buttom.active .S-subbuttom {
+    max-height: 500px;
+    opacity: 1;
 }
 
 .S-settings .S-center ul .S-buttom .S-subbuttom li {
@@ -864,12 +859,16 @@ main {
     transition: opacity 0.4s;
 }
 
-.S-settings .S-center ul .S-buttom.active .S-subbuttom {
-    max-height: 500px;
-    opacity: 1;
+
+.S-settings .S-center ul .S-buttom .S-subbuttom li a{
+    transition: color 1s;
+    cursor: pointer;
 }
 
-
+.S-settings .S-center ul .S-buttom .S-subbuttom li a:hover {
+    color: var(--org-color1);
+    transition: color 0.1s;
+}
 
 /*====================================================================================================
 ======================================= CONFIG: S-SUBSETTINGS ========================================
@@ -1173,10 +1172,10 @@ main {
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
-    background-color: wheat;
     cursor: pointer;
     opacity: 40%;
     transition: opacity calc(var(--element-out) - 0.2s);
+    display: flex;
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors:hover,
@@ -1188,7 +1187,7 @@ main {
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.active {
     width: 2.6rem;
     height: 2.6rem;
-    transform: translateX(-1px);
+    transform: translateY(-1px) translateX(-1px);
 }
 
 .S-subsettings .S-appearence .S-theme .S-toggle-colors .S-colors.G-white{
@@ -1244,6 +1243,7 @@ main {
     border: 2px solid #5e0033;
     box-shadow: 0 0 2px 1px #5e0033;
 }
+
 
 .S-subsettings .S-appearence .S-font-style div {
     display: flex;
@@ -1390,16 +1390,23 @@ main {
 
 .S-subsettings .S-suport .S-faq .S-answers {
     position: relative;
-    padding-left: 2rem;
-    height: 5rem;
-    transition: calc(var(--element-in) - 0.05s);
+    padding: 0 4rem 2rem 2rem;
+    transition: calc(var(--element-in) + 0.1s);
     overflow: hidden;
+    line-height: 1.3rem;
+    max-height: 12rem;
 }
 
 .S-subsettings .S-suport .S-faq .S-answers.closed {
-    height: 0;
+    padding: 0 4rem 0 2rem;
+    max-height: 0;
     opacity: 30%;
-    transition: calc(var(--element-out) - 0.15s);
+    transition: calc(var(--element-out) - 0.1s);
+}
+
+.S-subsettings .S-suport .S-faq .S-answers .S-pages{
+    color: var(--white-to-black-color);
+    font-weight: 600;
 }
 
 .S-subsettings .S-suport .S-service-terms {
@@ -1581,7 +1588,7 @@ main {
     flex-direction: column;
     gap: 0.7rem;
     align-items: flex-start;
-    height: 11rem;
+    height: 12.5rem;
     margin: 1.5rem;
     padding: 1.5rem;
     padding-top: 1rem;
@@ -1601,6 +1608,15 @@ main {
     font-size: calc(var(--size-font-icons) + 2px);
     background-color: var(--second-color);
     cursor: pointer;
+}
+
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-rate-us{
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-evenly;
+    width: 10rem;
+    height: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
@@ -1642,51 +1658,61 @@ main {
     box-shadow: 0 0 4px 1px var(--org-color1);
 }
 
-.S-subsettings .S-about-us .S-bonfire-summary {
+.S-subsettings .S-about-us .S-bonfire .S-bonfire-text {
     padding: 0rem 2.5rem 0.5rem 3.2rem;
     text-align: justify;
     font-size: var(--size-font-text);
 }
 
-.S-subsettings .S-about-us .S-bonfire-summary strong {
+.S-subsettings .S-about-us .S-bonfire .S-bonfire-text strong {
     color: var(--org-color2);
     font-size: calc(var(--size-font-text) + 15px);
 }
 
-.S-subsettings .S-about-us .S-download-bonfire {
+.S-subsettings .S-about-us .S-bonfire .S-download-bonfire {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1rem;
 }
 
-.S-subsettings .S-about-us .S-download-bonfire .S-google-play-download {
+.S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-google-play-download {
     width: 200px;
     height: 55px;
     transition: calc(var(--element-out) - 0.3s);
     cursor: pointer;
 }
 
-.S-subsettings .S-about-us .S-download-bonfire .S-google-play-download:hover {
+.S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-google-play-download:hover {
     width: 210px;
     height: 60px;
     transition: calc(var(--element-in) - 0.3s);
     transform: translate(-2px);
 }
 
-.S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download {
+.S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-apple-store-download {
     width: 210px;
     height: 62px;
     transition: calc(var(--element-out) - 0.3s);
     cursor: pointer;
 }
 
-.S-subsettings .S-about-us .S-download-bonfire .S-apple-store-download:hover {
+.S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-apple-store-download:hover {
     width: 223px;
     height: 70px;
     transition: calc(var(--element-in) - 0.3s);
     transform: translate(5px);
 }
 
+.S-subsettings .S-about-us .S-CEFET .S-cefet-text {
+    padding: 0rem 2.5rem 0.5rem 3.2rem;
+    text-align: justify;
+    font-size: var(--size-font-text);
+}
+
+.S-subsettings .S-about-us .S-CEFET .S-cefet-text strong {
+    color: var(--org-color2);
+    font-size: calc(var(--size-font-text) + 15px);
+}
 
 /*====================================================================================================
 ========================================== LOG-OUT MODAL =============================================

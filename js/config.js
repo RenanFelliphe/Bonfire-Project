@@ -10,7 +10,6 @@
 
 openTiers(); //Abre e fecha CADA SEÇÃO da página de configurações
 openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
-updateMode(); //Define o MODO(Light/Dark) e as CORES do site
 defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
@@ -45,39 +44,46 @@ function openSearchArea() {
     });
 }
 
-//Define o MODO(Light/Dark) e as CORES do site
-function updateMode() {
-    const chk = document.getElementById('S-chk');
-    chk.addEventListener('change', () => {
-        document.body.classList.toggle('light-mode');
-    });
-}
-
-function updateTheme() {
-    const colors = document.querySelectorAll(".S-colors");
-
-    colors.forEach(newColor => {
-        newColor.addEventListener('click', () => {
-            colors.forEach(lastColor => lastColor.classList.remove("active"));
-            newColor.classList.add("active");
-
-            // Remove todas as classes de cor do body
-            document.body.classList.remove(
-                "G-white",
-                "G-red",
-                "G-orange",
-                "G-yellow",
-                "G-green",
-                "G-cyan",
-                "G-blue",
-                "G-purple",
-                "G-pink"
-            );
-
-            // Adiciona a classe de cor selecionada ao body
-            document.body.classList.add(newColor.classList[1]);
+//Atualiza o MODO e o TEMA do site
+function updateTheme(){
+    //Atualiza o MODO(Light/Dark)
+    function updateMode() {
+        const chk = document.getElementById('S-chk');
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode');
         });
-    });
+    }
+
+    //Atualiza o tema e as CORES do site
+    function updateColors() {
+        const colors = document.querySelectorAll(".S-colors");
+
+        colors.forEach(newColor => {
+            newColor.addEventListener('click', () => {
+                colors.forEach(lastColor => lastColor.classList.remove("active"));
+                newColor.classList.add("active");
+
+                // Remove todas as classes de cor do body
+                document.body.classList.remove(
+                    "G-white",
+                    "G-red",
+                    "G-orange",
+                    "G-yellow",
+                    "G-green",
+                    "G-cyan",
+                    "G-blue",
+                    "G-purple",
+                    "G-pink"
+                );
+
+                // Adiciona a classe de cor selecionada ao body
+                document.body.classList.add(newColor.classList[1]);
+            });
+        });
+    }
+
+    updateMode();
+    updateColors();
 }
 
 //Define AS FONTES do site

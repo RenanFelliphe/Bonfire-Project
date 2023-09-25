@@ -56,7 +56,6 @@
     --body-color: #18191A;
     /*Cor do body*/
 
-
     /* ========= VARIÁVEIS DE CORES (PADRÃO) ========= */
 
     --org-color1: #00EB00;
@@ -103,7 +102,7 @@
 
 
 .dark-mode {
-    --white-to-black-color: #E2E2E2;
+    --white-to-black-color: #EFEFEF;
     --black-to-white-color: #131313;
 
     --text-color: #9E9C9C;
@@ -134,6 +133,10 @@
     --fourth-color: #EBEBF5;
 }
 
+.G-wrong{
+    color: #CE0037;
+    font-weight: 600;
+}
 
 /*====================================================================================================
 ======================================== VARIÁVEIS DE COR: ===========================================
@@ -146,7 +149,7 @@
 .G-white {
     --org-color1: #EFEFEF; /* Branco versão 1 */
     --org-color2: #EFEFEF; /* Branco versão 2 */
-    --org-color-darker: #BFBFBF; /* Uma versão mais escura da cor branca */
+    --org-color-darker: #5f5f5f; /* Uma versão mais escura da cor branca */
     --org-color-lighter: #FFFFFF; /* Uma versão mais clara da cor branca */
     --org-color-color-low-opacity: #EFEFEF60; /* Branco com baixa opacidade */
     --org-color-transparent: #EFEFEF30; /* Branco semi-transparente */
