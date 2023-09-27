@@ -1,3 +1,13 @@
+DROP TABLE Customers; DROP TABLE Orders ; DROP TABLE Shippings ;
+
+CREATE TABLE Origem(
+	pais varchar(30),
+	sigla varchar(2),
+  	idioma varchar(30),
+  	gentilico varchar(30),
+  	CONSTRAINT PK_origem PRIMARY KEY(pais)
+);
+
 CREATE TABLE Usuario(
 	nome varchar(30),
   	apelido varchar(30),
@@ -5,39 +15,47 @@ CREATE TABLE Usuario(
   	senha varchar,
   	biografia varchar(200),
   	genero varchar(30),
-  	verificado boolean,
   	recado varchar(50),
+    verificado boolean,
+  	nacionalidade varchar(30),
   	CONSTRAINT PK_usuario PRIMARY KEY(nome, apelido)
+  	CONSTRAINT FK_pais_usuario FOREIGN KEY(nacionalidade) REFERENCES Origem(pais)
+);
+
+CREATE TABLE Profissao(
+	idProfissao varchar(30),
+  	nome varchar(30),
+  	CONSTRAINT PK_profissao PRIMARY KEY(idProfissao)
 );
 
 CREATE TABLE Comunidade(
   	idComunidade varchar(30),
     nome varchar(30),
   	biografia varchar(200),
-  	recado varchar(50),
   	verificado boolean,
   	privada boolean,
+    sede varchar(30),
   	CONSTRAINT PK_comunidade PRIMARY KEY(idComunidade)
+    CONSTRAINT FK_pais_usuario FOREIGN KEY(sede) REFERENCES Origem(pais)
 );
 
 CREATE TABLE Campeonato(
     idCamp varchar(30),
 	nome varchar(100),
-  	dtInicio date,
-  	dtEncerramento date,
-  	recado varchar(50),
   	biografia varchar(200),
   	categoria varchar(30),
   	presencial boolean,
   	premiacao numeric,
+    localizacao varchar(30),
     CONSTRAINT PK_campeonato PRIMARY KEY(idCamp)
-);
+    CONSTRAINT FK_pais_usuario FOREIGN KEY(localizacao) REFERENCES Origem(pais)
+); /*Alterar o atributo Categoria para uma Foreign key para a tabela Jogo*/
 
 CREATE TABLE Jogo(
     idJogo varchar(30),
+nome varchar(100),
 	genero varchar(30),
   	desenvolvedora varchar(100),
-  	plataforma varchar(30),
   	multiplayer boolean,
   	CONSTRAINT PK_jogo PRIMARY KEY(idJogo)
 );
@@ -45,28 +63,25 @@ CREATE TABLE Jogo(
 CREATE TABLE Publicacao(
   	idPublicacao varchar(30),
   	dtComentario date,
-    tags varchar(30),
     texto varchar(300),
   	usuarioNome varchar(30),
     usuarioApelido varchar(30),
   	CONSTRAINT PK_publicacao PRIMARY KEY(idPublicacao),
-    CONSTRAINT FK_usuarionome_publicacao FOREIGN KEY(usuarioNome) REFERENCES Usuario(nome),
-    CONSTRAINT FK_usuarioapelido_publicacao FOREIGN KEY(usuarioApelido) REFERENCES Usuario(apelido)
+    CONSTRAINT FK_usuario_publicacao FOREIGN KEY(usuarioNome, usuarioApelido) REFERENCES Usuario(nome, apelido)
 );
 
 CREATE TABLE Comentario(
-	idComentario varchar(30),
-  	tags varchar(30),
-  	dtComentario date,
-  	texto varchar(300),
-  	usuarioNome varchar(30),
+    idComentario varchar(30),
+    dtComentario date,
+    texto varchar(300),
+    usuarioNome varchar(30),
     usuarioApelido varchar(30),
     idPublicacao varchar(30),
-  	CONSTRAINT PK_comentario PRIMARY KEY(idComentario),
-  	CONSTRAINT FK_usuarionome_comentario FOREIGN KEY(usuarioNome) REFERENCES Usuario(nome),
-    CONSTRAINT FK_usuarioapelido_comentario FOREIGN KEY(usuarioApelido) REFERENCES Usuario(apelido),
-  	CONSTRAINT FK_publicacao_comentario FOREIGN KEY(idPublicacao) REFERENCES Publicacao(idPublicacao)
+    CONSTRAINT PK_comentario PRIMARY KEY(idComentario),
+    CONSTRAINT FK_usuario_comentario FOREIGN KEY(usuarioNome, usuarioApelido) REFERENCES Usuario(nome, apelido),
+    CONSTRAINT FK_publicacao_comentario FOREIGN KEY(idPublicacao) REFERENCES Publicacao(idPublicacao)
 );
+
 
 CREATE TABLE ComunidadeCampeonato(
 	idComunidade varchar(30),
@@ -85,34 +100,34 @@ CREATE TABLE ComunidadeJogo(
 );
 
 CREATE TABLE UsuarioJogo(
-	nomeUsuario varchar(30),
-  	apelidoUsuario varchar(30),
-  	idJogo varchar(30),
-  	CONSTRAINT FK_UsuarioJogo PRIMARY KEY(nomeUsuario, apelidoUsuario, idJogo),
-  	FOREIGN KEY(nomeUsuario) REFERENCES Usuario(nome),
-    FOREIGN KEY(apelidoUsuario) REFERENCES Usuario(apelido),
-  	FOREIGN KEY(idJogo) REFERENCES Jogo(idJogo)
+    nomeUsuario varchar(30),
+    apelidoUsuario varchar(30),
+    idJogo varchar(30),
+    CONSTRAINT FK_UsuarioJogo PRIMARY KEY(nomeUsuario, apelidoUsuario, idJogo),
+    FOREIGN KEY(nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
+    FOREIGN KEY(idJogo) REFERENCES Jogo(idJogo)
 );
+
 
 CREATE TABLE UsuarioComunidade(
-	nomeUsuario varchar(30),
-  	apelidoUsuario varchar(30),
-  	idComunidade varchar(30),
-  	CONSTRAINT FK_UsuarioComunidade PRIMARY KEY(nomeUsuario, apelidoUsuario, idComunidade),
-  	FOREIGN KEY(nomeUsuario) REFERENCES Usuario(nome),
-    FOREIGN KEY(apelidoUsuario) REFERENCES Usuario(apelido),
-  	FOREIGN KEY(idComunidade) REFERENCES Comunidade(idComunidade)
+    nomeUsuario varchar(30),
+    apelidoUsuario varchar(30),
+    idComunidade varchar(30),
+    CONSTRAINT FK_UsuarioComunidade PRIMARY KEY(nomeUsuario, apelidoUsuario, idComunidade),
+    FOREIGN KEY(nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
+    FOREIGN KEY(idComunidade) REFERENCES Comunidade(idComunidade)
 );
 
+
 CREATE TABLE UsuarioCampeonato(
-	nomeUsuario varchar(30),
-  	apelidoUsuario varchar(30),
-  	idCampeonato varchar(30),
-  	CONSTRAINT FK_UsuarioCampeonato PRIMARY KEY(nomeUsuario, apelidoUsuario, idCampeonato),
-  	FOREIGN KEY(nomeUsuario) REFERENCES Usuario(nome),
-    FOREIGN KEY(apelidoUsuario) REFERENCES Usuario(apelido),
-  	FOREIGN KEY(idCampeonato) REFERENCES Campeonato(idCampeonato)
+    nomeUsuario varchar(30),
+    apelidoUsuario varchar(30),
+    idCampeonato varchar(30),
+    CONSTRAINT FK_UsuarioCampeonato PRIMARY KEY(nomeUsuario, apelidoUsuario, idCampeonato),
+    FOREIGN KEY(nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
+    FOREIGN KEY(idCampeonato) REFERENCES Campeonato(idCamp)
 );
+
 
 CREATE TABLE CampeonatoJogo(
 	idJogo varchar(30),
@@ -121,3 +136,281 @@ CREATE TABLE CampeonatoJogo(
   	FOREIGN KEY(idJogo) REFERENCES Jogo(idJogo),
     FOREIGN KEY(idCamp) REFERENCES Campeonato(idCamp)
 );
+
+CREATE TABLE UsuarioProfissao(
+    nomeUsuario varchar(30),
+    apelidoUsuario varchar(30),
+    idProfissao varchar(30),
+    CONSTRAINT FK_UsuarioProfissao PRIMARY KEY(nomeUsuario, apelidoUsuario, idProfissao),
+    FOREIGN KEY(nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
+    FOREIGN KEY(idProfissao) REFERENCES Profissao(idProfissao)
+);
+
+
+/**********************************************************************************************************/
+/**********************************************************************************************************/
+/**********************************************************************************************************/
+
+
+INSERT INTO Origem (pais, sigla, idioma, gentilico)
+VALUES
+    ('Alemanha', 'DE', 'Alemão', 'Alemão'),
+    ('Argentina', 'AR', 'Espanhol', 'Argentino'),
+    ('Austrália', 'AU', 'Inglês', 'Australiano'),
+    ('Bélgica', 'BE', 'Francês', 'Belga'),
+    ('Brasil', 'BR', 'Português', 'Brasileiro'),
+    ('Canadá', 'CA', 'Inglês', 'Canadense'),
+    ('Chile', 'CL', 'Espanhol', 'Chileno'),
+    ('China', 'CN', 'Chinês', 'Chinês'),
+    ('Colômbia', 'CO', 'Espanhol', 'Colombiano'),
+    ('Coreia do Sul', 'KR', 'Coreano', 'Sul-coreano'),
+    ('Dinamarca', 'DK', 'Dinamarquês', 'Dinamarquês'),
+    ('Egito', 'EG', 'Árabe', 'Egípcio'),
+    ('Espanha', 'ES', 'Espanhol', 'Espanhol'),
+    ('Estados Unidos', 'US', 'Inglês', 'Americano'),
+    ('Filipinas', 'PH', 'Filipino', 'Filipino'),
+    ('Finlândia', 'FI', 'Finlandês', 'Finlandês'),
+    ('França', 'FR', 'Francês', 'Francês'),
+    ('Grécia', 'GR', 'Grego', 'Grego'),
+    ('Holanda', 'NL', 'Holandês', 'Holandês'),
+    ('Índia', 'IN', 'Hindi', 'Indiano'),
+    ('Indonésia', 'ID', 'Indonésio', 'Indonésio'),
+    ('Inglaterra', 'UK', 'Inglês', 'Inglês'),
+    ('Irlanda', 'IE', 'Inglês', 'Irlandês'),
+    ('Itália', 'IT', 'Italiano', 'Italiano'),
+    ('Japão', 'JP', 'Japonês', 'Japonês'),
+    ('Malásia', 'MY', 'Malaio', 'Malaio'),
+    ('Marrocos', 'MA', 'Árabe', 'Marroquino'),
+    ('México', 'MX', 'Espanhol', 'Mexicano'),
+    ('Nova Zelândia', 'NZ', 'Inglês', 'Neozelandês'),
+    ('Noruega', 'NO', 'Norueguês', 'Norueguês'),
+    ('Peru', 'PE', 'Espanhol', 'Peruano'),
+    ('Polônia', 'PL', 'Polonês', 'Polonês'),
+    ('Portugal', 'PT', 'Português', 'Português'),
+    ('Rússia', 'RU', 'Russo', 'Russo'),
+    ('Singapura', 'SG', 'Malaio', 'Singapuriano'),
+    ('Suécia', 'SE', 'Sueco', 'Sueco'),
+    ('Suíça', 'CH', 'Alemão', 'Suíço'),
+    ('Tailândia', 'TH', 'Tailandês', 'Tailandês'),
+    ('Turquia', 'TR', 'Turco', 'Turco');
+
+INSERT INTO Profissao (idProfissao, nome)
+VALUES
+    ('PRO0000', 'Nenhuma'),
+    ('PRO0001', 'Jogador Profissional'),
+    ('PRO0002', 'Streamer'),
+    ('PRO0003', 'Caster'),
+    ('PRO0004', 'Coach'),
+    ('PRO0005', 'Analista'),
+    ('PRO0006', 'Manager'),
+    ('PRO0007', 'Desenvolvedor de Jogos'),
+    ('PRO0008', 'Designer'),
+    ('PRO0009', 'Jornalista'),
+    ('PRO0010', 'Editor de Vídeo'),
+    ('PRO0011', 'Publicitário'),
+    ('PRO0012', 'Narrador'),
+    ('PRO0013', 'Entrevistador'),
+    ('PRO0014', 'CEO'),
+    ('PRO0015', 'Psicologo'),
+    ('PRO0016', 'Tradutor'),
+    ('PRO0017', 'Fotógrafo'),
+    ('PRO0018', 'Comentarista'),
+    ('PRO0019', 'Gerente de Patrocínios'),
+    ('PRO0020', 'Segurança Pessoal');
+
+INSERT INTO Jogo (idJogo, nome, genero, desenvolvedora, multiplayer)
+VALUES
+    ('JOG0001', 'League of Legends', 'Moba', 'Riot Games', true),
+    ('JOG0002', 'Counter-Strike: Global Offensive', 'Tiro', 'Valve Corporation', true),
+    ('JOG0003', 'Fortnite', 'Battle Royale', 'Epic Games', true),
+    ('JOG0004', 'The Legend of Zelda: Breath of the Wild', 'Aventura', 'Nintendo', false),
+    ('JOG0005', 'Minecraft', 'Sobrevivência', 'Mojang Studios', true),
+    ('JOG0006', 'Overwatch', 'Tiro', 'Blizzard Entertainment', true),
+    ('JOG0007', 'Grand Theft Auto V', 'Ação', 'Rockstar Games', true),
+    ('JOG0008', 'Among Us', 'Multijogador Online', 'InnerSloth', true),
+    ('JOG0009', 'Super Mario Odyssey', 'Aventura', 'Nintendo', false),
+    ('JOG0010', 'Hearthstone', 'Estratégia', 'Blizzard Entertainment', true),
+    ('JOG0011', 'Free Fire', 'Battle Royale', 'Garena', true),
+    ('JOG0012', 'Valorant', 'Tiro', 'Riot Games', true),
+    ('JOG0013', 'Rainbow Six Siege', 'Tiro', 'Ubisoft', true),
+    ('JOG0014', 'Clash Royale', 'Estratégia', 'Supercell', true),
+    ('JOG0015', 'League of Legends: Wild Rift', 'Moba', 'Riot Games', true),
+    ('JOG0016', 'Dota 2', 'Moba', 'Valve Corporation', true),
+    ('JOG0017', 'The Last of Us', 'Ação', 'Naughty Dog', true),
+    ('JOG0018', 'Call of Duty: Warzone', 'Battle Royale', 'Activision', true),
+    ('JOG0019', 'FIFA 22', 'Esporte', 'EA Sports', true),
+    ('JOG0020', 'Apex Legends', 'Battle Royale', 'Respawn Entertainment', true),
+    ('JOG0021', 'Rocket League 2', 'Esporte', 'Psyonix', true),
+    ('JOG0022', 'God of War: Ragnarok', 'Ação', 'Santa Monica Studio', false),
+    ('JOG0023', 'Red Dead Redemption 2', 'Ação', 'Rockstar Games', true),
+    ('JOG0024', 'Tekken 8', 'Luta', 'Bandai Namco', true),
+    ('JOG0025', 'Street Fighter 6', 'Luta', 'Capcom', true),
+    ('JOG0026', 'Mortal Kombat 1 (2023)', 'Luta', 'NetherRealm Studios', true),
+    ('JOG0027', 'Mortal Kombat 11', 'Luta', 'NetherRealm Studios', true),
+    ('JOG0028', 'Resident Evil 4 Remake', 'Ação', 'Capcom', false),
+    ('JOG0029', 'Shadow of The Colossus Remake', 'Ação', 'Bluepoint Games', false),
+    ('JOG0030', 'Standoff 2', 'Tiro', 'Axlebolt', true),
+    ('JOG0031', 'Clash of Clans', 'Estratégia', 'Supercell', true),
+    ('JOG0032', 'The Sims 4', 'Simulação', 'Maxis', false),
+    ('JOG0033', 'Devil May Cry 5', 'Ação', 'Capcom', false),
+    ('JOG0034', 'Dead by Daylight', 'Survival Horror', 'Behaviour Interactive', true),
+    ('JOG0035', 'Genshin Impact', 'Ação e Aventura', 'miHoYo', true),
+    ('JOG0036', "Assassin's Creed Valhalla", 'Ação e Aventura', 'Ubisoft', false),
+    ('JOG0037', 'Ghost of Tsushima', 'Ação e Aventura', 'Sucker Punch Productions', false),
+	('JOG0038', 'The Witcher 3: Wild Hunt', 'RPG de Ação', 'CD Projekt', false),
+    ('JOG0039', 'Dark Souls III', 'RPG de Ação', 'FromSoftware', false),
+    ('JOG0040', 'Cyberpunk 2077', 'RPG de Ação', 'CD Projekt', false);
+
+INSERT INTO Comunidade VALUES
+('COM0001', 'LOUD GG', 'Follow The Noise ⊳', true, false, 'Brasil'),
+('COM0002', 'PAIN GAMING', 'Biggest Esports Organization in Latin America', true, false,'Brasil'),
+('COM0003', 'TSM', 'Global gaming and entertainment. 108-Time Champions.', true, false, 'Estados Unidos'),
+('COM0004', 'FLUXO GG', 'Segue o Fluxo.', true, false, 'Brasil'),
+('COM0005', 'TEAM LIQUID', 'Home of top athletes across seventeen premier esports titles', true, false, 'Holanda'),
+('COM0006', 'FAZE CLAN', 'EST 2010. 45-Time Esports Champions', true, false, 'Estados Unidos'),
+('COM0007', 'CLOU9', 'Esports Organization for 10 Whole Years', true, false, 'Estados Unidos'),
+('COM0008', 'LEVIATAN', 'Representándote desde 2021.', true, false, 'Argentina'),
+('COM0009', 'T1', 'Official profile of T1 Entertainment & Sports.', true, false, 'Coreia do Sul'),
+('COM0010', 'DRX', 'Passionately playing games to inspire all the challengers', true, false, 'Coreia do Sul');
+
+INSERT INTO Usuario VALUES
+('Bruno Goes', 'Nobru', 'fx.brunogoes@gmail.com', 'fx9855412', 'Segue o Fluxo', 'masculino', 'Segue o Fluxo', true, 'Brasil'),
+('Matias Delipetro', 'Saadhak', 'loudmatiassaadhak@gmail.com', '135486541', 'Matias Delipetro, 26, São Paulo, SP | VALORANT Player', 'masculino', null, true, 'Argentina'),
+('Rodrigo Fernandes', 'El Gato', 'rodrigofernandes213@gmail.com', 'ff561230', 'Nova era da Los', 'masculino', 'PLATIIIINA', true, 'Brasil'),
+('Tyson Ngo', 'TenZ', 'ngoTenz@gmail.com', 'ngotytenz', 'VALORANT Player for @Sentinels', 'masculino', null, true, 'Canadá'),
+('John Doe', 'JDoe', 'johndoe@email.com', 'securepass', 'Gaming enthusiast', 'masculino', 'Happy gaming!', true, 'Estados Unidos'),
+('Luis Gonzales', 'LuisG', 'luis@email.com', 'luispass', 'Pro esports player', 'masculino', 'Competitive gaming is life!', true, 'Argentina'),
+('Ninja', 'NinjaGamer', 'ninja@email.com', 'ninjapassword', 'Professional Fortnite streamer', 'masculino', 'Time to conquer Fortnite!', true, 'Estados Unidos'),
+('PewDiePie', 'PewDiePie', 'pewdie@email.com', 'brofist', 'YouTube gaming sensation', 'masculino', 'Bro Army, unite!', true, 'Suécia'),
+('Pokimane', 'Pokimane', 'poki@email.com', 'pokipass', 'Twitch streamer and content creator', 'feminino', 'Welcome to the Poki Squad!', true, 'Canadá'),
+('Shroud', 'Shroud', 'shroud@email.com', 'shroudpass', 'Former professional CS:GO player and streamer', 'masculino', 'Headshots incoming!', true, 'Canadá');
+
+INSERT INTO Campeonato (idCamp, nome, biografia, categoria, presencial, premiacao, localizacao)
+VALUES
+    ('CAMP0001', 'CBLOL 2023', 'Campeonato Brasileiro de League of Legends 2023', 'Esports', true, 1000000, 'Brasil'),
+    ('CAMP0002', 'LBFF 2023', 'Liga Brasileira de Free Fire 2023', 'Esports', true, 500000, 'Brasil'),
+    ('CAMP0003', 'Major CS:GO 2023', 'CS:GO Major Championship 2023', 'Esports', false, 1500000, 'Estados Unidos'),
+    ('CAMP0004', 'Overwatch League 2023', 'Overwatch League Season 5', 'Esports', true, 2000000, 'Estados Unidos'),
+    ('CAMP0005', 'The International 2023', 'Dota 2 World Championship 2023', 'Esports', false, 3000000, 'Itália'),
+    ('CAMP0006', 'League of Legends Championship Series 2023', 'North American League of Legends Championship', 'Esports', true, 2500000, 'Estados Unidos'),
+    ('CAMP0007', 'LEC 2023', 'League of Legends European Championship 2023', 'Esports', true, 2000000, 'França'),
+    ('CAMP0008', 'ESL Pro League Season 15', 'Counter-Strike: Global Offensive Pro League', 'Esports', true, 1000000, 'China'),
+    ('CAMP0009', 'Rocket League Championship Series 2023', 'Rocket League Championship', 'Esports', true, 500000, 'Irlanda'),
+    ('CAMP0010', 'FIFA eWorld Cup 2023', 'FIFA Esports World Championship', 'Esports', true, 300000, 'Japão');
+
+INSERT INTO UsuarioCampeonato (nomeUsuario, apelidoUsuario, idCampeonato)
+VALUES
+    ('Bruno Goes', 'Nobru', 'CAMP0001'),
+    ('Matias Delipetro', 'Saadhak', 'CAMP0002'),
+    ('Rodrigo Fernandes', 'El Gato', 'CAMP0002'),
+    ('Tyson Ngo', 'TenZ', 'CAMP0003'),
+    ('John Doe', 'JDoe', 'CAMP0003'),
+    ('Luis Gonzales', 'LuisG', 'CAMP0004'),
+    ('Ninja', 'NinjaGamer', 'CAMP0004'),
+    ('PewDiePie', 'PewDiePie', 'CAMP0005'),
+    ('Pokimane', 'Pokimane', 'CAMP0005'),
+    ('Shroud', 'Shroud', 'CAMP0005');
+
+INSERT INTO UsuarioComunidade (nomeUsuario, apelidoUsuario, idComunidade)
+VALUES
+    ('Bruno Goes', 'Nobru', 'COM0001'),
+    ('Matias Delipetro', 'Saadhak', 'COM0001'),
+    ('Tyson Ngo', 'TenZ', 'COM0001'),
+    ('John Doe', 'JDoe', 'COM0002'),
+    ('Luis Gonzales', 'LuisG', 'COM0002'),
+    ('Ninja', 'NinjaGamer', 'COM0003'),
+    ('PewDiePie', 'PewDiePie', 'COM0003'),
+    ('Pokimane', 'Pokimane', 'COM0004'),
+    ('Shroud', 'Shroud', 'COM0005'),
+    ('Rodrigo Fernandes', 'El Gato', 'COM0005');
+
+INSERT INTO UsuarioJogo (nomeUsuario, apelidoUsuario, idJogo)
+VALUES
+    ('Bruno Goes', 'Nobru', 'JOG0001'),
+    ('Matias Delipetro', 'Saadhak', 'JOG0002'),
+    ('Rodrigo Fernandes', 'El Gato', 'JOG0003'),
+    ('Tyson Ngo', 'TenZ', 'JOG0004'),
+    ('John Doe', 'JDoe', 'JOG0005'),
+    ('Luis Gonzales', 'LuisG', 'JOG0006'),
+    ('Ninja', 'NinjaGamer', 'JOG0007'),
+    ('PewDiePie', 'PewDiePie', 'JOG0008'),
+    ('Pokimane', 'Pokimane', 'JOG0009'),
+    ('Shroud', 'Shroud', 'JOG0010');
+
+INSERT INTO UsuarioProfissao (nomeUsuario, apelidoUsuario, idProfissao)
+VALUES
+    ('Bruno Goes', 'Nobru', 'PRO0001'),
+    ('Matias Delipetro', 'Saadhak', 'PRO0002'),
+    ('Tyson Ngo', 'TenZ', 'PRO0001'),
+    ('John Doe', 'JDoe', 'PRO0003'),
+    ('Luis Gonzales', 'LuisG', 'PRO0001'),
+    ('Ninja', 'NinjaGamer', 'PRO0002'),
+    ('PewDiePie', 'PewDiePie', 'PRO0002'),
+    ('Pokimane', 'Pokimane', 'PRO0002'),
+    ('Shroud', 'Shroud', 'PRO0001'),
+    ('Rodrigo Fernandes', 'El Gato', 'PRO0004');
+
+INSERT INTO ComunidadeJogo (idComunidade, idJogo)
+VALUES
+    ('COM0001', 'JOG0001'),
+    ('COM0001', 'JOG0002'),
+    ('COM0002', 'JOG0001'),
+    ('COM0002', 'JOG0003'),
+    ('COM0003', 'JOG0004'),
+    ('COM0003', 'JOG0005'),
+    ('COM0004', 'JOG0006'),
+    ('COM0004', 'JOG0007'),
+    ('COM0005', 'JOG0008'),
+    ('COM0005', 'JOG0009');
+
+INSERT INTO ComunidadeCampeonato (idComunidade, idCamp)
+VALUES
+    ('COM0001', 'CAMP0001'),
+    ('COM0002', 'CAMP0001'),
+    ('COM0003', 'CAMP0002'),
+    ('COM0004', 'CAMP0002'),
+    ('COM0005', 'CAMP0003'),
+    ('COM0006', 'CAMP0003'),
+    ('COM0007', 'CAMP0004'),
+    ('COM0008', 'CAMP0004'),
+    ('COM0009', 'CAMP0005'),
+    ('COM0010', 'CAMP0005');
+
+INSERT INTO CampeonatoJogo (idJogo, idCamp)
+VALUES
+    ('JOG0001', 'CAMP0001'),
+    ('JOG0002', 'CAMP0001'),
+    ('JOG0003', 'CAMP0001'),
+    ('JOG0004', 'CAMP0002'),
+    ('JOG0005', 'CAMP0002'),
+    ('JOG0006', 'CAMP0002'),
+    ('JOG0007', 'CAMP0003'),
+    ('JOG0008', 'CAMP0003'),
+    ('JOG0009', 'CAMP0003'),
+    ('JOG0010', 'CAMP0003');
+
+INSERT INTO Publicacao (idPublicacao, dtComentario, texto, usuarioNome, usuarioApelido)
+VALUES
+    ('PUB0001', '2023-09-27', 'Vitória incrível no CBLOL!', 'Bruno Goes', 'Nobru'),
+    ('PUB0002', '2023-09-27', 'Excelente jogo de CS:GO!', 'Matias Delipetro', 'Saadhak'),
+    ('PUB0003', '2023-09-27', 'Gran partida de Valorant!', 'Tyson Ngo', 'TenZ'),
+    ('PUB0004', '2023-09-27', 'Ansioso para o próximo torneio!', 'John Doe', 'JDoe'),
+    ('PUB0005', '2023-09-27', 'Bom trabalho no torneio!', 'Luis Gonzales', 'LuisG'),
+    ('PUB0006', '2023-09-27', 'Transmisión increíble hoy!', 'PewDiePie', 'PewDiePie'),
+    ('PUB0007', '2023-09-27', '¡Gracias por entretenernos!', 'Pokimane', 'Pokimane'),
+    ('PUB0008', '2023-09-27', 'Jugando CS:GO ahora!', 'Shroud', 'Shroud'),
+    ('PUB0009', '2023-09-27', 'Belas jogadas no Fortnite!', 'Ninja', 'NinjaGamer'),
+    ('PUB0010', '2023-09-27', 'Hora de vencer en FIFA 22!', 'PewDiePie', 'PewDiePie');
+
+INSERT INTO Comentario (idComentario, dtComentario, texto, usuarioNome, usuarioApelido, idPublicacao)
+VALUES
+    ('COM001', '2023-09-27', 'Ótima publicação!', 'Bruno Goes', 'Nobru', 'PUB0001'),
+    ('COM002', '2023-09-27', 'Concordo totalmente!', 'Matias Delipetro', 'Saadhak', 'PUB0002'),
+    ('COM003', '2023-09-27', 'Que partida incrível!', 'Tyson Ngo', 'TenZ', 'PUB0003'),
+    ('COM004', '2023-09-27', 'Estou ansioso para isso!', 'John Doe', 'JDoe', 'PUB0004'),
+    ('COM005', '2023-09-27', 'Bom trabalho!', 'Luis Gonzales', 'LuisG', 'PUB0005'),
+    ('COM006', '2023-09-27', 'Eres increíble!', 'PewDiePie', 'PewDiePie', 'PUB0006'),
+    ('COM007', '2023-09-27', '¡Gracias por entretenernos!', 'Pokimane', 'Pokimane', 'PUB0007'),
+    ('COM008', '2023-09-27', '¡Buena jugada!', 'Shroud', 'Shroud', 'PUB0008'),
+    ('COM009', '2023-09-27', '¡Estoy animando por ti!', 'Ninja', 'NinjaGamer', 'PUB0009'),
+    ('COM010', '2023-09-27', 'Hora de ganar en FIFA 22!', 'PewDiePie', 'PewDiePie', 'PUB0010');
