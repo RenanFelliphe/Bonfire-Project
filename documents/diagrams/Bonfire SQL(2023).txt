@@ -1,0 +1,64 @@
+CREATE TABLE Usuario(
+	nome varchar(30),
+  	apelido varchar(30),
+  	email varchar,
+  	senha varchar,
+  	biografia varchar(200),
+  	genero varchar(30),
+  	verificado boolean,
+  	recado varchar(50),
+  	CONSTRAINT PK_usuario PRIMARY KEY(nome, apelido)
+);
+CREATE TABLE Comunidade(
+  	idComunidade varchar(30),
+    nome varchar(30),
+  	biografia varchar(200),
+  	recado varchar(50),
+  	verificado boolean,
+  	privada boolean,
+  	CONSTRAINT PK_comunidade PRIMARY KEY(idComunidade)
+);
+CREATE TABLE Campeonato(
+    idCamp varchar(30),
+	nome varchar(100),
+  	dtInicio date,
+  	dtEncerramento date,
+  	recado varchar(50),
+  	biografia varchar(200),
+  	categoria varchar(30),
+  	presencial boolean,
+  	premiacao numeric,
+    CONSTRAINT PK_campeonato PRIMARY KEY(idCamp)
+);
+CREATE TABLE Jogo(
+    idJogo varchar(30),
+	genero varchar(30),
+  	desenvolvedora varchar(100),
+  	plataforma varchar(30),
+  	multiplayer boolean,
+  	CONSTRAINT PK_jogo PRIMARY KEY(idJogo)
+);
+CREATE TABLE Publicacao(
+  	idPublicacao varchar(30),
+  	dtComentario date,
+    tags varchar(30),
+    texto varchar(300),
+  	usuarioNome varchar(30),
+    usuarioApelido varchar(30),
+  	CONSTRAINT PK_publicacao PRIMARY KEY(idPublicacao),
+    CONSTRAINT FK_usuarioNome_publicacao FOREIGN KEY(usuarioNome) REFERENCES Usuario(nome),
+    CONSTRAINT FK_usuarioApelido_publicacao FOREIGN KEY(usuarioApelido) REFERENCES Usuario(apelido)
+);
+CREATE TABLE Comentario(
+	idComentario varchar(30),
+  	tags varchar(30),
+  	dtComentario date,
+  	texto varchar(300),
+  	usuarioNome varchar(30),
+    usuarioApelido varchar(30),
+    idPublicacao varchar(30),
+  	CONSTRAINT PK_comentario PRIMARY KEY(idComentario),
+  	CONSTRAINT FK_usuarioNome_comentario FOREIGN KEY(usuarioNome) REFERENCES Usuario(nome),
+    CONSTRAINT FK_usuarioApelido_comentario FOREIGN KEY(usuarioApelido) REFERENCES Usuario(apelido),
+  	CONSTRAINT FK_publicacao_comentario FOREIGN KEY(idPublicacao) REFERENCES Publicacao(idPublicacao)
+);
