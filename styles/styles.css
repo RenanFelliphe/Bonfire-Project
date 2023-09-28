@@ -1582,15 +1582,31 @@ main {
     transform: translateY(-20%) translateX(50%);
     overflow: hidden;
     padding: 1rem;
-    border: 1px solid var(--org-color-darker);
+    border: 1px solid var(--org-color1);
     border-radius: 1.5rem;
     box-shadow: 0 0 10px 0 black;
     padding: 1rem;
     text-align: center;    
 }
 
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-close-modal {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    color: var(--white-to-black-color);
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--org-color-darker);
+    border: 1px solid var(--org-color1);
+    border-bottom-left-radius: 22px;
+    display: flex;
+    font-size: calc(var(--size-font-icons) + 25px);
+    padding: 4px 6px 0px 0px;
+    box-shadow: 0px 1px 5px 0 rgb(22, 22, 22);
+}
+
 .S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-bonfire-logo{
-    width: 16rem;
+    width: 100%;
 }
 
 .S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-thanks-for{
@@ -1601,7 +1617,7 @@ main {
 
 .S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-confirm-text{
     font-size: calc(var(--size-font-text) + 1px);
-    line-height: 1.1rem;
+    line-height: 1.15rem;
 }
 
 .S-subsettings .S-suport .S-report-problems .S-confirm-modal button{
