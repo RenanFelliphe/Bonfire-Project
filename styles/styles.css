@@ -1433,10 +1433,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    padding: 0rem 2rem 0rem 2rem;
     height: 9rem;
-    overflow: hidden;
     margin: 0.5rem;
+    gap: 0.5rem;
 }
 
 .S-subsettings .S-suport .S-report-problems .S-tags {
@@ -1452,6 +1451,11 @@ main {
     cursor: pointer;
 }
 
+.S-subsettings .S-suport .S-report-problems .S-tags:hover {
+    transition: calc(var(--element-in) - 0.1s);
+    font-size: calc(var(--size-font-text) + 4px);
+}
+
 .S-subsettings .S-suport .S-report-problems .S-more-tags {
     display: flex;
     position: relative;
@@ -1459,12 +1463,6 @@ main {
     height: 2rem;
     border-radius: 100%;
     font-size: calc(var(--size-font-text) + 10px);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-tags:hover {
-    transition: calc(var(--element-in) - 0.1s);
-    font-size: calc(var(--size-font-text) + 4px);
-    padding: 0.05rem 1.05rem 0.05rem 1.05rem;
 }
 
 .S-subsettings .S-suport .S-report-problems .S-more-tags:hover {
@@ -1570,6 +1568,76 @@ main {
     position: absolute;
     opacity: 75%;
     pointer-events: none;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--third-color);
+    height: 26rem;
+    width: 18.5rem;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-20%) translateX(50%);
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid var(--org-color-darker);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px 0 black;
+    padding: 1rem;
+    text-align: center;    
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-bonfire-logo{
+    width: 16rem;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-thanks-for{
+    font-weight: 600;
+    font-size: calc(var(--size-font-title) - 5px);
+    line-height: 3rem;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-confirm-text{
+    font-size: calc(var(--size-font-text) + 1px);
+    line-height: 1.1rem;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal button{
+    border: 1px solid var(--body-color);
+    border-radius: 1.5rem;
+    background-color: var(--org-color-darker);
+    padding:  0.3rem 1rem 0.3rem 1rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin: 0.4rem;
+    cursor: pointer;
+    color: var(--white-to-black-color);
+    border-color: var(--white-to-black-color);
+    font-size: calc(var(--size-font-subtitle) + 2px);
+    transition: calc(var(--element-out) - 0.2s);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal button:hover{
+    color: var(--white-to-black-color);
+    border-color: var(--white-to-black-color);
+    background-color: var(--org-color1);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal button.S-rate-us{
+    color: var(--org-color1);
+    border-color: var(--org-color1);
+    background-color: var(--third-color);
+    padding:  0.5rem 0.8rem 0.5rem 0.8rem;
+    font-size: calc(var(--size-font-subtitle) - 2px);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal button.S-rate-us:hover{
+    color: var(--white-to-black-color);
+    border-color: var(--white-to-black-color);
+    background-color: var(--org-color1);
+    transition: calc(var(--element-in) - 0.1s);
 }
 
 .S-subsettings .S-suport .S-feedback .S-article-description {

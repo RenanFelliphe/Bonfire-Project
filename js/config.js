@@ -15,7 +15,7 @@ openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 FAQsection(); //Funções da seção das Perguntar Frequentes no Tier para o Suport
 updateTheme();
-
+reportFeedback();
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
 =========================================================================================================================================*/
@@ -431,6 +431,16 @@ function FAQsection() {
     closeQuestionsHover();
 }
 
-
+function reportFeedback(){
+    function sendReport(){
+        const sendReport = document.querySelector(".S-report-submit");
+        const reportModal = document.querySelector(".S-confirm-modal");
+        
+        sendReport.addEventListener('click', () => {
+            reportModal.toggle('.active');
+        })
+    }
+    sendReport();
+}
 
 

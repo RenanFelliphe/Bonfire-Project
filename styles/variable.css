@@ -156,7 +156,7 @@
 }
 
 .G-red {
-    --org-color1: #FF0000; /* Vermelho versão 1 */
+    --org-color1: #ff0022; /* Vermelho versão 1 */
     --org-color2: #FF0000; /* Vermelho versão 2 */
     --org-color-darker: #6F0000; /* Uma versão mais escura da cor vermelha */
     --org-color-lighter: #FF6666; /* Uma versão mais clara da cor vermelha */
@@ -165,8 +165,8 @@
 }
 
 .G-orange {
-    --org-color1: #FF7A00; /* Laranja versão 1 */
-    --org-color2: #FF7A00; /* Laranja versão 2 */
+    --org-color1: #FF6600; /* Laranja versão 1 */
+    --org-color2: #FF6600; /* Laranja versão 2 */
     --org-color-darker: #683200; /* Uma versão mais escura da cor laranja */
     --org-color-lighter: #FFA733; /* Uma versão mais clara da cor laranja */
     --org-color-color-low-opacity: #FF7A0060; /* Laranja com baixa opacidade */
@@ -174,8 +174,8 @@
 }
 
 .G-yellow {
-    --org-color1: #FFFF00; /* Amarelo versão 1 */
-    --org-color2: #FFFF00; /* Amarelo versão 2 */
+    --org-color1: #FFD700; /* Amarelo versão 1 */
+    --org-color2: #FFD700; /* Amarelo versão 2 */
     --org-color-darker: #77770f; /* Uma versão mais escura da cor amarela */
     --org-color-lighter: #FFFF99; /* Uma versão mais clara da cor amarela */
     --org-color-color-low-opacity: #FFFF0060; /* Amarelo com baixa opacidade */

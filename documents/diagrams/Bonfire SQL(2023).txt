@@ -1,149 +1,150 @@
 CREATE SCHEMA bonfire2023;
 USE bonfire2023;
 
-/*	 Criação das tabelas de ENTIDADES		*/
+/* Criação das tabelas de ENTIDADES */
+
 CREATE TABLE Origem (
-    pais varchar(30),
-    sigla varchar(2),
-    idioma varchar(30),
-    gentilico varchar(30),
+    pais varchar(30) NOT NULL,
+    sigla varchar(2) NOT NULL,
+    idioma varchar(30) NOT NULL,
+    gentilico varchar(30) NOT NULL,
     CONSTRAINT PK_origem PRIMARY KEY (pais)
 );
 
 CREATE TABLE Usuario (
-    nome varchar(30),
-    apelido varchar(30),
-    email varchar(50),
-    senha varchar(50),
+    nome varchar(30) NOT NULL,
+    apelido varchar(30) NOT NULL,
+    email varchar(50) NOT NULL,
+    senha varchar(50) NOT NULL,
     biografia varchar(200),
-    genero varchar(30),
+    genero varchar(30) NOT NULL,
     recado varchar(50),
-    verificado boolean,
-    nacionalidade varchar(30),
+    verificado boolean NOT NULL,
+    nacionalidade varchar(30) NOT NULL,
     CONSTRAINT PK_usuario PRIMARY KEY (nome, apelido),
-    CONSTRAINT FK_pais_usuario FOREIGN KEY (nacionalidade) REFERENCES Origem(pais)
+    CONSTRAINT FK_pais_usuario FOREIGN KEY (nacionalidade) REFERENCES Origem(pais) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE Profissao (
-    idProfissao varchar(30),
-    nome varchar(100),
+    idProfissao varchar(30) NOT NULL,
+    nome varchar(100) NOT NULL,
     CONSTRAINT PK_profissao PRIMARY KEY (idProfissao)
 );
 
 CREATE TABLE Comunidade (
-    idComunidade varchar(30),
-    nome varchar(30),
+    idComunidade varchar(30) NOT NULL,
+    nome varchar(30) NOT NULL,
     biografia varchar(200),
-    verificado boolean,
-    privada boolean,
-    sede varchar(30),
+    verificado boolean NOT NULL,
+    privada boolean NOT NULL,
+    sede varchar(30) NOT NULL,
     CONSTRAINT PK_comunidade PRIMARY KEY (idComunidade),
-    CONSTRAINT FK_pais_comunidade FOREIGN KEY (sede) REFERENCES Origem(pais)
+    CONSTRAINT FK_pais_comunidade FOREIGN KEY (sede) REFERENCES Origem(pais) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE Campeonato (
-    idCamp varchar(30),
-    nome varchar(100),
+    idCamp varchar(30) NOT NULL,
+    nome varchar(100) NOT NULL,
     biografia varchar(200),
-    categoria varchar(30),
-    presencial boolean,
-    premiacao numeric,
-    localizacao varchar(30),
+    categoria varchar(30) NOT NULL,
+    presencial boolean NOT NULL,
+    premiacao numeric NOT NULL,
+    localizacao varchar(30) NOT NULL,
     CONSTRAINT PK_campeonato PRIMARY KEY (idCamp),
-    CONSTRAINT FK_pais_campeonato FOREIGN KEY (localizacao) REFERENCES Origem(pais)
+    CONSTRAINT FK_pais_campeonato FOREIGN KEY (localizacao) REFERENCES Origem(pais) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE Jogo (
-    idJogo varchar(30),
-    nome varchar(100),
-    genero varchar(30),
-    desenvolvedora varchar(100),
-    multiplayer boolean,
+    idJogo varchar(30) NOT NULL,
+    nome varchar(100) NOT NULL,
+    genero varchar(30) NOT NULL,
+    desenvolvedora varchar(100) NOT NULL,
+    multiplayer boolean NOT NULL,
     CONSTRAINT PK_jogo PRIMARY KEY (idJogo)
 );
 
 CREATE TABLE Publicacao (
-    idPublicacao varchar(30),
-    dtComentario date,
-    texto varchar(300),
-    usuarioNome varchar(30),
-    usuarioApelido varchar(30),
+    idPublicacao varchar(30) NOT NULL,
+    dtComentario date NOT NULL,
+    texto varchar(300) NOT NULL,
+    usuarioNome varchar(30) NOT NULL,
+    usuarioApelido varchar(30) NOT NULL,
     CONSTRAINT PK_publicacao PRIMARY KEY (idPublicacao),
-    CONSTRAINT FK_usuario_publicacao FOREIGN KEY (usuarioNome, usuarioApelido) REFERENCES Usuario(nome, apelido)
+    CONSTRAINT FK_usuario_publicacao FOREIGN KEY (usuarioNome, usuarioApelido) REFERENCES Usuario(nome, apelido) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE Comentario (
-    idComentario varchar(30),
-    dtComentario date,
-    texto varchar(300),
-    usuarioNome varchar(30),
-    usuarioApelido varchar(30),
-    idPublicacao varchar(30),
+    idComentario varchar(30) NOT NULL,
+    dtComentario date NOT NULL,
+    texto varchar(300) NOT NULL,
+    usuarioNome varchar(30) NOT NULL,
+    usuarioApelido varchar(30) NOT NULL,
+    idPublicacao varchar(30) NOT NULL,
     CONSTRAINT PK_comentario PRIMARY KEY (idComentario),
-    CONSTRAINT FK_usuario_comentario FOREIGN KEY (usuarioNome, usuarioApelido) REFERENCES Usuario(nome, apelido),
-    CONSTRAINT FK_publicacao_comentario FOREIGN KEY (idPublicacao) REFERENCES Publicacao(idPublicacao)
+    CONSTRAINT FK_usuario_comentario FOREIGN KEY (usuarioNome, usuarioApelido) REFERENCES Usuario(nome, apelido) ON UPDATE CASCADE ON DELETE NO ACTION,
+    CONSTRAINT FK_publicacao_comentario FOREIGN KEY (idPublicacao) REFERENCES Publicacao(idPublicacao) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
-/*	 Criação das tabelas de RELACIONAMENTOS		*/
+/* Criação das tabelas de RELACIONAMENTOS */
 
 CREATE TABLE ComunidadeCampeonato (
-    idComunidade varchar(30),
-    idCamp varchar(30),
+    idComunidade varchar(30) NOT NULL,
+    idCamp varchar(30) NOT NULL,
     CONSTRAINT PK_comunidadecampeonato PRIMARY KEY (idComunidade, idCamp),
-    FOREIGN KEY (idComunidade) REFERENCES Comunidade(idComunidade),
-    FOREIGN KEY (idCamp) REFERENCES Campeonato(idCamp)
+    FOREIGN KEY (idComunidade) REFERENCES Comunidade(idComunidade) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idCamp) REFERENCES Campeonato(idCamp) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE ComunidadeJogo (
-    idComunidade varchar(30),
-    idJogo varchar(30),
+    idComunidade varchar(30) NOT NULL,
+    idJogo varchar(30) NOT NULL,
     CONSTRAINT PK_comunidadejogo PRIMARY KEY (idComunidade, idJogo),
-    FOREIGN KEY (idComunidade) REFERENCES Comunidade(idComunidade),
-    FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
+    FOREIGN KEY (idComunidade) REFERENCES Comunidade(idComunidade) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE UsuarioJogo (
-    nomeUsuario varchar(30),
-    apelidoUsuario varchar(30),
-    idJogo varchar(30),
+    nomeUsuario varchar(30) NOT NULL,
+    apelidoUsuario varchar(30) NOT NULL,
+    idJogo varchar(30) NOT NULL,
     CONSTRAINT PK_usuariojogo PRIMARY KEY (nomeUsuario, apelidoUsuario, idJogo),
-    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
-    FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
+    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE UsuarioComunidade (
-    nomeUsuario varchar(30),
-    apelidoUsuario varchar(30),
-    idComunidade varchar(30),
+    nomeUsuario varchar(30) NOT NULL,
+    apelidoUsuario varchar(30) NOT NULL,
+    idComunidade varchar(30) NOT NULL,
     CONSTRAINT PK_uuariocomunidade PRIMARY KEY (nomeUsuario, apelidoUsuario, idComunidade),
-    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
-    FOREIGN KEY (idComunidade) REFERENCES Comunidade(idComunidade)
+    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idComunidade) REFERENCES Comunidade(idComunidade) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE UsuarioCampeonato (
-    nomeUsuario varchar(30),
-    apelidoUsuario varchar(30),
-    idCampeonato varchar(30),
+    nomeUsuario varchar(30) NOT NULL,
+    apelidoUsuario varchar(30) NOT NULL,
+    idCampeonato varchar(30) NOT NULL,
     CONSTRAINT PK_usuariocampeonato PRIMARY KEY (nomeUsuario, apelidoUsuario, idCampeonato),
-    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
-    FOREIGN KEY (idCampeonato) REFERENCES Campeonato(idCamp)
+    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idCampeonato) REFERENCES Campeonato(idCamp) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE CampeonatoJogo (
-    idJogo varchar(30),
-    idCamp varchar(30),
+    idJogo varchar(30) NOT NULL,
+    idCamp varchar(30) NOT NULL,
     CONSTRAINT PK_campeonatojogo PRIMARY KEY (idJogo, idCamp),
-    FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo),
-    FOREIGN KEY (idCamp) REFERENCES Campeonato(idCamp)
+    FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idCamp) REFERENCES Campeonato(idCamp) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 CREATE TABLE UsuarioProfissao (
-    nomeUsuario varchar(30),
-    apelidoUsuario varchar(30),
-    idProfissao varchar(30),
+    nomeUsuario varchar(30) NOT NULL,
+    apelidoUsuario varchar(30) NOT NULL,
+    idProfissao varchar(30) NOT NULL,
     CONSTRAINT PK_usuarioprofissao PRIMARY KEY (nomeUsuario, apelidoUsuario, idProfissao),
-    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido),
-    FOREIGN KEY (idProfissao) REFERENCES Profissao(idProfissao)
+    FOREIGN KEY (nomeUsuario, apelidoUsuario) REFERENCES Usuario(nome, apelido) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY (idProfissao) REFERENCES Profissao(idProfissao) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 /*	 Inserção nas tabelas de ENTIDADES		*/
@@ -296,7 +297,8 @@ INSERT INTO Usuario VALUES
 ('Richard Tyler', 'NinjaGamer', 'ninja@email.com', 'ninjapassword', 'Professional Fortnite streamer', 'masculino', 'Time to conquer Fortnite!', true, 'Estados Unidos'),
 ('Felix Arvid', 'PewDiePie', 'pewdie@email.com', 'brofist', 'YouTube gaming sensation', 'masculino', 'Bro Army, unite!', true, 'Suécia'),
 ('Imane Anys', 'Pokimane', 'poki@email.com', 'pokipass', 'Twitch streamer and content creator', 'feminino', 'Welcome to the Poki Squad!', true, 'Marrocos'),
-('Michael Grzesiek', 'Shroud', 'shroud@email.com', 'shroudpass', 'Former professional CS:GO player and streamer', 'masculino', 'Headshots incoming!', true, 'Canadá');
+('Michael Grzesiek', 'Shroud', 'shroud@email.com', 'shroudpass', 'Former professional CS:GO player and streamer', 'masculino', 'Headshots incoming!', true, 'Canadá'),
+('Bárbara Passos', 'Babi', 'babipassos@gmail.com', '9812531babi', null, 'feminino', null, true, 'Brasil');
 
 INSERT INTO Campeonato VALUES
 ('CAMP0001', 'CBLOL 2023', 'Campeonato Brasileiro de League of Legends 2023', 'Esports', true, 1000000, 'Brasil'),
@@ -420,11 +422,10 @@ INSERT INTO CampeonatoJogo VALUES
 ('JOG0009', 'CAMP0003'),
 ('JOG0010', 'CAMP0003');
 
-SELECT * FROM Usuario;
-
 /*  ------------------------------------------------ DUVIDAS ------------------------------------------------
 1- Qual a diferença entre criar uma tabela pro relacionamento e colocar o atributo em uma das tabelas?
 2- Devo manter as tabelas de relacionamento com chaves primárias?
 3- Como abrir o mesmo Banco em outros computadores?
 4- Como funciona os relacionamentos multiplos? Ex: LOUD (Comunidade) -> League of Legends, Valorant, Free Fire (Jogo)
+5- Não é melhor usar ON DELETE CASCADE ao invés de ON DELETE NO ACTION?
 	---------------------------------------------------------------------------------------------------------*/
