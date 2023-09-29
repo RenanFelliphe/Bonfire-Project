@@ -1495,6 +1495,7 @@ main {
     font-size: calc(var(--size-font-icons) + 2px);
     background-color: var(--second-color);
     cursor: pointer;
+    border: none;
 }
 
 .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input {
@@ -1570,114 +1571,6 @@ main {
     pointer-events: none;
 }
 
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--third-color);
-    height: 25rem;
-    width: 18.5rem;
-    top: 50%;
-    right: 50%;
-    transform: translateY(-20%) translateX(50%);
-    overflow: hidden;
-    padding: 1rem;
-    border: 1px solid var(--org-color1);
-    border-radius: 1.5rem;
-    padding: 1rem;
-    text-align: center;  
-    box-shadow: 0px 1px 6px 0  var(--org-color-transparent);
-    opacity: 1;
-    transition: var(--element-in);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal.close{
-    width: 0;
-    height: 0;
-    opacity: 0;
-    transition: var(--element-out);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-close-modal{
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--org-color-darker);
-    border: 1px solid var(--org-color1);
-    border-bottom-left-radius: 22px;
-    display: flex;
-    padding: 5px 6px 0px 0px;
-    box-shadow: 0px 1px 5px 0  var(--org-color-transparent);
-}
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-close-modal i{
-    transition: var(--element-in);
-    transform: rotate(0);    
-    color: var(--white-to-black-color);
-    font-size: calc(var(--size-font-icons) + 25px);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal.close .S-close-modal i{
-    transform: rotate(-270deg);
-    transition: var(--element-out);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-bonfire-logo{
-    width: 110%;
-    margin: -0.5rem 0 -1.5rem 0;
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-thanks-for{
-    font-weight: 600;
-    font-size: calc(var(--size-font-title) - 5px);
-    line-height: 3rem;
-    width: 16rem;
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-confirm-text{
-    font-size: calc(var(--size-font-text) + 1px);
-    line-height: 1.15rem;
-    width: 16rem;
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal button{
-    border: 1px solid var(--body-color);
-    border-radius: 1.5rem;
-    background-color: var(--org-color-darker);
-    padding:  0.3rem 1rem 0.3rem 1rem;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    margin: 0.4rem;
-    cursor: pointer;
-    color: var(--white-to-black-color);
-    border-color: var(--white-to-black-color);
-    font-size: calc(var(--size-font-subtitle) + 2px);
-    transition: calc(var(--element-out) - 0.2s);
-    box-shadow: 0px 1px 5px 0  var(--org-color-transparent);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal button:hover{
-    color: var(--white-to-black-color);
-    border-color: var(--white-to-black-color);
-    background-color: var(--org-color1);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal button.S-rate-us{
-    color: var(--org-color1);
-    border-color: var(--org-color1);
-    background-color: var(--third-color);
-    padding:  0.5rem 0.8rem 0.5rem 0.8rem;
-    font-size: calc(var(--size-font-subtitle) - 2px);
-}
-
-.S-subsettings .S-suport .S-report-problems .S-confirm-modal button.S-rate-us:hover{
-    color: var(--white-to-black-color);
-    border-color: var(--white-to-black-color);
-    background-color: var(--org-color-darker);
-    transition: calc(var(--element-in) - 0.1s);
-}
-
 .S-subsettings .S-suport .S-feedback .S-article-description {
     font-size: calc(var(--size-font-subtitle) - 1px);
     margin: -0.5rem 0 0 5rem;
@@ -1714,15 +1607,25 @@ main {
     font-size: calc(var(--size-font-icons) + 2px);
     background-color: var(--second-color);
     cursor: pointer;
+    border: none;
 }
 
-.S-subsettings .S-suport .S-feedback .S-feedback-area .S-rate-us{
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-rating{
     border-left: 1px solid var(--border-color);
     display: flex;
     justify-content: space-evenly;
     width: 10rem;
     height: 1.5rem;
     padding-left: 1.5rem;
+}
+
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-rating .S-feedback-stars{
+    color: var(--body-color);
+    border: 1px solid var(--border-color);
+}
+
+.S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-rating .S-feedback-stars.active{
+    color: #DAA520;
 }
 
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
@@ -1768,6 +1671,121 @@ main {
     padding: 0rem 2.5rem 0.5rem 3.2rem;
     text-align: justify;
     font-size: var(--size-font-text);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal.close,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal.close {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: var(--element-out);
+}
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--third-color);
+  height: 22rem;
+  width: 17rem;
+  top: 30%;
+  left: 56.5%;
+  transform: translateY(-20%) translateX(50%);
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid var(--org-color1);
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0px 1px 6px 0 var(--org-color-transparent);
+  opacity: 1;
+  transition: var(--element-in);
+  z-index: 999;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal.close,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal.close {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: var(--element-out);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-close-modal,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal .S-close-modal {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--org-color-darker);
+  border: 1px solid var(--org-color1);
+  border-bottom-left-radius: 22px;
+  display: flex;
+  padding: 5px 6px 0px 0px;
+  box-shadow: 0px 1px 5px 0 var(--org-color-transparent);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-close-modal i,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal .S-close-modal i {
+  transition: var(--element-in);
+  transform: rotate(0);
+  color: var(--white-to-black-color);
+  font-size: calc(var(--size-font-icons) + 25px);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal.close .S-close-modal i,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal.close .S-close-modal i {
+  transform: rotate(-270deg);
+  transition: var(--element-out);
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-bonfire-logo,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal .S-bonfire-logo {
+  width: 110%;
+  margin: -0.5rem 0 -1.5rem 0;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-thanks-for,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal .S-thanks-for {
+  font-weight: 600;
+  font-size: calc(var(--size-font-title) - 6px);
+  line-height: 3rem;
+  width: 16rem;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal .S-confirm-text,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal .S-confirm-text {
+  font-size: calc(var(--size-font-text) + 1px);
+  line-height: 1.15rem;
+  width: 15.5rem;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal button.S-confirm-report,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal button.S-confirm-feeback {
+  border: 1px solid var(--body-color);
+  border-radius: 1.5rem;
+  background-color: var(--org-color-darker);
+  padding: 0.3rem 1rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin: 0.4rem 0 1rem 0;
+  cursor: pointer;
+  color: var(--white-to-black-color);
+  border-color: var(--white-to-black-color);
+  font-size: calc(var(--size-font-subtitle) + 2px);
+  transition: calc(var(--element-out) - 0.2s);
+  box-shadow: 0px 1px 5px 0 var(--org-color-transparent);
+}
+
+.S-subsettings .S-suport .S-feedback .S-confirm-modal button.S-confirm-feeback {
+    margin: 1rem 0 0 0;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-confirm-modal button:hover,
+.S-subsettings .S-suport .S-feedback .S-confirm-modal button:hover {
+  color: var(--white-to-black-color);
+  border-color: var(--white-to-black-color);
+  background-color: var(--org-color1);
 }
 
 .S-subsettings .S-about-us .S-bonfire .S-bonfire-text strong {

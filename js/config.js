@@ -434,12 +434,38 @@ function FAQsection() {
 function reportFeedback(){
     function sendReport(){
         const reportSubmit = document.querySelector(".S-report-submit");
-        const reportModal = document.querySelector(".S-confirm-modal");
-        
+        const reportModal = document.querySelector(".S-report-problems-modal");
+        const reportClear = document.querySelector(".S-report-clear");
+
+        //Abre o modal
         reportSubmit.addEventListener('click', () => {
             reportModal.classList.toggle('close');
-        })
+
+            //Limpa o input e fecha o modal
+            reportClear.addEventListener('click', () => {
+                reportModal.classList.add('close');
+            })
+        }) 
     }
+
+    function sendFeedback(){
+        const reportSubmit = document.querySelector(".S-feedback-submit");
+        const reportModal = document.querySelector(".S-feedback-modal");
+        const feedbackClear = document.querySelector(".S-feedback-clear");
+
+        //Abre o modal
+        reportSubmit.addEventListener('click', () => {
+            reportModal.classList.toggle('close');
+
+            //Limpa o input e fecha o modal
+            feedbackClear.addEventListener('click', () => {
+                reportModal.classList.add('close');
+            })
+        })
+
+        
+    }
+    sendFeedback();
     sendReport();
 }
 

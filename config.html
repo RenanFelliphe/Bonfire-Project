@@ -747,26 +747,25 @@
                         </div>
 
                         <form class="S-report-area">
-                            <i class="bi bi-trash S-report-clear All-icon"></i>
+                            <button type="reset" class="bi bi-trash S-report-clear All-icon"></button>
                             <input type="text" class="S-report-input" placeholder="Tags..."> </input>
                             <input type="text" class="S-report-input" placeholder="Título..."> </input>
                             <textarea name="report-area" class="S-report-input"
                                 placeholder="Descreva com o máximo de informações possíveis..."></textarea>
 
-                            <div class="S-report-submit"><i class="bi bi-send-fill"></i></div>
+                            <button type="reset" class="S-report-submit"><i class="bi bi-send-fill"></i></button>
                             <i class="bi bi-paperclip S-report-media"></i>
                             <p class="S-media-placeholder">Adicione até 3 imagens ou vídeos...</p>
-                        </form>
 
-                        <form class="S-confirm-modal close">
-                            <div class="S-close-modal"><i class="bi bi-x All-icon"></i></div>
-                            <img src="assets/Bonfire-logo.svg" alt="Logo do Bonfire" class="S-bonfire-logo">
-                            <span class="S-thanks-for">Obrigado pelo relatório!</span>
-                            <span class="S-confirm-text">
-                                Trabalharemos o mais rápido possível para investigar e resolver o seu problema. Entraremos em contato em breve pelo email:</span>
-                                <span class="S-user-email">“pancada@seg.gg”</span>
-                                <button type="submit" class="S-confirm-report">OK</button>
-                                <button class="S-rate-us">AVALIE-NOS</button>
+                            <div class="S-confirm-modal S-report-problems-modal close">
+                                <button type="submit" class="S-close-modal"><i class="bi bi-x All-icon"></i></button>
+                                <img src="assets/Bonfire-logo.svg" alt="Logo do Bonfire" class="S-bonfire-logo">
+                                <span class="S-thanks-for">Obrigado pelo relatório!</span>
+                                <span class="S-confirm-text">
+                                    Trabalharemos o mais rápido possível para investigar e resolver o seu problema. Entraremos em contato em breve pelo email:</span>
+                                    <span class="S-user-email">“pancada@seg.gg”</span>
+                                    <button type="submit" class="S-confirm-report">OK</button>
+                                </div>
                         </form>
                     </article>
 
@@ -775,18 +774,27 @@
                         <p class="S-article-description"> Ajude-nos a melhorar a sua experiência no <span
                                 class="S-feedback-bonfire">Bonfire</span>!</p>
                         <form class="S-feedback-area">
-                            <i class="bi bi-trash S-feedback-clear All-icon"></i>
-                            <div class="S-rate-us">
-                                <i id="S-awful" class="bi bi-star All-icon"></i>
-                                <i id="S-bad" class="bi bi-star All-icon"></i>
-                                <i id="S-medium" class="bi bi-star All-icon"></i>
-                                <i id="S-good" class="bi bi-star All-icon"></i>
-                                <i id="S-amazing" class="bi bi-star All-icon"></i>
+                            <button type="reset" class="bi bi-trash S-feedback-clear All-icon"></button>
+                            <div class="S-feedback-rating">
+                                <i id="S-awful" class="bi bi-star-fill S-feedback-stars active All-icon"></i>
+                                <i id="S-bad" class="bi bi-star-fill S-feedback-stars active All-icon"></i>
+                                <i id="S-medium" class="bi bi-star-fill S-feedback-stars active All-icon"></i>
+                                <i id="S-good" class="bi bi-star-fill S-feedback-stars All-icon"></i>
+                                <i id="S-amazing" class="bi bi-star-fill S-feedback-stars All-icon"></i>
                             </div>
                             <input type="text" class="S-feedback-input" placeholder="Título..."> </input>
                             <textarea name="feedback-area" class="S-feedback-input"
                                 placeholder="Descreva com o máximo de informações possíveis..."></textarea>
-                            <button type="submit" class="S-feedback-submit"><i class="bi bi-send-fill"></i></button>
+                            <button type="reset" class="S-feedback-submit"><i class="bi bi-send-fill"></i></button>
+
+                            <div class="S-confirm-modal S-feedback-modal close">
+                                <button type="submit" class="S-close-modal"><i class="bi bi-x All-icon"></i></button>
+                                <img src="assets/Bonfire-logo.svg" alt="Logo do Bonfire" class="S-bonfire-logo">
+                                <span class="S-thanks-for">Obrigado pelo feedback!</span>
+                                <span class="S-confirm-text">
+                                    Faremos o possível para melhorar com base nas suas sugestões. Sua contribuição é fundamental para tornar nossa plataforma ainda melhor!</span>
+                                    <button type="submit" class="S-confirm-feeback">OK</button>
+                                </div>
                         </form>
                     </article>
                 </section>
