@@ -433,11 +433,11 @@ function FAQsection() {
 
 function reportFeedback(){
     function sendReport(){
-        const sendReport = document.querySelector(".S-report-submit");
+        const reportSubmit = document.querySelector(".S-report-submit");
         const reportModal = document.querySelector(".S-confirm-modal");
         
-        sendReport.addEventListener('click', () => {
-            reportModal.toggle('.active');
+        reportSubmit.addEventListener('click', () => {
+            reportModal.classList.toggle('close');
         })
     }
     sendReport();
