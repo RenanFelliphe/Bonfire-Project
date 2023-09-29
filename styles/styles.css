@@ -1585,12 +1585,10 @@ main {
 .S-subsettings .S-suport .S-feedback .S-feedback-area {
     position: relative;
     flex-direction: column;
-    gap: 0.7rem;
     align-items: flex-start;
-    height: 12.5rem;
+    height: 12.9rem;
     margin: 1.5rem;
-    padding: 1.5rem;
-    padding-top: 1rem;
+    padding: 1.3rem 1.5rem 1.5rem 1.5rem;
     background-color: var(--fourth-color);
     border: 1px solid var(--border-color);
     border-radius: 30px;
@@ -1614,18 +1612,22 @@ main {
     border-left: 1px solid var(--border-color);
     display: flex;
     justify-content: space-evenly;
-    width: 10rem;
+    width: 13rem;
     height: 1.5rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-rating .S-feedback-stars{
-    color: var(--body-color);
-    border: 1px solid var(--border-color);
+    color: var(--border-color);
+    transition: calc(var(--element-out) - 0.4s);
+    font-size: var(--size-font-icons);
 }
 
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-rating .S-feedback-stars.active{
     color: #DAA520;
+    transition: calc(var(--element-in) - 0.25s);
+    font-size: calc(var(--size-font-icons) + 4px);
+    transform: rotate(72.5deg);
 }
 
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input {
@@ -1636,6 +1638,7 @@ main {
     padding: 0 2rem 0 2rem;
     font-size: var(--size-font-subtitle);
     background: transparent;
+    margin-top: 0.3rem;
 }
 
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-input::-webkit-scrollbar {
@@ -1689,7 +1692,7 @@ main {
   height: 22rem;
   width: 17rem;
   top: 30%;
-  left: 56.5%;
+  left: 58.5%;
   transform: translateY(-20%) translateX(50%);
   overflow: hidden;
   padding: 1rem;

@@ -15,7 +15,7 @@ openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 FAQsection(); //Funções da seção das Perguntar Frequentes no Tier para o Suport
 updateTheme();
-reportFeedback();
+reportProblemsAndFeedback();
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
 =========================================================================================================================================*/
@@ -431,42 +431,69 @@ function FAQsection() {
     closeQuestionsHover();
 }
 
-function reportFeedback(){
-    function sendReport(){
+function reportProblemsAndFeedback() {
+    //Funções da seção de Reportar problemas
+    function sendReport() {
         const reportSubmit = document.querySelector(".S-report-submit");
         const reportModal = document.querySelector(".S-report-problems-modal");
         const reportClear = document.querySelector(".S-report-clear");
 
-        //Abre o modal
+        // Abre o modal
         reportSubmit.addEventListener('click', () => {
             reportModal.classList.toggle('close');
 
-            //Limpa o input e fecha o modal
+            // Limpa o input e fecha o modal
             reportClear.addEventListener('click', () => {
                 reportModal.classList.add('close');
-            })
-        }) 
+            });
+        });
     }
 
-    function sendFeedback(){
+    //Funções da seção de enviar Feedback
+    function sendFeedback() {
         const reportSubmit = document.querySelector(".S-feedback-submit");
         const reportModal = document.querySelector(".S-feedback-modal");
         const feedbackClear = document.querySelector(".S-feedback-clear");
+        const feedbackStars = document.querySelectorAll('.S-feedback-rating .S-feedback-stars');
 
-        //Abre o modal
-        reportSubmit.addEventListener('click', () => {
-            reportModal.classList.toggle('close');
+        function openCloseModal() {
+            // Abre o modal
+            reportSubmit.addEventListener('click', () => {
+                reportModal.classList.toggle('close');
+            });
 
-            //Limpa o input e fecha o modal
+            // Limpa o input e fecha o modal
             feedbackClear.addEventListener('click', () => {
                 reportModal.classList.add('close');
-            })
-        })
 
-        
+                // Remove a classe de todas as estrelas
+                feedbackStars.forEach((star) => {
+                    star.classList.remove("active");
+                });
+            });
+        }
+
+        function updateStars() {
+            feedbackStars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    // Adiciona a classe "active" nas estrelas com índice menor ou igual ao índice da estrela clicada
+                    for (let i = 0; i <= index; i++) {
+                        feedbackStars[i].classList.add("active");
+                    }
+
+                    // Remove a classe "active" das estrelas com índice maior do que o índice da estrela clicada
+                    for (let i = index + 1; i < feedbackStars.length; i++) {
+                        feedbackStars[i].classList.remove("active");
+                    }
+                });
+            });
+        }
+
+        openCloseModal();
+        updateStars();
     }
+
     sendFeedback();
     sendReport();
 }
-
 
