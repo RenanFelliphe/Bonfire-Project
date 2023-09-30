@@ -586,8 +586,119 @@ main {
     background-color: var(--second-color);
     width: 100%;
     height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
 }
 
+.H-timeline .H-publish{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 33rem;
+    height: 8rem;
+    padding: 1.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+}
+
+.H-timeline .H-publish i{
+    font-size: calc(var(--size-font-icons) - 1px);
+}
+
+.H-timeline .H-publish .H-publish-title{
+    position: absolute;
+    top: -0.8rem;
+    background-color: var(--second-color);
+    padding: 0 1rem 0 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: calc(var(--size-font-title) - 6px);
+    letter-spacing: 1px;
+}
+
+.H-timeline .H-publish .H-left{
+    width: 4.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.H-timeline .H-publish .H-left .H-user-images{
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+}
+
+.H-timeline .H-publish .H-left .H-user-images .H-profile-img{
+    position: relative;
+    display: flex;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    z-index: +1;
+}
+
+.H-timeline .H-publish .H-left .H-user-images .H-profile-img img{
+    max-width: 100%;
+}
+
+.H-timeline .H-publish .H-left .H-user-images .H-org-img{
+    position: absolute;
+    display: flex;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 38%;
+    border: 1px solid var(--border-color);
+    right: 0px;
+    bottom: 0px;
+    z-index: +1;
+}
+
+.H-timeline .H-publish .H-org-img img{
+    max-width: 100%;
+}
+
+.H-timeline .H-publish .H-left .H-user-images .H-user-status{
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    border: 8px dashed var(--org-color1);
+    border-radius: 100%;
+    transition: var(--element-out);
+}
+
+.H-characters{
+    font-size: calc(var(--size-font-text) - 5px);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.H-timeline .H-publish input.H-type-here {
+    outline: none;
+    border: none;
+    width: 80%;
+    background: none;
+    margin: 0.8rem 1rem 1rem 1rem;
+    font-size: var(--size-font-text);
+    letter-spacing: 1px;
+}
+
+.H-timeline .H-publish .bi-emoji-smile{
+    margin-top: 0.8rem
+}
+
+.H-post-annexes{
+    position: absolute;
+    display: flex;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 0.5rem;
+}
 
 /*===============================================================================================================
 ============================================= HOME/INDEX: H-Aside================================================
