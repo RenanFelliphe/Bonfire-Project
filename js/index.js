@@ -1,9 +1,12 @@
+
+
 /*========================================================================================================================================
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
 /*=======================================================================================================================================*/
 
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
+featuredProfilesFunctions(); //Funções da seção DESTAQUES
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
@@ -190,3 +193,53 @@ function openQuickMessages() {
         quickMessages.classList.toggle("close");
     });
 }
+
+//Funções da seção DESTAQUES
+function featuredProfilesFunctions() {
+    //Crie um carrosel de perfis
+    function swiperProfiles(){
+    var swiper = new Swiper(".H-profiles-swiper", {
+        slidesPerView: 2,
+        direction: "vertical",
+        loop: true,
+        navigation: {
+          nextEl: ".H-arrow-next",
+          prevEl: ".H-arrow-preview",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+            clickable: true
+          },
+        mousewheel: true,
+        keyboard: {
+            enabled: true,
+          },
+
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+        
+      });
+  
+    }
+    //Alterna os botões de seguir/seguindo quando clicados
+    function toggleFollows() {
+    const followButtonList = document.querySelectorAll(".H-follow");
+
+      followButtonList.forEach((followButton) => {
+        followButton.addEventListener('click', () => {
+          if (followButton.textContent === "Seguir") {
+            followButton.textContent = "Seguindo";
+          } else {
+            followButton.textContent = "Seguir";
+          }
+        });
+      });
+    }
+
+    swiperProfiles(); 
+    toggleFollows();
+}
+  

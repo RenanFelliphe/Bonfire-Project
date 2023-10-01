@@ -10,12 +10,12 @@
 
 openTiers(); //Abre e fecha CADA SEÇÃO da página de configurações
 openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
-defineFont(); //Define AS FONTES do site
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
-FAQsection(); //Funções da seção das Perguntar Frequentes no Tier para o Suport
-updateTheme();
-reportProblemsAndFeedback();
+FAQsection(); //Funções da seção das PERGUNTAS FREQUENTES no Tier para o SUPORTE
+reportProblemsAndFeedback(); //Funções da seção para Reportar PROBLEMAS e Enviar FEEDBACK
+personalizeBonfire(); //Conjunto de funções para personalizar as características do site como o MODO, AS CORES E AS FONTES
+
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
 =========================================================================================================================================*/
@@ -42,132 +42,6 @@ function openSearchArea() {
     searchConfigIcon.addEventListener('click', () => {
         searchConfigSection.classList.toggle("close");
     });
-}
-
-//Atualiza o MODO e o TEMA do site
-function updateTheme(){
-    //Atualiza o MODO(Light/Dark)
-    function updateMode() {
-        const chk = document.getElementById('S-chk');
-        chk.addEventListener('change', () => {
-            document.body.classList.toggle('light-mode');
-        });
-    }
-
-    //Atualiza o tema e as CORES do site
-    function updateColors() {
-        const colors = document.querySelectorAll(".S-colors");
-
-        colors.forEach(newColor => {
-            newColor.addEventListener('click', () => {
-                colors.forEach(lastColor => lastColor.classList.remove("active"));
-                newColor.classList.add("active");
-
-                // Remove todas as classes de cor do body
-                document.body.classList.remove(
-                    "G-white",
-                    "G-red",
-                    "G-orange",
-                    "G-yellow",
-                    "G-green",
-                    "G-cyan",
-                    "G-blue",
-                    "G-purple",
-                    "G-pink"
-                );
-
-                // Adiciona a classe de cor selecionada ao body
-                document.body.classList.add(newColor.classList[1]);
-            });
-        });
-    }
-
-    updateMode();
-    updateColors();
-}
-
-//Define AS FONTES do site
-function defineFont() {
-
-    //Define o TAMANHO de UMA FONTE ESPECÍFICA do site
-    function defineEspecificFontSize() {
-        function updateFontSize(className, sizeVarName) {
-            const sizeValue = document.querySelector(className + '-value');
-            const sizeRange = document.querySelector(className + '-range');
-
-            sizeRange.addEventListener('input', function () {
-                sizeValue.innerHTML = this.value;
-                document.documentElement.style.setProperty(sizeVarName, `${sizeRange.value}px`);
-            });
-        }
-
-        updateFontSize('.S-title-font-size', '--size-font-title');
-        updateFontSize('.S-subtitle-font-size', '--size-font-subtitle');
-        updateFontSize('.S-text-font-size', '--size-font-text');
-        updateFontSize('.S-icons-font-size', '--size-font-icons');
-    }
-
-    //Abre e fecha a ÁREA DE CONFIGURAÇÕES AVANÇADAS DE FONTE
-    function openAdvancedFontConfig() {
-        const fontAdvancedConfig = document.querySelector('.S-font-advanced-config');
-        const fontAdvancedConfigIcon = document.querySelector('.S-font-config');
-
-        fontAdvancedConfigIcon.addEventListener('click', () => {
-            fontAdvancedConfig.classList.toggle('close');
-        });
-    }
-
-    //Define o TAMANHO de TODAS AS FONTES do site
-    function defineAllFontSize() {
-        const fontSizeValue = document.querySelector('.S-font-size-value');
-        const fontSizeRange = document.querySelector('.S-font-size-range');
-
-        const rangeMin = parseInt(fontSizeRange.min);
-        const rangeMax = parseInt(fontSizeRange.max);
-        const rangeCenter = (rangeMin + rangeMax) / 2;
-
-        const initialFontSize = getComputedStyle(document.documentElement).getPropertyValue('--size-font-title') || rangeCenter;
-        const initialFontIcons = getComputedStyle(document.documentElement).getPropertyValue('--size-font-icons') || rangeCenter;
-        const initialFontSubtitle = getComputedStyle(document.documentElement).getPropertyValue('--size-font-subtitle') || rangeCenter;
-        const initialFontText = getComputedStyle(document.documentElement).getPropertyValue('--size-font-text') || rangeCenter;
-        const initialFontDetail = getComputedStyle(document.documentElement).getPropertyValue('--size-font-detail') || rangeCenter;
-
-        fontSizeRange.addEventListener('input', function () {
-            const newSize = parseInt(initialFontSize) + parseInt(fontSizeRange.value) - rangeCenter;
-            const newIconsSize = parseInt(initialFontIcons) + parseInt(fontSizeRange.value) - rangeCenter;
-            const newSubtitleSize = parseInt(initialFontSubtitle) + parseInt(fontSizeRange.value) - rangeCenter;
-            const newTextSize = parseInt(initialFontText) + parseInt(fontSizeRange.value) - rangeCenter;
-            const newDetailSize = parseInt(initialFontDetail) + parseInt(fontSizeRange.value) - rangeCenter;
-
-            fontSizeValue.innerHTML = fontSizeRange.value;
-
-            document.documentElement.style.setProperty('--size-font-title', `${newSize}px`);
-            document.documentElement.style.setProperty('--size-font-icons', `${newIconsSize}px`);
-            document.documentElement.style.setProperty('--size-font-subtitle', `${newSubtitleSize}px`);
-            document.documentElement.style.setProperty('--size-font-text', `${newTextSize}px`);
-            document.documentElement.style.setProperty('--size-font-detail', `${newDetailSize}px`);
-        });
-
-        function defineFontSizeByButtons() {
-            const fontSizeMinus = document.querySelector('.S-font-size-minus');
-            const fontSizePlus = document.querySelector('.S-font-size-plus');
-
-            fontSizePlus.addEventListener('click', () => {
-                fontSizeRange.value = parseInt(fontSizeRange.value) + 1;
-                fontSizeRange.dispatchEvent(new Event('input'));
-            });
-
-            fontSizeMinus.addEventListener('click', () => {
-                fontSizeRange.value = parseInt(fontSizeRange.value) - 1;
-                fontSizeRange.dispatchEvent(new Event('input'));
-            });
-        }
-        defineFontSizeByButtons();
-    }
-
-    openAdvancedFontConfig();
-    defineAllFontSize();
-    defineEspecificFontSize();
 }
 
 //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
@@ -356,7 +230,7 @@ function menuAsideFunctions() {
     userActions();
 }
 
-//Funções da seção das Perguntar Frequentes no Tier para o Suport
+//Funções da seção das PERGUNTAS FREQUENTES no Tier para o SUPORTE
 function FAQsection() {
     const faq = document.querySelector(".S-faq");
     const generalQuestions = document.querySelector(".S-general-questions");
@@ -430,7 +304,7 @@ function FAQsection() {
     openQuestion();
     closeQuestionsHover();
 }
-
+//Funções da seção para Reportar PROBLEMAS e Enviar FEEDBACK
 function reportProblemsAndFeedback() {
     //Funções da seção de Reportar problemas
     function sendReport() {
@@ -497,3 +371,128 @@ function reportProblemsAndFeedback() {
     sendReport();
 }
 
+//Conjunto de funções para personalizar as características do site como o MODO, AS CORES E AS FONTES
+function personalizeBonfire(){
+    //Atualiza o MODO(Light/Dark)
+    function updateMode() {
+        const chk = document.getElementById('S-chk');
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    }
+
+    //Atualiza o tema e as CORES do site
+    function updateColors() {
+        const colors = document.querySelectorAll(".S-colors");
+
+        colors.forEach(newColor => {
+            newColor.addEventListener('click', () => {
+                colors.forEach(lastColor => lastColor.classList.remove("active"));
+                newColor.classList.add("active");
+
+                // Remove todas as classes de cor do body
+                document.body.classList.remove(
+                    "G-white",
+                    "G-red",
+                    "G-orange",
+                    "G-yellow",
+                    "G-green",
+                    "G-cyan",
+                    "G-blue",
+                    "G-purple",
+                    "G-pink"
+                );
+
+                // Adiciona a classe de cor selecionada ao body
+                document.body.classList.add(newColor.classList[1]);
+            });
+        });
+    }
+
+    //Atualiza AS FONTES do site
+    function updateFont() {
+
+        //Define o TAMANHO de UMA FONTE ESPECÍFICA do site
+        function defineEspecificFontSize() {
+            function updateFontSize(className, sizeVarName) {
+                const sizeValue = document.querySelector(className + '-value');
+                const sizeRange = document.querySelector(className + '-range');
+
+                sizeRange.addEventListener('input', function () {
+                    sizeValue.innerHTML = this.value;
+                    document.documentElement.style.setProperty(sizeVarName, `${sizeRange.value}px`);
+                });
+            }
+
+            updateFontSize('.S-title-font-size', '--size-font-title');
+            updateFontSize('.S-subtitle-font-size', '--size-font-subtitle');
+            updateFontSize('.S-text-font-size', '--size-font-text');
+            updateFontSize('.S-icons-font-size', '--size-font-icons');
+        }
+
+        //Abre e fecha a ÁREA DE CONFIGURAÇÕES AVANÇADAS DE FONTE
+        function openAdvancedFontConfig() {
+            const fontAdvancedConfig = document.querySelector('.S-font-advanced-config');
+            const fontAdvancedConfigIcon = document.querySelector('.S-font-config');
+
+            fontAdvancedConfigIcon.addEventListener('click', () => {
+                fontAdvancedConfig.classList.toggle('close');
+            });
+        }
+
+        //Define o TAMANHO de TODAS AS FONTES do site
+        function defineAllFontSize() {
+            const fontSizeValue = document.querySelector('.S-font-size-value');
+            const fontSizeRange = document.querySelector('.S-font-size-range');
+
+            const rangeMin = parseInt(fontSizeRange.min);
+            const rangeMax = parseInt(fontSizeRange.max);
+            const rangeCenter = (rangeMin + rangeMax) / 2;
+
+            const initialFontSize = getComputedStyle(document.documentElement).getPropertyValue('--size-font-title') || rangeCenter;
+            const initialFontIcons = getComputedStyle(document.documentElement).getPropertyValue('--size-font-icons') || rangeCenter;
+            const initialFontSubtitle = getComputedStyle(document.documentElement).getPropertyValue('--size-font-subtitle') || rangeCenter;
+            const initialFontText = getComputedStyle(document.documentElement).getPropertyValue('--size-font-text') || rangeCenter;
+            const initialFontDetail = getComputedStyle(document.documentElement).getPropertyValue('--size-font-detail') || rangeCenter;
+
+            fontSizeRange.addEventListener('input', function () {
+                const newSize = parseInt(initialFontSize) + parseInt(fontSizeRange.value) - rangeCenter;
+                const newIconsSize = parseInt(initialFontIcons) + parseInt(fontSizeRange.value) - rangeCenter;
+                const newSubtitleSize = parseInt(initialFontSubtitle) + parseInt(fontSizeRange.value) - rangeCenter;
+                const newTextSize = parseInt(initialFontText) + parseInt(fontSizeRange.value) - rangeCenter;
+                const newDetailSize = parseInt(initialFontDetail) + parseInt(fontSizeRange.value) - rangeCenter;
+
+                fontSizeValue.innerHTML = fontSizeRange.value;
+
+                document.documentElement.style.setProperty('--size-font-title', `${newSize}px`);
+                document.documentElement.style.setProperty('--size-font-icons', `${newIconsSize}px`);
+                document.documentElement.style.setProperty('--size-font-subtitle', `${newSubtitleSize}px`);
+                document.documentElement.style.setProperty('--size-font-text', `${newTextSize}px`);
+                document.documentElement.style.setProperty('--size-font-detail', `${newDetailSize}px`);
+            });
+
+            function defineFontSizeByButtons() {
+                const fontSizeMinus = document.querySelector('.S-font-size-minus');
+                const fontSizePlus = document.querySelector('.S-font-size-plus');
+
+                fontSizePlus.addEventListener('click', () => {
+                    fontSizeRange.value = parseInt(fontSizeRange.value) + 1;
+                    fontSizeRange.dispatchEvent(new Event('input'));
+                });
+
+                fontSizeMinus.addEventListener('click', () => {
+                    fontSizeRange.value = parseInt(fontSizeRange.value) - 1;
+                    fontSizeRange.dispatchEvent(new Event('input'));
+                });
+            }
+            defineFontSizeByButtons();
+        }
+
+        openAdvancedFontConfig();
+        defineAllFontSize();
+        defineEspecificFontSize();
+    }
+    updateMode();
+    updateColors();
+    updateFont();
+}

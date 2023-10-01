@@ -607,7 +607,7 @@ main {
     font-size: calc(var(--size-font-icons) - 1px);
 }
 
-.H-timeline .H-publish .H-publish-title{
+.H-timeline .H-publish .H-section-title{
     position: absolute;
     top: -0.8rem;
     background-color: var(--second-color);
@@ -664,8 +664,8 @@ main {
 
 .H-timeline .H-publish .H-left .H-user-images .H-user-status{
     position: absolute;
-    width: 105%;
-    height: 105%;
+    width: 108%;
+    height: 108%;
     border: 8px dashed var(--org-color1);
     border-radius: 100%;
     transition: var(--element-out);
@@ -697,7 +697,7 @@ main {
     bottom: 15%;
     left: 50%;
     transform: translate(-50%);
-    gap: 0.5rem;
+    gap: 0.9rem;
 }
 
 /*===============================================================================================================
@@ -713,13 +713,13 @@ main {
     overflow: hidden;
 }
 
-.H-aside .H-search{
+.H-search{
     display: flex;
     justify-content: space-evenly;
     padding: 1.5rem;
 }
 
-.H-aside .H-search .H-search-input {
+.H-search .H-search-input {
     background-color: var(--third-color);
     border: 1px solid var(--border-color);
     border-top-right-radius: 5rem;
@@ -731,14 +731,14 @@ main {
     padding: 0 0.3125rem 0 0.3125rem;
 }
 
-.H-aside .H-search .H-search-input input {
+.H-search .H-search-input input {
     outline: none;
     border: none;
     width: 12.5rem;
     background: none;
 }
 
-.H-aside .H-user-notify{
+.H-user-notify{
     display: flex;
     border: 1px solid var(--border-color);
     width: 2.2rem;
@@ -746,6 +746,181 @@ main {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
+
+.H-featured-profiles{
+    position: relative;
+    margin: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    max-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
+}
+
+.H-featured-profiles .H-section-title{
+    position: absolute;
+    top: -0.8rem;
+    background-color: var(--third-color);
+    padding: 0 1rem 0 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: calc(var(--size-font-title) - 6px);
+    letter-spacing: 1px;
+    z-index: +2;
+}
+
+.H-featured-profiles .H-profiles-swiper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-right: 2rem;
+}
+
+.H-featured-profiles .H-all-profiles{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile::after{
+    position: absolute;
+    content: '';
+    width: 80%;    
+    height: 1px;
+    background: var(--border-color);
+    left: 50%;
+    top: -1px;
+    transform: translateX(-50%);
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-images{
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    width: 3.5rem;
+    cursor: pointer;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-profile-img{
+    position: relative;
+    display: flex;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    z-index: +1;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-profile-img img{
+    max-width: 100%;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-org-img{
+    position: absolute;
+    display: flex;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 38%;
+    border: 1px solid var(--border-color);
+    right: 0px;
+    bottom: 0px;
+    z-index: +1;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-org-img img{
+    max-width: 100%;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-images  .H-user-status{
+    position: absolute;
+    width: 108%;
+    height: 108%;
+    border: 8px dashed var(--org-color1);
+    border-radius: 100%;
+    transition: var(--element-out);
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-texts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-texts .H-user-nick {
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 9.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(var(--size-font-title) - 11px);
+    animation: marquee 5s linear infinite;
+}
+
+
+.H-featured-profiles .H-all-profiles .H-profile .H-user-texts .H-user-achievement{
+    font-size: calc(var(--size-font-text) - 3px);
+    width: 9.7rem;
+    overflow-wrap: break-word;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-follow{
+    position: absolute;
+    background-color: var(--body-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    right: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: var(--size-font-text);
+}
+
+.H-featured-profiles .H-arrows{
+    opacity: 20%;
+    transition: calc(var(--element-out) - 0.2s);
+    right: -0.2rem;
+    height: 2rem;
+    width: 4rem;    
+    right: 1rem;
+    display: flex;
+    z-index: +1;
+}
+
+.H-featured-profiles .H-arrows:hover{
+    opacity: 100%;
+    color: var(--text-color);
+    transition: calc(var(--element-in) - 0.2s);
+}
+
+.H-featured-profiles .H-arrow-next{
+    position: absolute;
+    font-size: calc(var(--size-font-title) + 3rem);
+    bottom: -1rem;
+}
+
+.H-featured-profiles .H-arrow-preview{
+    position: absolute;
+    font-size: calc(var(--size-font-title) + 3rem);
+    top: -1rem;
+    transform: rotate(180deg);
+}
+
+.H-featured-profiles .swiper-pagination-bullet-active {
+    background-color: var(--org-color1);
+}
+
 /*===========================================================================================================
 =========================================== CONFIG: S-SETTINGS ==============================================
 ===========================================================================================================*/
