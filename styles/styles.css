@@ -45,6 +45,18 @@ main {
     transition-duration: 0.22s;
 }
 
+@keyframes characterBlocked {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.characterBlocked {
+    animation: characterBlocked 0.5s ease-in-out infinite;
+    color: #ff0000;
+}
 /*====================================================================================================
 ============================================ MENU ASIDE ==============================================
 ====================================================================================================*/
