@@ -752,7 +752,7 @@ main {
     margin: 1rem;
     border: 1px solid var(--border-color);
     border-radius: 1rem;
-    max-height: 10rem;
+    max-height: 11rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -789,6 +789,13 @@ main {
     position: relative;
     width: 100%;
     display: flex;
+    justify-content: space-between;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-profile-content{
+    position: relative;
+    width: 100%;
+    display: flex;
     justify-content: flex-start;
     gap: 1rem;
 }
@@ -808,7 +815,9 @@ main {
     position: relative;
     border-radius: 100%;
     display: flex;
-    width: 3.5rem;
+    width: 15%;
+    min-width: 3.5rem;
+    max-width: 4rem;
     cursor: pointer;
 }
 
@@ -857,26 +866,29 @@ main {
     align-items: flex-start;
 }
 
+/* Adicionar responsividade no texto*/
+
 .H-featured-profiles .H-all-profiles .H-profile .H-user-texts .H-user-nick {
     font-weight: 600;
     letter-spacing: 1px;
-    width: 9.7rem;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: calc(var(--size-font-title) - 11px);
+    font-size: calc(var(--size-font-title) - 0.7vh);
     animation: marquee 5s linear infinite;
 }
 
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-texts .H-user-achievement{
-    font-size: calc(var(--size-font-text) - 3px);
-    width: 9.7rem;
+    font-size: calc(var(--size-font-text) - 0.25vh);
+    width: 100%;
     overflow-wrap: break-word;
+    padding-left: 1px;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-follow{
-    position: absolute;
+    position: relative;
     background-color: var(--body-color);
     padding: 0.5rem;
     border-radius: 1rem;

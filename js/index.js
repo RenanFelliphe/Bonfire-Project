@@ -206,11 +206,6 @@ function featuredProfilesFunctions() {
           nextEl: ".H-arrow-next",
           prevEl: ".H-arrow-preview",
         },
-        pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-            clickable: true
-          },
         mousewheel: true,
         keyboard: {
             enabled: true,
