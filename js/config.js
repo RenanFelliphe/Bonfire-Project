@@ -163,28 +163,28 @@ function menuAsideFunctions() {
 
         const logOptionsDiv = document.querySelector('.M-log-actions');
         const logButtom = document.querySelector('.M-log-buttom');
-        
+
         // Abre a seção com botão
         function openContainer() {
             logButtom.addEventListener('click', function () {
                 logOptionsDiv.classList.toggle("close");
                 logButtom.classList.toggle("active");
-        
+
                 if (logOptionsDiv.classList.contains("close")) {
                     clearTimeout(hoverTimeout);
                 } else {
                     clearTimeout(hoverTimeout);
                 }
             });
-    }
+        }
         // Fecha a seção com hover
-        function closeContainerHover(){
+        function closeContainerHover() {
 
             main.addEventListener("mouseover", () => {
                 logOptionsDiv.classList.add("close");
                 logButtom.classList.remove("active");
             })
-            
+
             sidebarCenter.addEventListener("mouseover", () => {
                 logOptionsDiv.classList.add("close");
                 logButtom.classList.remove("active");
@@ -241,7 +241,7 @@ function FAQsection() {
     const otherQuestionTitle = document.querySelector(".S-otherQ-title");
     const questionLine = document.querySelector(".S-line");
 
-    function openQuestion(){
+    function openQuestion() {
         questions.forEach((questionList, index) => {
             questionList.addEventListener('click', () => {
                 answers[index].classList.remove("closed");
@@ -249,7 +249,7 @@ function FAQsection() {
         });
     }
 
-    function closeQuestionsHover(){
+    function closeQuestionsHover() {
         faq.addEventListener('mouseleave', () => {
             answers.forEach(answer => {
                 answer.classList.add('closed');
@@ -257,7 +257,7 @@ function FAQsection() {
         });
     }
 
-    function otherQuestion(){
+    function otherQuestion() {
         otherQuestionTitle.addEventListener('click', () => {
             //Transiciona a linha colorida
             questionLine.classList.remove("S-geral-active");
@@ -270,7 +270,7 @@ function FAQsection() {
             //Inverte as seções
             otherQuestions.classList.add("active");
             generalQuestions.classList.remove("active");
-            
+
             //Fecha as perguntas
             answers.forEach(answer => {
                 answer.classList.add('closed');
@@ -278,7 +278,7 @@ function FAQsection() {
         });
     }
 
-    function generalQuestion(){
+    function generalQuestion() {
         generalQuestionTitle.addEventListener('click', () => {
             //Transiciona a linha colorida
             questionLine.classList.remove("S-other-active");
@@ -291,7 +291,7 @@ function FAQsection() {
             //Inverte as seções
             generalQuestions.classList.add("active");
             otherQuestions.classList.remove("active");
-            
+
             //Fecha as perguntas
             answers.forEach(answer => {
                 answer.classList.add('closed');
@@ -304,6 +304,7 @@ function FAQsection() {
     openQuestion();
     closeQuestionsHover();
 }
+
 //Funções da seção para Reportar PROBLEMAS e Enviar FEEDBACK
 function reportProblemsAndFeedback() {
     //Funções da seção de Reportar problemas
@@ -311,16 +312,54 @@ function reportProblemsAndFeedback() {
         const reportSubmit = document.querySelector(".S-report-submit");
         const reportModal = document.querySelector(".S-report-problems-modal");
         const reportClear = document.querySelector(".S-report-clear");
+        const tagList = document.querySelectorAll(".S-tags");
 
-        // Abre o modal
-        reportSubmit.addEventListener('click', () => {
-            reportModal.classList.toggle('close');
 
+        function openCloseModal() {
+            // Abre o modal
+            reportSubmit.addEventListener('click', () => {
+                reportModal.classList.toggle('close');
+            });
             // Limpa o input e fecha o modal
             reportClear.addEventListener('click', () => {
                 reportModal.classList.add('close');
+                //Adiciona a opacidade em todas as tags
+                tagList.forEach((tags) => {
+                    tags.style.opacity = 1;
+
+                });
             });
-        });
+        }
+
+        function chooseTags() {
+            const tagInput = document.querySelector("#S-tag-area");
+            tagList.forEach((tags) => {
+                tags.addEventListener('click', () => {
+                    if (tags.style.opacity == 0.3) {
+                        tags.style.opacity = 1;
+                        const tagToRemove = tags.textContent.trim();
+                        tagInput.value = tagInput.value
+                            .split(',')
+                            .map((tag) => tag.trim())
+                            .filter((tag) => tag !== tagToRemove)
+                            .join(', '); // Remove a tag do input
+                    } else {
+
+                        tags.style.opacity = 0.3;
+
+                        const tagText = tags.textContent.trim();
+                        if (tagInput.value === "") {
+                            tagInput.value = tagText;
+                        } else {
+                            tagInput.value += `, ${tagText}`; // Adiciona a tag ao input separada por vírgula
+                        }
+                    }
+                });
+            });
+        }
+
+        openCloseModal();
+        chooseTags();
     }
 
     //Funções da seção de enviar Feedback
@@ -372,7 +411,7 @@ function reportProblemsAndFeedback() {
 }
 
 //Conjunto de funções para personalizar as características do site como o MODO, AS CORES E AS FONTES
-function personalizeBonfire(){
+function personalizeBonfire() {
     //Atualiza o MODO(Light/Dark)
     function updateMode() {
         const chk = document.getElementById('S-chk');

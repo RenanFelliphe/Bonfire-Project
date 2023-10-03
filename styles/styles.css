@@ -1943,8 +1943,14 @@ main {
     border-left: 1px solid var(--border-color);
     width: 100%;
     padding: 0 2rem 0 2rem;
-    font-size: var(--size-font-subtitle);
+    font-size: var(--size-font-text);
     background: transparent;
+}
+
+.S-subsettings .S-suport .S-report-problems .S-report-area #S-tag-area{
+    width: 95%;
+    pointer-events: none;
+    text-overflow: ellipsis;
 }
 
 .S-subsettings .S-suport .S-report-problems .S-report-area .S-report-input::-webkit-scrollbar {
@@ -2065,7 +2071,7 @@ main {
 .S-subsettings .S-suport .S-feedback .S-feedback-area .S-feedback-rating .S-feedback-stars.active{
     color: #DAA520;
     transition: calc(var(--element-in) - 0.25s);
-    font-size: calc(var(--size-font-icons) + 4px);
+    font-size: calc(var(--size-font-icons) + 2px);
     transform: rotate(72.5deg);
 }
 
@@ -2075,7 +2081,7 @@ main {
     border-left: 1px solid var(--border-color);
     width: 100%;
     padding: 0 2rem 0 2rem;
-    font-size: var(--size-font-subtitle);
+    font-size: var(--size-font-text);
     background: transparent;
     margin-top: 0.3rem;
 }
