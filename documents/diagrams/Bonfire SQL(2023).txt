@@ -147,6 +147,20 @@ CREATE TABLE UsuarioProfissao (
     FOREIGN KEY (idProfissao) REFERENCES Profissao(idProfissao) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
+/*	  Criação das Views	    */
+
+CREATE VIEW VerificaçãoDeComentario AS
+	SELECT P.usuarioapelido AS "Publicação de:", P.conteudoTexto AS "Conteudo da Publicação:", U.apelido AS "Comentário de:", C.conteudoTexto AS "Conteudo do Comentário:" from Comentario C INNER JOIN Usuario U, Publicacao P
+		WHERE U.nome = C.usuarioNome AND U.apelido = C.usuarioApelido
+		AND P.idPublicacao = C.idPublicacao;
+    
+CREATE VIEW contarUsuariosPorPais AS
+	SELECT O.pais AS "País", count(U.nome) AS "Quantidade de Usuários" FROM Usuario U INNER JOIN Origem O ON O.pais = U.nacionalidade GROUP BY O.pais;
+
+CREATE VIEW contarUsuariosPorProfissao AS
+    	SELECT P.nome AS "Profissão", count(U.nome) AS "Quantidade de Usuários" FROM Usuario U, Profissao P, UsuarioProfissao UP
+        WHERE P.idProfissao = UP.idProfissao AND U.nome = UP.usuarioNome AND U.apelido = UP.usuarioApelido GROUP BY P.nome;    
+        
 /*	  Inserção nas tabelas de ENTIDADES	    */
 INSERT INTO Origem VALUES
 ('África do Sul', 'ZA', 'Inglês', 'Sul-africano'),
@@ -291,8 +305,8 @@ INSERT INTO Usuario VALUES
 ('Matias Delipetro', 'Saadhak', 'loudmatiassaadhak@gmail.com', '135486541', 'Matias Delipetro, 26, São Paulo, SP | VALORANT Player', 'masculino', null, true, 'Argentina'),
 ('Rodrigo Fernandes', 'El Gato', 'rodrigofernandes213@gmail.com', 'ff561230', 'Nova era da Los', 'masculino', 'PLATIIIINA', true, 'Brasil'),
 ('Tyson Ngo', 'TenZ', 'ngoTenz@gmail.com', 'ngotytenz', 'VALORANT Player for @Sentinels', 'masculino', null, true, 'Canadá'),
-('John Doe', 'JDoe', 'johndoe@email.com', 'securepass', 'Gaming enthusiast', 'masculino', 'Happy gaming!', true, 'Estados Unidos'),
-('Luis Gonzales', 'LuisG', 'luis@email.com', 'luispass', 'Pro esports player', 'masculino', 'Competitive gaming is life!', true, 'Argentina'),
+('Bryan Luna', 'pANcada', 'pANcada04@email.com', 'whyPancasdontMiss', 'Player for @Sentinels', 'masculino', null, true, 'Brasil'),
+('Bruno Bittencourt', 'Playhard', 'PHbittencourt@gmail.com', '123456', 'CEO for @LOUDGG', 'masculino', 'A LOUD é o Brasil e o Brasil é a LOUD', true, 'Brasil'),
 ('Richard Tyler', 'NinjaGamer', 'ninja@email.com', 'ninjapassword', 'Professional Fortnite streamer', 'masculino', 'Time to conquer Fortnite!', true, 'Estados Unidos'),
 ('Felix Arvid', 'PewDiePie', 'pewdie@email.com', 'brofist', 'YouTube gaming sensation', 'masculino', 'Bro Army, unite!', true, 'Suécia'),
 ('Imane Anys', 'Pokimane', 'poki@email.com', 'pokipass', 'Twitch streamer and content creator', 'feminino', 'Welcome to the Poki Squad!', true, 'Marrocos'),
@@ -312,28 +326,28 @@ INSERT INTO Campeonato VALUES
 ('CAMP0010', 'FIFA eWorld Cup 2023', 'FIFA Esports World Championship', 'Esports', true, 300000, 'Japão');
 
 INSERT INTO Publicacao VALUES
-('PUB0001', '2023-09-27', 'Vitória incrível no CBLOL!', 'Bruno Goes', 'Nobru'),
+('PUB0001', '2023-09-27', 'Vitória incrível contra a Los Grandes no CBLOL!', 'Bruno Goes', 'Nobru'),
 ('PUB0002', '2023-09-27', 'Excelente jogo de CS:GO!', 'Matias Delipetro', 'Saadhak'),
-('PUB0003', '2023-09-27', 'Gran partida de Valorant!', 'Tyson Ngo', 'TenZ'),
-('PUB0004', '2023-09-27', 'Ansioso para o próximo torneio!', 'John Doe', 'JDoe'),
-('PUB0005', '2023-09-27', 'Bom trabalho no torneio!', 'Luis Gonzales', 'LuisG'),
-('PUB0006', '2023-09-27', 'Transmisión increíble hoy!', 'Felix Arvid', 'PewDiePie'),
-('PUB0007', '2023-09-27', '¡Gracias por entretenernos!', 'Imane Anys', 'Pokimane'),
-('PUB0008', '2023-09-27', 'Jugando CS:GO ahora!', 'Michael Grzesiek', 'Shroud'),
-('PUB0009', '2023-09-27', 'Belas jogadas no Fortnite!', 'Richard Tyler', 'NinjaGamer'),
-('PUB0010', '2023-09-27', 'Hora de vencer en FIFA 22!', 'Felix Arvid', 'PewDiePie');
+('PUB0003', '2023-09-27', "OMG, why pANcada don't miss a shot?", 'Tyson Ngo', 'TenZ'),
+('PUB0004', '2023-09-27', 'Ansioso para o próximo torneio!', 'Bryan Luna', 'pANcada'),
+('PUB0005', '2023-09-27', 'Nós somos campeões mundiais" Faz o L!!!!!!!', 'Bruno Bittencourt', 'PlayHard'),
+('PUB0006', '2023-09-27', 'Nice 24h Stream guys, but I\'ll never do it again!', 'Felix Arvid', 'PewDiePie'),
+('PUB0007', '2023-09-27', 'Thank you for the stream guys and girls, see you tomorrow!', 'Imane Anys', 'Pokimane'),
+('PUB0008', '2023-09-27', 'New CS video on the Channel, WHAT ARE YOU WAITING FOR?', 'Michael Grzesiek', 'Shroud'),
+('PUB0009', '2023-09-27', "I'm officially passing the crown to Bugha, SHINE MY BOI!", 'Richard Tyler', 'NinjaGamer'),
+('PUB0010', '2023-09-27', "I'm finnaly got it, 111M of subscribers", 'Felix Arvid', 'PewDiePie');
 
 INSERT INTO Comentario VALUES
-('COM001', '2023-09-27', 'Ótima publicação!', 'Bruno Goes', 'Nobru', 'PUB0001'),
-('COM002', '2023-09-27', 'Concordo totalmente!', 'Matias Delipetro', 'Saadhak', 'PUB0002'),
-('COM003', '2023-09-27', 'Que partida incrível!', 'Tyson Ngo', 'TenZ', 'PUB0003'),
-('COM004', '2023-09-27', 'Estou ansioso para isso!', 'John Doe', 'JDoe', 'PUB0004'),
-('COM005', '2023-09-27', 'Bom trabalho!', 'Luis Gonzales', 'LuisG', 'PUB0005'),
-('COM006', '2023-09-27', 'Eres increíble!', 'Felix Arvid', 'PewDiePie', 'PUB0006'),
-('COM007', '2023-09-27', '¡Gracias por entretenernos!', 'Imane Anys', 'Pokimane', 'PUB0007'),
-('COM008', '2023-09-27', '¡Buena jugada!', 'Michael Grzesiek', 'Shroud', 'PUB0008'),
-('COM009', '2023-09-27', '¡Estoy animando por ti!', 'Richard Tyler', 'NinjaGamer', 'PUB0009'),
-('COM010', '2023-09-27', 'Hora de ganar en FIFA 22!', 'Felix Arvid', 'PewDiePie', 'PUB0010');
+('COM001', '2023-09-27', 'GGWP Fluxo!!', 'Rodrigo Fernandes', 'El Gato', 'PUB0001'),
+('COM002', '2023-09-27', 'Parabains manito!', 'Matias Delipetro', 'Saadhak', 'PUB0001'),
+('COM003', '2023-09-27', 'Es el mejor del mundo!', 'Matias Delipetro', 'Saadhak', 'PUB0003'),
+('COM004', '2023-09-27', 'Fala dele!', 'Bryan Luna', 'pANcada', 'PUB0003'),
+('COM005', '2023-09-27', 'Meu Deus, porque o Pancada não erra um tiro?', 'Bruno Bittencourt', 'Playhard', 'PUB0004'),
+('COM006', '2023-09-27', 'Now, go see my last video on Youtube', 'Felix Arvid', 'PewDiePie', 'PUB0006'),
+('COM007', '2023-09-27', 'You\'re trash!! jk LY!', 'Richard Tyler', 'NinjaGamer', 'PUB0007'),
+('COM008', '2023-09-27', 'See you!', 'Michael Grzesiek', 'Shroud', 'PUB0007'),
+('COM009', '2023-09-27', '😏!!', 'Richard Tyler', 'NinjaGamer', 'PUB0008'),
+('COM010', '2023-09-27', 'You still celebrate that? LMAO', 'Richard Tyler', 'NinjaGamer', 'PUB0010');
 
 /*	     Inserção nas tabelas de RELACIONAMENTOS	 	*/
 
@@ -342,8 +356,8 @@ INSERT INTO UsuarioCampeonato VALUES
 ('Matias Delipetro', 'Saadhak', 'CAMP0002'),
 ('Rodrigo Fernandes', 'El Gato', 'CAMP0002'),
 ('Tyson Ngo', 'TenZ', 'CAMP0003'),
-('John Doe', 'JDoe', 'CAMP0003'),
-('Luis Gonzales', 'LuisG', 'CAMP0004'),
+('Bruno Bittencourt', 'Playhard', 'CAMP0003'),
+('Bryan Luna', 'pANcada', 'CAMP0004'),
 ('Richard Tyler', 'NinjaGamer', 'CAMP0004'),
 ('Felix Arvid', 'PewDiePie', 'CAMP0005'),
 ('Imane Anys', 'Pokimane', 'CAMP0005'),
@@ -353,8 +367,8 @@ INSERT INTO UsuarioComunidade VALUES
 ('Bruno Goes', 'Nobru', 'COM0001'),
 ('Matias Delipetro', 'Saadhak', 'COM0001'),
 ('Tyson Ngo', 'TenZ', 'COM0001'),
-('John Doe', 'JDoe', 'COM0002'),
-('Luis Gonzales', 'LuisG', 'COM0002'),
+('Bruno Bittencourt', 'Playhard', 'COM0002'),
+('Bryan Luna', 'pANcada', 'COM0002'),
 ('Richard Tyler', 'NinjaGamer', 'COM0003'),
 ('Felix Arvid', 'PewDiePie', 'COM0003'),
 ('Imane Anys', 'Pokimane', 'COM0004'),
@@ -366,8 +380,8 @@ INSERT INTO UsuarioJogo VALUES
 ('Matias Delipetro', 'Saadhak', 'JOG0002'),
 ('Rodrigo Fernandes', 'El Gato', 'JOG0003'),
 ('Tyson Ngo', 'TenZ', 'JOG0004'),
-('John Doe', 'JDoe', 'JOG0005'),
-('Luis Gonzales', 'LuisG', 'JOG0006'),
+('Bryan Luna', 'pANcada', 'JOG0005'),
+('Bruno Bittencourt', 'Playhard', 'JOG0006'),
 ('Richard Tyler', 'NinjaGamer', 'JOG0007'),
 ('Felix Arvid', 'PewDiePie', 'JOG0008'),
 ('Imane Anys', 'Pokimane', 'JOG0009'),
@@ -377,8 +391,8 @@ INSERT INTO UsuarioProfissao VALUES
 ('Bruno Goes', 'Nobru', 'PRO0001'),
 ('Matias Delipetro', 'Saadhak', 'PRO0002'),
 ('Tyson Ngo', 'TenZ', 'PRO0001'),
-('John Doe', 'JDoe', 'PRO0003'),
-('Luis Gonzales', 'LuisG', 'PRO0001'),
+('Bryan Luna', 'pANcada', 'PRO0001'),
+('Bruno Bittencourt', 'Playhard', 'PRO0014'),
 ('Richard Tyler', 'NinjaGamer', 'PRO0002'),
 ('Felix Arvid', 'PewDiePie', 'PRO0002'),
 ('Imane Anys', 'Pokimane', 'PRO0002'),
