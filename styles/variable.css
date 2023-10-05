@@ -174,12 +174,12 @@
 }
 
 .G-yellow {
-    --org-color1: #FFD700; /* Amarelo versão 1 */
-    --org-color2: #FFD700; /* Amarelo versão 2 */
-    --org-color-darker: #77770f; /* Uma versão mais escura da cor amarela */
-    --org-color-lighter: #FFFF99; /* Uma versão mais clara da cor amarela */
-    --org-color-color-low-opacity: #FFFF0060; /* Amarelo com baixa opacidade */
-    --org-color-transparent: #FFFF0030; /* Amarelo semi-transparente */
+    --org-color1: #FFD400; /* Amarelo versão 1 */
+    --org-color2: #FFD400; /* Amarelo versão 2 */
+    --org-color-darker: #8b7400; /* Uma versão mais escura da cor amarela */
+    --org-color-lighter: #ffe251; /* Uma versão mais clara da cor amarela */
+    --org-color-color-low-opacity: #FFD40060; /* Amarelo com baixa opacidade */
+    --org-color-transparent: #FFD40030; /* Amarelo semi-transparente */
 }
 
 .G-green {

@@ -25,7 +25,7 @@ function charactersLimit() {
     numberOFCharacters.style.color = "lime";
 
     //100% do limite máximo de caracteres atingido
-    if (inputContent.length > maxCharacters) {
+    if (inputContent.length >= maxCharacters) {
         input.value = inputContent.slice(0, maxCharacters);
         numberOFCharacters.textContent = "MAX";
         numberOFCharacters.style.color = "red";
