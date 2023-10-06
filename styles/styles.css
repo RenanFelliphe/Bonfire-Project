@@ -876,17 +876,17 @@ main {
     border: 1px solid var(--border-color);
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
-    min-width: 20rem;
     height: 2rem;
+    width: 18rem;
     display: flex;
-    justify-content: space-around;
-    padding: 0 0.3125rem 0 0.3125rem;
+    padding: 0 0.7rem 0 0.7rem;
+    gap: 0.5rem;
 }
 
 .H-search .H-search-input input {
     outline: none;
     border: none;
-    width: 12.5rem;
+    width: 100%;
     background: none;
 }
 
@@ -928,14 +928,12 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
-    padding-right: 2rem;
 }
 
 .H-featured-profiles .H-all-profiles{
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 0 1rem;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile{
@@ -943,14 +941,12 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-.H-featured-profiles .H-all-profiles .H-profile .H-profile-content{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
+.H-featured-profiles .H-all-profiles .H-profile:hover{
+    background-color: var(--half-third-color);
 }
 
 .H-featured-profiles .H-all-profiles .H-profile::after{
@@ -962,6 +958,14 @@ main {
     left: 50%;
     top: -1px;
     transform: translateX(-50%);
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .H-profile-content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images{
@@ -1029,7 +1033,6 @@ main {
     font-size: calc(var(--size-font-title) - 1.5vh);
     animation: marquee 5s linear infinite;
 }
-
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-texts .H-user-achievement{
     font-size: calc(var(--size-font-text) - 0.3vh);
@@ -1119,12 +1122,16 @@ main {
 
 .H-trending-topics .H-all-trends{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .H-trending-topics .H-all-trends .H-trend{
+    width: 100%;
     position: relative;
     cursor: pointer;
-    padding: 0.8rem 2rem 0.8rem 2rem;
+    padding: 0.6rem 2rem 0.6rem 2rem;
 }
 
 .H-trending-topics .H-all-trends .H-trend:hover{
@@ -1141,6 +1148,18 @@ main {
 .H-trending-topics .H-all-trends .H-trend .H-trend-numbers .H-trend-ranking{
     font-size: var(--size-font-text);
     font-weight: 600;
+    color: #6F7270;
+}
+
+.H-trending-topics .H-all-trends .H-trend#H-first-trend .H-trend-numbers .H-trend-ranking{
+    color: #F7EF8A;
+}
+
+.H-trending-topics .H-all-trends .H-trend#H-second-trend .H-trend-numbers .H-trend-ranking{
+    color: #D5D5D5;
+}
+.H-trending-topics .H-all-trends .H-trend#H-third-trend .H-trend-numbers .H-trend-ranking{
+    color: #CD7F32;
 }
 
 .H-trending-topics .H-all-trends .H-trend .H-trend-markers{
