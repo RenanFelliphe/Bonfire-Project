@@ -627,7 +627,7 @@ main {
     padding: 0 1rem 0 1rem;
     left: 50%;
     transform: translate(-50%);
-    font-size: calc(var(--size-font-title) - 6px);
+    font-size: calc(var(--size-font-title) - 7px);
     letter-spacing: 1px;
 }
 
@@ -729,7 +729,7 @@ main {
     padding: 0 1rem 0 1rem;
     left: 50%;     
     transform: translate(-50%);
-    font-size: calc(var(--size-font-title) - 6px);
+    font-size: calc(var(--size-font-title) - 7px);
     letter-spacing: 1px;
 }
 
@@ -909,7 +909,7 @@ main {
     padding: 0 1rem 0 1rem;
     left: 50%;
     transform: translate(-50%);
-    font-size: calc(var(--size-font-title) - 6px);
+    font-size: calc(var(--size-font-title) - 7px);
     letter-spacing: 1px;
     z-index: +2;
 }
@@ -1074,6 +1074,36 @@ main {
     background-color: var(--org-color1);
 }
 
+.H-trending-topics{
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 3rem 1rem 1rem 1rem;
+}
+
+.H-trending-topics .H-section-title{
+    position: absolute;
+    top: -0.8rem;
+    background-color: var(--third-color);
+    padding: 0 1rem 0 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: calc(var(--size-font-title) - 7px);
+    letter-spacing: 1px;
+    z-index: +2;
+}
+
+.H-trending-topics .H-trending-filter{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: calc(var(--size-font-icons) + 7px);
+    font-weight: 600;
+}
 /*===========================================================================================================
 =========================================== CONFIG: S-SETTINGS ==============================================
 ===========================================================================================================*/
