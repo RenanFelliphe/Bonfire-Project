@@ -62,7 +62,9 @@ CREATE TABLE Jogo (
     multiplayer boolean NOT NULL,
     CONSTRAINT PK_jogo PRIMARY KEY (idJogo)
 );
+        
 
+        
 CREATE TABLE Publicacao (
     idPublicacao varchar(10) NOT NULL,
     dtPublicacao date NOT NULL,
@@ -149,17 +151,34 @@ CREATE TABLE UsuarioProfissao (
 
 /*	  Criação das Views	    */
 
-CREATE VIEW VerificaçãoDeComentario AS
+CREATE VIEW listarComentarios AS
 	SELECT P.usuarioapelido AS "Publicação de:", P.conteudoTexto AS "Conteudo da Publicação:", U.apelido AS "Comentário de:", C.conteudoTexto AS "Conteudo do Comentário:" from Comentario C INNER JOIN Usuario U, Publicacao P
 		WHERE U.nome = C.usuarioNome AND U.apelido = C.usuarioApelido
 		AND P.idPublicacao = C.idPublicacao;
     
 CREATE VIEW contarUsuariosPorPais AS
-	SELECT O.pais AS "País", count(U.nome) AS "Quantidade de Usuários" FROM Usuario U INNER JOIN Origem O ON O.pais = U.nacionalidade GROUP BY O.pais;
+		SELECT O.pais AS "País", count(U.nome) AS "Quantidade de Usuários" FROM Usuario U INNER JOIN Origem O
+        ON O.pais = U.nacionalidade GROUP BY O.pais;
 
+CREATE VIEW listarUsuariosPorPais AS
+		SELECT O.pais AS "País", U.apelido AS "Nick", U.nome AS "Nome" FROM Usuario U INNER JOIN Origem O
+        ON O.pais = U.nacionalidade ORDER BY O.pais;
+		
 CREATE VIEW contarUsuariosPorProfissao AS
     	SELECT P.nome AS "Profissão", count(U.nome) AS "Quantidade de Usuários" FROM Usuario U, Profissao P, UsuarioProfissao UP
         WHERE P.idProfissao = UP.idProfissao AND U.nome = UP.usuarioNome AND U.apelido = UP.usuarioApelido GROUP BY P.nome;    
+        
+CREATE VIEW listarUsuariosPorProfissao AS
+    	SELECT P.nome AS "Profissão", U.apelido AS "Nick", U.nome AS "Nome" FROM Usuario U, Profissao P, UsuarioProfissao UP
+        WHERE P.idProfissao = UP.idProfissao AND U.nome = UP.usuarioNome AND U.apelido = UP.usuarioApelido ORDER BY P.nome ASC;    
+        
+CREATE VIEW contarUsuariosPorJogo AS
+    	SELECT J.nome AS "Jogo", count(U.nome) AS "Quantidade de Usuários" FROM Usuario U, Jogo J, UsuarioJogo UJ
+        WHERE j.idJogo = Uj.idJogo AND U.nome = UJ.usuarioNome AND U.apelido = UJ.usuarioApelido GROUP BY J.nome; 
+           
+CREATE VIEW listarUsuariosPorJogo AS
+		SELECT J.nome AS "Jogo", U.apelido AS "Nick", U.nome AS "Nome" FROM Usuario U, Jogo J, UsuarioJogo UJ
+        WHERE j.idJogo = Uj.idJogo AND U.nome = UJ.usuarioNome AND U.apelido = UJ.usuarioApelido ORDER BY J.nome ASC; 
         
 /*	  Inserção nas tabelas de ENTIDADES	    */
 INSERT INTO Origem VALUES
@@ -311,7 +330,14 @@ INSERT INTO Usuario VALUES
 ('Felix Arvid', 'PewDiePie', 'pewdie@email.com', 'brofist', 'YouTube gaming sensation', 'masculino', 'Bro Army, unite!', true, 'Suécia'),
 ('Imane Anys', 'Pokimane', 'poki@email.com', 'pokipass', 'Twitch streamer and content creator', 'feminino', 'Welcome to the Poki Squad!', true, 'Marrocos'),
 ('Michael Grzesiek', 'Shroud', 'shroud@email.com', 'shroudpass', 'Former professional CS:GO player and streamer', 'masculino', 'Headshots incoming!', true, 'Canadá'),
-('Bárbara Passos', 'Babi', 'babipassos@gmail.com', '9812531babi', null, 'feminino', null, true, 'Brasil');
+('Victor Augusto', 'Coringa', 'loudcoringa@gmail.com', '4615618', null, 'masculino', "Live as 19h todos os dias", true, 'Brasil'),
+('Gustavo Queiroz', 'Minerva', 'gustavominerva@gmail.com', 'gustavominerva', null, 'masculino', null, true, 'Brasil'),
+('Alexandre Borba', 'Gaules', 'gau@gmail.com', 'gaules487', null, 'masculino', null, true, 'Brasil'),
+('Kim Hyuk-kyu', 'Deft', 'kimhyuk@gmail.com', 'kimhyukkyio', null, 'masculino', null, true, 'Coreia Do Sul'),
+('Lee Sang-hyeok', 'Faker', 'fakerLeeSang@gmail.com', 'fakerloldes', null, 'masculino', null, true, 'Coreia Do Sul'),
+('Vicente Compagnon', 'Tacolilla', 'Tacolla@gmail.com', 'VicTacolente', null, 'masculino', null, true, 'Chile'),
+('Gustavo Gomes', 'BaianoLOL', 'baianoLOL@gmail.com', 'ilhadaslendaslol', "CEO for Ilha das Lendas", 'masculino', null, true, 'Brasil'),
+('Jaccob Whiteaker', 'Yay', 'JaccobYayJaccob@gmail.com', 'YaWhiteakery', null, 'masculino', null, true, 'Estados Unidos');
 
 INSERT INTO Campeonato VALUES
 ('CAMP0001', 'CBLOL 2023', 'Campeonato Brasileiro de League of Legends 2023', 'Esports', true, 1000000, 'Brasil'),
@@ -376,28 +402,32 @@ INSERT INTO UsuarioComunidade VALUES
 ('Rodrigo Fernandes', 'El Gato', 'COM0005');
 
 INSERT INTO UsuarioJogo VALUES
-('Bruno Goes', 'Nobru', 'JOG0001'),
-('Matias Delipetro', 'Saadhak', 'JOG0002'),
-('Rodrigo Fernandes', 'El Gato', 'JOG0003'),
-('Tyson Ngo', 'TenZ', 'JOG0004'),
-('Bryan Luna', 'pANcada', 'JOG0005'),
-('Bruno Bittencourt', 'Playhard', 'JOG0006'),
-('Richard Tyler', 'NinjaGamer', 'JOG0007'),
-('Felix Arvid', 'PewDiePie', 'JOG0008'),
-('Imane Anys', 'Pokimane', 'JOG0009'),
-('Michael Grzesiek', 'Shroud', 'JOG0010');
+('Bruno Goes', 'Nobru', 'JOG0011'),
+('Matias Delipetro', 'Saadhak', 'JOG0012'),
+('Rodrigo Fernandes', 'El Gato', 'JOG0011'),
+('Tyson Ngo', 'TenZ', 'JOG0012'),
+('Bryan Luna', 'pANcada', 'JOG0012'),
+('Bruno Bittencourt', 'Playhard', 'JOG0011');
 
 INSERT INTO UsuarioProfissao VALUES
 ('Bruno Goes', 'Nobru', 'PRO0001'),
 ('Matias Delipetro', 'Saadhak', 'PRO0002'),
 ('Tyson Ngo', 'TenZ', 'PRO0001'),
+('Rodrigo Fernandes', 'El Gato', 'PRO0014'),
 ('Bryan Luna', 'pANcada', 'PRO0001'),
 ('Bruno Bittencourt', 'Playhard', 'PRO0014'),
 ('Richard Tyler', 'NinjaGamer', 'PRO0002'),
 ('Felix Arvid', 'PewDiePie', 'PRO0002'),
 ('Imane Anys', 'Pokimane', 'PRO0002'),
 ('Michael Grzesiek', 'Shroud', 'PRO0001'),
-('Rodrigo Fernandes', 'El Gato', 'PRO0004');
+('Victor Augusto', 'Coringa', 'PRO0002'),
+('Gustavo Queiroz', 'Minerva', 'PRO0002'),
+('Alexandre Borba', 'Gaules', 'PRO0002'),
+('Kim Hyuk-kyu', 'Deft', 'PRO0001'),
+('Lee Sang-hyeok', 'Faker', 'PRO0001'),
+('Vicente Compagnon', 'Tacolilla', 'PRO0001'),
+('Gustavo Gomes', 'BaianoLOL', 'PRO0002'),
+('Jaccob Whiteaker', 'Yay', 'PRO0001');
 
 INSERT INTO ComunidadeJogo VALUES
 ('COM0001', 'JOG0001'),
