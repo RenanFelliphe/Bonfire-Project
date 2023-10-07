@@ -160,76 +160,103 @@
             </div>
         </section>
 
-        <section class="H-timeline">
-            <section class="H-publish">
-                <h1 class="H-section-title">Criar Publicação</h1>
-                <div class="H-left">
-                    <div class="H-user-images">
-                        <div class="H-profile-img"><img src="assets/perfil.png" alt="Foto de perfil"></div>
-                        <div class="H-org-img"><img src="assets/loud-logo.png" alt="Foto da organização"></div>
-                        <div class="H-user-status"></div>
-                    </div>
-                    <span class="H-characters"><span class="H-characters-number">0</span>/<span class="H-max-characters">20</span></span>
+        <section class="T-trends">
+            <section class="T-trending-topics">
+                <h1 class="T-section-title">Assuntos do Momento</h1>
+                <div class="T-trend-functions">
+                    <i class="bi bi-search T-trending-search All-icon"></i>
+                    <i class="T-country-img"><img src="assets/brasil.png" alt="Imagem da Bandeira do Brasil"></i>
                 </div>
-        
-                <input type="text" placeholder="No que você está pensando?" class="H-type-here" oninput="charactersLimit()">
-                <i class="bi bi-emoji-smile All-icon"></i>
-        
-                <div class="H-annexes">
-                    <i class="bi bi-link-45deg All-icon"></i>
-                    <i class="bi bi-images All-icon"></i>
-                    <i class="bi bi-trophy All-icon"></i>
-                    <i class="bi bi-clock-history All-icon"></i>
-                    <i class="bi bi-flag All-icon"></i>
-                    <i class="bi bi-filetype-gif All-icon"></i>
-                    <i class="bi bi-controller All-icon"></i>
-                    <i class="bi bi-geo-alt All-icon"></i>
+                <div class="T-gaming-filter">
+                    <h4 class="T-game T-first-game active"> Todos </h4>
+                    <h4 class="T-game T-second-game"> Valorant </h4>
+                    <h4 class="T-game T-third-game"> League of Legends </h4>
+                    <h4 class="T-game T-fourth-game"> Free Fire </h4>
+                    <h4 class="T-game T-fifth-game"> CS:GO </h4>
+                    <span class="T-line"> </span>
                 </div>
-            </section>
-
-            <section class="H-suggestions">
-                <h1 class="H-section-title"> Sugestões </h1>
-                <div class="H-all-profiles">
-                    <div class="H-profile">
-                        <div class="H-user-images">
-                            <a href="perfil.html" class="H-profile-img"><img src="assets/fnx.jpg" alt="Fodo de perfil"></a>
-                            <a href="comunidade.html" class="H-org-img"><img src="assets/imperial-logo.jpg" alt="Foto da organização"></a>
-                            <div class="H-user-status"></div>
-                        </div>
-                        <div class="H-user-texts">
-                            <span class="H-user-nick">FNX</span>
-                            <span class="H-user-name">Lincoln Lau</span>
-                            <span class="H-follows"><span class="H-number-followers">615.1K</span>Seguidores</span>
-                        </div>
-                        <span class="H-follow">Seguir</span>
-                    </div>
-                    <div class="H-profile">
-                        <div class="H-user-images">
-                            <a href="perfil.html" class="H-profile-img"><img src="assets/fallen.jpg" alt="Fodo de perfil"></a>
-                            <a href="comunidade.html" class="H-org-img"><img src="assets/furia-logo.png" alt="Foto da organização"></a>
-                            <div class="H-user-status"></div>
-                        </div>
-                        <div class="H-user-texts">
-                            <span class="H-user-nick">Fallen</span>
-                            <span class="H-user-name">Gabriel Toledo</span>
-                            <span class="H-follows"><span class="H-number-followers">1.2M</span>Seguidores</span>
-                        </div>
-                        <span class="H-follow">Seguir</span>
-                    </div>
-                    <div class="H-profile">
-                        <div class="H-user-images">
-                            <a href="perfil.html" class="H-profile-img"><img src="assets/gaules.jpg" alt="Fodo de perfil"></a>
-                            <div class="H-user-status"></div>
-                        </div>
-                        <div class="H-user-texts">
-                            <span class="H-user-nick">Gaules</span>
-                            <span class="H-user-name">Alexandre Borba</span>
-                            <span class="H-follows"><span class="H-number-followers">1.03M</span>Seguidores</span>
-                        </div>
-                        <span class="H-follow">Seguir</span>
-                    </div>
+                <div class="T-all-trends">
+                    <a href="" class="T-trend" id="T-first-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">1°</span> — <span class="T-trend-number-posts">1.1M</span> de Postagens</p>
+                        <p class="T-trend-topic">Loud Bak is back</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Free Fire</span> / <span class="T-trend-main-tag">Bak</span> / <span class="T-trend-secondary-tag">LOUD</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-second-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">2°</span> — <span class="T-trend-number-posts">992K</span> de Postagens</p>
+                        <p class="T-trend-topic">Valorant</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Valorant</span> / <span class="T-trend-main-tag">Valorant</span> / <span class="T-trend-secondary-tag">VCT Champions</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-third-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">3°</span> — <span class="T-trend-number-posts">828K</span> de Postagens</p>
+                        <p class="T-trend-topic">Freitas no Fluxo</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Free Fire</span> / <span class="T-trend-main-tag">Freitas</span> / <span class="T-trend-secondary-tag">Fluxo</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-fourth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">4°</span> — <span class="T-trend-number-posts">802K</span> de Postagens</p>
+                        <p class="T-trend-topic">Sentinels</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Valorant</span> / <span class="T-trend-main-tag">Sentinels</span> / <span class="T-trend-secondary-tag">Sacy e pANcada</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-fifth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">5°</span> — <span class="T-trend-number-posts">758K</span> de Postagens</p>
+                        <p class="T-trend-topic">Brance</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">League of Legends</span> / <span class="T-trend-main-tag">Kabum</span> / <span class="T-trend-secondary-tag">Red Canids</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-eighth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">6°</span> — <span class="T-trend-number-posts">743K</span> de Postagens</p>
+                        <p class="T-trend-topic">NAYU NA LOUD</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Minecraft</span> / <span class="T-trend-main-tag">NAYU</span> / <span class="T-trend-secondary-tag">Coringa</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-seventh-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">7°</span> — <span class="T-trend-number-posts">721K</span> de Postagens</p>
+                        <p class="T-trend-topic">Cs2</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Counter-Strike: Global Offensive</span> / <span class="T-trend-main-tag">CS2</span> / <span class="T-trend-secondary-tag">CS:GO</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-eighth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">8°</span> — <span class="T-trend-number-posts">702K</span> de Postagens</p>
+                        <p class="T-trend-topic">FaZe</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Rainbow Six Siege</span> / <span class="T-trend-main-tag">FaZe</span> / <span class="T-trend-secondary-tag">SIX Invitational</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-sixth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">9°</span> — <span class="T-trend-number-posts">681K</span> de Postagens</p>
+                        <p class="T-trend-topic">Robo</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">League of Legends</span> / <span class="T-trend-main-tag">LOUD</span> / <span class="T-trend-secondary-tag">Worlds</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-nineth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">10°</span> — <span class="T-trend-number-posts">673K</span> de Postagens</p>
+                        <p class="T-trend-topic">Titan</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">League of Legends</span> / <span class="T-trend-main-tag">paiN</span> / <span class="T-trend-secondary-tag">Kabum</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-nineth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">11°</span> — <span class="T-trend-number-posts">649K</span> de Postagens</p>
+                        <p class="T-trend-topic">Minecraft</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Minecraft</span> / <span class="T-trend-main-tag">Tatu</span> / <span class="T-trend-secondary-tag">Carangueijo</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-sixth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">12°</span> — <span class="T-trend-number-posts">622K</span> de Postagens</p>
+                        <p class="T-trend-topic">Dupreeh</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Counter-Strike: Global Offensive</span> / <span class="T-trend-main-tag">Team Vitality</span> / <span class="T-trend-secondary-tag">Major</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-seventh-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">13°</span> — <span class="T-trend-number-posts">607K</span> de Postagens</p>
+                        <p class="T-trend-topic">Gods</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">League of Legends</span> / <span class="T-trend-main-tag">Newjeans</span> / <span class="T-trend-secondary-tag">Riot</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-tenth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">14°</span> — <span class="T-trend-number-posts">564K</span> de Postagens</p>
+                        <p class="T-trend-topic">ALGS</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Apex-Legends</span> / <span class="T-trend-main-tag">TSM</span> / <span class="T-trend-secondary-tag">ImperialHal</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-tenth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">15°</span> — <span class="T-trend-number-posts">538K</span> de Postagens</p>
+                        <p class="T-trend-topic">Furia</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Counter-Strike: Global Offensive</span> / <span class="T-trend-main-tag">FURIA</span> / <span class="T-trend-secondary-tag">Complexity</span></p>
+                    </a>
+                    <a href="" class="T-trend" id="T-eighth-trend">
+                        <p class="T-trend-numbers"><span class="T-trend-ranking">16°</span> — <span class="T-trend-number-posts">520K</span> de Postagens</p>
+                        <p class="T-trend-topic">Xand</p>
+                        <p class="T-trend-markers"><span class="T-trend-game">Valorant</span> / <span class="T-trend-main-tag">KRU</span> / <span class="T-trend-secondary-tag">00Nation</span></p>
+                    </a>
                 </div>
-                <a href="" class="H-see-more-suggestions">Ver mais...</a>
             </section>
         </section>
 
@@ -518,39 +545,6 @@
                 </div>
                 <i class='bx bx-chevron-down All-icon H-arrows H-arrow-preview'></i>
                 <i class='bx bx-chevron-down All-icon H-arrows H-arrow-next'></i>
-            </section>
-            
-            <section class="H-trending-topics">
-                <h1 class="H-section-title">Assuntos do Momento</h1>
-                <i class="bi bi-sliders2 H-trending-filter All-icon"></i>
-                <div class="H-all-trends">
-                    <a href="" class="H-trend" id="H-first-trend">
-                        <p class="H-trend-numbers"><span class="H-trend-ranking">1°</span> — <span class="H-trend-number-posts">1.1M</span> de Postagens</p>
-                        <p class="H-trend-topic">Loud Bak is back</p>
-                        <p class="H-trend-markers"><span class="H-trend-game">Free Fire</span> / <span class="H-trend-main-tag">Bak</span> / <span class="H-trend-secondary-tag">LOUD</span></p>
-                    </a>
-                    <a href="" class="H-trend" id="H-second-trend">
-                        <p class="H-trend-numbers"><span class="H-trend-ranking">2°</span> — <span class="H-trend-number-posts">992K</span> de Postagens</p>
-                        <p class="H-trend-topic">Valorant</p>
-                        <p class="H-trend-markers"><span class="H-trend-game">Valorant</span> / <span class="H-trend-main-tag">Valorant</span> / <span class="H-trend-secondary-tag">VCT Champions</span></p>
-                    </a>
-                    <a href="" class="H-trend" id="H-third-trend">
-                        <p class="H-trend-numbers"><span class="H-trend-ranking">3°</span> — <span class="H-trend-number-posts">828K</span> de Postagens</p>
-                        <p class="H-trend-topic">Freitas no Fluxo</p>
-                        <p class="H-trend-markers"><span class="H-trend-game">Free Fire</span> / <span class="H-trend-main-tag">Freitas</span> / <span class="H-trend-secondary-tag">Fluxo</span></p>
-                    </a>
-                    <a href="" class="H-trend" id="H-fourth-trend">
-                        <p class="H-trend-numbers"><span class="H-trend-ranking">4°</span> — <span class="H-trend-number-posts">802K</span> de Postagens</p>
-                        <p class="H-trend-topic">Sentinels</p>
-                        <p class="H-trend-markers"><span class="H-trend-game">Valorant</span> / <span class="H-trend-main-tag">Sentinels</span> / <span class="H-trend-secondary-tag">Sacy e pANcada</span></p>
-                    </a>
-                    <a href="" class="H-trend" id="H-fifth-trend">
-                        <p class="H-trend-numbers"><span class="H-trend-ranking">5°</span> — <span class="H-trend-number-posts">758K</span> de Postagens</p>
-                        <p class="H-trend-topic">Brance</p>
-                        <p class="H-trend-markers"><span class="H-trend-game">League of Legends</span> / <span class="H-trend-main-tag">Kabum</span> / <span class="H-trend-secondary-tag">Red Canids</span></p>
-                    </a>
-                </div>
-                <a href="trends.html" class="H-see-more">Ver mais...</a>
             </section>
             
         </aside>

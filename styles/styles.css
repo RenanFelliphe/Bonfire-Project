@@ -1,5 +1,5 @@
 body {
-    background-color: var(--body-color);
+    background-color: var(--third-color);
     overflow: auto;
 }
 
@@ -602,7 +602,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 .H-timeline .H-publish{
@@ -855,7 +856,6 @@ main {
     background-color: var(--third-color);
     width: 55%;
     height: 100vh;
-    border-left: 1px solid var(--border-color);
     overflow-y: scroll;
     overflow-x: hidden;
     padding-bottom: 3rem;
@@ -1181,6 +1181,159 @@ main {
     bottom: 0.7rem;
     left: 2rem;
     cursor: pointer;
+}
+
+/*===========================================================================================================
+=========================================== TRENDS: T-TRENDS ==============================================
+===========================================================================================================*/
+
+.T-trends{
+    background-color: var(--second-color);
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh; 
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.T-trending-topics{
+    position: relative;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.T-trending-topics .T-section-title{
+    position: absolute;
+    top: -0.8rem;
+    background-color: var(--second-color);
+    padding: 0 1rem 0 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: calc(var(--size-font-title) - 6px);
+    white-space: nowrap;
+    letter-spacing: 1px;
+    z-index: +2;
+}
+
+.T-trend-functions{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
+
+.T-trending-topics .T-trend-functions i{
+    top: 1.5rem;
+    z-index: +1;
+}
+
+.T-trending-topics .T-trend-functions i.T-trending-search{
+    left: 1.5rem;
+    display: flex;
+    font-size: calc(var(--size-font-icons) + 3px);
+    background-color: var(--first-color);
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.7rem;
+}
+
+.T-trending-topics .T-trend-functions .T-country-img{
+    clip-path: circle();
+    width: 2.7rem;
+    display: flex;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
+.T-trending-topics .T-trend-functions .T-country-img img{
+    max-width: 100%;
+}
+
+.T-trending-topics .T-gaming-filter{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.T-trending-topics .T-gaming-filter .T-game{
+    font-size: var(--size-font-subtitle);
+    cursor: pointer;
+}
+
+.T-trending-topics .T-gaming-filter .T-game.active{
+    color: var(--org-color1);
+    font-size: calc(var(--size-font-subtitle) + 2px);
+}
+
+.T-trending-topics .T-gaming-filter .T-line{
+    position: absolute;
+    width: 7rem;
+    height: 2px;
+    bottom: -1px;
+    border-radius: 100%;
+    left: 2.1rem;
+    background-color: var(--org-color1);
+}
+
+.T-trending-topics .T-all-trends{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+}
+
+.T-trending-topics .T-all-trends .T-trend{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    padding: 0.6rem 2rem 0.6rem 2.5rem;
+}
+
+.T-trending-topics .T-all-trends .T-trend:hover{
+    background-color: var(--third-color);
+}
+
+.T-trending-topics .T-all-trends .T-trend .T-trend-numbers{
+    font-size: calc(var(--size-font-text) - 2px);
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.3rem;
+}
+
+.T-trending-topics .T-all-trends .T-trend .T-trend-numbers .T-trend-ranking{
+    font-size: var(--size-font-text);
+    font-weight: 600;
+    color: #6F7270;
+}
+
+.T-trending-topics .T-all-trends .T-trend#T-first-trend .T-trend-numbers .T-trend-ranking{
+    color: #F7EF8A;
+}
+
+.T-trending-topics .T-all-trends .T-trend#T-second-trend .T-trend-numbers .T-trend-ranking{
+    color: #D5D5D5;
+}
+
+.T-trending-topics .T-all-trends .T-trend#T-third-trend .T-trend-numbers .T-trend-ranking{
+    color: #CD7F32;
+}
+
+.T-trending-topics .T-all-trends .T-trend .T-trend-markers{
+    font-size: calc(var(--size-font-text) - 1px);
+    
+}
+
+.T-trending-topics .T-all-trends .T-trend .T-trend-topic{
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /*===========================================================================================================
