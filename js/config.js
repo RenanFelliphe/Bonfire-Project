@@ -15,6 +15,7 @@ menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATE
 FAQsection(); //Funções da seção das PERGUNTAS FREQUENTES no Tier para o SUPORTE
 reportProblemsAndFeedback(); //Funções da seção para Reportar PROBLEMAS e Enviar FEEDBACK
 personalizeBonfire(); //Conjunto de funções para personalizar as características do site como o MODO, AS CORES E AS FONTES
+bonfireMembersBio(); //Abre a BIOGRAFIA de cada um dos MEMBROS do Projeto
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
@@ -534,4 +535,38 @@ function personalizeBonfire() {
     updateMode();
     updateColors();
     updateFont();
+}
+
+//Abre a BIOGRAFIA de cada um dos MEMBROS do Projeto
+function bonfireMembersBio() {
+    const memberList = document.querySelectorAll(".S-member");
+    const memberBiographys = document.querySelectorAll(".S-member-bio");
+
+    memberList.forEach((member, index) => {
+        member.addEventListener("click", () => {
+            if (!member.classList.contains("active")) {
+                memberBiographys.forEach((bio) => {
+                    bio.classList.remove("active");
+                });
+
+                memberList.forEach((allMembers) => {
+                    allMembers.classList.remove("active");
+                    allMembers.style.opacity = 0.4;
+                });
+
+                member.style.opacity = 1;
+                member.classList.add("active");
+                memberBiographys[index].classList.add("active");
+                
+            } else {
+                memberList.forEach((allMembers) => {
+                    memberBiographys[index].classList.remove("active");
+                    allMembers.classList.remove("active");
+                    member.style.opacity = 1;
+                    allMembers.style.opacity = 1;
+                });                
+                
+            }
+        });
+    });
 }

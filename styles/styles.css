@@ -2537,6 +2537,99 @@ main {
     transform: translate(5px);
 }
 
+.S-subsettings .S-about-us .S-team{
+    padding-bottom: 1rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 600;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    line-height: 1.25rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member .S-member-image{
+    width: 8rem;
+    border-radius: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member.active .S-member-image,
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member:hover .S-member-image{
+    border: 1px solid var(--org-color1);
+    box-shadow: 0 0 5px 1px var(--org-color1);
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member .S-member-name{
+    font-size: calc(var(--size-font-title) - 5px);
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member .S-member-role{
+    font-size: calc(var(--size-font-subtitle) - 2px);
+    margin-bottom: 0.3rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member .S-member-see-more{
+    font-size: calc(var(--size-font-text) - 1px);
+    background-color: var(--body-color);
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    line-height: 1.5rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member.active .S-member-see-more,
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-members-infos .S-member:hover .S-member-see-more{
+    border: 1px solid var(--org-color1);
+    box-shadow: 0 0 5px 1px var(--org-color-darker);
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios{
+    position: relative;
+    padding: 0.5rem 2rem 0.5rem 3rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios .S-bio-title{
+    font-size: var(--size-font-subtitle);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios .S-member-bio {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios .S-member-bio.active {
+    opacity: 1;
+    max-height: 15rem;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios .S-member-bio-text{
+    width: 100%;    
+    word-wrap: break-word;
+    font-size: calc(var(--size-font-text));
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios .S-member-social{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.S-subsettings .S-about-us .S-team .S-bonfire-members .S-all-bios .S-member-social a{
+    font-size: calc(var(--size-font-subtitle) + 5px);
+}
+
 .S-subsettings .S-about-us .S-CEFET .S-cefet-text {
     padding: 0rem 2.5rem 0.5rem 3.2rem;
     text-align: justify;
