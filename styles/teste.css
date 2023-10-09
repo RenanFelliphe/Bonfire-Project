@@ -1,0 +1,307 @@
+body {
+    background-color: var(--third-color);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem;
+    align-items: flex-end;
+}
+
+.Teste{
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+
+.Teste .S-social-media-link .S-media-icon{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+}
+
+.Teste .S-social-media-link .S-media-icon i{
+    display: flex;
+    font-size: 18px;
+    transition: 0.2s linear;
+    z-index: +1;
+    width: 100%;
+    height: 100%;
+}
+
+.Teste .S-social-media-link:hover .S-media-icon i{
+    transform: scale(1.5);
+    color: #f1f1f1;
+    transition: all 0.5s;
+}
+
+.Teste .S-social-media-link .S-media-icon .S-link-animation{
+    content: '';
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+    border-radius: 25%;
+}
+
+.Teste .S-social-media-link:hover .S-media-icon .S-link-animation{
+    animation: aaa 0.65s 1;
+    top: -10%;
+    left: -10%;
+    transition: all 0.5s;
+}
+
+@keyframes aaa{
+    0%{
+     left: -110%;
+     top: 90%;   
+    }
+    50%{
+        left: 10%;
+        top: -30%;   
+       }
+    100%{
+        left: -10%;
+        top: -10%;   
+       }
+}
+
+
+.Modelo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.Modelo1 .S-social-media-link{
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.Modelo1 .S-social-media-link .S-media-icon{
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.Modelo1 .S-social-media-link i{
+  display: flex;
+  font-size: 23px;
+  z-index: +1;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.Modelo1 .S-social-media-link:hover i{
+  transform: scale(1.4);
+}
+
+.Modelo1 .S-social-media-link .S-media-name{
+  position: absolute;
+  top: 0;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  border-radius: 25px;
+  opacity: 0;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+}
+
+.Modelo1 .S-social-media-link:hover .S-media-name{
+  top: -60px;
+  opacity: 1;
+}
+
+.Modelo1 .S-social-media-link .S-media-name:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.Modelo1 .S-social-media-link .S-media-icon .S-link-animation{
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+  border-radius: 100%;
+}
+
+.Modelo1 .S-social-media-link:hover .S-media-icon .S-link-animation{
+  animation: aaa 0.65s 1;
+  top: -10%;
+  left: -10%;
+  transition: all 0.5s;
+}
+
+@keyframes aaa{
+  0%{
+   left: -110%;
+   top: 90%;   
+  }
+  50%{
+      left: 13%;
+      top: -25%;   
+     }
+  100%{
+      left: -13%;
+      top: -10%;   
+     }
+}
+
+.Modelo1 .S-social-media-link:hover i,
+.Modelo1 .S-social-media-link:hover .S-media-name,
+.Modelo1 .S-social-media-link:hover .S-media-icon .S-link-animation{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.Modelo1 .facebook:hover .S-media-name,
+.Modelo1 .facebook:hover .S-media-name:before,
+.Modelo1 .facebook:hover .S-media-icon .S-link-animation{
+  background: #3B5999;
+}
+
+.Modelo1 .twitter:hover .S-media-name,
+.Modelo1 .twitter:hover .S-media-name:before,
+.Modelo1 .twitter:hover .S-media-icon .S-link-animation{
+  background: #46C1F6;
+}
+
+.Modelo1 .instagram:hover .S-media-name,
+.Modelo1 .instagram:hover .S-media-name:before,
+.Modelo1 .instagram:hover .S-media-icon .S-link-animation{
+  background: #e1306c;
+}
+
+.Modelo1 .github:hover .S-media-name,
+.Modelo1 .github:hover .S-media-name:before,
+.Modelo1 .github:hover .S-media-icon .S-link-animation{
+  background: #333;
+}
+
+.Modelo1 .youtube:hover .S-media-name,
+.Modelo1 .youtube:hover .S-media-name:before,
+.Modelo1 .youtube:hover .S-media-icon .S-link-animation{
+  background: #DE463B;
+}
+
+
+
+
+
+.Modelo2 .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+
+.Modelo2 .button:hover{
+  width: 200px;
+}
+
+.Modelo2 .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.Modelo2 .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+
+.Modelo2 .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+
+.Modelo2 .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+
+.Modelo2 .button:nth-child(4):hover .icon{
+  background: #333;
+}
+
+.Modelo2 .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+
+.Modelo2 .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.Modelo2 .button:hover .icon i{
+  color: #fff;
+}
+
+.Modelo2 .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.Modelo2 .button:nth-child(1) span{
+  color: #4267B2;
+}
+
+.Modelo2 .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+
+.Modelo2 .button:nth-child(3) span{
+  color: #E1306C;
+}
+
+.Modelo2 .button:nth-child(4) span{
+  color: #333;
+}
+.Modelo2 .button:nth-child(5) span{
+  color: #ff0000;
+}

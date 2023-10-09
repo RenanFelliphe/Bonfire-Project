@@ -541,7 +541,8 @@ function personalizeBonfire() {
 function bonfireMembersBio() {
     const memberList = document.querySelectorAll(".S-member");
     const memberBiographys = document.querySelectorAll(".S-member-bio");
-
+    const abouUsContainer = document.querySelector(".S-about-us");
+    
     memberList.forEach((member, index) => {
         member.addEventListener("click", () => {
             if (!member.classList.contains("active")) {
@@ -568,5 +569,14 @@ function bonfireMembersBio() {
                 
             }
         });
+/*
+        abouUsContainer.addEventListener("mouseleave", () => {
+            member.classList.remove("active");
+            memberBiographys.forEach((bio) => {
+                bio.classList.remove("active");
+            });
+        });*/
     });
+
+        
 }
