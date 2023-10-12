@@ -208,7 +208,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
     width: 100%;
 }
 
@@ -240,8 +239,8 @@ main {
     content: '';
     position: absolute;
     bottom: 4px;
-    left: 0.7rem;
-    width: 30%;
+    left: 1rem;
+    width: 25%;
     height: 1px;
     border-radius: 1rem;
     background-color: var(--org-color1);
@@ -259,7 +258,7 @@ main {
     width: 100%;
     opacity: 1;
     transition: var(--element-in);
-    font-size: calc(var(--size-font-icons) + 2px);
+    font-size: calc(var(--size-font-icons) - 3px);
 }
 
 .M-menu.close .M-center .M-slider i{
@@ -278,13 +277,48 @@ main {
 }
 
 .M-menu .M-center .M-slider i.M-pages-icon{
-    font-size: calc(var(--size-font-icons) + 0.7rem);
+    font-size: calc(var(--size-font-icons) + 0.3rem);
 }
 
-.M-menu .M-center .M-pages{
+.M-menu .M-center .M-all-pages{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.M-menu .M-center .M-all-pages .M-page{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 100%;
     padding-left: 1.5rem;
+    height: 2.7rem;
+}
+
+.M-menu .M-center .M-all-pages .M-page i.M-icon-page{
+    font-size: calc(var(--size-font-icons) + 0.4rem);
+}
+
+.M-menu .M-center .M-post{
+    position: relative;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+}
+
+.M-menu .M-center .M-post .M-post-button{
+    display: flex;
+    background-color: var(--first-color);
+    padding: 1rem;
+    width: 100%;
+    height: 90%;
+    border-radius: 2rem;
+    cursor: pointer;
 }
