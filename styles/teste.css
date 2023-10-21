@@ -203,8 +203,8 @@ main {
     color: white;
 }
 
-.M-menu .M-center,
-.M-menu .M-center .M-pages{
+.M-menu .M-center{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -283,10 +283,21 @@ main {
 .M-menu .M-center .M-all-pages{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    gap: 1.8rem;
+    justify-content: flex-start;
     width: 100%;
-    overflow: hidden;
+    height: 25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 1rem;
+}
+
+.M-menu .M-center .M-all-pages::-webkit-scrollbar{
+    display: none;
+}
+
+.M-menu.close .M-center .M-all-pages{
+    overflow-y: hidden;
 }
 
 .M-menu .M-center .M-all-pages .M-page{
@@ -307,7 +318,7 @@ main {
 
 .M-menu .M-center .M-post{
     position: relative;
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     width: 100%;
     height: 5rem;
     display: flex;
@@ -322,3 +333,4 @@ main {
     border-radius: 2rem;
     cursor: pointer;
 }
+

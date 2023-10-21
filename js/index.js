@@ -4,10 +4,9 @@
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
 /*=======================================================================================================================================*/
 
-/*menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL*/
+menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 featuredProfilesFunctions(); //Funções da seção DESTAQUES
-postingFunctions(); //Funções da seção de postagem
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
