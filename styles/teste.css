@@ -334,3 +334,28 @@ main {
     cursor: pointer;
 }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.M-menu .M-footer {
+    padding: 1rem;
+    padding-left: 0.45rem;
+    height: 100%;
+    width: 100%;
+}
+
+.M-menu .M-footer .M-footer-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 105%;
+    height: 3.3rem;
+    transition: var(--element-out);
+    background-color: var(--half-second-color);
+    border-radius: 2rem;
+}
+
+.M-menu.close .M-footer .M-footer-content {
+    border-radius: 0;
+    background-color: transparent;
+}
