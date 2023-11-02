@@ -73,16 +73,16 @@ main {
     border: 1px solid var(--border-color);
     border-top: 0;
     transition: width var(--element-in);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 0.3rem;
 }
 
 .M-menu.close {
     width: 4.8rem;
     transition: width var(--element-out);
-}
-
-.M-menu section {
-    position: relative;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .M-menu::after {
@@ -105,11 +105,14 @@ main {
 .M-menu .M-top {
     position: relative;
     height: 3.5rem;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     background-color: var(--half-second-color);
     padding: 1.5rem 1.5rem 1.5rem 1.65rem;
+    border-bottom: 1px solid var(--border-color);
 }
+
 .M-menu .M-top .M-open-close{
     position: relative;
     display: flex;
@@ -203,28 +206,22 @@ main {
     color: white;
 }
 
-.M-menu .M-center{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.M-menu .M-center .M-slider{
+.M-menu .M-slider{
     position: relative;
     width: 100%;
     padding: 0.7rem 0.7rem 0.9rem 0.55rem;
     display: flex;
     transition: var(--element-out);
     overflow: hidden;
+    height: 4rem;
+    border-bottom: none;
 }
 
-.M-menu.close .M-center .M-slider{
+.M-menu.close .M-slider{
     transition: var(--element-in);
 }
 
-.M-menu .M-center .M-slider::before{
+.M-menu .M-slider::before{
     content: '';
     position: absolute;
     bottom: 4px;
@@ -235,7 +232,7 @@ main {
     background-color: var(--border-color);
 }
 
-.M-menu .M-center .M-slider::after{
+.M-menu .M-slider::after{
     content: '';
     position: absolute;
     bottom: 4px;
@@ -248,12 +245,12 @@ main {
     box-shadow: 0 0 3px 0 var(--org-color-lighter);
 }
 
-.M-menu.close .M-center .M-slider::after{
+.M-menu.close .M-slider::after{
     opacity: 0;
     transition: var(--element-in);
 }
 
-.M-menu .M-center .M-slider i{
+.M-menu .M-slider i{
     display: flex;
     width: 100%;
     opacity: 1;
@@ -261,35 +258,43 @@ main {
     font-size: calc(var(--size-font-icons) - 3px);
 }
 
-.M-menu.close .M-center .M-slider i{
+.M-menu.close .M-slider i{
     width: 0;
     opacity: 0;
     transition: var(--element-out);
 }
 
-.M-menu .M-center .M-slider i.active{
+.M-menu .M-slider i.active{
     color: var(--org-color1)
 }
 
-.M-menu.close .M-center .M-slider i.active{
+.M-menu.close .M-slider i.active{
     opacity: 1;
     color: var(--text-color)
 }
 
-.M-menu .M-center .M-slider i.M-pages-icon{
+.M-menu .M-slider i.M-pages-icon{
     font-size: calc(var(--size-font-icons) + 0.3rem);
+}
+
+.M-menu .M-center{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 71vh;
 }
 
 .M-menu .M-center .M-all-pages{
     display: flex;
     flex-direction: column;
-    gap: 1.8rem;
     justify-content: flex-start;
     width: 100%;
-    height: 25rem;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-top: 1rem;
+    padding: 0.5rem 0 1rem 0;
+    gap: 0.3rem;
 }
 
 .M-menu .M-center .M-all-pages::-webkit-scrollbar{
@@ -309,10 +314,24 @@ main {
     cursor: pointer;
     width: 100%;
     padding-left: 1.5rem;
-    height: 2.7rem;
+    line-height: 3.5rem;
+}
+.M-menu .M-center .M-all-pages .M-page:hover{
+    background-color: var(--half-third-color);
+}
+.M-menu .M-center .M-all-pages .M-page .M-page-name{
+    opacity: 1;
+    transform: translateX(0);
+    transition: var(--element-in);
 }
 
-.M-menu .M-center .M-all-pages .M-page i.M-icon-page{
+.M-menu.close .M-center .M-all-pages .M-page .M-page-name{
+    opacity: 0;
+    transform: translateX(-105px);
+    transition: var(--element-out);
+}
+
+.M-menu .M-center .M-all-pages .M-page .M-page-icon{
     font-size: calc(var(--size-font-icons) + 0.4rem);
 }
 
@@ -320,7 +339,6 @@ main {
     position: relative;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     width: 100%;
-    height: 5rem;
     display: flex;
 }
 
@@ -334,28 +352,161 @@ main {
     cursor: pointer;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
 .M-menu .M-footer {
-    padding: 1rem;
-    padding-left: 0.45rem;
-    height: 100%;
+    position: relative;
+    display: flex;
+    padding: 0.45rem;
     width: 100%;
+    z-index: +1;
 }
 
 .M-menu .M-footer .M-footer-content {
     display: flex;
     justify-content: flex-start;
-    gap: 1rem;
     width: 105%;
-    height: 3.3rem;
     transition: var(--element-out);
     background-color: var(--half-second-color);
     border-radius: 2rem;
 }
 
-.M-menu.close .M-footer .M-footer-content {
-    border-radius: 0;
-    background-color: transparent;
+.M-menu .M-footer .M-footer-content .M-user-images {
+    width: 3.7rem;
+    height: 100%;
+    display: flex;
+    z-index: +1;
+    border-radius: 100%;
+    box-shadow: 0 0 5px 0px black;
+}
+
+.M-menu .M-footer .M-footer-content .M-user-images .M-perfil-img{
+    display: flex;
+    width: 3.7rem;
+    clip-path: circle();
+}
+
+.M-menu .M-footer .M-footer-content .M-user-images .M-perfil-img img{
+    max-width: 100%;
+}
+
+.M-menu .M-footer .M-footer-content .M-user-images .M-org-img{
+    position: absolute;
+    display: flex;
+    width: 1.5rem;
+    clip-path: circle();
+    transform: translateX(1.3rem) translateY(1.2rem);
+}
+
+.M-menu .M-footer .M-footer-content .M-user-images .M-org-img img{
+    max-width: 100%;
+}
+
+.M-menu .M-footer .M-footer-content .M-user-images .M-user-status {
+    position: absolute;
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    clip-path: circle();
+    border: 7px dashed var(--org-color1);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.M-menu .M-footer .M-footer-content .M-user-infos {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 80%;
+    position: absolute;
+    left: 2.2rem;
+    transform: translateY(-2px);
+}
+
+.M-menu .M-footer .M-footer-content .M-user-infos .M-user-nick {
+    font-size: var(--size-font-title);
+    font-weight: bolder;
+    letter-spacing: 1px;
+    transition: opacity, transform var(--element-in);
+}
+
+.M-menu .M-footer .M-footer-content .M-user-infos .M-user-name {
+    margin: -0.3rem 0 0 -0.5rem;
+    font-size: calc(var(--size-font-text) - 1px);
+    font-weight: 600;
+    letter-spacing: 0px;
+    transition: opacity, transform var(--element-in);
+}
+
+.M-menu.close .M-footer .M-footer-content .M-user-infos span{
+    opacity: 0;
+    transform: translateX(-105px);
+    transition: var(--element-out);
+}
+
+.M-menu .M-footer .M-footer-content .M-log-button {
+    position: absolute;
+    display: flex;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    transition: opacity var(--element-in);
+}
+
+.M-menu.close .M-footer .M-footer-content .M-log-button {
+    opacity: 0;
+    transition: opacity var(--element-out);
+}
+
+.M-menu .M-footer .M-footer-content .M-log-button.active {
+    background-color: var(--active-color);
+}
+
+.M-menu .M-footer .M-footer-content .M-log-actions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    width: 14rem;
+    height: 5rem;
+    top: -4.7rem;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--menu-color);
+    left: 50%;
+    transform: translate(-50%);
+    transition: var(--element-in);
+    z-index: -1;
+}
+
+.M-menu.close .M-footer .M-footer-content .M-log-actions,
+.M-menu .M-footer .M-footer-content .M-log-actions.close {
+    opacity: 0;    top: 0;
+    transition: var(--element-out);
+}
+
+.M-menu .M-footer .M-footer-content .M-log-actions ul li a {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.M-menu .M-footer .M-footer-content .M-log-actions ul li a span {
+    transition: color 0.4s;
+}
+
+.M-menu .M-footer .M-footer-content .M-log-actions ul li a:hover span {
+    color: var(--org-color1);
+    transition: color 0.2s;
+}
+
+.M-menu .M-footer .M-footer-content .M-log-actions ul li span.M-title {
+    font-size: var(--size-font-subtitle);
+}
+
+.M-menu .M-footer .M-footer-content .M-log-actions ul li span.All-icon {
+    font-size: var(--size-font-icons);
 }

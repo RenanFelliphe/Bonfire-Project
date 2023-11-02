@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles/variable.css">
     <link rel="stylesheet" href="styles/teste.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <title>Bonfire</title>
 
@@ -32,49 +33,49 @@
             </div>
         </section>
 
-        <section class="M-center">
-            <article class="M-slider">
-                <i class="bi bi-three-dots active M-pages-icon All-icon"></i>
-                <i class="bi bi-search M-search-icon All-icon"></i>
-                <i class="bi bi-bell M-notifications-icon All-icon"></i>
-            </article>
+        <section class="M-slider">
+            <i class="bi bi-three-dots active M-pages-icon All-icon"></i>
+            <i class="bi bi-search M-search-icon All-icon"></i>
+            <i class="bi bi-bell M-notifications-icon All-icon"></i>
+        </section>
 
+        <section class="M-center">
             <article class="M-all-pages">
                     <a href="index.html" class="M-page">
-                        <i class="bi bi-house-door M-icon-page All-icon"></i>
-                        <span>Página Inicial</span>
+                        <i class="bi bi-house-door M-page-icon All-icon"></i>
+                        <span class="M-page-name">Página Inicial</span>
                     </a>
                     <a href="events.html" class="M-page onDisplay">
-                        <i class="bi bi-calendar-date M-icon-page All-icon"></i>
-                        <span>Eventos</span>
+                        <i class="bi bi-calendar-date M-page-icon All-icon"></i>
+                        <span class="M-page-name">Eventos</span>
                     </a>
                     <a class="M-page onDisplay">
-                        <i class="bi bi-globe-americas M-icon-page All-icon"></i>
-                        <span>Explorar</span>
+                        <i class="bi bi-globe-americas M-page-icon All-icon"></i>
+                        <span class="M-page-name">Explorar</span>
                     </a>
                     <a class="M-page onDisplay">
-                        <i class="bi bi-people M-icon-page All-icon"></i>
-                        <span>Amigos</span>
+                        <i class="bi bi-people M-page-icon All-icon"></i>
+                        <span class="M-page-name">Amigos</span>
                     </a>
                     <a class="M-page onDisplay">
-                        <i class="bi bi-newspaper M-icon-page All-icon"></i>
-                        <span>News</span>
+                        <i class="bi bi-newspaper M-page-icon All-icon"></i>
+                        <span class="M-page-name">News</span>
                     </a>
                     <a class="M-page onDisplay">
-                        <i class="bi bi-cart2 M-icon-page All-icon"></i>
-                        <span>Shopping</span>
+                        <i class="bi bi-cart2 M-page-icon All-icon"></i>
+                        <span class="M-page-name">Shopping</span>
                     </a>
                     <a class="M-page">
-                        <i class="bi bi-key M-icon-page All-icon"></i>
-                        <span>Cofre</span>
+                        <i class="bi bi-key M-page-icon All-icon"></i>
+                        <span class="M-page-name">Cofre</span>
                     </a>
                     <a class="M-page">
-                        <i class="bi bi-pie-chart M-icon-page All-icon"></i>
-                        <span>Estatísticas</span>
+                        <i class="bi bi-pie-chart M-page-icon All-icon"></i>
+                        <span class="M-page-name">Estatísticas</span>
                     </a>
                     <a href="config.html" class="M-page">
-                        <i class="bi bi-gear-wide M-icon-page All-icon"></i>
-                        <span>Configurações</span>
+                        <i class="bi bi-gear-wide M-page-icon All-icon"></i>
+                        <span class="M-page-name">Configurações</span>
                     </a>
             </article>
 
@@ -86,20 +87,53 @@
         <section class="M-footer">
             <div class="M-footer-content">
                 <figure class="M-user-images">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <div class="M-perfil-img">
+                        <img src="assets/perfil.png" alt="">
+                    </div>
+                    <div class="M-org-img">                    
+                        <img src="assets/loud-logo.png" alt="">
+                    </div>
                     <span class="M-user-status"></span>
                 </figure>
                 <div class="M-user-infos">
-                    <span class="M-user-name">Saadhak</span>
-                    <span class="M-user-nick">Matias Delipetro</span>
+                    <span class="M-user-nick">Saadhak</span>
+                    <span class="M-user-name">Matias Delipetro</span>
                 </div>
-                <i class="bi bi-arrow-left-right M-log-actions All-icon"></i>
 
+                <i class="bi bi-arrow-left-right M-log-button All-icon"></i>
+                <div class="M-log-actions close">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="bi bi-people All-icon"></span>
+                                <span class="M-title"> Alternar usuário </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <span class="bi bi-box-arrow-left All-icon"></span>
+                                <span class="M-title M-log-out"> Sair </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section>    
+        </section>  
 </nav>
-
+<section>
+    <!--SEÇÃO PARA DEFINIÇÃO DE MODAIS -->
+    <div class="M-log-out-modal">
+        <!--Aparece ao Clicar no botão de Log Out na S-Settings-->
+        <div class="M-log-out-modal-container">
+            <i class="bi bi-x M-close-log-out-icon All-icon"></i>
+            <h4>Tem certeza que deseja SAIR ?</h4>
+            <div class="M-log-out-modal-buttons">
+                <button class="M-cancel-log-out">CANCELAR</button>
+                <button class="M-confirm-log-out">SAIR</button>
+            </div>
+        </div>
+    </div>
+</section>
 <script src="js/teste.js"></script>
 </body>
 
