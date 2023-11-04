@@ -70,14 +70,13 @@ main {
     height: 100vh;
     width: 16rem;
     background-color: var(--menu-color);
-    border: 1px solid var(--border-color);
-    border-top: 0;
+    border-right: 1px solid var(--border-color);
     transition: width var(--element-in);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.5rem;
 }
 
 .M-menu.close {
@@ -294,7 +293,7 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0.5rem 0 1rem 0;
-    gap: 0.3rem;
+    gap: 1vh;
 }
 
 .M-menu .M-center .M-all-pages::-webkit-scrollbar{
@@ -313,26 +312,60 @@ main {
     white-space: nowrap;
     cursor: pointer;
     width: 100%;
-    padding-left: 1.5rem;
+    padding-left: 1.4rem;
     line-height: 3.5rem;
 }
+
 .M-menu .M-center .M-all-pages .M-page:hover{
     background-color: var(--half-third-color);
 }
+
+.M-menu .M-center .M-all-pages .M-page.active .M-page-name{
+    color: var(--org-color1);
+    font-size: calc(var(--size-font-subtitle) + 2px);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
 .M-menu .M-center .M-all-pages .M-page .M-page-name{
     opacity: 1;
     transform: translateX(0);
-    transition: var(--element-in);
+    transition: transform var(--element-in), opacity calc(var(--element-in) + 0.7s), color calc(var(--element-in) - 0.3s);
+    font-size: calc(var(--size-font-subtitle) + 1px);
 }
 
 .M-menu.close .M-center .M-all-pages .M-page .M-page-name{
     opacity: 0;
-    transform: translateX(-105px);
-    transition: var(--element-out);
+    transform: translateX(-100px);
+    transition: transform var(--element-out), opacity calc(var(--element-out) - 0.3s);
 }
 
 .M-menu .M-center .M-all-pages .M-page .M-page-icon{
-    font-size: calc(var(--size-font-icons) + 0.4rem);
+    font-size: calc(var(--size-font-icons) + 0.5rem);
+    background-color: var(--menu-color);
+    transition: color calc(var(--element-out) - 0.3s);
+}
+
+.M-menu .M-center .M-all-pages .M-page.active .M-page-icon{
+    color: var(--org-color1);
+}
+
+.M-menu .M-center .M-all-pages .M-page:hover .M-page-icon,
+.M-menu .M-center .M-all-pages .M-page:hover .M-page-name{
+    color: var(--org-color1);
+    transition: color 0s;
+}
+
+.M-menu-aside .M-aside-center .M-page.M-events .M-event-icon {
+    position: absolute;
+    display: flex;
+    width: 1.2rem;
+    clip-path: circle();
+    transform: translateX(0.75rem) translateY(-0.45rem);
+}
+
+.M-menu-aside .M-aside-center .M-page.M-events .M-event-icon img {
+    max-width: 100%;
 }
 
 .M-menu .M-center .M-post{
@@ -470,7 +503,7 @@ main {
     padding: 1.5rem;
     width: 14rem;
     height: 5rem;
-    top: -4.7rem;
+    top: -10vh;
     border: 2px solid var(--border-color);
     border-radius: 1rem;
     background-color: var(--menu-color);
