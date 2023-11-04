@@ -29,12 +29,12 @@ $nacionalidade = $_POST['nacionalidade'];
 
 
 // SQL query to insert user data into the database
-$sql = "INSERT INTO users (nome, email, senha, biografia, genero, recado, verificado, nacionalidade) VALUES (x, x, x, x, x, x, x, x)";
+$sql = "INSERT INTO users (nome, email, senha, genero, nacionalidade) VALUES ( x, x, x, x, x)";
 
 
 if ($stmt = $conn->prepare($sql))
 {
-   $stmt -> bind_param("ssssssis", $nome, $email, $senha, $biografia, $genero, $recado, $verificado, $nacionalidade);
+   $stmt -> bind_param("sssss", $nome, $email, $senha, $genero, $nacionalidade);
 
 
    if ($stmt->execute())
