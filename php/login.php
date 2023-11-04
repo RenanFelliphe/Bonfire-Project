@@ -34,7 +34,7 @@ $sql = "INSERT INTO users (nome, email, senha, biografia, genero, recado, verifi
 
 if ($stmt = $conn->prepare($sql))
 {
-   $stmt -> bind_param("sss", $nome, $email, $senha);
+   $stmt -> bind_param("ssssssis", $nome, $email, $senha, $biografia, $genero, $recado, $verificado, $nacionalidade);
 
 
    if ($stmt->execute())
