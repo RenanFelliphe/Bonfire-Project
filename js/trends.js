@@ -4,7 +4,7 @@
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
 /*=======================================================================================================================================*/
 
-menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
+menuFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 featuredProfilesFunctions(); //Funções da seção DESTAQUES
 
@@ -12,142 +12,110 @@ featuredProfilesFunctions(); //Funções da seção DESTAQUES
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
 /*=======================================================================================================================================*/
 
-//Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
-function menuAsideFunctions() {
-    const main = document.querySelector("main");
-    const sidebar = document.querySelector(".M-menu-aside");
-    const sidebarCenter = document.querySelector(".M-aside-center");
-    const morePagesContainer = document.querySelector(".M-aside-more");
-    var isOpen = false; // Variável para controlar o estado de abertura da sidebar
-    var hoverTimeout;
+//Funções e individualidades do MENU DE NAVEGAÇÃO
+function menuFunctions(){
+    const menu = document.querySelector(".M-menu");
+    const menuButton = document.querySelector(".M-open-close");
+    const allSliderOptions = document.querySelectorAll(".M-slider-options");
+    const sliderBar = document.querySelector(".M-slider-bar");
+    const allPages = document.querySelectorAll(".M-page");
+    const logActionsContainer = document.querySelector(".M-log-actions");
+    const logButton = document.querySelector(".M-log-button");
 
-    // Abre e fecha o menu usando BOTÃO
-    function buttonMenuAside() {
-        const menuButton = document.querySelector(".menu-button");
+    function openMenu(){
+        const pagesSection = document.querySelector(".M-pages-icon");
 
-        menuButton.addEventListener('click', function () {
-            sidebar.classList.toggle("close");
-            isOpen = !isOpen;
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle("close");
+            sliderBar.style.transform = `translateX(${-1.2}rem)`;
 
-            if (isOpen) {
-                setTimeout(hoverMorePages, 2000); // Aguarda 2 segundos antes de permitir a execução da função hoverMorePages
-            } else {
-                morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
-            }
+            allSliderOptions.forEach((sliderOptions) => {
+                sliderOptions.classList.remove("active");
+                pagesSection.classList.add("active");
+            });
+
         });
     }
 
-    // Abre o menu usando HOVER em Desktops
-    function hoverMenuAside() {
-        sidebar.addEventListener('mouseover', function () {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(function () {
-                sidebar.classList.remove("close");
-            }, 100); // Delay em milissegundos
-        });
-
-        sidebar.addEventListener('mouseout', function () {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(function () {
-                sidebar.classList.add("close");
-                morePagesContainer.classList.add("close"); // Retorna morePagesContainer ao estado inicial com a classe 'close'
-            }, 200); // Delay em milissegundos
-        });
-    }
-
-    // Abre a seção para ver as páginas ocultas
-    function openMorePages() {
-        const morePages = document.querySelector(".M-more-pages");
-
-        morePages.addEventListener('click', function () {
-            morePagesContainer.classList.toggle("close");
-            isOpen = !isOpen;
-
-            if (isOpen) {
-                setTimeout(hoverMorePages, 2000);
-            } else {
-                morePagesContainer.classList.add("close");
-            }
-        });
-    }
-
-    //Muda o tema de acordo com o circulo
-    function testChangeTheme() {
+    function toggleTheme(){
         const body = document.querySelector("body");
-        const team1 = document.querySelector(".M-team-1");
-        const team2 = document.querySelector(".M-team-2");
-        const team3 = document.querySelector(".M-team-3");
+        const team1 = document.querySelector(".M-color1");
+        const team2 = document.querySelector(".M-color2");
+        const team3 = document.querySelector(".M-color3");
 
         team1.addEventListener("click", () => {
-            body.classList.toggle("G-green");
+            body.classList.add("G-pink");
             body.classList.remove("G-orange");
-            body.classList.remove("G-blue");
+            body.classList.remove("G-cyan");
         });
 
         team2.addEventListener("click", () => {
-            body.classList.toggle("G-orange");
-            body.classList.remove("G-green");
-            body.classList.remove("G-blue");
+            body.classList.add("G-orange");
+            body.classList.remove("G-pink");
+            body.classList.remove("G-cyan");
         });
 
         team3.addEventListener("click", () => {
-            body.classList.toggle("G-blue");
+            body.classList.add("G-cyan");
             body.classList.remove("G-orange");
-            body.classList.remove("G-green");
+            body.classList.remove("G-pink");
         });
     }
 
-    //Troca e identa a PÁGINA SELECIONADA no menu lateral
-    function toggleSelectedPage() {
-        const list = document.querySelectorAll('.M-list');
-        const sublist = document.querySelectorAll('.M-sublist');
+    function sliderFunctions(){
+        const pagesSection = document.querySelector(".M-pages-icon");
+        const searchSection = document.querySelector(".M-search-icon");
+        const notificationsSection = document.querySelector(".M-notifications-icon");
 
-        list.forEach(item => item.addEventListener('click', function () {
-            list.forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
-        }));
+        pagesSection.addEventListener("click", () => {
+            sliderBar.style.transform = `translateX(${-1.2}rem)`;
 
-        sublist.forEach(subitem => subitem.addEventListener('click', function () {
-            sublist.forEach(subitem => subitem.classList.remove('active'));
-            this.classList.add('active');
-        }));
-    }
-
-    // Abre a seção para alternar de usuário e sair do site
-    function userActions() {
-
-        const logOptionsDiv = document.querySelector('.M-log-actions');
-        const logButtom = document.querySelector('.M-log-buttom');
-        
-        // Abre a seção com botão
-        function openContainer() {
-            logButtom.addEventListener('click', function () {
-                logOptionsDiv.classList.toggle("close");
-                logButtom.classList.toggle("active");
-        
-                if (logOptionsDiv.classList.contains("close")) {
-                    clearTimeout(hoverTimeout);
-                } else {
-                    clearTimeout(hoverTimeout);
-                }
+            allSliderOptions.forEach((sliderOptions) => {
+                sliderOptions.classList.remove("active");
+                pagesSection.classList.add("active");
             });
-    }
-        // Fecha a seção com hover
-        function closeContainerHover(){
-
-            main.addEventListener("mouseover", () => {
-                logOptionsDiv.classList.add("close");
-                logButtom.classList.remove("active");
-            })
+        });
+    
+        searchSection.addEventListener("click", () => {
+            sliderBar.style.transform = `translateX(${4.8}rem)`;
             
-            sidebarCenter.addEventListener("mouseover", () => {
-                logOptionsDiv.classList.add("close");
-                logButtom.classList.remove("active");
-            })
+            allSliderOptions.forEach((sliderOptions) => {
+                sliderOptions.classList.remove("active");
+                searchSection.classList.add("active");
+            });
+        });
+    
+        notificationsSection.addEventListener("click", () => {
+            sliderBar.style.transform = `translateX(${10.5}rem)`;
+            
+            allSliderOptions.forEach((sliderOptions) => {
+                sliderOptions.classList.remove("active");
+                notificationsSection.classList.add("active");
+            });
+        });
+    }
+    
+    function togglePage(){
+        allPages.forEach((pages) => {
+            pages.addEventListener("click", () => {
+                allPages.forEach((pages) => {
+                    pages.classList.remove("active");
+                });
+
+                pages.classList.toggle("active");
+            });
+    });
+
+    }
+
+    function logFunctions(){
+        function openLogContainer(){
+            logButton.addEventListener('click', () => {
+                logActionsContainer.classList.toggle("close");
+            });
         }
 
-        //SAI do site
-        function logOutBonfire() {
+        function logOutBonfire(){
             const logOutButton = document.querySelector('.M-log-out');
             const confirmDialog = document.querySelector('.M-log-out-modal');
             const confirmYes = document.querySelector('.M-confirm-log-out');
@@ -171,17 +139,16 @@ function menuAsideFunctions() {
                 confirmDialog.style.display = 'none';
             });
         }
-        openContainer();
-        closeContainerHover();
+
+        openLogContainer();
         logOutBonfire();
     }
 
-    testChangeTheme();
-    openMorePages();
-    hoverMenuAside();
-    buttonMenuAside();
-    toggleSelectedPage();
-    userActions();
+    openMenu();
+    sliderFunctions();
+    logFunctions();
+    togglePage();
+    toggleTheme();
 }
 
 //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS

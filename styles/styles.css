@@ -58,6 +58,56 @@ main {
     color: #ff0000;
 }
 
+
+.G-user-images {
+    position: relative;
+    display: flex;
+    border-radius: 100%;
+    border: 1px solid var(--border-color);
+    z-index: +1;
+}
+
+.M-menu .M-footer .M-footer-content .G-user-images {
+    max-width: 3.7rem;
+    max-height: 3.7rem;
+}
+
+.G-user-images .G-profile-img{
+    display: flex;
+    width: 100%;
+    clip-path: circle();
+    cursor: pointer;
+}
+
+.G-user-images .G-profile-img img{
+    max-width: 100%;
+}
+
+.G-user-images .G-org-img{
+    position: absolute;
+    display: flex;
+    width: 38%;
+    clip-path: circle();
+    right: -2px;
+    bottom: -1px;
+    cursor: pointer;
+}
+
+.G-user-images .G-org-img img{
+    max-width: 100%;
+}
+
+.G-user-images .G-user-status {
+    position: absolute;
+    display: flex;
+    width: 110%;
+    height: 110%;
+    clip-path: circle();
+    border: 7px dashed var(--org-color2);
+    border-radius: 100%;
+    z-index: -1;
+}
+
 /*====================================================================================================
 ============================================ MENU ASIDE ==============================================
 ====================================================================================================*/
@@ -386,48 +436,6 @@ main {
     border-radius: 2rem;
 }
 
-.M-menu .M-footer .M-footer-content .M-user-images {
-    width: 3.7rem;
-    height: 100%;
-    display: flex;
-    z-index: +1;
-    border-radius: 100%;
-    box-shadow: 0 0 5px 0px black;
-}
-
-.M-menu .M-footer .M-footer-content .M-user-images .M-perfil-img{
-    display: flex;
-    width: 3.7rem;
-    clip-path: circle();
-}
-
-.M-menu .M-footer .M-footer-content .M-user-images .M-perfil-img img{
-    max-width: 100%;
-}
-
-.M-menu .M-footer .M-footer-content .M-user-images .M-org-img{
-    position: absolute;
-    display: flex;
-    width: 1.5rem;
-    clip-path: circle();
-    transform: translateX(1.3rem) translateY(1.2rem);
-}
-
-.M-menu .M-footer .M-footer-content .M-user-images .M-org-img img{
-    max-width: 100%;
-}
-
-.M-menu .M-footer .M-footer-content .M-user-images .M-user-status {
-    position: absolute;
-    display: flex;
-    width: 4rem;
-    height: 4rem;
-    clip-path: circle();
-    border: 7px dashed var(--org-color1);
-    border-radius: 100%;
-    z-index: -1;
-}
-
 .M-menu .M-footer .M-footer-content .M-user-infos {
     display: flex;
     flex-direction: column;
@@ -669,49 +677,9 @@ main {
     gap: 1rem;
 }
 
-.H-timeline .H-publish .H-left .H-user-images{
-    position: relative;
-    border-radius: 100%;
-    display: flex;
-}
-
-.H-timeline .H-publish .H-left .H-user-images .H-profile-img{
-    position: relative;
-    display: flex;
-    border-radius: 100%;
-    overflow: hidden;
-    width: 100%;
-    border: 1px solid var(--border-color);
-    z-index: +1;
-}
-
-.H-timeline .H-publish .H-left .H-user-images .H-profile-img img{
-    max-width: 100%;
-}
-
-.H-timeline .H-publish .H-left .H-user-images .H-org-img{
-    position: absolute;
-    display: flex;
-    border-radius: 100%;
-    overflow: hidden;
-    width: 38%;
-    border: 1px solid var(--border-color);
-    right: 0px;
-    bottom: 0px;
-    z-index: +1;
-}
-
-.H-timeline .H-publish .H-org-img img{
-    max-width: 100%;
-}
-
-.H-timeline .H-publish .H-left .H-user-images .H-user-status{
-    position: absolute;
-    width: 108%;
-    height: 108%;
-    border: 8px dashed var(--org-color1);
-    border-radius: 100%;
-    transition: var(--element-out);
+.H-timeline .H-publish .H-left .G-user-images{
+    max-width: 4rem;
+    max-height: 4rem;
 }
 
 .H-characters{
@@ -779,51 +747,9 @@ main {
     border-radius: 1rem;
 }
 
-.H-suggestions .H-user-images{
-    position: relative;
-    border-radius: 100%;
-    display: flex;
-    width: 5em;
-    cursor: pointer;
-}
-
-.H-suggestions .H-user-images .H-profile-img{
-    position: relative;
-    display: flex;
-    border-radius: 100%;
-    overflow: hidden;
-    width: 100%;
-    border: 1px solid var(--border-color);
-    z-index: +1;
-}
-
-.H-suggestions .H-user-images .H-profile-img img{
-    max-width: 100%;
-}
-
-.H-suggestions .H-user-images .H-org-img{
-    position: absolute;
-    display: flex;
-    border-radius: 100%;
-    overflow: hidden;
-    width: 38%;
-    border: 1px solid var(--border-color);
-    right: 0px;
-    bottom: 0px;
-    z-index: +1;
-}
-
-.H-suggestions .H-user-images .H-org-img img{
-    max-width: 100%;
-}
-
-.H-suggestions .H-user-images .H-user-status{
-    position: absolute;
-    width: 108%;
-    height: 108%;
-    border: 8px dashed var(--org-color1);
-    border-radius: 100%;
-    transition: var(--element-out);
+.H-suggestions .G-user-images{
+    max-width: 5rem;
+    max-height: 5rem;
 }
 
 .H-suggestions .H-user-texts{
@@ -997,22 +923,23 @@ main {
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images{
     position: relative;
-    border-radius: 100%;
     display: flex;
-    width: 15%;
-    min-width: 3.5rem;
+    border-radius: 100%;
+    box-shadow: 0 0 5px 0px black;
+    border: 1px solid var(--border-color);
+    z-index: +1;
+}
+
+.H-featured-profiles .H-all-profiles .H-profile .G-user-images{
     max-width: 4rem;
-    cursor: pointer;
+    max-height: 4rem;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-profile-img{
-    position: relative;
     display: flex;
-    border-radius: 100%;
-    overflow: hidden;
     width: 100%;
-    border: 1px solid var(--border-color);
-    z-index: +1;
+    clip-path: circle();
+    cursor: pointer;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-profile-img img{
@@ -1022,13 +949,11 @@ main {
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-org-img{
     position: absolute;
     display: flex;
-    border-radius: 100%;
-    overflow: hidden;
     width: 38%;
-    border: 1px solid var(--border-color);
-    right: 0px;
-    bottom: 0px;
-    z-index: +1;
+    clip-path: circle();
+    right: -2px;
+    bottom: -1px;
+    cursor: pointer;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-org-img img{
@@ -1037,11 +962,13 @@ main {
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-images  .H-user-status{
     position: absolute;
-    width: 108%;
-    height: 108%;
-    border: 8px dashed var(--org-color1);
+    display: flex;
+    width: 110%;
+    height: 110%;
+    clip-path: circle();
+    border: 7px dashed var(--org-color2);
     border-radius: 100%;
-    transition: var(--element-out);
+    z-index: -1;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-texts{
@@ -1266,11 +1193,12 @@ main {
 }
 
 .T-trending-topics .T-trend-functions .T-country-img{
-    clip-path: circle();
-    width: 2.7rem;
+    width: 1.7rem;
     display: flex;
     right: 1.5rem;
     cursor: pointer;
+    border-radius: 20%;
+    overflow: hidden;
 }
 
 .T-trending-topics .T-trend-functions .T-country-img img{
@@ -1690,75 +1618,53 @@ main {
 .S-subsettings .S-account-profile .S-profile .S-profile-content {
     position: relative;
     display: flex;
-    gap: 10px;
+    gap: 2.7rem;
     width: 100%;
+    justify-content: flex-start;
     height: 65px;
     background-color: var(--third-color);
 }
 
-.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images {
-    position: absolute;
-    display: flex;
-    width: 15%;
-    min-width: 6.25rem;
-    height: 155%;
-    min-height: 4.7rem;
+.S-subsettings .S-account-profile .S-profile .S-profile-content .G-user-images {
+    bottom: 1.5rem;
+    left: 1.5rem;
     max-height: 12rem;
     max-width: 6.25rem;
-    bottom: 0.3rem;
-    left: 1rem;
 }
 
-.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images img {
-    cursor: pointer;
-}
-
-.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .perfil-img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-}
-
-.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images::before {
+.S-subsettings .S-account-profile .S-profile .S-profile-content .G-user-images::before{
     content: '';
     position: absolute;
-    width: 112%;
-    height: 112%;
+    width: 125%;
+    height: 125%;
     background-color: var(--third-color);
-    border-radius: 45px;
-}
-
-.S-subsettings .S-account-profile .S-profile .S-profile-content .S-profile-images .org-img {
-    position: absolute;
-    width: 31%;
-    height: 31%;
-    bottom: 0.05rem;
-    right: -0.1rem;
     border-radius: 100%;
 }
 
+.S-subsettings .S-account-profile .S-profile .S-profile-content .G-user-images .G-org-img{
+    width: 32%;
+    right: 0;
+    bottom: 1px;
+}
+
 .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    left: 8.25rem;
-    height: 100%;
-    gap: 0.5rem;
-    width: auto;
-    font-size: var(--size-font-text);
-    line-height: 1rem;
+    line-height: 1.3rem;
+    padding-bottom: 0.5rem;
+    z-index: +100;
 }
 
 .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .nick {
-    font-size: 1.7rem;
+    font-size: calc(var(--size-font-title) + 3px);
     font-weight: bolder;
     color: var(--org-color1);
     letter-spacing: 2px;
 }
 
 .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations .name {
+    font-size: var(--size-font-text);
     padding-left: 0.2rem;
 }
 
@@ -2540,25 +2446,11 @@ main {
     cursor: pointer;
 }
 
-.S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-google-play-download:hover {
-    width: 210px;
-    height: 60px;
-    transition: calc(var(--element-in) - 0.3s);
-    transform: translate(-2px);
-}
-
 .S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-apple-store-download {
     width: 210px;
     height: 62px;
     transition: calc(var(--element-out) - 0.3s);
     cursor: pointer;
-}
-
-.S-subsettings .S-about-us .S-bonfire .S-download-bonfire .S-apple-store-download:hover {
-    width: 223px;
-    height: 70px;
-    transition: calc(var(--element-in) - 0.3s);
-    transform: translate(5px);
 }
 
 .S-subsettings .S-about-us .S-team{

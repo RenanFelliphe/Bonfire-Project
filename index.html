@@ -26,9 +26,9 @@
             </div>
 
             <div class="M-menu-color">
-                <i class="bi bi-circle-fill M-color M-color1 G-green"></i>
+                <i class="bi bi-circle-fill M-color M-color1 G-pink"></i>
                 <i class="bi bi-circle-fill M-color M-color2 G-orange"></i>
-                <i class="bi bi-circle-fill M-color M-color3 G-blue"></i>
+                <i class="bi bi-circle-fill M-color M-color3 G-cyan"></i>
             </div>
         </section>
 
@@ -47,11 +47,11 @@
 
         <section class="M-center">
             <article class="M-all-pages">
-                    <a href="index.html" class="M-page M-home">
+                    <a href="index.html" class="M-page M-home active">
                         <i class="bi bi-house-door M-page-icon All-icon"></i>
                         <span class="M-page-name">Página Inicial</span>
                     </a>
-                    <a href="events.html" class="M-page M-events active">
+                    <a class="M-page M-events">
                         <i class="bi bi-calendar-date M-page-icon All-icon"></i>
                         <span class="M-page-name">Eventos</span>
                         <div class="M-event-notify">
@@ -96,14 +96,14 @@
 
         <section class="M-footer">
             <div class="M-footer-content">
-                <figure class="M-user-images">
-                    <a href="" class="M-perfil-img">
-                        <img src="assets/perfil.png" alt="">
+                <figure class="G-user-images">
+                    <a href="" class="G-profile-img">
+                        <img src="assets/perfil.png" alt="Foto de perfil">
                     </a>
-                    <a href="" class="M-org-img">                    
-                        <img src="assets/loud-logo.png" alt="">
+                    <a href="" class="G-org-img">                    
+                        <img src="assets/loud-logo.png" alt="Foto da organização">
                     </a>
-                    <span class="M-user-status"></span>
+                    <span class="G-user-status"></span>
                 </figure>
                 <div class="M-user-infos">
                     <span class="M-user-nick">Saadhak</span>
@@ -129,7 +129,7 @@
                 </div>
             </div>
         </section>  
-</nav>
+    </nav>
 
     <main>
         <section class="Q-quick-messages close">
@@ -143,11 +143,15 @@
             <section class="H-publish">
                 <h1 class="H-section-title">Criar Publicação</h1>
                 <div class="H-left">
-                    <div class="H-user-images">
-                        <div class="H-profile-img"><img src="assets/perfil.png" alt="Foto de perfil"></div>
-                        <div class="H-org-img"><img src="assets/loud-logo.png" alt="Foto da organização"></div>
-                        <div class="H-user-status"></div>
-                    </div>
+                    <figure class="G-user-images">
+                        <a href="" class="G-profile-img">
+                            <img src="assets/perfil.png" alt="Foto de perfil">
+                        </a>
+                        <a href="" class="G-org-img">                    
+                            <img src="assets/loud-logo.png" alt="Foto da organização">
+                        </a>
+                        <div class="G-user-status"></div>
+                    </figure>
                     <span class="H-characters"><span class="H-characters-number">0</span>/<span class="H-max-characters">20</span></span>
                 </div>
         
@@ -171,11 +175,15 @@
                 <h1 class="H-section-title"> Sugestões </h1>
                 <div class="H-all-profiles">
                     <div class="H-profile">
-                        <div class="H-user-images">
-                            <a href="perfil.html" class="H-profile-img"><img src="assets/fnx.jpg" alt="Fodo de perfil"></a>
-                            <a href="comunidade.html" class="H-org-img"><img src="assets/imperial-logo.jpg" alt="Foto da organização"></a>
-                            <div class="H-user-status"></div>
-                        </div>
+                        <figure class="G-user-images">
+                            <a href="" class="G-profile-img">
+                                <img src="assets/perfil.png" alt="Foto de perfil">
+                            </a>
+                            <a href="" class="G-org-img">                    
+                                <img src="assets/loud-logo.png" alt="Foto da organização">
+                            </a>
+                            <span class="G-user-status"></span>
+                        </figure>
                         <div class="H-user-texts">
                             <span class="H-user-nick">FNX</span>
                             <span class="H-user-name">Lincoln Lau</span>
@@ -184,11 +192,15 @@
                         <span class="H-follow">Seguir</span>
                     </div>
                     <div class="H-profile">
-                        <div class="H-user-images">
-                            <a href="perfil.html" class="H-profile-img"><img src="assets/fallen.jpg" alt="Fodo de perfil"></a>
-                            <a href="comunidade.html" class="H-org-img"><img src="assets/furia-logo.png" alt="Foto da organização"></a>
-                            <div class="H-user-status"></div>
-                        </div>
+                        <figure class="G-user-images">
+                            <a href="" class="G-profile-img">
+                                <img src="assets/fallen.jpg" alt="Foto de perfil">
+                            </a>
+                            <a href="" class="G-org-img">                    
+                                <img src="assets/furia-logo.png" alt="Foto da organização">
+                            </a>
+                            <span class="G-user-status"></span>
+                        </figure>
                         <div class="H-user-texts">
                             <span class="H-user-nick">Fallen</span>
                             <span class="H-user-name">Gabriel Toledo</span>
@@ -197,10 +209,17 @@
                         <span class="H-follow">Seguir</span>
                     </div>
                     <div class="H-profile">
-                        <div class="H-user-images">
-                            <a href="perfil.html" class="H-profile-img"><img src="assets/gaules.jpg" alt="Fodo de perfil"></a>
-                            <div class="H-user-status"></div>
-                        </div>
+                        <figure class="G-user-images">
+                            <a href="" class="G-profile-img">
+                                <img src="assets/gaules.jpg" alt="Foto de perfil">
+                            </a>
+                            <!--
+                                <a href="" class="G-org-img">                    
+                                    <img src="" alt="Foto da organização">
+                                </a>
+                            -->
+                            <span class="G-user-status"></span>
+                        </figure>
                         <div class="H-user-texts">
                             <span class="H-user-nick">Gaules</span>
                             <span class="H-user-name">Alexandre Borba</span>
@@ -230,11 +249,15 @@
                     <div class="H-all-profiles swiper-wrapper">
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/robo.jfif" alt="Foto de perfil"></a>
-                                    <a href="comunidade.html" class="H-org-img"><img src="assets/loud-logo.png" alt="Foto da organização"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/robo.jfif" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/loud-logo.png" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">ROBO</span>
                                     <span class="H-user-achievement">Hexacampeão do CBLOL</span>
@@ -244,10 +267,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/loud-logo.png" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/loud-logo.png" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">LOUD</span>
                                     <span class="H-user-achievement">Bicampeã da LBFF 9 e Tricampeã do CBLOL</span>
@@ -257,10 +287,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/shini.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/shini.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">SHINI</span>
                                     <span class="H-user-achievement">Anuncia seu retorno ao competitivo de LOL</span>
@@ -270,10 +307,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/team-vitality-logo.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/team-vitality-logo.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Team Vitality</span>
                                     <span class="H-user-achievement">Campeã do Major CS 2023</span>
@@ -283,11 +327,15 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/daiki.jpg" alt="Foto de perfil"></a>
-                                    <a href="comunidade.html" class="H-org-img"><img src="assets/team-liquid-logo.png" alt="Foto da organização"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/daiki.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/team-liquid-logo.png" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Daiki</span>
                                     <span class="H-user-achievement"> Classificada para o mundial de Valorant Inclusivo</span>
@@ -297,10 +345,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/jazzghost.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/jazzghost.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Jazzghost</span>
                                     <span class="H-user-achievement">Alcança 14M de inscritos no Youtube</span>
@@ -310,10 +365,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/team-one-logo.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/team-one-logo.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">T1</span>
                                     <span class="H-user-achievement">Campeã Mundial de League Of Legends</span>
@@ -323,11 +385,15 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/cameram4n.jpg" alt="Foto de perfil"></a>
-                                    <a href="comunidade.html" class="H-org-img"><img src="assets/los-logo2.jpg" alt="Foto da organização"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/cameram4n.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/los-logo2.jpg" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Cameram4n</span>
                                     <span class="H-user-achievement">Anunciado pela equipe de Rainbow 6 da Los Grandes</span>
@@ -337,11 +403,15 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/bak.jpg" alt="Foto de perfil"></a>
-                                    <a href="comunidade.html" class="H-org-img"><img src="assets/loud-logo.png" alt="Foto da organização"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/bak.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/loud-logo.png" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Bak</span>
                                     <span class="H-user-achievement">Retorna a sua antiga equipe, LOUD GG</span>
@@ -351,10 +421,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/dupreeh.webp" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/dupreeh.webp" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Dupreeh</span>
                                     <span class="H-user-achievement">Pentacampeão mundial de CS:GO</span>
@@ -364,10 +441,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/mouz-logo.png" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/mouz-logo.png" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Mouz E-sports</span>
                                     <span class="H-user-achievement">Campeã da ESL Pro League</span>
@@ -377,10 +461,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/team-liquid-logo.png" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/team-liquid-logo.png" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Team Liquid BR</span>
                                     <span class="H-user-achievement">Vencedora da final do VCT Game Changers São Paulo</span>
@@ -390,10 +481,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/fla-esports-logo.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/fla-esports-logo.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Flamengo E-sports</span>
                                     <span class="H-user-achievement">Vencedor da Copa NFA 2° Split 2023</span>
@@ -403,11 +501,15 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/tinonws.jpg" alt="Foto de perfil"></a>
-                                    <a href="comunidade.html" class="H-org-img"><img src="assets/loud-logo.png" alt="Foto da organização"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/tinonws.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/loud-logo.png" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Tinowns</span>
                                     <span class="H-user-achievement">Campeão do CBLOL 2° split 2023</span>
@@ -417,10 +519,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/evil-geniuses-logo.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/evil-geniuses-logo.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Evil Geniuses</span>
                                     <span class="H-user-achievement">Campeã do Valorant Champions Tour 2023</span>
@@ -430,10 +539,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/hummer-logo.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/hummer-logo.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Hummer</span>
                                     <span class="H-user-achievement">Anuncia entrada no cenário inclusivo do Valorant</span>
@@ -443,10 +559,15 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/aspas.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/aspas.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/leviatan-logo.jpg" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Aspas</span>
                                     <span class="H-user-achievement">MVP do VCT Américas 2023</span>
@@ -456,11 +577,15 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/freitas.jpg" alt="Foto de perfil"></a>
-                                    <a href="comunidade.html" class="H-org-img"><img src="assets/fluxo-logo.png" alt="Foto da organização"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/freitas.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <a href="" class="G-org-img">                    
+                                        <img src="assets/fluxo-logo.png" alt="Foto da organização">
+                                    </a>
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Freitas FF</span>
                                     <span class="H-user-achievement">Anunciado como novo influenciador do Fluxo</span>
@@ -470,10 +595,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/fluxo-logo.png" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/fluxo-logo.png" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Fluxo GG</span>
                                     <span class="H-user-achievement">Apresenta line-up feminina para a Taça das Patroas</span>
@@ -483,10 +615,17 @@
                         </div>
                         <div class="H-profile swiper-slide">
                             <div class="H-profile-content">
-                                <div class="H-user-images">
-                                    <a href="perfil.html" class="H-profile-img"><img src="assets/xand.jpg" alt="Foto de perfil"></a>
-                                    <div class="H-user-status"></div>
-                                </div>
+                                <figure class="G-user-images">
+                                    <a href="" class="G-profile-img">
+                                        <img src="assets/xand.jpg" alt="Foto de perfil">
+                                    </a>
+                                    <!--
+                                        <a href="" class="G-org-img">                    
+                                            <img src="" alt="Foto da organização">
+                                        </a>
+                                    -->
+                                    <span class="G-user-status"></span>
+                                </figure>
                                 <div class="H-user-texts">
                                     <span class="H-user-nick">Xand</span>
                                     <span class="H-user-achievement">Transferência encaminhada para a 00Nation</span>

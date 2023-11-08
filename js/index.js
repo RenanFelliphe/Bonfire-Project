@@ -4,7 +4,7 @@
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
 /*=======================================================================================================================================*/
 
-menuAsideFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
+menuFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 featuredProfilesFunctions(); //Funções da seção DESTAQUES
 
@@ -47,8 +47,8 @@ function charactersLimit() {
     }
 }
 
-//Funções e individualidades do MENU DE NAVEGAÇÃO LATERAL
-function menuAsideFunctions(){
+//Funções e individualidades do MENU DE NAVEGAÇÃO
+function menuFunctions(){
     const menu = document.querySelector(".M-menu");
     const menuButton = document.querySelector(".M-open-close");
     const allSliderOptions = document.querySelectorAll(".M-slider-options");
@@ -79,21 +79,21 @@ function menuAsideFunctions(){
         const team3 = document.querySelector(".M-color3");
 
         team1.addEventListener("click", () => {
-            body.classList.toggle("G-green");
+            body.classList.add("G-pink");
             body.classList.remove("G-orange");
-            body.classList.remove("G-blue");
+            body.classList.remove("G-cyan");
         });
 
         team2.addEventListener("click", () => {
-            body.classList.toggle("G-orange");
-            body.classList.remove("G-green");
-            body.classList.remove("G-blue");
+            body.classList.add("G-orange");
+            body.classList.remove("G-pink");
+            body.classList.remove("G-cyan");
         });
 
         team3.addEventListener("click", () => {
-            body.classList.toggle("G-blue");
+            body.classList.add("G-cyan");
             body.classList.remove("G-orange");
-            body.classList.remove("G-green");
+            body.classList.remove("G-pink");
         });
     }
 
