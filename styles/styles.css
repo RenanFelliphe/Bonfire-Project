@@ -91,10 +91,13 @@ main {
     right: -2px;
     bottom: -1px;
     cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 100%;
 }
 
 .G-user-images .G-org-img img{
     max-width: 100%;
+    border-radius: 100%;
 }
 
 .G-user-images .G-user-status {
@@ -711,7 +714,6 @@ main {
     gap: 0.9rem;
 }
 
-/***********/
 .H-suggestions{
     position: relative;
     width: 33rem;
@@ -921,60 +923,18 @@ main {
     gap: 1rem;
 }
 
-.H-featured-profiles .H-all-profiles .H-profile .H-user-images{
-    position: relative;
-    display: flex;
-    border-radius: 100%;
-    box-shadow: 0 0 5px 0px black;
-    border: 1px solid var(--border-color);
-    z-index: +1;
-}
-
 .H-featured-profiles .H-all-profiles .H-profile .G-user-images{
     max-width: 4rem;
     max-height: 4rem;
 }
 
-.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-profile-img{
-    display: flex;
-    width: 100%;
-    clip-path: circle();
-    cursor: pointer;
-}
-
-.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-profile-img img{
-    max-width: 100%;
-}
-
-.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-org-img{
-    position: absolute;
-    display: flex;
-    width: 38%;
-    clip-path: circle();
-    right: -2px;
-    bottom: -1px;
-    cursor: pointer;
-}
-
-.H-featured-profiles .H-all-profiles .H-profile .H-user-images .H-org-img img{
-    max-width: 100%;
-}
-
-.H-featured-profiles .H-all-profiles .H-profile .H-user-images  .H-user-status{
-    position: absolute;
-    display: flex;
-    width: 110%;
-    height: 110%;
-    clip-path: circle();
-    border: 7px dashed var(--org-color2);
-    border-radius: 100%;
-    z-index: -1;
-}
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-texts{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 80%;
+    height: 4rem;
 }
 
 .H-featured-profiles .H-all-profiles .H-profile .H-user-texts .H-user-nick {
@@ -984,7 +944,7 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: calc(var(--size-font-title) - 1.5vh);
+    font-size: calc(var(--size-font-title) - 1.2vh);
     animation: marquee 5s linear infinite;
 }
 
@@ -1645,6 +1605,7 @@ main {
     width: 32%;
     right: 0;
     bottom: 1px;
+    border: none;
 }
 
 .S-subsettings .S-account-profile .S-profile .S-profile-content .S-user-informations {
