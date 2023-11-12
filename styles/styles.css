@@ -112,7 +112,7 @@ main {
 }
 
 /*====================================================================================================
-============================================ MENU ASIDE ==============================================
+============================================ MENU: MODELO INICIAL ==============================================
 ====================================================================================================*/
 
 .M-menu {
@@ -127,7 +127,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 0.5rem;
+    z-index: +1;
 }
 
 .M-menu.close {
@@ -150,6 +150,10 @@ main {
 .M-menu.close::after {
     height: 0;
     transition: var(--element-out);
+}
+
+.M-menu section{
+    background-color: var(--menu-color);
 }
 
 .M-menu .M-top {
@@ -286,7 +290,6 @@ main {
 }
 
 .M-menu .M-slider .M-slider-bar{
-    content: '';
     position: absolute;
     bottom: -1px;
     width: 25%;
@@ -343,8 +346,7 @@ main {
     line-height: 3.5rem;
 }
 
-.M-menu .M-center .M-all-pages .M-page:hover,
-.M-menu .M-center .M-all-pages .M-page.active{
+.M-menu .M-center .M-all-pages .M-page:hover{
     background-color: var(--half-third-color);
 }
 
@@ -425,9 +427,8 @@ main {
 .M-menu .M-footer {
     position: relative;
     display: flex;
-    padding: 0.45rem;
+    padding: 0.45rem 0.45rem 1rem 0.45rem;
     width: 100%;
-    z-index: +1;
 }
 
 .M-menu .M-footer .M-footer-content {
@@ -537,6 +538,130 @@ main {
 
 .M-menu .M-footer .M-footer-content .M-log-actions ul li span.All-icon {
     font-size: var(--size-font-icons);
+}
+
+
+/*====================================================================================================
+============================================ MENU: MODELO NOTIFICAÇÕES ==============================================
+====================================================================================================*/
+
+
+.M-notifications {
+    position: fixed;
+    bottom: 0;
+    left: 0;  
+    height: 91vh;
+    width: 16rem;
+    background-color: var(--menu-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 1.5rem;
+    transition: calc(var(--element-in) + 0.2s);
+    overflow: hidden;
+}
+
+.M-notifications.close {
+    width: 4.8rem;
+    transition: var(--element-out);
+}
+
+.M-notifications.active{
+    left: 16rem;  
+    transition: calc(var(--element-out) - 0.2s);
+}
+
+.M-notifications .M-notifications-header{
+    position: relative;
+    width: 100%;
+}
+
+.M-notifications .M-notifications-header .M-notifications-top{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.M-notifications .M-notifications-header .M-notifications-top .M-section-title{
+    display: flex;
+    height: 1.5rem;
+    font-size: calc(var(--size-font-title) - 7px);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.M-notifications .M-notifications-header .M-notifications-top i{
+    display: flex;
+    height: 1.5rem;
+}
+
+.M-notifications .M-notifications-header .M-notifications-slider{
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+.M-notifications .M-notifications-header .M-notifications-slider .M-notifications-filter{
+    font-size: calc(var(--size-font-text) + 2px);
+    display: flex;
+    height: 1.5rem;
+}
+
+.M-notifications .M-notifications-header .M-notifications-slider .M-notifications-filter.M-arroba-icon{
+    font-size: calc(var(--size-font-text) + 7px);
+}
+
+.M-notifications .M-notifications-header .M-notifications-slider .M-notifications-slider-bar{
+    position: absolute;
+    bottom: -1px;
+    width: 27%;
+    height: 1px;
+    border-radius: 1rem;
+    background-color: var(--org-color1);
+    transition: var(--element-out), transform calc(var(--element-out) - 0.2s);
+    box-shadow: 0 0 3px 0 var(--org-color-lighter);
+    transform: translateX(-5.3rem);
+}
+
+.M-notifications .M-all-notifications{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.M-notifications .M-all-notifications::-webkit-scrollbar{
+    display: none;
+}
+
+.M-notifications .M-all-notifications .M-notify{
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5em 2rem 1rem 1.2em;
+}
+
+.M-notifications .M-all-notifications .M-notify .M-notifications-date{
+    font-size: calc(var(--size-font-text) - 3px);
+}
+
+.M-notifications .M-all-notifications .M-final-message{
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.M-notifications .M-all-notifications .M-see-more{
+    font-size: 0.7rem;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 /*=========================================================================================================

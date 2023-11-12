@@ -54,13 +54,6 @@ CREATE TABLE Equipe (
 	CONSTRAINT FK_Equipe_Grupo FOREIGN KEY(idGrupo) REFERENCES Grupo(idConta)
 );
 
-CREATE TABLE Divisoes (
-    idGrupo varchar(10),
-    idSubgrupo varchar(10),
-	CONSTRAINT FK_Divisoes_Grupo FOREIGN KEY(idGrupo) REFERENCES Grupo(idConta),    
-	CONSTRAINT FK_Divisoes_Subgrupo FOREIGN KEY(idSubgrupo) REFERENCES Grupo(idConta)
-);
-
 CREATE TABLE equipeCampeonato (
     idEquipe varchar(10),
     idCampeonato varchar(10),    
