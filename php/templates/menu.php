@@ -126,7 +126,7 @@
             
         </section>
 
-        <section class="M-notifications">
+        <section class="M-notifications close">
             <section class="M-notifications-header">
                 <div class="M-notifications-top">
                     <p class="M-section-title"> Notificações </p>
@@ -213,6 +213,7 @@
                     if (notificationsArea.classList.contains("active")) {
                         closeNotifications();
                     } else {
+                        notificationsArea.classList.add("close");
                         openCloseMenu();
                     }
                 });
