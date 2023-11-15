@@ -132,16 +132,6 @@
         </section>
 
         <aside class="H-aside">
-            <section class="H-search">
-                <i class="bi bi-bell H-user-notify All-icon"> </i>
-                <div class="H-search-input">
-                    <i class="bi bi-search All-icon"> </i>
-                    <i class="bi bi-keyboard All-icon"> </i>
-                    <input type="search" placeholder="Pesquisar...">
-                    <i class="bi bi-mic All-icon"> </i>
-                </div>
-            </section>   
-
             <section class="H-featured-profiles">
                 <h1 class="H-section-title">Destaques</h1>
                 <div class="H-profiles-swiper swiper">

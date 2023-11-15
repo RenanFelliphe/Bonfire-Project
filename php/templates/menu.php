@@ -17,7 +17,7 @@
 <body>
 
     <nav>
-        <section class="M-menu close">
+        <section class="M-menu">
             <section class="M-top">
                 <div class="M-open-close">
                     <i class="bi bi-list All-icon M-open"></i>
@@ -42,7 +42,7 @@
                 <article class="M-all-pages">
                         <a href="index.php" class="M-page M-home active">
                             <i class="bi bi-house-door M-page-icon All-icon"></i>
-                            <span class="M-page-name">Página Inicial</span>
+                            <span class="M-page-name">Home</span>
                         </a>
                         <a class="M-page M-events">
                             <i class="bi bi-calendar-date M-page-icon All-icon"></i>
@@ -126,7 +126,7 @@
             
         </section>
 
-        <section class="M-notifications close">
+        <section class="M-notifications M-menu-section close">
             <section class="M-notifications-header">
                 <div class="M-notifications-top">
                     <p class="M-section-title"> Notificações </p>
@@ -175,12 +175,32 @@
                 <a href="" class="M-see-more"> Ver Todas...</a>
             </section>
         </section>
+
+        <section class="M-search M-menu-section close">
+            <section class="M-search-top">
+                <p class="M-section-title"> Pesquisar </p>
+                <i class="bi bi-three-dots-vertical All-icon"></i>
+            </section>
+
+            <section class="M-search-input">
+                <i class="bi bi-keyboard All-icon"> </i>
+                <input type="search" placeholder="Pesquisar...">
+                <i class="bi bi-mic All-icon"> </i>
+            </section>
+
+            <section class="M-search-history">
+                <p class="M-section-title"> Histórico de Pesquisa</p>
+
+            </section>
+
+        </section>
     </nav>
 
     <script>
         function menuFunctions() {
             const menuArea = document.querySelector(".M-menu");
             const notificationsArea = document.querySelector(".M-notifications");
+            const searchArea = document.querySelector(".M-search");
 
             const menuButton = document.querySelector(".M-open-close");
             const allSliderIcons = document.querySelectorAll(".M-slider-options");
@@ -209,11 +229,23 @@
                     setTimeout(openCloseMenu, 200);
                 }
 
+                function closeSearch() {
+                        searchArea.classList.remove("active");
+                        searchArea.classList.add("close");
+
+                        setTimeout(openCloseMenu, 200);
+                    }
+
                 menuButton.addEventListener('click', () => {
                     if (notificationsArea.classList.contains("active")) {
                         closeNotifications();
+
+                    } else if(searchArea.classList.contains("active")) {
+                            closeSearch();
+
                     } else {
                         notificationsArea.classList.add("close");
+                        searchArea.classList.add("close");
                         openCloseMenu();
                     }
                 });
@@ -258,30 +290,48 @@
                     });
 
                     notificationsArea.classList.remove("active");
-                });
+                    notificationsArea.classList.add("close");
+                    
+                    searchArea.classList.remove("active");
+                    searchArea.classList.add("close");
+                    });
             
                 searchIcon.addEventListener("click", () => {
                     sliderBar.style.transform = `translateX(${4.8}rem)`;
-                    
+
                     allSliderIcons.forEach((sliderOptions) => {
                         sliderOptions.classList.remove("active");
                         searchIcon.classList.add("active");
                     });
 
                     notificationsArea.classList.remove("active");
+                    notificationsArea.classList.add("close");
+
+                    searchArea.classList.remove("close");
+                    searchArea.classList.add("active");
+
+                    notificationsArea.style.zIndex = "1";
+                    searchArea.style.zIndex = "2";
                 });
             
                 notificationsIcon.addEventListener("click", () => {
                     sliderBar.style.transform = `translateX(${10.5}rem)`;
+
                     
                     allSliderIcons.forEach((slidersIcons) => {
                         slidersIcons.classList.remove("active");
                         notificationsIcon.classList.add("active");
                     });
 
+                    searchArea.classList.remove("active");
+                    searchArea.classList.add("close");
+
                     notificationsArea.classList.remove("close");
                     notificationsArea.classList.add("active");
-                });
+
+                    searchArea.style.zIndex = "1";
+                    notificationsArea.style.zIndex = "2";
+                    });
             }
             
             function togglePage(){
@@ -331,13 +381,14 @@
 
                 openLogContainer();
                 logOutBonfire();
-            }
+            }   
 
-            openMenu();
-            sliderFunctions();
-            logFunctions();
-            togglePage();
-            toggleTheme();
+        openMenu();
+        sliderFunctions();
+        logFunctions();
+        togglePage();
+        toggleTheme();
+
         }
     </script>
 </body>
