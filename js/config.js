@@ -1,21 +1,20 @@
-/*==========================================================================================================================================
-======================================================== INDIVIDUALIDADES DA PÁGINA ========================================================
-============================================================================================================================================*/
-
-
-
 /*========================================================================================================================================
 ========================================================== FUNÇÕES DA PÁGINA =============================================================
 =========================================================================================================================================*/
 
 openTiers(); //Abre e fecha CADA SEÇÃO da página de configurações
 openSearchArea(); //Abre e fecha a ÁREA DE PESQUISA
-openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
-menuFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO
 FAQsection(); //Funções da seção das PERGUNTAS FREQUENTES no Tier para o SUPORTE
 reportProblemsAndFeedback(); //Funções da seção para Reportar PROBLEMAS e Enviar FEEDBACK
 personalizeBonfire(); //Conjunto de funções para personalizar as características do site como o MODO, AS CORES E AS FONTES
 bonfireMembersBio(); //Abre a BIOGRAFIA de cada um dos MEMBROS do Projeto
+
+/*========================================================================================================================================
+============================================================ OUTRAS FUNÇÕES ==============================================================
+=========================================================================================================================================*/
+
+menuFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO
+openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
@@ -43,155 +42,6 @@ function openSearchArea() {
     searchConfigIcon.addEventListener('click', () => {
         searchConfigSection.classList.toggle("close");
     });
-}
-
-//Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
-function openQuickMessages() {
-    const quickMessages = document.querySelector('.Q-quick-messages');
-    const messagePusher = document.querySelector('.Q-message-pusher');
-
-    messagePusher.addEventListener('click', () => {
-        quickMessages.classList.toggle("close");
-    });
-}
-
-//Funções e individualidades do MENU DE NAVEGAÇÃO
-function menuFunctions(){
-    const menu = document.querySelector(".M-menu");
-    const menuButton = document.querySelector(".M-open-close");
-    const allSliderOptions = document.querySelectorAll(".M-slider-options");
-    const sliderBar = document.querySelector(".M-slider-bar");
-    const allPages = document.querySelectorAll(".M-page");
-    const logActionsContainer = document.querySelector(".M-log-actions");
-    const logButton = document.querySelector(".M-log-button");
-
-    function openMenu(){
-        const pagesSection = document.querySelector(".M-pages-icon");
-
-        menuButton.addEventListener('click', () => {
-            menu.classList.toggle("close");
-            sliderBar.style.transform = `translateX(${-1.2}rem)`;
-
-            allSliderOptions.forEach((sliderOptions) => {
-                sliderOptions.classList.remove("active");
-                pagesSection.classList.add("active");
-            });
-
-        });
-    }
-
-    function toggleTheme(){
-        const body = document.querySelector("body");
-        const team1 = document.querySelector(".M-color1");
-        const team2 = document.querySelector(".M-color2");
-        const team3 = document.querySelector(".M-color3");
-
-        team1.addEventListener("click", () => {
-            body.classList.add("G-pink");
-            body.classList.remove("G-orange");
-            body.classList.remove("G-cyan");
-        });
-
-        team2.addEventListener("click", () => {
-            body.classList.add("G-orange");
-            body.classList.remove("G-pink");
-            body.classList.remove("G-cyan");
-        });
-
-        team3.addEventListener("click", () => {
-            body.classList.add("G-cyan");
-            body.classList.remove("G-orange");
-            body.classList.remove("G-pink");
-        });
-    }
-
-    function sliderFunctions(){
-        const pagesSection = document.querySelector(".M-pages-icon");
-        const searchSection = document.querySelector(".M-search-icon");
-        const notificationsSection = document.querySelector(".M-notifications-icon");
-
-        pagesSection.addEventListener("click", () => {
-            sliderBar.style.transform = `translateX(${-1.2}rem)`;
-
-            allSliderOptions.forEach((sliderOptions) => {
-                sliderOptions.classList.remove("active");
-                pagesSection.classList.add("active");
-            });
-        });
-    
-        searchSection.addEventListener("click", () => {
-            sliderBar.style.transform = `translateX(${4.8}rem)`;
-            
-            allSliderOptions.forEach((sliderOptions) => {
-                sliderOptions.classList.remove("active");
-                searchSection.classList.add("active");
-            });
-        });
-    
-        notificationsSection.addEventListener("click", () => {
-            sliderBar.style.transform = `translateX(${10.5}rem)`;
-            
-            allSliderOptions.forEach((sliderOptions) => {
-                sliderOptions.classList.remove("active");
-                notificationsSection.classList.add("active");
-            });
-        });
-    }
-    
-    function togglePage(){
-        allPages.forEach((pages) => {
-            pages.addEventListener("click", () => {
-                allPages.forEach((pages) => {
-                    pages.classList.remove("active");
-                });
-
-                pages.classList.toggle("active");
-            });
-    });
-
-    }
-
-    function logFunctions(){
-        function openLogContainer(){
-            logButton.addEventListener('click', () => {
-                logActionsContainer.classList.toggle("close");
-            });
-        }
-
-        function logOutBonfire(){
-            const logOutButton = document.querySelector('.M-log-out');
-            const confirmDialog = document.querySelector('.M-log-out-modal');
-            const confirmYes = document.querySelector('.M-confirm-log-out');
-            const confirmNo = document.querySelector('.M-cancel-log-out');
-            const pressXbutton = document.querySelector('.M-close-log-out-icon');
-
-            logOutButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                confirmDialog.style.display = 'block';
-            });
-
-            confirmYes.addEventListener('click', () => {
-                window.location.href = 'login.html';
-            });
-
-            confirmNo.addEventListener('click', () => {
-                confirmDialog.style.display = 'none';
-            });
-
-            pressXbutton.addEventListener('click', () => {
-                confirmDialog.style.display = 'none';
-            });
-        }
-
-        openLogContainer();
-        logOutBonfire();
-    }
-
-    openMenu();
-    sliderFunctions();
-    logFunctions();
-    togglePage();
-    toggleTheme();
 }
 
 //Funções da seção das PERGUNTAS FREQUENTES no Tier para o SUPORTE

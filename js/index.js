@@ -1,8 +1,11 @@
+/*========================================================================================================================================
+========================================================== FUNÇÕES DA PÁGINA =============================================================
+=========================================================================================================================================*/
 
 
 /*========================================================================================================================================
-========================================================== FUNÇÕES DA PÁGINA =============================================================
-/*=======================================================================================================================================*/
+============================================================ OUTRAS FUNÇÕES ==============================================================
+=========================================================================================================================================*/
 
 menuFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
@@ -10,7 +13,7 @@ featuredProfilesFunctions(); //Funções da seção DESTAQUES
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
-/*=======================================================================================================================================*/
+=========================================================================================================================================*/
 
 //LIMITADOR de CARACTERES dos inputs
 function charactersLimit() {
@@ -47,58 +50,5 @@ function charactersLimit() {
     }
 }
 
-//Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
-function openQuickMessages() {
-    const quickMessages = document.querySelector('.Q-quick-messages');
-    const messagePusher = document.querySelector('.Q-message-pusher');
-
-    messagePusher.addEventListener('click', () => {
-        quickMessages.classList.toggle("close");
-    });
-}
-
-//Funções da seção DESTAQUES
-function featuredProfilesFunctions() {
-    //Crie um carrosel de perfis
-    function swiperProfiles(){
-    var swiper = new Swiper(".H-profiles-swiper", {
-        slidesPerView: 2,
-        direction: "vertical",
-        loop: true,
-        navigation: {
-          nextEl: ".H-arrow-next",
-          prevEl: ".H-arrow-preview",
-        },
-        mousewheel: true,
-        keyboard: {
-            enabled: true,
-          },
-
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-        },
-        
-      });
-  
-    }
-    //Alterna os botões de seguir/seguindo quando clicados
-    function toggleFollows() {
-    const followButtonList = document.querySelectorAll(".H-follow");
-
-      followButtonList.forEach((followButton) => {
-        followButton.addEventListener('click', () => {
-          if (followButton.textContent === "Seguir") {
-            followButton.textContent = "Seguindo";
-          } else {
-            followButton.textContent = "Seguir";
-          }
-        });
-      });
-    }
-
-    swiperProfiles(); 
-    toggleFollows();
-}
 
 

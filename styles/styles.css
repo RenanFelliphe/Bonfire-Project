@@ -112,7 +112,7 @@ main {
 }
 
 /*====================================================================================================
-========================================= MENU: MODELO INICIAL =======================================
+=========================================== GLOBAL: MENU =============================================
 ====================================================================================================*/
 
 .M-menu {
@@ -551,12 +551,6 @@ main {
     font-size: var(--size-font-icons);
 }
 
-
-/*====================================================================================================
-==================================== MENU: MODELO NOTIFICAÇÕES =======================================
-====================================================================================================*/
-
-
 .M-notifications {
     position: fixed;
     bottom: 0;
@@ -674,12 +668,6 @@ main {
     font-size: 0.7rem;
     padding: 1rem 1rem 1rem 1rem;
 }
-
-
-/*===========================================================================================================
-============================================== MENU: SEARCH =================================================
-===========================================================================================================*/
-
 
 .M-search {
     position: fixed;
@@ -849,192 +837,9 @@ main {
     border-color: var(--org-color1);
 }
 
-
 /*================================================================================================================
-=========================================== HOME/INDEX: H-Timeline ===============================================
+============================================ GLOBAL: ASIDE SECTION ===============================================
 ================================================================================================================*/
-
-
-.H-timeline{
-    background-color: var(--second-color);
-    width: 100%;
-    height: 100vh;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 5vh;
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    overflow-y: auto;
-}
-
-.H-timeline::-webkit-scrollbar{
-    display: none;
-}
-
-.H-timeline .H-publish{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 33rem;
-    height: 8rem;
-    padding: 1.3rem;
-    border: 1px solid var(--border-color);
-    border-radius: 1.5rem;
-}
-
-.H-timeline .H-publish i{
-    font-size: calc(var(--size-font-icons) - 1px);
-}
-
-.H-timeline .H-publish .H-section-title{
-    position: absolute;
-    top: -0.8rem;
-    background-color: var(--second-color);
-    padding: 0 1rem 0 1rem;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: calc(var(--size-font-title) - 6px);
-    white-space: nowrap;
-    letter-spacing: 1px;
-}
-
-.H-timeline .H-publish .H-left{
-    width: 4.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.H-timeline .H-publish .H-left .G-user-images{
-    max-width: 4rem;
-    max-height: 4rem;
-}
-
-.H-characters{
-    font-size: calc(var(--size-font-text) - 5px);
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-.H-timeline .H-publish input.H-type-here {
-    outline: none;
-    border: none;
-    width: 80%;
-    background: none;
-    margin: 0.8rem 1rem 1rem 1rem;
-    font-size: var(--size-font-text);
-    letter-spacing: 1px;
-}
-
-.H-timeline .H-publish .bi-emoji-smile{
-    margin-top: 0.8rem
-}
-
-.H-annexes{
-    position: absolute;
-    display: flex;
-    bottom: 15%;
-    left: 50%;
-    transform: translate(-50%);
-    gap: 0.9rem;
-}
-
-.H-suggestions{
-    position: relative;
-    width: 33rem;
-    padding: 2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 1.5rem;
-}
-
-.H-suggestions .H-section-title{
-    position: absolute;
-    top: -0.8rem;
-    background-color: var(--second-color);
-    padding: 0 1rem 0 1rem;
-    left: 50%;     
-    transform: translate(-50%);
-    font-size: calc(var(--size-font-title) - 6px);
-    white-space: nowrap;
-    letter-spacing: 1px;
-}
-
-.H-suggestions .H-all-profiles{
-    display: flex;
-    gap: 2rem;
-    justify-content: space-evenly;
-}
-
-.H-suggestions .H-profile{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background-color: var(--third-color);
-    padding: 1.5rem;
-    border-radius: 1rem;
-}
-
-.H-suggestions .G-user-images{
-    max-width: 5rem;
-    max-height: 5rem;
-}
-
-.H-suggestions .H-user-texts{
-    display: flex;
-    flex-direction: column;
-    width: 6rem;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-}
-
-.H-suggestions .H-profile .H-follow{
-    position: relative;
-    background-color: var(--body-color);
-    padding: 0.5rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    right: 0;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: var(--size-font-text);
-}
-
-.H-suggestions .H-see-more-suggestions{
-    position: absolute;
-    font-size: calc(var(--size-font-text) - 4px);
-    font-weight: 600;
-    letter-spacing: 1px;
-    bottom: 0.7rem;
-    left: 2rem;
-    cursor: pointer;
-}
-
-.H-user-nick{
-    font-size: calc(var(--size-font-title) - 0.8vh);
-    font-weight: 600;
-}
-
-.H-user-name{
-    width: 100%;
-    font-size: calc(var(--size-font-subtitle) - 0.6vh);
-    
-}
-
-.H-follows{
-    font-size: calc(var(--size-font-text) - 0.4vh);
-}
-
-/*================================================================================================================
-============================================= HOME/INDEX: H-Aside=================================================
-================================================================================================================*/
-
 
 .H-aside{
     background-color: var(--third-color);
@@ -1288,7 +1093,186 @@ main {
     bottom: 0.7rem;
     left: 2rem;
     cursor: pointer;
-    z-index: +9999;
+}
+
+/*================================================================================================================
+=========================================== HOME/INDEX: H-Timeline ===============================================
+================================================================================================================*/
+
+.H-timeline{
+    background-color: var(--second-color);
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5vh;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+}
+
+.H-timeline::-webkit-scrollbar{
+    display: none;
+}
+
+.H-timeline .H-publish{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 33rem;
+    height: 8rem;
+    padding: 1.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+}
+
+.H-timeline .H-publish i{
+    font-size: calc(var(--size-font-icons) - 1px);
+}
+
+.H-timeline .H-publish .H-section-title{
+    position: absolute;
+    top: -0.8rem;
+    background-color: var(--second-color);
+    padding: 0 1rem 0 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: calc(var(--size-font-title) - 6px);
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.H-timeline .H-publish .H-left{
+    width: 4.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.H-timeline .H-publish .H-left .G-user-images{
+    max-width: 4rem;
+    max-height: 4rem;
+}
+
+.H-characters{
+    font-size: calc(var(--size-font-text) - 5px);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.H-timeline .H-publish input.H-type-here {
+    outline: none;
+    border: none;
+    width: 80%;
+    background: none;
+    margin: 0.8rem 1rem 1rem 1rem;
+    font-size: var(--size-font-text);
+    letter-spacing: 1px;
+}
+
+.H-timeline .H-publish .bi-emoji-smile{
+    margin-top: 0.8rem
+}
+
+.H-annexes{
+    position: absolute;
+    display: flex;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 0.9rem;
+}
+
+.H-suggestions{
+    position: relative;
+    width: 33rem;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+}
+
+.H-suggestions .H-section-title{
+    position: absolute;
+    top: -0.8rem;
+    background-color: var(--second-color);
+    padding: 0 1rem 0 1rem;
+    left: 50%;     
+    transform: translate(-50%);
+    font-size: calc(var(--size-font-title) - 6px);
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.H-suggestions .H-all-profiles{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.H-suggestions .H-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--third-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.H-suggestions .G-user-images{
+    max-width: 5rem;
+    max-height: 5rem;
+}
+
+.H-suggestions .H-user-texts{
+    display: flex;
+    flex-direction: column;
+    width: 6rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.H-suggestions .H-profile .H-follow{
+    position: relative;
+    background-color: var(--body-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    right: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: var(--size-font-text);
+}
+
+.H-suggestions .H-see-more-suggestions{
+    position: absolute;
+    font-size: calc(var(--size-font-text) - 4px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    bottom: 0.7rem;
+    left: 2rem;
+    cursor: pointer;
+}
+
+.H-user-nick{
+    font-size: calc(var(--size-font-title) - 0.8vh);
+    font-weight: 600;
+}
+
+.H-user-name{
+    width: 100%;
+    font-size: calc(var(--size-font-subtitle) - 0.6vh);
+    
+}
+
+.H-follows{
+    font-size: calc(var(--size-font-text) - 0.4vh);
 }
 
 /*===========================================================================================================

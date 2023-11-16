@@ -21,15 +21,12 @@
 
 </head>
 
-<body>
+<body class="">
     <main>
-        <section class="Q-quick-messages close">
-            <span class="Q-message-pusher"><i class="bi bi-chat-dots All-icon"></i></span>
-            <div class="Q-message-content">
-                <p>MENSAGENS RÁPIDAS</p>
-            </div>
-        </section>
-
+        <?php
+            INCLUDE_ONCE("php/templates/quickMessages.php");
+        ?>
+        
         <section class="S-settings">
             <div class="S-top">
                 <a href="config.html"><span class="S-tittle"> Configurações </span></a>
@@ -921,6 +918,7 @@
                 </section>
             </section>
         </aside>
+
     </main>
 
     <section>
