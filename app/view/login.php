@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="icon" href="assets/logo.jpeg">
 
-    <title>Bonfire - Login</title>
+    <title>Bonfire</title>
 </head>
 
 <body>
