@@ -21,31 +21,21 @@ $nome = $_POST['nome'];
 $apelido = $_POST['apelido'];
 $email = $_POST['email'];
 $senha = md5($_POST['senha']);
-$biografia = $_POST['biografia'];
-$genero = $_POST['genero'];
-$recado = $_POST['recado'];
-$verificado = $_POST['verificado'];
-$nacionalidade = $_POST['nacionalidade'];
+
 
 
 // SQL query to insert user data into the database
-$sql = "INSERT INTO users (nome, email, senha, biografia, genero, recado, verificado, nacionalidade) VALUES (x, x, x, x, x, x, x, x)";
+$sql = "SELECT email, senha FROM Usuarios";
 
 
 if ($stmt = $conn->prepare($sql))
 {
-   $stmt -> bind_param("sss", $nome, $email, $senha);
+   $stmt -> bind_param("ss", $email, $senha);
 
-
-   if ($stmt->execute())
-   {
-       echo "Cadastro concluído." . ".";
-   }
-   else
+   if (!($stmt->execute()))
    {
        echo "Erro: " . $stmt->error;
    }
-
 
    $stmt->close();
 }
@@ -53,7 +43,6 @@ else
 {
    echo "Erro " . $conn->error . ".";
 }
-
 
 $conn->close();
 ?>
