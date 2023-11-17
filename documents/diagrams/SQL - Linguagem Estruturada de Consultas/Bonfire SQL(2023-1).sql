@@ -464,9 +464,3 @@ INSERT INTO CampeonatoJogo VALUES
 ('JOG0008', 'CAMP0003'),
 ('JOG0009', 'CAMP0003'),
 ('JOG0010', 'CAMP0003');
-
-/*  ------------------------------------------------ DUVIDAS ------------------------------------------------
-2- Devo manter as tabelas de relacionamento com chaves primárias?
-3- Como abrir o mesmo Banco em outros computadores?
-5- Não é melhor usar ON DELETE CASCADE ao invés de ON DELETE NO ACTION?
-	---------------------------------------------------------------------------------------------------------*/
