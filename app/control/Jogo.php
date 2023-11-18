@@ -1,15 +1,7 @@
 <?php 
     class Jogo
     {
-        private $nome; 
-        private $apelido; 
-        private $email;  
-        private $senha; 
-        private $biografia;
-        private $genero; 
-        private $recado;  
-        private $verificado;
-        private $nacionalidade;
+        private $j;
 
     }
 ?>
