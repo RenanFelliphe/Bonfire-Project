@@ -25,7 +25,7 @@
 
     <main>
         <?php
-            INCLUDE_ONCE("php/templates/quickMessages.php");
+            INCLUDE_ONCE("templates/quickMessages.php");
         ?>
 
         <section class="H-timeline">
@@ -122,7 +122,7 @@
         </section>
 
         <?php
-            INCLUDE_ONCE("php/templates/aside.php");
+            INCLUDE_ONCE("templates/aside.php");
         ?>
     </main>
     
