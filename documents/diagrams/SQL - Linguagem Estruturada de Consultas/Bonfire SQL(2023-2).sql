@@ -17,7 +17,7 @@ CREATE TABLE Campeonato (
     modalidade varchar(30) NOT NULL,
     dtInicio date NOT NULL,
     dtEncerramento date NOT NULL,
-    verificado boolean NOT NULL,
+    verificado boolean,
     privado boolean NOT NULL,
     escala varchar(30) NOT NULL,
     jogo varchar(100) NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE Usuario (
     senha varchar(50) NOT NULL,
     genero varchar(50) NOT NULL,
     recado varchar(50),
-    verificado boolean NOT NULL,
+    verificado boolean,
     privado boolean NOT NULL,
     origem varchar(2) NOT NULL,
     CONSTRAINT PK_Usuario PRIMARY KEY(idConta),
@@ -45,7 +45,7 @@ CREATE TABLE Grupo (
     idConta varchar(10) NOT NULL,
     nome varchar(50) NOT NULL,
     recado varchar(50),
-    verificado boolean NOT NULL,
+    verificado boolean,
     privado boolean NOT NULL,
     origem varchar(2) NOT NULL,
     CONSTRAINT PK_Grupo PRIMARY KEY(idConta),
@@ -324,6 +324,23 @@ INSERT INTO usuarioEquipe (idEquipe, idUsuario, funcao) VALUES
 ('EQP302', 'USER315', 'Jogador'),
 ('EQP302', 'USER316', 'Jogador');
 
+/* TENTANDO CRIAR UM TRIGGER QUE DEFINE O ATRIBUTO VERIFICADO COMO NULO AO ADICIOMAR UM USUARIO
+
+DELIMITER $$
+	CREATE TRIGGER defineVerificado AFTER INSERT ON Usuario
+		FOR EACH ROW BEGIN
+			INSERT INTO Usuario (verificado) VALUES 
+            (verificadoNulo);
+		END$$
+DELIMITER ;
+
+DROP TRIGGER defineVerificado;
+
+DELETE FROM Usuario WHERE idConta = 'teste';
+INSERT INTO Usuario VALUES
+('teste', 'TESTE', 'testeTeste', 'testeTeste@gmail.com', 'testeTesteteste!', 'testando', null, null, false, 'BR');
+SELECT * FROM Usuario WHERE idConta = 'teste';
+*/
 
 /* 	ATALHOS (SELECTS E DROPS)
 	SELECT * FROM Origem;
