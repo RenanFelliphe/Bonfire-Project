@@ -1,5 +1,5 @@
 <?php
-    INCLUDE_ONCE("php/templates/menu.php");
+    INCLUDE_ONCE("templates/menu.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 <body class="">
     <main>
         <?php
-            INCLUDE_ONCE("php/templates/quickMessages.php");
+            INCLUDE_ONCE("templates/quickMessages.php");
         ?>
         
         <section class="T-trends">
@@ -129,7 +129,7 @@
         </section>
 
         <?php
-            INCLUDE_ONCE("php/templates/aside.php");
+            INCLUDE_ONCE("templates/aside.php");
         ?>
 
     </main>
