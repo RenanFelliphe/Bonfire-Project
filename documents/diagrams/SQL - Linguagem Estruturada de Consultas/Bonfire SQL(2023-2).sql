@@ -18,7 +18,7 @@ CREATE TABLE Campeonato (
     dtInicio date NOT NULL,
     dtEncerramento date NOT NULL,
     verificado boolean,
-    privado boolean NOT NULL,
+    privado boolean,
     escala varchar(30) NOT NULL,
     jogo varchar(100) NOT NULL,
 	origem varchar(4),
@@ -35,7 +35,7 @@ CREATE TABLE Usuario (
     genero varchar(50) NOT NULL,
     recado varchar(50),
     verificado boolean,
-    privado boolean NOT NULL,
+    privado boolean,
     origem varchar(2) NOT NULL,
     CONSTRAINT PK_Usuario PRIMARY KEY(idConta),
     CONSTRAINT FK_Usuario_Origem FOREIGN KEY(origem) REFERENCES Origem(sigla) ON UPDATE CASCADE ON DELETE NO ACTION
@@ -46,7 +46,7 @@ CREATE TABLE Grupo (
     nome varchar(50) NOT NULL,
     recado varchar(50),
     verificado boolean,
-    privado boolean NOT NULL,
+    privado boolean,
     origem varchar(2) NOT NULL,
     CONSTRAINT PK_Grupo PRIMARY KEY(idConta),
     CONSTRAINT FK_Grupo_Origem FOREIGN KEY(origem) REFERENCES Origem(sigla) ON UPDATE CASCADE ON DELETE NO ACTION
@@ -324,25 +324,26 @@ INSERT INTO usuarioEquipe (idEquipe, idUsuario, funcao) VALUES
 ('EQP302', 'USER315', 'Jogador'),
 ('EQP302', 'USER316', 'Jogador');
 
-/* TENTANDO CRIAR UM TRIGGER QUE DEFINE O ATRIBUTO VERIFICADO COMO NULO AO ADICIOMAR UM USUARIO
+/*	  Criação dos Triggers	    */
 
 DELIMITER $$
-	CREATE TRIGGER defineVerificado AFTER INSERT ON Usuario
-		FOR EACH ROW BEGIN
-			INSERT INTO Usuario (verificado) VALUES 
-            (verificadoNulo);
-		END$$
+	CREATE TRIGGER defineContaVerificadoFalse BEFORE INSERT ON Usuario
+	FOR EACH ROW
+	BEGIN
+		SET NEW.verificado = FALSE;
+	END$$
 DELIMITER ;
 
-DROP TRIGGER defineVerificado;
+DELIMITER $$
+	CREATE TRIGGER defineContaPrivadaFalse BEFORE INSERT ON Usuario
+	FOR EACH ROW
+	BEGIN
+		SET NEW.privado = FALSE;
+	END$$
+DELIMITER ;
 
-DELETE FROM Usuario WHERE idConta = 'teste';
-INSERT INTO Usuario VALUES
-('teste', 'TESTE', 'testeTeste', 'testeTeste@gmail.com', 'testeTesteteste!', 'testando', null, null, false, 'BR');
-SELECT * FROM Usuario WHERE idConta = 'teste';
-*/
-
-/* 	ATALHOS (SELECTS E DROPS)
+/*
+ 	ATALHOS (SELECTS E DROPS)
 	SELECT * FROM Origem;
 	SELECT * FROM Campeonato;
 	SELECT * FROM Usuario;
@@ -369,7 +370,7 @@ SELECT * FROM Usuario WHERE idConta = 'teste';
 	DROP TABLE IF EXISTS Grupo;
 	DROP TABLE IF EXISTS Equipe;
 	DROP TABLE IF EXISTS Origem;
-    
+        
 	DROP VIEW IF EXISTS listarEquipesPorCampeonatos;
 	DROP VIEW IF EXISTS listarUsuariosPorPais;
 	DROP VIEW IF EXISTS contarUsuariosPorPais;
