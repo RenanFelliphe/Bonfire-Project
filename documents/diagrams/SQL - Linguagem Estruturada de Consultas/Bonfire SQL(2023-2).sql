@@ -1,6 +1,8 @@
 USE projetos_INF2023_G10;
 
-/*      Criação das tabelas de ENTIDADES        */
+/*===========================================================================================================================
+============================================= CRIAÇÃO DAS TABELAS DE ENTIDADES ==============================================
+===========================================================================================================================*/
 
 CREATE TABLE Origem (
     sigla varchar(2) NOT NULL,
@@ -61,10 +63,12 @@ CREATE TABLE Equipe (
     nome varchar(50) NOT NULL,
 	dataCriacao date,
     CONSTRAINT PK_Equipe PRIMARY KEY(idEquipe),
-    CONSTRAINT FK_Equipe_Grupo FOREIGN KEY(idGrupo) REFERENCES Grupo(idConta) ON UPDATE CASCADE ON DELETE NO ACTION
+    CONSTRAINT FK_Equipe_Grupo FOREIGN KEY(idGrupo) REFERENCES Grupo(idConta) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-/*      Criação das tabelas de RELACIONAMENTOS      */
+/*===========================================================================================================================
+======================================== CRIAÇÃO DAS ENTIDADES DE RELACIONAMENTOS ===========================================
+===========================================================================================================================*/
 
 CREATE TABLE equipeCampeonato (
     idCampeonato varchar(10) NOT NULL,
@@ -77,11 +81,13 @@ CREATE TABLE usuarioEquipe (
 	idEquipe varchar(10) NOT NULL,
 	idUsuario varchar(10) NOT NULL,
     funcao varchar(30) NOT NULL,
-    CONSTRAINT FK_UsuarioEquipe_Equipe FOREIGN KEY(idEquipe) REFERENCES Equipe(idEquipe) ON UPDATE CASCADE ON DELETE NO ACTION,
+    CONSTRAINT FK_UsuarioEquipe_Equipe FOREIGN KEY(idEquipe) REFERENCES Equipe(idEquipe) ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FK_UsuarioEquipe_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(idConta) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
-/*	  Criação das Views	    */
+/*===========================================================================================================================
+=================================================== CRIAÇÃO DOS TRIGGERS ====================================================
+===========================================================================================================================*/
 
 CREATE VIEW listarEquipesPorCampeonatos AS
 	SELECT C.abreviacao AS "Campeonato", G.nome "Equipe" FROM Campeonato C
@@ -133,7 +139,10 @@ CREATE VIEW listarJogosPorOrganização AS
 		WHERE E.idGrupo = G.idConta AND EC.idEquipe = E.idEquipe AND C.idConta = EC.idCampeonato
         ORDER BY G.nome;
 
-/*	  Inserção nas tabelas de ENTIDADES	    */
+/*===========================================================================================================================
+=========================================== INSERÇÃO DAS TABELAS DE ENTIDADES ===============================================
+===========================================================================================================================*/
+
 INSERT INTO Origem VALUES
 ('DE', 'Alemanha', 'Alemão'),
 ('ZA', 'África do Sul', 'Sul-africano'),
@@ -260,19 +269,20 @@ INSERT INTO Usuario VALUES
 ('USER505', 'userLivs', 'Lívia Braga Xavier', 'livsBraga@example.com', 'GabsEuTeAmo', 'Feminino', null, false, false, '2023-02-15', 'BR');
 
 INSERT INTO Grupo VALUES
-('GP001', 'LOUD GG', 'Faz o L', true, false, '2023-02-15', 'BR'),
-('GP002', 'paiN Gaming', 'TRA DI ÇÃAÃO', true, false, '2023-02-15', 'BR'),
-('GP003', 'Vivo Keyd', null, true, false, '2023-02-15', 'BR'),
-('GP004', 'Sentinels', null, true, false, '2023-02-15', 'US');
+('GP001', 'LOUD GG', 'Faz o L', true, false, '2023-04-02', 'BR'),
+('GP002', 'paiN Gaming', 'TRA DI ÇÃAÃO', true, false, '2024-01-07', 'BR'),
+('GP003', 'Vivo Keyd', null, true, false, '2022-12-01', 'BR'),
+('GP004', 'Sentinels', null, true, false, '2023-10-27', 'US');
 
 INSERT INTO Equipe VALUES
-('EQP101', 'GP001', 'LOUD Valorant', '2023-02-15'),
-('EQP102', 'GP001', 'LOUD League of Legends', '2023-02-15'),
-('EQP103', 'GP001', 'LOUD Free Fire', '2023-02-15'),
-('EQP201', 'GP002', 'paiN League of Legends', '2023-02-15'),
-('EQP301', 'GP003', 'Vivo Keyd Free Fire', '2023-02-15'),
-('EQP302', 'GP003', 'Vivo Keyd League of Legends', '2023-02-15'),
-('EQP401', 'GP004', 'Sentinels Valorant', '2023-02-15');
+('EQP101', 'GP001', 'LOUD Valorant', '2023-12-26'),
+('EQP102', 'GP001', 'LOUD League of Legends', '2022-07-03'),
+('EQP103', 'GP001', 'LOUD Free Fire', '2024-03-17'),
+('EQP201', 'GP002', 'paiN League of Legends', '2022-12-23'),
+('EQP301', 'GP003', 'Vivo Keyd Free Fire', '2024-09-28'),
+('EQP302', 'GP003', 'Vivo Keyd League of Legends', '2023-09-29'),
+('EQP401', 'GP004', 'Sentinels Valorant', '2024-09-30');
+
 
 INSERT INTO Campeonato VALUES 
 ('CAMP101', 'CBLOL', 'Campeonato Brasileiro de League of Legends', true, 'Masculino', '2023-01-03', '2023-03-28', true, false, 'Regional', 'League of Legends', '2023-02-15', 'BR'),
@@ -280,7 +290,9 @@ INSERT INTO Campeonato VALUES
 ('CAMP202', 'FFWS', 'Free Fire World Series', true, 'Misto', '2023-08-15', '2023-09-15', true, false, 'Mundial', 'Free Fire', '2023-02-15', null),
 ('CAMP301', 'VCT: Américas', 'Valorant Champions Tour: Liga das Américas', true, 'Misto', '2023-08-25', '2023-11-30', true, false, 'Continental', 'Valorant', '2023-02-15', null);
 
-/*	     Inserção nas tabelas de RELACIONAMENTOS	 	*/
+/*===========================================================================================================================
+======================================== INSERÇÃO NAS ENTIDADES DE RELACIONAMENTOS ==========================================
+===========================================================================================================================*/
 
 INSERT INTO equipeCampeonato VALUES
 ('CAMP101', 'EQP102'),
@@ -328,7 +340,9 @@ INSERT INTO usuarioEquipe (idEquipe, idUsuario, funcao) VALUES
 ('EQP302', 'USER315', 'Jogador'),
 ('EQP302', 'USER316', 'Jogador');
 
-/*	  Criação dos Triggers	    */
+/*===========================================================================================================================
+================================================== CRIAÇÃO DOS TRIGGERS =====================================================
+===========================================================================================================================*/
 
 DELIMITER $$
 	CREATE TRIGGER defineUsuarioVerificadoFalse BEFORE INSERT ON Usuario
@@ -410,8 +424,7 @@ DELIMITER $$
 	END$$
 DELIMITER ;
 
-/*
- 	ATALHOS (SELECTS E DROPS)
+/* ========================================= ATALHOS (SELECTS E DROPS) =========================================
 	SELECT * FROM Origem;
 	SELECT * FROM Campeonato;
 	SELECT * FROM Usuario;
