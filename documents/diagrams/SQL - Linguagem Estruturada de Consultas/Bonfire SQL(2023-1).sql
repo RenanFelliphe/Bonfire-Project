@@ -63,8 +63,6 @@ CREATE TABLE Jogo (
     CONSTRAINT PK_jogo PRIMARY KEY (idJogo)
 );
         
-
-        
 CREATE TABLE Publicacao (
     idPublicacao varchar(10) NOT NULL,
     dtPublicacao date NOT NULL,
