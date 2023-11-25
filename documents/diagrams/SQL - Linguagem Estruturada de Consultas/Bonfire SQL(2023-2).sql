@@ -15,7 +15,6 @@ CREATE TABLE Campeonato (
     idConta varchar(10) NOT NULL,
     abreviacao varchar (30) NOT NULL,
     nome varchar(100) NOT NULL,
-    presencial boolean NOT NULL,
     modalidade varchar(30) NOT NULL,
     dtInicio date NOT NULL,
     dtEncerramento date NOT NULL,
@@ -90,7 +89,7 @@ CREATE TABLE usuarioEquipe (
 ===========================================================================================================================*/
 
 CREATE VIEW listarEquipesPorCampeonatos AS
-	SELECT C.abreviacao AS "Campeonato", G.nome "Equipe" FROM Campeonato C
+	SELECT C.abreviacao AS "Campeonato", C.jogo AS "Jogo" , G.nome "Equipe" FROM Campeonato C
 		INNER JOIN equipeCampeonato EC ON C.idConta = EC.idCampeonato
 		INNER JOIN Equipe E ON E.idEquipe = EC.idEquipe
 		INNER JOIN Grupo G ON G.idConta = E.idGrupo 
@@ -272,23 +271,45 @@ INSERT INTO Grupo VALUES
 ('GP001', 'LOUD GG', 'Faz o L', true, false, '2023-04-02', 'BR'),
 ('GP002', 'paiN Gaming', 'TRA DI ÇÃAÃO', true, false, '2024-01-07', 'BR'),
 ('GP003', 'Vivo Keyd', null, true, false, '2022-12-01', 'BR'),
-('GP004', 'Sentinels', null, true, false, '2023-10-27', 'US');
+('GP004', 'Sentinels', null, true, false, '2023-10-27', 'US'),
+('GP005', 'Furia', null, true, false, '2023-08-01', 'BR'),
+('GP006', 'Team Liquid', null, true, false, '2023-01-22', 'NL'),
+('GP007', 'DRX', null, true, false, '2022-05-12', 'KR'),
+('GP008', 'Karmine Korp', null, true, false, '2022-12-29', 'FR'),
+('GP009', 'Leviatán', null, true, false, '2023-03-03', 'AR'),
+('GP010', 'KRU', null, true, false, '2024-01-02', 'AR'),
+('GP011', 'Fnatic', null, true, false, '2024-01-02', 'UK'),
+('GP012', 'Team Vitality', null, true, false, '2024-01-02', 'FR'),
+('GP013', 'Team Evos E-sports', null, true, false, '2024-01-02', 'ID'),
+('GP014', 'Natus Vincere', null, true, false, '2024-01-02', 'UA'),
+('GP015', 'T1', null, true, false, '2024-01-02', 'KR');
+
 
 INSERT INTO Equipe VALUES
 ('EQP101', 'GP001', 'LOUD Valorant', '2023-12-26'),
 ('EQP102', 'GP001', 'LOUD League of Legends', '2022-07-03'),
 ('EQP103', 'GP001', 'LOUD Free Fire', '2024-03-17'),
 ('EQP201', 'GP002', 'paiN League of Legends', '2022-12-23'),
+('EQP202', 'GP002', 'paiN Free Fire', '2022-12-23'),
 ('EQP301', 'GP003', 'Vivo Keyd Free Fire', '2024-09-28'),
 ('EQP302', 'GP003', 'Vivo Keyd League of Legends', '2023-09-29'),
-('EQP401', 'GP004', 'Sentinels Valorant', '2024-09-30');
+('EQP401', 'GP004', 'Sentinels Valorant', '2024-09-30'),
+('EQP501', 'GP005', 'Furia League of Legends', '2024-09-30'),
+('EQP502', 'GP005', 'Furia Valorant', '2024-09-30'),
+('EQP503', 'GP005', 'Furia CS:GO', '2024-09-30');
 
 
 INSERT INTO Campeonato VALUES 
-('CAMP101', 'CBLOL', 'Campeonato Brasileiro de League of Legends', true, 'Masculino', '2023-01-03', '2023-03-28', true, false, 'Regional', 'League of Legends', '2023-02-15', 'BR'),
-('CAMP201', 'LBFF', 'Liga Brasileira de Free Fire', true, 'Misto', '2023-05-18', '2023-07-28', true, false, 'Regional', 'Free Fire', '2023-02-15', 'BR'),
-('CAMP202', 'FFWS', 'Free Fire World Series', true, 'Misto', '2023-08-15', '2023-09-15', true, false, 'Mundial', 'Free Fire', '2023-02-15', null),
-('CAMP301', 'VCT: Américas', 'Valorant Champions Tour: Liga das Américas', true, 'Misto', '2023-08-25', '2023-11-30', true, false, 'Continental', 'Valorant', '2023-02-15', null);
+('CAMP101', 'CBLOL', 'Campeonato Brasileiro de League of Legends', 'Masculino', '2023-01-03', '2023-03-28', true, false, 'Regional', 'League of Legends', '2023-02-15', 'BR'),
+('CAMP201', 'LBFF', 'Liga Brasileira de Free Fire', 'Misto', '2023-05-18', '2023-07-28', true, false, 'Regional', 'Free Fire', '2023-02-15', 'BR'),
+('CAMP202', 'FFWS', 'Free Fire World Series', 'Misto', '2023-08-15', '2023-09-15', true, false, 'Mundial', 'Free Fire', '2023-02-15', null),
+('CAMP203', 'CPN', 'Copa Nobru', 'Misto', '2023-02-02', '2023-03-04', true, false, 'Regional', 'Free Fire', '2022-02-15', 'BR'),
+('CAMP204', 'NFA', 'Liga NFA', 'Misto', '2022-12-28', '2023-02-27', true, false, 'Regional', 'Free Fire', '2023-02-15', 'BR'),
+('CAMP301', 'VCT: Américas', 'Valorant Champions Tour: Liga das Américas', 'Misto', '2023-08-25', '2023-11-30', true, false, 'Continental', 'Valorant', '2023-02-15', null),
+('CAMP302', 'VCT: Pacífico', 'Valorant Champions Tour: Liga do Pacífico', 'Misto', '2023-08-25', '2023-11-30', true, false, 'Continental', 'Valorant', '2023-02-15', null),
+('CAMP303', 'VCT: EMEA', 'Valorant Champions Tour: Liga do EMEA', 'Misto', '2023-08-25', '2023-11-30', true, false, 'Continental', 'Valorant', '2023-02-15', null),
+('CAMP401', 'CBCS', 'Campeonato Brasileiro de Counter-Strike', 'Masculino', '2023-05-15', '2023-06-30', true, false, 'Regional', 'CS:GO', '2023-02-15', 'BR'),
+('CAMP402', 'Majors CS', 'Campeonato Major de Counter-Strike', 'Masculino', '2023-11-01', '2023-12-14', true, false, 'Mundial', 'CS:GO', '2023-02-15', null);
 
 /*===========================================================================================================================
 ======================================== INSERÇÃO NAS ENTIDADES DE RELACIONAMENTOS ==========================================
@@ -298,12 +319,16 @@ INSERT INTO equipeCampeonato VALUES
 ('CAMP101', 'EQP102'),
 ('CAMP101', 'EQP201'),
 ('CAMP101', 'EQP302'),
+('CAMP101', 'EQP501'),
 ('CAMP201', 'EQP103'),
 ('CAMP201', 'EQP301'),
 ('CAMP301', 'EQP101'),
-('CAMP301', 'EQP401');
+('CAMP301', 'EQP401'),
+('CAMP301', 'EQP502'),
+('CAMP401', 'EQP503');
 
-INSERT INTO usuarioEquipe (idEquipe, idUsuario, funcao) VALUES 
+
+INSERT INTO usuarioEquipe VALUES 
 ('EQP101', 'USER201', 'Jogador'),
 ('EQP101', 'USER202', 'Jogador'),
 ('EQP101', 'USER203', 'Jogador'),
