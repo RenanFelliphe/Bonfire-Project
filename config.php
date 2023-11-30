@@ -29,7 +29,7 @@
         
         <section class="S-settings">
             <div class="S-top">
-                <a href="config.html"><span class="S-tittle"> Configurações </span></a>
+                <a href="config.php"><span class="S-tittle"> Configurações </span></a>
                 <div class="S-others-functions">
                     <i class='bi bi-search S-search-icon All-icon'><span class="icon-hover">Pesquisar</span></i>
                 </div>

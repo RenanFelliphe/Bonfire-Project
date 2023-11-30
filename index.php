@@ -1,6 +1,6 @@
 <?php
     INCLUDE_ONCE("templates/menu.php");
-    $verify = if(isset()) ? true : header("location login.php"); 
+    //$verify = if(isset($_SESSION['active'])) ? true : header("location login.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -136,7 +136,7 @@
                 <h4>Tem certeza que deseja SAIR ?</h4>
                 <div class="M-log-out-modal-buttons">
                     <button class="M-cancel-log-out">CANCELAR</button>
-                    <button class="M-confirm-log-out">SAIR</button>
+                    <button class="M-confirm-log-out"><a href="helpers/logOut.php">SAIR</a></button>
                 </div>
             </div>
         </div>

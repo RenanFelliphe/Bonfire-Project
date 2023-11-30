@@ -367,7 +367,7 @@
                     });
 
                     confirmYes.addEventListener('click', () => {
-                        window.location.href = 'login.html';
+                        window.location.href = 'login';
                     });
 
                     confirmNo.addEventListener('click', () => {
