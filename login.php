@@ -1,3 +1,5 @@
+<?php require_once "app/model/signIn.php"?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +24,7 @@
         <div class="global-login-container">
             <div class="container" id="container">
                 <div class="form-container sign-up-container">
-                    <form action="#">
+                    <form action = "./app/model/signUp.php" method = "POST">
                         <h1 class="primary-text">Criar conta</h1>
 
                         <div class="social-container">
@@ -33,18 +35,18 @@
 
                         <span class="quaternary-text">Ou use seu email para registrar</span>
 
-                        <input type="text" placeholder="Usuário" required>
-                        <input type="email" placeholder="E-mail" required>
-                        <input type="password" minlength="8" placeholder="Senha" required>
+                        <input type="text" name = "apelido" placeholder="Usuário" required>
+                        <input type="email" name = "email" placeholder="E-mail" required>
+                        <input type="password" name = "senha" minlength="8" placeholder="Senha" required>
+                        <input type="password" name = "confirmaSenha" minlength="8" placeholder="Confirmar senha" required>
 
-                        <button>
-                            <a href="index.html" class="register-button" id="register-button">Registrar</a>
-                        </button>
+                        <input class = "submitButton" type="submit" name = cadastrar value = "Cadastrar">
                     </form>
+                    
                 </div>
 
                 <div class="form-container sign-in-container">
-                    <form action="#">
+                    <form action = "" method = "POST">
                         <h1 class="primary-text">Iniciar sessão</h1>
 
                         <div class="social-container">
@@ -55,15 +57,19 @@
 
                         <span class="quaternary-text">Ou entre com sua conta Bonfire</span>
                         
-                        <input type="text" placeholder="Usuário ou E-mail" required>
+                        <input type="text" placeholder="E-mail" required>
                         <input type="password" minlength="8" placeholder="Senha" required>
 
                         <a href="#" class="forgot">Esqueci minha senha</a>
 
-                        <button>
-                            <a href="index.html" class="login-button" id="login-button">Entrar</a>
-                        </button>
+                        <input  class = "submitButton" type="submit" name = acessar value = "Entrar">
                     </form>
+                    <?php 
+                        if(isset($_POST['acessar']))
+                        {
+                            login($conn);
+                        }
+                    ?>
                 </div>
 
                 <div class="overlay-container">

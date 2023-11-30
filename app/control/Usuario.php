@@ -253,6 +253,4 @@
 
     $genericUser->bemVindo();
 
-
-
 ?>
