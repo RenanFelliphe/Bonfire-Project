@@ -41,17 +41,17 @@
             if(strtolower($this->genero) === "masculino")
             {
                 $gen = "o";
-                echo "Bem vind(". $gen .") " . $this->nome ." seu apelido está definido como \"" . $this->apelido ."\".<br>";
+                echo "Bem vind(". $gen .") " . $this->nome ."! Seu apelido está definido como \"" . $this->apelido ."\".<br>";
             }
             else if(strtolower($this->genero) === "feminino")
             {
                 $gen = "a";
-                echo "Bem vind(". $gen .") " . $this->nome ." seu apelido está definido como \"" . $this->apelido ."\".<br>";
+                echo "Bem vind(". $gen .") " . $this->nome ."! Seu apelido está definido como \"" . $this->apelido ."\".<br>";
             }
             else if(!strtolower($this->genero) === "feminino" && !strtolower($this->genero) === "masculino")
             {
                 $gen = "o/a";
-                echo "Bem vind(". $gen .") " . $this->nome ." seu apelido está definido como \"" . $this->apelido ."\".<br>";
+                echo "Bem vind(". $gen .") " . $this->nome ."! Seu apelido está definido como \"" . $this->apelido ."\".<br>";
             }
         }
 
@@ -252,5 +252,7 @@
     $genericUser = new Usuario("Natália da Mata", "nattmc", "Feminino");
 
     $genericUser->bemVindo();
+
+
 
 ?>
