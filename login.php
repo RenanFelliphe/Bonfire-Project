@@ -47,7 +47,6 @@
 
                         <input class = "submitButton" type="submit" name = cadastrar value = "Cadastrar">
                     </form>
-                    
                 </div>
 
                 <div class="form-container sign-in-container">
@@ -69,7 +68,6 @@
 
                         <input  class = "submitButton" type="submit" name = acessar value = "Entrar">
                     </form>
-                    
                 </div>
 
                 <div class="overlay-container">

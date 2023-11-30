@@ -17,20 +17,20 @@
 
 
    // Get user input from the form
-   function logIn($connect)
+   function logIn($conn)
    {
-      if(isset($_POST['acessar']) AND !empty($_POST['apelido']) AND !empty($_POST['email']) AND !empty($_POST['senha']))
+      if(isset($_POST['acessar']) AND !empty($_POST['email']) AND !empty($_POST['senha']))
       {
-         $email = filter_input(INPUT_POST, "email",FILTER_VALIDATE_EMAIL);
+         $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
          $senha = md5($_POST['senha']);
 
-         $query = "SELECT * FROM Usuario WHERE email='$email' AND senha = '$senha' ";
+         $query = "SELECT * FROM Usuario WHERE email = '$email' AND senha = '$senha' ";
 
          $execute = mysqli_query($connect,$query);
 
          $return = mysqli_fetch_assoc($execute);
 
-         if(!empty($return['email']) && !empty($return['senha']))
+         if(!empty($return['email']))
          {
             //echo "Olá, " . $return['apelido'] . "!";
 
