@@ -28,12 +28,65 @@
             $this->nome = $nome;
         }
 
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
         //SETS
         //=====================================================================================================================================================
         //=====================================================================================================================================================
         //=====================================================================================================================================================
     
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
 
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
+
+        public function setNome()
+        {
+            $this->nome = $nome;
+        }
     
     }
     
