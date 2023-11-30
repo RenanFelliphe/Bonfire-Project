@@ -1,9 +1,9 @@
 <?php
 // Database connection parameters
-$hostname = 'localhost'; // Change this to your database hostname
-$username = 'root'; // Change this to your database username
-$password = '@nlcoding_4(NL4)'; // Change this to your database password
-$database = 'Bonfire-Project'; // Change this to your database name
+$hostname = '162.240.17.101'; // Change this to your database hostname
+$username = 'projetos_nlessa'; // Change this to your database username
+$password = 'Gc&sgY74PK$}'; // Change this to your database password
+$database = 'projetos_INF2023_G10'; // Change this to your database name
 
 
 // Create a database connection
