@@ -1,5 +1,6 @@
 <?php
     INCLUDE_ONCE("templates/menu.php");
+    $verify = if(isset()) ? true : header("location login.php"); 
 ?>
 
 <!DOCTYPE html>

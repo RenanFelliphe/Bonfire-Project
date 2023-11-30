@@ -17,7 +17,7 @@
 
 
    // Get user input from the form
-   function login($connect)
+   function logIn($connect)
    {
       if(isset($_POST['acessar']) AND !empty($_POST['apelido']) AND !empty($_POST['email']) AND !empty($_POST['senha']))
       {
@@ -40,6 +40,8 @@
             $_SESSION['idConta'] = $return['idConta'];
             $_SESSION['email'] = $return['email'];
             $_SESSION['active'] = true;
+
+            header("location: ../../index.php");
          }
          else
          {
@@ -47,4 +49,10 @@
          }
       }
    }
-?>
+
+   function logOut()
+   {
+      session_start();
+      session_unset();
+      session_destroy();
+   }

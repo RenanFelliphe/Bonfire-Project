@@ -17,7 +17,7 @@
 
 
    // Get user input from the form
-   function login($connect)
+   function sign($connect)
    {
       if(isset($_POST['acessar']) AND !empty($_POST['apelido']) AND !empty($_POST['email']) AND !empty($_POST['senha']))
       {
@@ -40,6 +40,3 @@
          }
       }
    }
-
-   $conn->close();
-?>

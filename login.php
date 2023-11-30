@@ -1,4 +1,9 @@
-<?php require_once "app/model/signIn.php"?>
+<?php require_once "app/model/signIn.php"; 
+    if(isset($_POST['acessar']))
+    {
+        logIn($conn);
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +51,7 @@
                 </div>
 
                 <div class="form-container sign-in-container">
-                    <form action = "" method = "POST">
+                    <form action = "./app/model/signIn.php" method = "POST">
                         <h1 class="primary-text">Iniciar sessão</h1>
 
                         <div class="social-container">
@@ -64,12 +69,7 @@
 
                         <input  class = "submitButton" type="submit" name = acessar value = "Entrar">
                     </form>
-                    <?php 
-                        if(isset($_POST['acessar']))
-                        {
-                            login($conn);
-                        }
-                    ?>
+                    
                 </div>
 
                 <div class="overlay-container">
