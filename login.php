@@ -1,4 +1,6 @@
-<?php require_once "app/model/signIn.php"; 
+<?php 
+    require_once "app/model/signIn.php";
+    
     if(isset($_POST['acessar']))
     {
         logIn($conn);
@@ -29,7 +31,7 @@
         <div class="global-login-container">
             <div class="container" id="container">
                 <div class="form-container sign-up-container">
-                    <form action = "./app/model/signUp.php" method = "POST">
+                    <form action = "" method = "POST">
                         <h1 class="primary-text">Criar conta</h1>
 
                         <div class="social-container">
@@ -51,7 +53,7 @@
                 </div>
 
                 <div class="form-container sign-in-container">
-                    <form action = "./app/model/signIn.php" method = "POST">
+                    <form action = "" method = "POST">
                         <h1 class="primary-text">Iniciar sessão</h1>
 
                         <div class="social-container">

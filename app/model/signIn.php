@@ -5,28 +5,20 @@
    $password = 'Gc&sgY74PK$}'; // Change this to your database password
    $database = 'projetos_INF2023_G10'; // Change this to your database name
 
-
    // Create a database connection
    $conn = mysqli_connect($hostname, $username, $password, $database);
 
-
-   if ($conn->connect_error)
-   {
-      die("Erro " . $conn->connect_error) . ".";
-   }
-
-
    // Get user input from the form
-   function logIn($connect)
+   function logIn($conn)
    {
-      if(isset($_POST['acessar']) AND !empty($_POST['apelido']) AND !empty($_POST['email']) AND !empty($_POST['senha']))
+      if(isset($_POST['acessar']) and !empty($_POST['email']) and !empty($_POST['senha']))
       {
-         $email = filter_input(INPUT_POST, "email",FILTER_VALIDATE_EMAIL);
+         $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
          $senha = md5($_POST['senha']);
 
-         $query = "SELECT * FROM Usuario WHERE email='$email' AND senha = '$senha' ";
+         $query = "SELECT * FROM Usuario WHERE email = '$email' AND senha = '$senha' ";
 
-         $execute = mysqli_query($connect,$query);
+         $execute = mysqli_query($conn,$query);
 
          $return = mysqli_fetch_assoc($execute);
 
@@ -41,7 +33,7 @@
             $_SESSION['email'] = $return['email'];
             $_SESSION['active'] = true;
 
-            header("location: ../../index.php");
+            header('Location: ../../index.php');
          }
          else
          {

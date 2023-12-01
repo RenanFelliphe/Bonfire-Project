@@ -1,12 +1,13 @@
 <?php 
 
+    require "./Conn.php";
     // Criando Classe
     //=====================================================================================================================================================
     //=====================================================================================================================================================
     //=====================================================================================================================================================
     class Usuario
     {
-
+        
         private $nome = "a"; 
         private $apelido = "a"; 
         private $email ="@xyz.com";  
@@ -20,12 +21,23 @@
         private $quantSeguindo = 0;
         private $quantPosts = 0;
 
-        function __construct($nome,$apelido,$genero)
+        function __construct()
         {
-            $this->nome = $nome;
-            $this->apelido = $apelido;  
-            $this->genero = $genero;
+
         }
+
+        public $connect;
+        public function list()
+        {
+            $conn = new Conn();
+            $this->connect = $conn->connect();
+
+            $queryUsers = "SELECT idConta, nome, email FROM Usuarios ORDER BY idConta DESC LIMIT 5";
+            $resultUsers = $this->connect->prepare($queryUsers);
+            $resultUsers->execute();
+            return $resultUsers->fetchAll();
+        }
+        
 
         //Metodos
         //=====================================================================================================================================================
@@ -226,6 +238,11 @@
                 $this->quantPosts = $quantPosts;
             }
         }
+
+        public function setConn(Conn $conn)
+        {
+            $this->connect = $conn;
+        }
     }
 
     //Instanciando Objetos
@@ -252,5 +269,10 @@
     $genericUser = new Usuario("Natália da Mata", "nattmc", "Feminino");
 
     $genericUser->bemVindo();
+
+    //Conexão
+    //=====================================================================================================================================================
+    //=====================================================================================================================================================
+    //=====================================================================================================================================================
 
 ?>
