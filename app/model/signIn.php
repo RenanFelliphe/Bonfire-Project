@@ -22,7 +22,7 @@
 
          $return = mysqli_fetch_assoc($execute);
 
-         if(!empty($return['email']) && !empty($return['senha']))
+         if(!empty($return['email']))
          {
             //echo "Olá, " . $return['apelido'] . "!";
 
