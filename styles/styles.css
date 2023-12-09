@@ -850,7 +850,7 @@ main {
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: 3rem;
+    padding: 1rem 0 3rem 0;
 }
 
 .H-aside::-webkit-scrollbar{
@@ -1388,6 +1388,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     overflow-y: scroll;
+    padding-bottom: 5rem;
 }
 
 .T-trending-topics .T-all-trends::-webkit-scrollbar{
@@ -1396,8 +1397,8 @@ main {
 
 
 .T-trending-topics .T-all-trends .T-trend{
-    width: 100%;
     position: relative;
+    width: 100%;
     cursor: pointer;
     padding: 0.6rem 2rem 0.6rem 2.5rem;
 }
@@ -1440,6 +1441,19 @@ main {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.T-trending-topics .T-all-trends .T-trend .T-trend-coments{
+    position: absolute;
+    display: flex;
+    gap: 0.6rem;
+    right: 2rem;
+    bottom: 0.6rem;
+    z-index: +1;
+}
+
+.T-trending-topics .T-all-trends .T-trend .T-trend-coments .G-user-images{
+    width: 1.3rem;
 }
 
 /*===========================================================================================================

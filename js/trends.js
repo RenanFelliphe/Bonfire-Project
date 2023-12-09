@@ -73,7 +73,7 @@ function menuFunctions() {
     const allSliderIcons = document.querySelectorAll(".M-slider-options");
     const sliderBar = document.querySelector(".M-slider-bar");
     const allPages = document.querySelectorAll(".M-page");
-    const logActionsContainer = document.querySelector(".M-log-actions");
+    const loggingArea = document.querySelector(".M-log-actions");
     const logButton = document.querySelector(".M-log-button");
 
     function openMenu() {
@@ -89,26 +89,23 @@ function menuFunctions() {
             });
         }
         
-        function closeNotifications() {
+        function closeMenuAreas() {
+            loggingArea.classList.add("close");
+
             notificationsArea.classList.remove("active");
             notificationsArea.classList.add("close");
+
+            searchArea.classList.remove("active");
+            searchArea.classList.add("close");
 
             setTimeout(openCloseMenu, 200);
         }
 
-        function closeSearch() {
-                searchArea.classList.remove("active");
-                searchArea.classList.add("close");
-
-                setTimeout(openCloseMenu, 200);
-            }
-
         menuButton.addEventListener('click', () => {
-            if (notificationsArea.classList.contains("active")) {
-                closeNotifications();
-
-            } else if(searchArea.classList.contains("active")) {
-                    closeSearch();
+            if (!loggingArea.classList.contains("close") ||
+                notificationsArea.classList.contains("active") ||
+                searchArea.classList.contains("active")) {
+                closeMenuAreas();
 
             } else {
                 notificationsArea.classList.add("close");
@@ -217,7 +214,7 @@ function menuFunctions() {
     function logFunctions(){
         function openLogContainer(){
             logButton.addEventListener('click', () => {
-                logActionsContainer.classList.toggle("close");
+                loggingArea.classList.toggle("close");
             });
         }
 
@@ -234,7 +231,7 @@ function menuFunctions() {
             });
 
             confirmYes.addEventListener('click', () => {
-                window.location.href = 'login';
+                window.location.href = 'login.html';
             });
 
             confirmNo.addEventListener('click', () => {
