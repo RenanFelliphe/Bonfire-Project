@@ -1,7 +1,3 @@
-<?php
-    INCLUDE_ONCE("templates/menu.php");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,11 +18,194 @@
 </head>
 
 <body class="">
+    <nav>
+        <section class="M-menu">
+            <section class="M-top">
+                <div class="M-open-close">
+                    <i class="bi bi-list All-icon M-open"></i>
+                    <i class="bi bi-x All-icon M-close"></i>
+                </div>
+
+                <div class="M-menu-color">
+                    <i class="bi bi-circle-fill M-color M-color1 G-pink"></i>
+                    <i class="bi bi-circle-fill M-color M-color2 G-orange"></i>
+                    <i class="bi bi-circle-fill M-color M-color3 G-cyan"></i>
+                </div>
+            </section>
+
+            <section class="M-slider">
+                <i class="bi bi-three-dots active M-slider-options M-pages-icon All-icon" style="font-size: calc(var(--size-font-icons) + 0.3rem);"></i>
+                <i class="bi bi-search M-slider-options M-search-icon All-icon"></i>
+                <i class="bi bi-bell M-slider-options M-notifications-icon All-icon"></i>
+                <span class="M-slider-bar"></span>
+            </section>
+
+            <section class="M-center">
+                <article class="M-all-pages">
+                        <a href="index.html" class="M-page M-home active">
+                            <i class="bi bi-house-door M-page-icon All-icon"></i>
+                            <span class="M-page-name">Home</span>
+                        </a>
+                        <a class="M-page M-events">
+                            <i class="bi bi-calendar-date M-page-icon All-icon"></i>
+                            <span class="M-page-name">Eventos</span>
+                            <div class="M-event-notify">
+                                <img src="assets/loud-logo.png" alt="Logo do Criador do Evento">
+                            </div>
+                        </a>
+                        <a class="M-page M-explore">
+                            <i class="bi bi-globe-americas M-page-icon All-icon"></i>
+                            <span class="M-page-name">Explorar</span>
+                        </a>
+                        <a class="M-page M-friends">
+                            <i class="bi bi-people M-page-icon All-icon"></i>
+                            <span class="M-page-name">Amigos</span>
+                            <i class="M-message-notify"></i>
+                        </a>
+                        <a class="M-page M-news">
+                            <i class="bi bi-newspaper M-page-icon All-icon"></i>
+                            <span class="M-page-name">News</span>
+                        </a>
+                        <a class="M-page M-shopping">
+                            <i class="bi bi-cart2 M-page-icon All-icon"></i>
+                            <span class="M-page-name">Shopping</span>
+                        </a>
+                        <a class="M-page M-safe">
+                            <i class="bi bi-key M-page-icon All-icon"></i>
+                            <span class="M-page-name">Cofre</span>
+                        </a>
+                        <a class="M-page M-statistics">
+                            <i class="bi bi-pie-chart M-page-icon All-icon"></i>
+                            <span class="M-page-name">Estatísticas</span>
+                        </a>
+                        <a href="config.html" class="M-page M-settings">
+                            <i class="bi bi-gear-wide M-page-icon All-icon"></i>
+                            <span class="M-page-name">Configurações</span>
+                        </a>
+                </article>
+
+                <article class="M-post">
+                    <span class="M-post-button">Postar</span>
+                </article>
+            </section>
+
+            <section class="M-footer">
+                <div class="M-footer-content">
+                    <figure class="G-user-images">
+                        <a href="" class="G-profile-img">
+                            <img src="assets/perfil.png" alt="Foto de perfil">
+                        </a>
+                        <a href="" class="G-org-img">                    
+                            <img src="assets/loud-logo.png" alt="Foto da organização">
+                        </a>
+                        <span class="G-user-status"></span>
+                    </figure>
+                    <div class="M-user-infos">
+                        <span class="M-user-nick">Saadhak</span>
+                        <span class="M-user-name">Matias Delipetro</span>
+                    </div>
+
+                    <i class="bi bi-arrow-left-right M-log-button All-icon"></i>
+                    <div class="M-log-actions close">
+                        <ul>
+                            <li>
+                                <a href="" style="cursor: pointer;">
+                                    <span class="bi bi-people All-icon"></span>
+                                    <span class="M-title"> Alternar usuário </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer;">
+                                    <span class="bi bi-box-arrow-left All-icon"></span>
+                                    <span class="M-title M-log-out"> Sair </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>  
+
+            
+        </section>
+
+        <section class="M-notifications M-menu-section close">
+            <section class="M-notifications-header">
+                <div class="M-notifications-top">
+                    <p class="M-section-title"> Notificações </p>
+                    <i class="bi bi-three-dots-vertical All-icon"></i>
+                </div>
+
+                <div class="M-notifications-slider">
+                    <p class="M-notifications-filter"> Todos </p>
+                    <i class="bi bi-at active M-notifications-filter M-arroba-icon All-icon"></i>
+                    <i class="bi bi-chat M-notifications-filter M-messages-icon All-icon"></i>
+                    <i class="bi bi-patch-check M-notifications-filter M-verified-icon All-icon"></i>
+                    <span class="M-notifications-slider-bar"></span>
+                </div>
+            </section>
+
+            <section class="M-all-notifications">
+                <div class="M-notify">
+                    <p class="M-notifications-date">Hoje</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">Ontem</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">12/11/2023</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">01/11/2023</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">22/10/2023</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">07/06/2023</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">01/01/2022</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">30/12/2021</p>
+                </div>
+                <div class="M-notify">
+                    <p class="M-notifications-date">30/12/2021</p>
+                </div>
+
+                <p class="M-final-message"> Você não tem mais nenhuma notificação não lida!</p>
+                <a href="" class="M-see-more"> Ver Todas...</a>
+            </section>
+        </section>
+
+        <section class="M-search M-menu-section close">
+            <section class="M-search-top">
+                <p class="M-section-title"> Pesquisar </p>
+                <i class="bi bi-three-dots-vertical All-icon"></i>
+            </section>
+
+            <section class="M-search-input">
+                <i class="bi bi-keyboard All-icon"> </i>
+                <input type="search" placeholder="Pesquisar...">
+                <i class="bi bi-mic All-icon"> </i>
+            </section>
+
+            <section class="M-search-history">
+                <p class="M-section-title"> Histórico de Pesquisa</p>
+
+            </section>
+
+        </section>
+    </nav>
+    
     <main>
-        <?php
-            INCLUDE_ONCE("templates/quickMessages.php");
-        ?>
-        
+        <section class="Q-quick-messages close">
+            <span class="Q-message-pusher"><i class="bi bi-chat-dots All-icon"></i></span>
+            <div class="Q-message-content">
+                <p>MENSAGENS RÁPIDAS</p>
+            </div>
+        </section>
+
         <section class="S-settings">
             <div class="S-top">
                 <a href="config.php"><span class="S-tittle"> Configurações </span></a>

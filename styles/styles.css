@@ -12,6 +12,7 @@ main {
     height: 100%;
     padding-left: 256px;
     z-index: -1;
+    overflow-y: hidden;
 }
 
 .All-icon {
@@ -380,7 +381,7 @@ main {
     transition: color calc(var(--element-out) - 0.3s);
     background-color: var(--menu-color);
     padding-left: 1.4rem;    
-    z-index: 2;
+    z-index: +1;
 }
 
 .M-menu .M-center .M-all-pages .M-page.active .M-page-icon{
@@ -449,6 +450,7 @@ main {
     transition: var(--element-out);
     background-color: var(--half-second-color);
     border-radius: 2rem;
+    z-index: +2;
 }
 
 .M-menu .M-footer .M-footer-content .M-user-infos {
@@ -501,7 +503,7 @@ main {
     background-color: var(--active-color);
 }
 
-.M-menu .M-footer .M-footer-content .M-log-actions {
+.M-menu .M-footer .M-log-actions {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -517,16 +519,17 @@ main {
     left: 50%;
     transform: translate(-50%);
     transition: var(--element-in);
-    z-index: -1;
+    z-index: 1;
 }
 
-.M-menu.close .M-footer .M-footer-content .M-log-actions,
-.M-menu .M-footer .M-footer-content .M-log-actions.close {
-    opacity: 0;    top: 0;
+.M-menu.close .M-footer .M-log-actions,
+.M-menu .M-footer .M-log-actions.close {
+    opacity: 0;    
+    top: 0;
     transition: var(--element-out);
 }
 
-.M-menu .M-footer .M-footer-content .M-log-actions ul li a {
+.M-menu .M-footer .M-log-actions ul li a {
     display: flex;
     justify-content: flex-start;
     gap: 0.8rem;
@@ -534,20 +537,20 @@ main {
     line-height: 1.5rem;
 }
 
-.M-menu .M-footer .M-footer-content .M-log-actions ul li a span {
+.M-menu .M-footer .M-log-actions ul li a span {
     transition: color 0.4s;
 }
 
-.M-menu .M-footer .M-footer-content .M-log-actions ul li a:hover span {
+.M-menu .M-footer .M-log-actions ul li a:hover span {
     color: var(--org-color1);
     transition: color 0.2s;
 }
 
-.M-menu .M-footer .M-footer-content .M-log-actions ul li span.M-title {
+.M-menu .M-footer .M-log-actions ul li span.M-title {
     font-size: var(--size-font-subtitle);
 }
 
-.M-menu .M-footer .M-footer-content .M-log-actions ul li span.All-icon {
+.M-menu .M-footer .M-log-actions ul li span.All-icon {
     font-size: var(--size-font-icons);
 }
 
@@ -1280,8 +1283,10 @@ main {
 ===========================================================================================================*/
 
 .T-trends{
+    position: relative;
     background-color: var(--second-color);
     width: 100%;
+    height: 100vh;
     padding: 2rem 0 2rem 0;
     display: flex;
     flex-direction: column;
@@ -1375,12 +1380,20 @@ main {
 }
 
 .T-trending-topics .T-all-trends{
+    position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-top: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
 }
+
+.T-trending-topics .T-all-trends::-webkit-scrollbar{
+    display: none;
+}
+
 
 .T-trending-topics .T-all-trends .T-trend{
     width: 100%;
@@ -2868,7 +2881,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--body-color);
-    padding: 25px;
+    padding: 15px;
     padding-top: 30px;
     border-radius: 5px;
     text-align: center;
@@ -2906,6 +2919,10 @@ main {
     width: 7rem;
 }
 
+.M-log-out-modal-buttons button.M-cancel-log-out:hover {
+    letter-spacing: 3px;
+}
+
 .M-log-out-modal-buttons button.M-confirm-log-out {
     color: var(--white-to-black-color);
     background-color: var(--org-color-darker);
@@ -2913,6 +2930,11 @@ main {
     border-radius: 5px;
     width: 3.5rem;
     box-shadow: 2px 1px 4px 0 rgb(22, 22, 22);
+}
+
+.M-log-out-modal-buttons button.M-confirm-log-out:hover {
+    box-shadow: 0 0 5px 0 var(--org-color1);
+    transition: 0.2s;
 }
 
 .M-log-out-modal-container .M-close-log-out-icon {
@@ -2926,11 +2948,14 @@ main {
     border: 1px solid var(--org-color1);
     border-radius: 7px;
     display: flex;
-    font-size: calc(var(--size-font-icons) + 8px);
-    padding: 2px 1px 0px 0px;
+    font-size: calc(var(--size-font-icons) + 13px);
     box-shadow: 0px 1px 5px 0 rgb(22, 22, 22);
+    transition: 0.2s;
 }
 
-
+.M-log-out-modal-container .M-close-log-out-icon:hover {
+    box-shadow: 0 0 3px 1px var(--org-color1);
+    transition: 0.2s;
+}
 
 

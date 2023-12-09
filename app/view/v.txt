@@ -1,1 +1,0 @@
-exibir a interface do aplicativo (exibir as informações do banco) (UI)
