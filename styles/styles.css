@@ -76,12 +76,14 @@ main {
 .G-user-images .G-profile-img{
     display: flex;
     width: 100%;
+    height: 100%;
     clip-path: circle();
     cursor: pointer;
 }
 
 .G-user-images .G-profile-img img{
     max-width: 100%;
+    max-height: 100%;
 }
 
 .G-user-images .G-org-img{
@@ -98,6 +100,7 @@ main {
 
 .G-user-images .G-org-img img{
     max-width: 100%;
+    max-height: 100%;
     border-radius: 100%;
 }
 
@@ -947,7 +950,7 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: calc(var(--size-font-title) - 1.2vh);
+    font-size: var(--size-font-subtitle);
     animation: marquee 5s linear infinite;
 }
 
@@ -1316,37 +1319,18 @@ main {
     z-index: +2;
 }
 
-.T-trend-functions{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem 0 2rem;
-}
-
-.T-trending-topics .T-trend-functions i{
-    top: 1.5rem;
-    z-index: +1;
-}
-
-.T-trending-topics .T-trend-functions i.T-trending-search{
-    left: 1.5rem;
-    display: flex;
-    font-size: calc(var(--size-font-icons) + 3px);
-    background-color: var(--first-color);
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 0.7rem;
-}
-
-.T-trending-topics .T-trend-functions .T-country-img{
+.T-trending-topics .T-country-img{
     width: 1.7rem;
     display: flex;
-    right: 1.5rem;
     cursor: pointer;
     border-radius: 20%;
     overflow: hidden;
+    z-index: +1;
+    float: right;
+    transform: translate(-20px);
 }
 
-.T-trending-topics .T-trend-functions .T-country-img img{
+.T-trending-topics .T-country-img img{
     max-width: 100%;
 }
 
@@ -1356,27 +1340,21 @@ main {
     width: 100%;
     justify-content: space-evenly;
     padding: 1rem;
+    height: 4rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .T-trending-topics .T-gaming-filter .T-game{
     font-size: var(--size-font-subtitle);
     cursor: pointer;
+    transition: calc(var(--element-out) - 0.3s);
 }
 
 .T-trending-topics .T-gaming-filter .T-game.active{
     color: var(--org-color1);
-    font-size: calc(var(--size-font-subtitle) + 2px);
-}
-
-.T-trending-topics .T-gaming-filter .T-line{
-    position: absolute;
-    width: 7rem;
-    height: 2px;
-    bottom: -1px;
-    border-radius: 100%;
-    left: 2.1rem;
-    background-color: var(--org-color1);
+    padding-bottom: 0.5rem;
+    font-size: calc(var(--size-font-subtitle) + 1px);
+    transition: calc(var(--element-in) - 0.2s);
 }
 
 .T-trending-topics .T-all-trends{

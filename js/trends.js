@@ -11,7 +11,7 @@
 menuFunctions(); //Funções e individualidades do MENU DE NAVEGAÇÃO
 openQuickMessages(); //Abre e fecha a ÁREA DE MENSAGENS RÁPIDAS
 featuredProfilesFunctions(); //Funções da seção DESTAQUES
-
+filterTrends(); //Filtra as trends POR JOGO
 
 /*========================================================================================================================================
 ========================================================= DEFININDO AS FUNÇÕES ===========================================================
@@ -262,5 +262,22 @@ function openQuickMessages() {
 
     messagePusher.addEventListener('click', () => {
         quickMessages.classList.toggle("close");
+    });
+}
+
+//Filtra as trends POR JOGO
+function filterTrends(){
+    const gamesOptions = document.querySelectorAll(".T-game");
+    const slider = document.querySelector(".T-line");
+
+    gamesOptions.forEach((game) => {
+        game.addEventListener('click', () => {
+            gamesOptions.forEach((option) => {
+                option.classList.remove("active");
+            });
+            game.classList.add("active");
+            const computedWidth = window.getComputedStyle(game).width;
+            slider.style.width = computedWidth;
+        });
     });
 }
