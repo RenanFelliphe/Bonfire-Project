@@ -281,11 +281,16 @@ function menuFunctions() {
         logOutBonfire();
     }   
 
+    function notificationsFunctions(){
+        
+    }
+
 openMenu();
-sliderFunctions();
-logFunctions();
-togglePage();
 toggleTheme();
+sliderFunctions();
+togglePage();
+logFunctions();
+notificationsFunctions();
 
 }
 
