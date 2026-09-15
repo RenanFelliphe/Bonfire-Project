@@ -1,0 +1,79 @@
+/*====================================================================================================
+======= AJUSTES ESPECÍFICOS DA PÁGINA DE REGISTRO (reaproveita a base de styles/login.css) ===========
+====================================================================================================*/
+
+/* O formulário de registro tem bem mais campos que o de login, então o painel
+   precisa poder rolar em telas mais baixas e os espaçamentos ficam mais enxutos. */
+.register-panel {
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 4px;
+    padding-block: 2vh;
+}
+
+.register-panel .panel-header {
+    margin-bottom: clamp(18px, 3vh, 30px);
+}
+
+.register-panel .social-row {
+    margin-bottom: clamp(20px, 3.4vh, 34px);
+}
+
+.register-panel .field {
+    margin-bottom: clamp(14px, 2.2vh, 22px);
+}
+
+.register-panel .field-error {
+    margin: 6px 0 0;
+    min-height: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.register-panel .field-error:empty {
+    display: none;
+}
+
+.register-panel .field-fullname .field-row {
+    border-bottom-color: var(--org-color1);
+}
+
+.register-panel .field.field-invalid .field-row {
+    border-bottom-color: #ff0022;
+}
+
+/* --- linha com dois campos lado a lado (Apelido / Usuário, Senha / Confirmar Senha) --- */
+.field-group {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(16px, 2.4vw, 28px);
+    margin-bottom: clamp(14px, 2.2vh, 22px);
+}
+
+.field-group .field {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.register-panel .panel-register {
+    margin-top: clamp(14px, 2.4vh, 22px);
+}
+
+.register-panel .panel-page-note {
+    margin-top: clamp(16px, 2.8vh, 26px);
+}
+
+@media (max-width: 900px) {
+    .register-panel {
+        overflow-y: visible;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .field-group {
+        flex-direction: column;
+        gap: clamp(14px, 2.2vh, 22px);
+    }
+}

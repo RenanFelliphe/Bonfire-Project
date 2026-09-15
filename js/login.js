@@ -1,15 +1,13 @@
-const signUpButton = document.getElementById("signUp");
-const signInButton = document.getElementById("signIn");
-const registerButton = document.getElementById("register");
-const container = document.getElementById("container");
+// Toggle de visibilidade da senha (apenas efeito visual, sem envio/validação real)
+const passwordField = document.getElementById('login-password');
+const toggleEyeIcon = document.getElementById('togglePasswordVisibility');
 
-signUpButton.addEventListener('click', () => {
-    container.classList.add('right-panel-active');
-});
+if (passwordField && toggleEyeIcon) {
+    toggleEyeIcon.addEventListener('click', () => {
+        const isHidden = passwordField.type === 'password';
 
-signInButton.addEventListener('click', () => {
-    container.classList.remove('right-panel-active');
-});
-registerButton.addEventListener('click', () => {
-    container.classList.remove('right-panel-active');
-});
+        passwordField.type = isHidden ? 'text' : 'password';
+        toggleEyeIcon.classList.toggle('bi-eye-slash', !isHidden);
+        toggleEyeIcon.classList.toggle('bi-eye', isHidden);
+    });
+}

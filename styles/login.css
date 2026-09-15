@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Krona+One&family=Montserrat&family=Roboto:wght@100&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;500;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 /*====================================================================================================
 ========================================== SCROLL STYLE =============================================
 ====================================================================================================*/
@@ -34,291 +34,869 @@ body {
     height: 100%;
     max-width: 100vw;
     overflow: overlay;
-
+    font-family: "Montserrat", sans-serif;
 }
+
 /*====================================================================================================
-========================================== MAIN STYLE =============================================
+========================================== MAIN STYLE ================================================
 ====================================================================================================*/
 .login-start {
-    height: 100%;
+    position: relative;
+    height: 100vh;
     width: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    align-items: stretch;
+    padding-top: 3rem;
 }
 
 .login-start-wallpaper {
     width: 100%;
     height: 100vh;
-    background-image: url("/assets/login-background-img.jpeg");
+    background-image: url("../assets/login-background-img.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 0;
-
 }
 
 .blur-filter {
     height: 100%;
     width: 100%;
-    background: rgba(51, 49, 49, 0.5);
-    backdrop-filter: blur(4px);
+    background: rgba(10, 10, 10, 0.72);
+    backdrop-filter: blur(3px);
     position: absolute;
     z-index: 1;
 }
 
 .global-login-container {
-    font-family: "Montserrat", sans-serif;
-    margin: -85vh 0 7.5vh;
+    position: relative;
     z-index: 2;
-    width: 70%;
-
-}
-
-.primary-text {
-    font-weight: bold;
-    margin: 0;
-}
-
-.secondary-text {
-    font-size: 20px;
-    margin: 0px 0 60px 0;
-}
-
-.terciary-text {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-}
-
-.quaternary-text {
-    font-size: 12px;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+    column-gap: 4vw;
+    padding: 0 6vw;
 }
 
 a {
-    color: #383A3B;
-    font-size: 14px;
     text-decoration: none;
-    margin: 15px 0;
-}
-/*====================================================================================================
-========================================== CONTAINER STYLE =============================================
-====================================================================================================*/
-.container {
-    background: #9E9C9C;
-    border-radius: 15px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.336), 0 10px 10px rgba(0, 0, 0, 0.295);
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    min-height: 480px;
 }
 
-.form-container form {
-    background: #9E9C9C;
+.link-strong {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/*====================================================================================================
+========================================== HEADER ====================================================
+====================================================================================================*/
+.LP-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    padding: 2vh 6vw;
+    background: rgba(19, 19, 19, 0.65);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.LP-header-inner {
     display: flex;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.LP-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.LP-logo img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.LP-logo-glow {
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--org-color1);
+    filter: blur(14px);
+    opacity: 0.55;
+    pointer-events: none;
+    transition: opacity 200ms ease-in;
+}
+
+.LP-logo:hover .LP-logo-glow {
+    opacity: 0.9;
+}
+
+.LP-logo-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.LP-logo-text {
+    position: relative;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    color: var(--white-to-black-color, #E2E2E2);
+}
+
+.LP-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 40px);
+}
+
+.LP-nav-link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.75;
+    padding-bottom: 4px;
+}
+
+.LP-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--org-color1);
+    transition: width 180ms ease-in;
+}
+
+.LP-nav-link:hover {
+    opacity: 1;
+}
+
+.LP-nav-link:hover::after {
+    width: 100%;
+}
+
+.LP-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 2vw, 22px);
+}
+
+.LP-login-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+.LP-login-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.LP-header-cta {
+    flex-shrink: 0;
+    padding: 9px 22px;
+    border-radius: 999px;
+    background: var(--org-color1);
+    color: #10120f;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: transform 100ms ease-in, background-color 150ms ease-in;
+}
+
+.LP-header-cta:hover {
+    background: var(--org-color-lighter);
+}
+
+.LP-header-cta:active {
+    transform: scale(0.96);
+}
+
+.LP-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white-to-black-color, #E2E2E2);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.LP-mobile-nav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 220ms ease-in;
+}
+
+.LP-mobile-nav.LP-open {
+    max-height: 400px;
+    margin-top: 2vh;
+}
+
+.LP-mobile-nav .LP-nav-link,
+.LP-mobile-nav .LP-login-link {
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.LP-mobile-nav .LP-header-cta {
+    margin-top: 10px;
     text-align: center;
 }
 
-.social-container {
-    margin: 20px 0;
+@media (max-width: 900px) {
+
+    .LP-nav,
+    .LP-header-actions {
+        display: none;
+    }
+
+    .LP-menu-toggle {
+        display: block;
+    }
+
+    .LP-mobile-nav {
+        display: flex;
+    }
 }
 
-.social-container a {
-    border: 2px solid #ddd;
-    background-color: #18191A;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
+/*====================================================================================================
+========================================== FOOTER =====================================================
+====================================================================================================*/
+.login-footer {
+    position: relative;
+    z-index: 2;
+
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.6vh;
+    padding: 2.2vh 6vw 2vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(0deg, rgba(10, 10, 10, 0.35) 0%, rgba(10, 10, 10, 0) 100%);
+}
+
+.login-footer-inner {
+    display: flex;
     align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
-    transition: transform 80ms ease-in;
+    justify-content: space-between;
+    gap: clamp(16px, 3vw, 40px);
 }
-    .social-container a i
-    {
-        color:#ffffff;
-    }
 
-    .social-container a:active {
-        transform: scale(.95);
-    }
-
-    .social-container a:focus {
-        outline: none;
-    }
-
-.form-container input {
-    background: #868686;
-    border: none;
-    border-radius: 15px;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
-    outline:none;
-    color:#ffffff;
+.login-footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 0;
 }
-    .form-container input::placeholder
-    {
-        color:#ffffff;
-    }
 
-.global-login-container button {
-    border-radius: 15px;
-    border: none;
-    background: #383A3B;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
+.login-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
     letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
+    color: var(--white-to-black-color, #E2E2E2);
 }
 
-.global-login-container button a {
-    color: #fff;
+.login-footer-logo-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
-button:active {
-    transform: scale(.95);
+.login-footer-tagline {
+    font-size: 12px;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.5;
 }
 
-button:focus {
+.login-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.login-footer-links a {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+.login-footer-links a:hover {
+    opacity: 1;
+    color: var(--org-color1);
+    text-decoration: underline;
+}
+
+.login-footer-dot {
+    font-size: 10px;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.35;
+}
+
+.login-footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.login-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-color, #585757);
+    color: var(--white-to-black-color, #E2E2E2);
+    font-size: 15px;
+    transition: border-color 150ms ease-in, color 150ms ease-in, transform 100ms ease-in;
+}
+
+.login-social-icon:hover {
+    border-color: var(--org-color1);
+    color: var(--org-color1);
+    transform: translateY(-2px);
+}
+
+.login-footer-copy {
+    font-size: 11px;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.4;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .login-footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .login-footer-brand {
+        align-items: center;
+    }
+
+    .login-footer-social {
+        justify-content: center;
+    }
+}
+
+/*====================================================================================================
+========================================== COLUNA ESQUERDA (HERO) ===================================
+====================================================================================================*/
+.login-hero {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8vh;
+}
+
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(20px, 3vw, 48px);
+}
+
+/* --- diamante de 4 bolinhas --- */
+.diamond {
+    position: relative;
+    width: clamp(130px, 12vw, 170px);
+    height: clamp(130px, 12vw, 170px);
+    flex-shrink: 0;
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--org-color1);
+}
+
+.dot-green {
+    width: 34%;
+    height: 34%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 18px 4px var(--org-color1), 0 0 36px 10px var(--org-color-low-opacity);
+    animation: dot-pulse 2.2s ease-in-out infinite;
+}
+
+.dot-pink {
+    width: 32%;
+    height: 32%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.dot-red {
+    width: 32%;
+    height: 32%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.dot-blue {
+    width: 30%;
+    height: 30%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes dot-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 18px 4px var(--org-color1), 0 0 36px 10px var(--org-color-low-opacity);
+    }
+
+    50% {
+        box-shadow: 0 0 26px 8px var(--org-color1), 0 0 50px 16px var(--org-color-low-opacity);
+    }
+}
+
+/* --- texto principal do hero --- */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 14px;
+    font-family: "Chakra Petch", sans-serif;
+    line-height: 1;
+    margin: 0;
+}
+
+.hero-title-start {
+    font-size: clamp(40px, 6vw, 78px);
+    font-weight: 700;
+    color: var(--org-color1)
+}
+
+.hero-title-rest {
+    color: var(--white-to-black-color, #E2E2E2);
+    font-size: clamp(18px, 2.2vw, 28px);
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    margin: 10px 0 0;
+    color: #C9C9C9;
+    font-size: clamp(15px, 1.6vw, 21px);
+    font-weight: 700;
+}
+
+.hero-bang {
+    color: var(--org-color1);
+    font-weight: 700;
+}
+
+.hero-arrow {
+    width: min(420px, 26vw);
+    margin: 22px 0 14px;
+}
+
+.hero-arrow-svg {
+    width: 100%;
+    height: 14px;
+    display: block;
+    overflow: visible;
+}
+
+.hero-arrow-line {
+    stroke: var(--org-color1);
+    stroke-width: 2;
+}
+
+.hero-arrow-head {
+    fill: var(--org-color1);
+}
+
+.hero-register {
+    color: var(--white-to-black-color, #E2E2E2);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*====================================================================================================
+========================================== COLUNA DIREITA (PAINEL) ==================================
+====================================================================================================*/
+.login-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 420px;
+}
+
+.panel-header {
+    margin-bottom: clamp(26px, 4.5vh, 46px);
+    text-align: center;
+}
+
+.panel-title {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: clamp(40px, 4.2vw, 58px);
+    line-height: 1;
+    margin: 0;
+}
+
+.panel-subtitle {
+    margin-top: 6px;
+    color: var(--white-to-black-color, #E2E2E2);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+/* --- botões sociais --- */
+.social-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: clamp(30px, 5vh, 50px);
+}
+
+.social-button {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 8px;
+    border-radius: 999px;
+    border: 2px solid;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: transform 120ms ease-in, background-color 120ms ease-in;
+}
+
+.social-button:active {
+    transform: scale(.96);
+}
+
+.social-button i {
+    font-size: 17px;
+}
+
+.social-facebook {
+    border-color: #1E90FF;
+    color: #1E90FF;
+}
+
+.social-facebook:hover {
+    background: #1E90FF20;
+}
+
+.social-google {
+    border-color: #ff0022;
+    color: #ff0022;
+}
+
+.social-google:hover {
+    background: #ff002220;
+}
+
+.social-google-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.social-twitter {
+    border-color: #00FFFF;
+    color: #00FFFF;
+}
+
+.social-twitter:hover {
+    background: #00FFFF20;
+}
+
+/* --- campos --- */
+.field {
+    margin-bottom: clamp(22px, 3.6vh, 36px);
+}
+
+.field-label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--org-color1)
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-bottom: 9px;
+    border-bottom: 1.5px solid var(--border-color, #585757);
+}
+
+.field-email .field-row {
+    border-bottom-color: var(--org-color1);
+}
+
+.field-icon {
+    font-size: 16px;
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.85;
+    flex-shrink: 0;
+}
+
+.field-icon-muted {
+    opacity: 0.55;
+}
+
+.field-toggle-eye {
+    margin-left: auto;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.field-toggle-eye:hover {
+    opacity: 1;
+}
+
+.field-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    color: var(--white-to-black-color, #E2E2E2);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
     outline: none;
 }
 
-button.ghost {
-    background: #18191A;
-    border: solid 1px #fff;
-    border-radius: 15px;
+.field-input::placeholder {
+    color: var(--white-to-black-color, #E2E2E2);
+    opacity: 0.55;
 }
 
-.form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all .6s ease-in-out;
-
-}
-
-.sign-in-container {
-    left: 0;
-    width: 50%;
-    z-index: 4;
-}
-
-.sign-up-container {
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 3;
-}
-
-.forgot
-{
-    color: #ffffff;
-    font-weight: 700;
-    padding:10px;
-    border-radius:15px;
-    transition: transform 80ms ease-in;
-}
-.forgot:hover
-{
-    background-color: #868686;
-}
-.forgot:active {
-    transform: scale(.95);
-}
-/*====================================================================================================
-========================================== OVERLAY STYLE =============================================
-====================================================================================================*/
-.overlay-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform .6s ease-in-out;
-}
-
-.overlay {
-    background: #161616;
-    background: #383A3B no-repeat 0 0 / cover;
-    color: #fff;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-}
-
-.overlay-panel {
-    position: absolute;
-    top: 0;
+/* --- lembrar de mim / esqueceu senha --- */
+.field-options {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0 40px;
-    height: 100%;
-    width: 50%;
+    justify-content: space-between;
+    margin-bottom: clamp(30px, 5vh, 50px);
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+    font-size: 14px;
+    color: var(--white-to-black-color, #E2E2E2);
+    cursor: pointer;
+}
+
+.remember-me input {
+    display: none;
+}
+
+.checkbox-fake {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1.5px solid var(--org-color1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #10120f;
+    font-size: 13px;
+    background: transparent;
+    transition: background-color 120ms ease-in;
+}
+
+.remember-me input:checked+.checkbox-fake {
+    background: var(--org-color1);
+}
+
+.remember-me input:not(:checked)+.checkbox-fake i {
+    display: none;
+}
+
+.forgot-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--org-color1)
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* --- botão start --- */
+.start-button {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    background: var(--first-color, #383A3B);
+    color: #EDEDED;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 14px;
+    cursor: pointer;
+    transition: transform 80ms ease-in, background-color 120ms ease-in;
+}
+
+.start-button:hover {
+    background: var(--active-color, #3a3c3d);
+}
+
+.start-button:active {
+    transform: scale(.97);
+}
+
+.panel-register {
     text-align: center;
-    transform: translateX(0);
-    transition: transform .6s ease-in-out;
-}
-/*====================================================================================================
-========================================== ANIMATION STYLE =============================================
-====================================================================================================*/
-.overlay-right {
-    right: 0;
-    transform: translateX(0);
+    margin-top: clamp(18px, 3vh, 30px);
+    font-size: 14px;
+    color: var(--white-to-black-color, #E2E2E2);
 }
 
-.overlay-left {
-    transform: translateX(-20%);
+.panel-register a{
+    color: var(--org-color1)
 }
 
-.container.right-panel-active .sign-in-container {
-    transform: translateX(100%);
-
+.panel-page-note {
+    text-align: center;
+    margin-top: clamp(22px, 4vh, 40px);
+    font-size: 13px;
+    line-height: 1.6;
+    color: #B5B5B5;
 }
 
-.container.right-panel-active .overlay-container {
-    transform: translateX(-100%)
-}
-
-.container.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-}
-
-.container.right-panel-active .overlay {
-    transform: translateX(50%);
-}
-
-.container.right-panel-active .overlay-left {
-    transform: translateX(0)
-}
-
-.container.right-panel-active .overlay-right {
-    transform: translateX(20%)
+.panel-page-note a{
+    color: var(--org-color1)
 }
 
 /*====================================================================================================
-========================================== FOOTER STYLE =============================================
+========================================== RESPONSIVIDADE ===========================================
 ====================================================================================================*/
+@media (max-width: 900px) {
+    .login-start {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .login-start-wallpaper {
+        position: fixed;
+    }
+
+    .global-login-container {
+        height: auto;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        padding: 8vh 6vw 6vh;
+        row-gap: 6vh;
+    }
+
+    .login-hero {
+        order: 2;
+        padding-bottom: 0;
+    }
+
+    .ghost-text {
+        display: none;
+    }
+
+    .hero-bottom {
+        justify-content: center;
+    }
+
+    .login-panel {
+        order: 1;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .hero-title,
+    .hero-arrow,
+    .hero-register {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-row {
+        flex-direction: column;
+    }
+
+    .social-button {
+        width: 100%;
+    }
+}

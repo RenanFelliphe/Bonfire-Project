@@ -10,9 +10,10 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles/variable.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/register.css">
     <link rel="icon" href="assets/logo.png">
 
-    <title>Bonfire | Login</title>
+    <title>Bonfire | Registro</title>
 </head>
 
 <body>
@@ -26,10 +27,10 @@
                 </a>
 
                 <nav class="LP-nav">
-                    <a href="#organizacoes" class="LP-nav-link">Organizações</a>
-                    <a href="#recursos" class="LP-nav-link">Recursos</a>
-                    <a href="#comunidade" class="LP-nav-link">Comunidade</a>
-                    <a href="#baixar" class="LP-nav-link">Baixar app</a>
+                    <a href="landing.html#organizacoes" class="LP-nav-link">Organizações</a>
+                    <a href="landing.html#recursos" class="LP-nav-link">Recursos</a>
+                    <a href="landing.html#comunidade" class="LP-nav-link">Comunidade</a>
+                    <a href="landing.html#baixar" class="LP-nav-link">Baixar app</a>
                 </nav>
 
                 <div class="LP-header-actions">
@@ -43,20 +44,20 @@
             </div>
 
             <nav class="LP-mobile-nav" id="LPMobileNav">
-                <a href="#organizacoes" class="LP-nav-link">Organizações</a>
-                <a href="#recursos" class="LP-nav-link">Recursos</a>
-                <a href="#comunidade" class="LP-nav-link">Comunidade</a>
-                <a href="#baixar" class="LP-nav-link">Baixar app</a>
+                <a href="landing.html#organizacoes" class="LP-nav-link">Organizações</a>
+                <a href="landing.html#recursos" class="LP-nav-link">Recursos</a>
+                <a href="landing.html#comunidade" class="LP-nav-link">Comunidade</a>
+                <a href="landing.html#baixar" class="LP-nav-link">Baixar app</a>
                 <a href="login.html" class="LP-login-link">Entrar</a>
                 <a href="register.html" class="LP-header-cta G-green">Criar conta</a>
             </nav>
         </header>
-        
+
         <div class="login-start-wallpaper">
             <div class="blur-filter"></div>
         </div>
 
-        <div class="global-login-container">
+        <div class="global-login-container register-container">
 
             <!-- ================= COLUNA ESQUERDA (HERO) ================= -->
             <section class="login-hero">
@@ -82,17 +83,17 @@
                             </svg>
                         </div>
 
-                        <p class="hero-register">Não tem uma conta? <a href="register.html"
-                                class="link-strong G-green">Registre-se</a></p>
+                        <p class="hero-register">Já tem uma conta? <a href="login.html"
+                                class="link-strong G-green">Entrar</a></p>
                     </div>
                 </div>
             </section>
 
             <!-- ================= COLUNA DIREITA (PAINEL) ================= -->
-            <section class="login-panel">
+            <section class="login-panel register-panel">
                 <header class="panel-header">
-                    <h1 class="panel-title G-green">Login</h1>
-                    <p class="panel-subtitle">Seja bem vindo novamente</p>
+                    <h1 class="panel-title G-green">Registro</h1>
+                    <p class="panel-subtitle">É rápido e fácil</p>
                 </header>
 
                 <div class="social-row">
@@ -119,35 +120,81 @@
                     </a>
                 </div>
 
-                <div class="field field-email">
-                    <label class="field-label G-green" for="login-email">Email</label>
-                    <div class="field-row">
-                        <i class="bi bi-question-circle field-icon field-icon-muted"></i>
-                        <i class="bi bi-envelope field-icon G-green"></i>
-                        <input class="field-input" id="login-email" type="text" placeholder="seuemail@exemplo.com">
+                <form id="registerForm" novalidate>
+                    <div class="field field-fullname">
+                        <label class="field-label G-green" for="register-fullname">Nome Completo</label>
+                        <div class="field-row">
+                            <i class="bi bi-question-circle field-icon field-icon-muted"
+                                title="Use o nome que aparece em seus documentos"></i>
+                            <i class="bi bi-person field-icon G-green"></i>
+                            <input class="field-input" id="register-fullname" name="fullname" type="text"
+                                placeholder="Digite seu nome completo" autocomplete="name" required>
+                        </div>
+                        <p class="field-error" data-error-for="register-fullname"></p>
                     </div>
-                </div>
 
-                <div class="field field-password">
-                    <div class="field-row">
-                        <i class="bi bi-lock field-icon"></i>
-                        <input class="field-input" id="login-password" type="password" placeholder="••••••••">
-                        <i class="bi bi-eye-slash field-icon field-toggle-eye" id="togglePasswordVisibility"></i>
+                    <div class="field-group">
+                        <div class="field field-nickname">
+                            <div class="field-row">
+                                <i class="bi bi-lightning-charge field-icon"></i>
+                                <input class="field-input" id="register-nickname" name="nickname" type="text"
+                                    placeholder="Apelido" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="field field-username">
+                            <div class="field-row">
+                                <i class="bi bi-at field-icon"></i>
+                                <input class="field-input" id="register-username" name="username" type="text"
+                                    placeholder="Nome de Usuário" autocomplete="username" required>
+                            </div>
+                            <p class="field-error" data-error-for="register-username"></p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="field-options">
-                    <label class="remember-me">
-                        <input type="checkbox" id="rememberMe" checked>
-                        <span class="checkbox-fake G-green"><i class="bi bi-check"></i></span>
-                        Lembrar de mim
-                    </label>
-                    <a href="#" class="forgot-link G-green">Esqueceu a Senha?</a>
-                </div>
+                    <div class="field field-email">
+                        <div class="field-row">
+                            <i class="bi bi-envelope field-icon"></i>
+                            <input class="field-input" id="register-email" name="email" type="email"
+                                placeholder="Email" autocomplete="email" required>
+                        </div>
+                        <p class="field-error" data-error-for="register-email"></p>
+                    </div>
 
-                <a href="/home.html"><button type="button" class="start-button">Start</button></a>
+                    <div class="field field-confirm-email">
+                        <div class="field-row">
+                            <i class="bi bi-envelope field-icon"></i>
+                            <input class="field-input" id="register-confirm-email" name="confirmEmail" type="email"
+                                placeholder="Confirmar Email" autocomplete="email" required>
+                        </div>
+                        <p class="field-error" data-error-for="register-confirm-email"></p>
+                    </div>
 
-                <p class="panel-register">Não tem uma conta? <a href="register.html" class="link-strong G-green">Registre-se</a></p>
+                    <div class="field-group">
+                        <div class="field field-password">
+                            <div class="field-row">
+                                <i class="bi bi-lock field-icon"></i>
+                                <input class="field-input" id="register-password" name="password" type="password"
+                                    placeholder="Senha" autocomplete="new-password" required>
+                            </div>
+                            <p class="field-error" data-error-for="register-password"></p>
+                        </div>
+
+                        <div class="field field-confirm-password">
+                            <div class="field-row">
+                                <i class="bi bi-lock field-icon"></i>
+                                <input class="field-input" id="register-confirm-password" name="confirmPassword"
+                                    type="password" placeholder="Confirmar Senha" autocomplete="new-password" required>
+                            </div>
+                            <p class="field-error" data-error-for="register-confirm-password"></p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="start-button" id="registerNextButton">Next</button>
+                </form>
+
+                <p class="panel-register">Já tem uma conta? <a href="login.html" class="link-strong G-green">Entrar</a>
+                </p>
 
                 <p class="panel-page-note">
                     Você tem um campeonato, uma organização ou uma empresa?<br>
@@ -189,7 +236,7 @@
         </footer>
     </main>
 
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
 </body>
 
 </html>
